@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\AdresTR\AdresTR.csproj" />
+    <ProjectReference Include="..\..\src\AdresTR.Data\AdresTR.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <InternalsVisibleTo Include="AdresTR.Eval.Tests" />
+  </ItemGroup>
+
+</Project>

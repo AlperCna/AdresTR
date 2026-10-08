@@ -3,3 +3,4 @@
 *.sln text eol=crlf
 *.bin binary
 *.br binary
+*.jsonl text eol=lf
