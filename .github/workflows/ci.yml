@@ -49,6 +49,9 @@ jobs:
       - name: Evaluation sets are valid
         run: dotnet run --project tools/AdresTR.Eval -c Release --no-build -- validate
 
+      - name: Accuracy gate (dev sets)
+        run: dotnet run --project tools/AdresTR.Eval -c Release --no-build -- gate
+
       - run: dotnet test --solution AdresTR.slnx -c Release --no-build --coverage --coverage-output-format cobertura --results-directory ${{ github.workspace }}/coverage
 
       - name: Upload coverage

@@ -9,13 +9,15 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | Exact match | Micro-F1 | Macro-F1 | il | ilçe | birim@1 | birim@5 | MRR | ECE |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| regex-baseline | 14.2 [12.0–16.3] | 76.8 [75.6–77.9] | 61.5 | 51.6 | 32.3 | 19.5 | 19.5 | 19.5 | – |
+| adrestr | 99.0 [98.3–99.6] | 99.8 [99.7–99.9] | 92.2 | 100.0 | 99.9 | 99.2 | 99.2 | 99.2 | 0.007 |
+| regex-baseline | 14.2 [12.0–16.3] | 76.8 [75.6–77.9] | 61.5 | 51.5 | 31.4 | 18.7 | 18.7 | 18.7 | – |
 | libpostal | 12.0 [10.2–14.1] | 61.2 [59.5–62.9] | 47.7 | – | – | – | – | – | – |
 
 <details><summary>Per-field F1</summary>
 
 | System | il | ilce | mahalle | semt | csbm_tur | csbm_ad | site | blok | dis_kapi | kat | daire | posta_kodu | tarif |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| adrestr | 100.0 | 99.9 | 99.8 | 0.0 | 99.7 | 99.4 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | regex-baseline | 72.3 | 50.4 | 73.9 | – | 96.2 | 78.6 | 0.0 | 0.0 | 82.1 | 100.0 | 84.3 | 100.0 | 0.0 |
 | libpostal | 55.1 | 55.0 | 60.6 | – | 93.1 | 81.6 | 0.0 | 0.0 | 58.0 | 75.3 | 8.0 | 85.5 | 0.0 |
 
@@ -23,39 +25,39 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 <details><summary>Exact match by tag / noise</summary>
 
-| Tag | n | regex-baseline | libpostal |
-|---|---:|---:|---:|
-| abbreviation | 823 | 16.2 | 11.5 |
-| ambiguous-name | 705 | 15.2 | 13.2 |
-| ascii | 149 | 18.8 | 12.1 |
-| broken-i | 60 | 0.0 | 6.7 |
-| duplicate-token | 83 | 14.5 | 14.5 |
-| glued | 115 | 0.0 | 0.0 |
-| koy | 192 | 0.0 | 14.1 |
-| landmark | 119 | 0.0 | 0.0 |
-| missing-il | 100 | 0.0 | 9.0 |
-| missing-ilce | 119 | 28.6 | 8.4 |
-| noise:ascii | 149 | 18.8 | 12.1 |
-| noise:broken-i | 60 | 0.0 | 6.7 |
-| noise:duplicate-token | 83 | 14.5 | 14.5 |
-| noise:glued | 115 | 0.0 | 0.0 |
-| noise:landmark | 119 | 0.0 | 0.0 |
-| noise:lowercase | 130 | 12.3 | 7.7 |
-| noise:missing-il | 100 | 0.0 | 9.0 |
-| noise:missing-ilce | 119 | 28.6 | 8.4 |
-| noise:phone | 120 | 0.0 | 0.8 |
-| noise:reordered | 71 | 0.0 | 1.4 |
-| noise:typo | 118 | 2.5 | 1.7 |
-| noise:uppercase | 119 | 9.2 | 7.6 |
-| numbered-street | 66 | 16.7 | 10.6 |
-| osb | 24 | 0.0 | 0.0 |
-| phone | 120 | 0.0 | 0.8 |
-| postal-code | 245 | 15.5 | 10.6 |
-| reordered | 229 | 0.0 | 0.9 |
-| site-blok | 85 | 0.0 | 0.0 |
-| slash-door | 166 | 2.4 | 1.2 |
-| typo | 118 | 2.5 | 1.7 |
-| uppercase | 119 | 9.2 | 7.6 |
+| Tag | n | adrestr | regex-baseline | libpostal |
+|---|---:|---:|---:|---:|
+| abbreviation | 823 | 99.3 | 16.2 | 11.5 |
+| ambiguous-name | 705 | 99.1 | 15.2 | 13.2 |
+| ascii | 149 | 100.0 | 18.8 | 12.1 |
+| broken-i | 60 | 100.0 | 0.0 | 6.7 |
+| duplicate-token | 83 | 95.2 | 14.5 | 14.5 |
+| glued | 115 | 93.0 | 0.0 | 0.0 |
+| koy | 192 | 97.9 | 0.0 | 14.1 |
+| landmark | 119 | 96.6 | 0.0 | 0.0 |
+| missing-il | 100 | 100.0 | 0.0 | 9.0 |
+| missing-ilce | 119 | 99.2 | 28.6 | 8.4 |
+| noise:ascii | 149 | 100.0 | 18.8 | 12.1 |
+| noise:broken-i | 60 | 100.0 | 0.0 | 6.7 |
+| noise:duplicate-token | 83 | 95.2 | 14.5 | 14.5 |
+| noise:glued | 115 | 93.0 | 0.0 | 0.0 |
+| noise:landmark | 119 | 96.6 | 0.0 | 0.0 |
+| noise:lowercase | 130 | 98.5 | 12.3 | 7.7 |
+| noise:missing-il | 100 | 100.0 | 0.0 | 9.0 |
+| noise:missing-ilce | 119 | 99.2 | 28.6 | 8.4 |
+| noise:phone | 120 | 98.3 | 0.0 | 0.8 |
+| noise:reordered | 71 | 100.0 | 0.0 | 1.4 |
+| noise:typo | 118 | 99.2 | 2.5 | 1.7 |
+| noise:uppercase | 119 | 99.2 | 9.2 | 7.6 |
+| numbered-street | 66 | 100.0 | 16.7 | 10.6 |
+| osb | 24 | 100.0 | 0.0 | 0.0 |
+| phone | 120 | 98.3 | 0.0 | 0.8 |
+| postal-code | 245 | 99.2 | 15.5 | 10.6 |
+| reordered | 229 | 98.7 | 0.0 | 0.9 |
+| site-blok | 85 | 100.0 | 0.0 | 0.0 |
+| slash-door | 166 | 100.0 | 2.4 | 1.2 |
+| typo | 118 | 99.2 | 2.5 | 1.7 |
+| uppercase | 119 | 99.2 | 9.2 | 7.6 |
 
 </details>
 
@@ -63,13 +65,15 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | Exact match | Micro-F1 | Macro-F1 | il | ilçe | birim@1 | birim@5 | MRR | ECE |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| regex-baseline | 14.0 [12.5–15.7] | 76.8 [76.0–77.7] | 61.6 | 52.2 | 33.8 | 20.5 | 20.5 | 20.5 | – |
+| adrestr | 97.4 [96.6–98.0] | 99.6 [99.5–99.7] | 91.9 | 99.8 | 99.6 | 98.7 | 98.7 | 98.7 | 0.022 |
+| regex-baseline | 14.0 [12.5–15.7] | 76.8 [76.0–77.7] | 61.6 | 52.1 | 33.5 | 19.9 | 19.9 | 19.9 | – |
 | libpostal | 10.0 [8.6–11.3] | 60.0 [58.8–61.2] | 47.4 | – | – | – | – | – | – |
 
 <details><summary>Per-field F1</summary>
 
 | System | il | ilce | mahalle | semt | csbm_tur | csbm_ad | site | blok | dis_kapi | kat | daire | posta_kodu | tarif |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| adrestr | 99.9 | 99.5 | 99.4 | 0.0 | 99.8 | 99.2 | 98.9 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 98.1 |
 | regex-baseline | 73.2 | 51.1 | 75.1 | – | 94.8 | 77.8 | 0.0 | 0.0 | 81.9 | 100.0 | 85.6 | 100.0 | 0.0 |
 | libpostal | 55.5 | 55.2 | 59.6 | – | 92.0 | 78.8 | 0.2 | 0.0 | 55.0 | 79.4 | 11.4 | 82.0 | 0.0 |
 
@@ -77,39 +81,39 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 <details><summary>Exact match by tag / noise</summary>
 
-| Tag | n | regex-baseline | libpostal |
-|---|---:|---:|---:|
-| abbreviation | 1616 | 16.1 | 9.8 |
-| ambiguous-name | 1438 | 15.0 | 10.4 |
-| ascii | 237 | 13.1 | 6.8 |
-| broken-i | 122 | 0.0 | 1.6 |
-| duplicate-token | 237 | 14.8 | 11.8 |
-| glued | 249 | 0.0 | 0.0 |
-| koy | 369 | 0.0 | 11.7 |
-| landmark | 210 | 0.0 | 0.0 |
-| missing-il | 216 | 0.0 | 13.0 |
-| missing-ilce | 229 | 16.2 | 3.9 |
-| noise:ascii | 237 | 13.1 | 6.8 |
-| noise:broken-i | 122 | 0.0 | 1.6 |
-| noise:duplicate-token | 237 | 14.8 | 11.8 |
-| noise:glued | 249 | 0.0 | 0.0 |
-| noise:landmark | 210 | 0.0 | 0.0 |
-| noise:lowercase | 243 | 9.1 | 10.7 |
-| noise:missing-il | 216 | 0.0 | 13.0 |
-| noise:missing-ilce | 229 | 16.2 | 3.9 |
-| noise:phone | 226 | 0.0 | 0.4 |
-| noise:reordered | 162 | 0.0 | 0.0 |
-| noise:typo | 231 | 1.7 | 2.6 |
-| noise:uppercase | 207 | 12.6 | 4.8 |
-| numbered-street | 116 | 15.5 | 8.6 |
-| osb | 51 | 0.0 | 0.0 |
-| phone | 226 | 0.0 | 0.4 |
-| postal-code | 499 | 14.2 | 10.4 |
-| reordered | 464 | 0.0 | 0.0 |
-| site-blok | 185 | 0.0 | 0.0 |
-| slash-door | 335 | 3.0 | 3.6 |
-| typo | 231 | 1.7 | 2.6 |
-| uppercase | 207 | 12.6 | 4.8 |
+| Tag | n | adrestr | regex-baseline | libpostal |
+|---|---:|---:|---:|---:|
+| abbreviation | 1616 | 97.9 | 16.1 | 9.8 |
+| ambiguous-name | 1438 | 97.4 | 15.0 | 10.4 |
+| ascii | 237 | 98.3 | 13.1 | 6.8 |
+| broken-i | 122 | 99.2 | 0.0 | 1.6 |
+| duplicate-token | 237 | 87.8 | 14.8 | 11.8 |
+| glued | 249 | 90.4 | 0.0 | 0.0 |
+| koy | 369 | 95.7 | 0.0 | 11.7 |
+| landmark | 210 | 96.7 | 0.0 | 0.0 |
+| missing-il | 216 | 97.2 | 0.0 | 13.0 |
+| missing-ilce | 229 | 91.7 | 16.2 | 3.9 |
+| noise:ascii | 237 | 98.3 | 13.1 | 6.8 |
+| noise:broken-i | 122 | 99.2 | 0.0 | 1.6 |
+| noise:duplicate-token | 237 | 87.8 | 14.8 | 11.8 |
+| noise:glued | 249 | 90.4 | 0.0 | 0.0 |
+| noise:landmark | 210 | 96.7 | 0.0 | 0.0 |
+| noise:lowercase | 243 | 97.5 | 9.1 | 10.7 |
+| noise:missing-il | 216 | 97.2 | 0.0 | 13.0 |
+| noise:missing-ilce | 229 | 91.7 | 16.2 | 3.9 |
+| noise:phone | 226 | 98.2 | 0.0 | 0.4 |
+| noise:reordered | 162 | 95.1 | 0.0 | 0.0 |
+| noise:typo | 231 | 95.7 | 1.7 | 2.6 |
+| noise:uppercase | 207 | 96.6 | 12.6 | 4.8 |
+| numbered-street | 116 | 98.3 | 15.5 | 8.6 |
+| osb | 51 | 90.2 | 0.0 | 0.0 |
+| phone | 226 | 98.2 | 0.0 | 0.4 |
+| postal-code | 499 | 98.2 | 14.2 | 10.4 |
+| reordered | 464 | 97.0 | 0.0 | 0.0 |
+| site-blok | 185 | 97.3 | 0.0 | 0.0 |
+| slash-door | 335 | 97.9 | 3.0 | 3.6 |
+| typo | 231 | 95.7 | 1.7 | 2.6 |
+| uppercase | 207 | 96.6 | 12.6 | 4.8 |
 
 </details>
 
@@ -117,36 +121,38 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | Exact match | Micro-F1 | Macro-F1 | il | ilçe | birim@1 | birim@5 | MRR | ECE |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| regex-baseline | 9.7 [6.7–13.0] | 63.7 [61.0–66.0] | 66.4 | 42.8 | 42.4 | 19.9 | 19.9 | 19.9 | – |
-| libpostal | 29.3 [24.3–34.3] | 60.8 [56.9–64.5] | 45.7 | – | – | – | – | – | – |
+| adrestr | 96.3 [94.0–98.3] | 99.5 [99.1–99.8] | 99.6 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 0.034 |
+| regex-baseline | 7.7 [5.0–10.7] | 62.6 [60.1–65.0] | 56.8 | 42.1 | 41.7 | 19.7 | 19.7 | 19.7 | – |
+| libpostal | 26.3 [21.7–31.3] | 58.1 [54.2–61.7] | 44.3 | – | – | – | – | – | – |
 
 <details><summary>Per-field F1</summary>
 
 | System | il | ilce | mahalle | semt | csbm_tur | csbm_ad | site | blok | dis_kapi | kat | daire | posta_kodu | tarif |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| regex-baseline | 98.1 | 40.5 | 55.4 | – | 96.3 | 60.4 | – | – | 47.6 | – | – | – | – |
-| libpostal | 62.5 | 22.5 | 49.6 | – | 89.2 | 77.4 | 0.0 | – | 64.0 | – | 0.0 | – | – |
+| adrestr | 100.0 | 100.0 | 100.0 | – | 100.0 | 98.1 | – | – | 99.2 | – | 100.0 | – | – |
+| regex-baseline | 98.1 | 40.5 | 55.4 | – | 96.3 | 60.4 | – | – | 46.8 | – | 0.0 | – | – |
+| libpostal | 62.5 | 22.5 | 49.6 | – | 89.2 | 77.4 | 0.0 | – | 53.6 | – | 0.0 | – | – |
 
 </details>
 
 <details><summary>Exact match by tag / noise</summary>
 
-| Tag | n | regex-baseline | libpostal |
-|---|---:|---:|---:|
-| abbreviation | 279 | 10.0 | 30.5 |
-| ambiguous-name | 208 | 9.1 | 27.4 |
-| ascii | 8 | 12.5 | 25.0 |
-| broken-i | 15 | 6.7 | 26.7 |
-| glued | 17 | 5.9 | 11.8 |
-| landmark | 4 | 25.0 | 25.0 |
-| merkez | 11 | 9.1 | 9.1 |
-| missing-il | 245 | 6.1 | 29.0 |
-| missing-ilce | 88 | 17.0 | 72.7 |
-| numbered-street | 78 | 16.7 | 53.8 |
-| semt | 7 | 0.0 | 57.1 |
-| site-blok | 1 | 0.0 | 0.0 |
-| slash-door | 117 | 9.4 | 54.7 |
-| uppercase | 143 | 10.5 | 48.3 |
+| Tag | n | adrestr | regex-baseline | libpostal |
+|---|---:|---:|---:|---:|
+| abbreviation | 279 | 96.1 | 7.9 | 27.2 |
+| ambiguous-name | 208 | 96.2 | 7.2 | 25.0 |
+| ascii | 8 | 100.0 | 12.5 | 25.0 |
+| broken-i | 15 | 100.0 | 6.7 | 26.7 |
+| glued | 17 | 100.0 | 5.9 | 11.8 |
+| landmark | 4 | 75.0 | 25.0 | 25.0 |
+| merkez | 11 | 90.9 | 9.1 | 9.1 |
+| missing-il | 245 | 99.2 | 3.7 | 25.3 |
+| missing-ilce | 88 | 98.9 | 10.2 | 64.8 |
+| numbered-street | 78 | 93.6 | 11.5 | 48.7 |
+| semt | 7 | 100.0 | 0.0 | 57.1 |
+| site-blok | 1 | 0.0 | 0.0 | 0.0 |
+| slash-door | 117 | 99.1 | 4.3 | 47.0 |
+| uppercase | 143 | 94.4 | 6.3 | 42.0 |
 
 </details>
 
@@ -154,39 +160,41 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | Exact match | Micro-F1 | Macro-F1 | il | ilçe | birim@1 | birim@5 | MRR | ECE |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| regex-baseline | 9.5 [7.8–11.2] | 64.0 [62.8–65.2] | 57.0 | 44.1 | 44.2 | 19.7 | 19.7 | 19.7 | – |
-| libpostal | 27.7 [25.1–30.0] | 60.9 [59.0–62.7] | 40.5 | – | – | – | – | – | – |
+| adrestr | 95.8 [94.6–96.8] | 99.2 [98.9–99.4] | 77.2 | 99.5 | 99.5 | 100.0 | 100.0 | 100.0 | 0.036 |
+| regex-baseline | 8.2 [6.8–9.8] | 63.5 [62.3–64.6] | 49.8 | 42.5 | 42.6 | 19.2 | 19.2 | 19.2 | – |
+| libpostal | 26.2 [23.8–28.6] | 59.3 [57.4–61.1] | 39.9 | – | – | – | – | – | – |
 
 <details><summary>Per-field F1</summary>
 
 | System | il | ilce | mahalle | semt | csbm_tur | csbm_ad | site | blok | dis_kapi | kat | daire | posta_kodu | tarif |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| regex-baseline | 98.1 | 40.2 | 50.8 | – | 96.2 | 64.1 | – | – | 49.4 | – | – | 0.0 | – |
-| libpostal | 63.2 | 21.1 | 50.2 | – | 88.4 | 75.8 | 0.0 | – | 66.2 | 0.0 | 0.0 | – | – |
+| adrestr | 99.5 | 99.1 | 99.6 | 0.0 | 99.7 | 98.1 | – | – | 99.6 | – | 99.3 | – | 0.0 |
+| regex-baseline | 98.1 | 40.2 | 50.8 | – | 96.2 | 64.1 | – | – | 49.2 | – | 0.0 | 0.0 | – |
+| libpostal | 63.2 | 21.1 | 50.2 | – | 88.4 | 75.8 | 0.0 | – | 60.1 | 0.0 | 0.0 | – | – |
 
 </details>
 
 <details><summary>Exact match by tag / noise</summary>
 
-| Tag | n | regex-baseline | libpostal |
-|---|---:|---:|---:|
-| abbreviation | 1135 | 10.0 | 28.5 |
-| ambiguous-name | 850 | 8.0 | 26.9 |
-| ascii | 23 | 13.0 | 47.8 |
-| broken-i | 29 | 0.0 | 27.6 |
-| glued | 80 | 3.8 | 10.0 |
-| landmark | 21 | 33.3 | 47.6 |
-| merkez | 28 | 7.1 | 14.3 |
-| missing-il | 991 | 7.0 | 28.7 |
-| missing-ilce | 364 | 15.9 | 68.1 |
-| numbered-street | 318 | 13.8 | 51.3 |
-| osb | 1 | 0.0 | 0.0 |
-| reordered | 3 | 100.0 | 100.0 |
-| semt | 25 | 8.0 | 16.0 |
-| site-blok | 14 | 50.0 | 50.0 |
-| slash-door | 419 | 8.4 | 56.6 |
-| typo | 2 | 0.0 | 0.0 |
-| uppercase | 571 | 11.0 | 48.3 |
+| Tag | n | adrestr | regex-baseline | libpostal |
+|---|---:|---:|---:|---:|
+| abbreviation | 1135 | 95.9 | 8.6 | 27.0 |
+| ambiguous-name | 850 | 96.8 | 6.4 | 25.4 |
+| ascii | 23 | 100.0 | 8.7 | 43.5 |
+| broken-i | 29 | 100.0 | 0.0 | 27.6 |
+| glued | 80 | 95.0 | 3.8 | 10.0 |
+| landmark | 21 | 85.7 | 33.3 | 47.6 |
+| merkez | 28 | 100.0 | 7.1 | 14.3 |
+| missing-il | 991 | 96.9 | 5.4 | 26.9 |
+| missing-ilce | 364 | 96.7 | 12.1 | 64.0 |
+| numbered-street | 318 | 96.2 | 10.7 | 48.1 |
+| osb | 1 | 100.0 | 0.0 | 0.0 |
+| reordered | 3 | 100.0 | 100.0 | 100.0 |
+| semt | 25 | 84.0 | 8.0 | 16.0 |
+| site-blok | 14 | 92.9 | 42.9 | 42.9 |
+| slash-door | 419 | 96.4 | 4.8 | 52.5 |
+| typo | 2 | 50.0 | 0.0 | 0.0 |
+| uppercase | 571 | 94.4 | 8.6 | 45.5 |
 
 </details>
 
@@ -194,6 +202,7 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | Exact match | Micro-F1 | Macro-F1 | il | ilçe | birim@1 | birim@5 | MRR | ECE |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| adrestr | 94.0 [88.0–98.8] | 98.6 [96.9–99.7] | 93.1 | 100.0 | 100.0 | 98.6 | 100.0 | 99.3 | 0.060 |
 | regex-baseline | 28.9 [19.3–38.6] | 84.0 [80.7–87.1] | 65.4 | 72.3 | 66.3 | 32.4 | 32.4 | 32.4 | – |
 | libpostal | 34.9 [25.3–45.8] | 75.6 [69.4–81.0] | 56.2 | – | – | – | – | – | – |
 
@@ -201,6 +210,7 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | il | ilce | mahalle | semt | csbm_tur | csbm_ad | site | blok | dis_kapi | kat | daire | posta_kodu | tarif |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| adrestr | 100.0 | 100.0 | 97.9 | 100.0 | 97.7 | 97.7 | 66.7 | – | 100.0 | 100.0 | 100.0 | 100.0 | 57.1 |
 | regex-baseline | 95.2 | 82.7 | 75.0 | 0.0 | 91.4 | 85.0 | 0.0 | – | 83.1 | 83.3 | 88.9 | 100.0 | 0.0 |
 | libpostal | 91.8 | 83.1 | 72.9 | 0.0 | 87.5 | 78.0 | 0.0 | – | 63.0 | 60.0 | 37.5 | 100.0 | 0.0 |
 
@@ -208,32 +218,32 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 <details><summary>Exact match by tag / noise</summary>
 
-| Tag | n | regex-baseline | libpostal |
-|---|---:|---:|---:|
-| abbreviation | 6 | 33.3 | 33.3 |
-| ambiguous-name | 30 | 50.0 | 60.0 |
-| ascii | 5 | 60.0 | 20.0 |
-| broken-i | 3 | 33.3 | 66.7 |
-| d-k-ambiguity | 5 | 20.0 | 20.0 |
-| duplicate-token | 11 | 45.5 | 45.5 |
-| glued | 5 | 20.0 | 0.0 |
-| historic-name | 4 | 25.0 | 75.0 |
-| koy | 8 | 0.0 | 12.5 |
-| kume-evler | 4 | 0.0 | 0.0 |
-| landmark | 4 | 0.0 | 0.0 |
-| merkez | 6 | 50.0 | 16.7 |
-| missing-il | 17 | 11.8 | 29.4 |
-| missing-ilce | 5 | 80.0 | 80.0 |
-| numbered-street | 12 | 16.7 | 50.0 |
-| osb | 4 | 0.0 | 0.0 |
-| phone | 3 | 0.0 | 33.3 |
-| postal-code | 5 | 80.0 | 100.0 |
-| reordered | 11 | 9.1 | 0.0 |
-| semt | 8 | 0.0 | 12.5 |
-| site-blok | 5 | 20.0 | 20.0 |
-| slash-door | 8 | 0.0 | 25.0 |
-| typo | 5 | 0.0 | 0.0 |
-| uppercase | 7 | 28.6 | 42.9 |
+| Tag | n | adrestr | regex-baseline | libpostal |
+|---|---:|---:|---:|---:|
+| abbreviation | 6 | 83.3 | 33.3 | 33.3 |
+| ambiguous-name | 30 | 100.0 | 50.0 | 60.0 |
+| ascii | 5 | 100.0 | 60.0 | 20.0 |
+| broken-i | 3 | 100.0 | 33.3 | 66.7 |
+| d-k-ambiguity | 5 | 100.0 | 20.0 | 20.0 |
+| duplicate-token | 11 | 90.9 | 45.5 | 45.5 |
+| glued | 5 | 100.0 | 20.0 | 0.0 |
+| historic-name | 4 | 100.0 | 25.0 | 75.0 |
+| koy | 8 | 62.5 | 0.0 | 12.5 |
+| kume-evler | 4 | 50.0 | 0.0 | 0.0 |
+| landmark | 4 | 50.0 | 0.0 | 0.0 |
+| merkez | 6 | 83.3 | 50.0 | 16.7 |
+| missing-il | 17 | 94.1 | 11.8 | 29.4 |
+| missing-ilce | 5 | 80.0 | 80.0 | 80.0 |
+| numbered-street | 12 | 100.0 | 16.7 | 50.0 |
+| osb | 4 | 100.0 | 0.0 | 0.0 |
+| phone | 3 | 100.0 | 0.0 | 33.3 |
+| postal-code | 5 | 100.0 | 80.0 | 100.0 |
+| reordered | 11 | 100.0 | 9.1 | 0.0 |
+| semt | 8 | 100.0 | 0.0 | 12.5 |
+| site-blok | 5 | 80.0 | 20.0 | 20.0 |
+| slash-door | 8 | 100.0 | 0.0 | 25.0 |
+| typo | 5 | 100.0 | 0.0 | 0.0 |
+| uppercase | 7 | 100.0 | 28.6 | 42.9 |
 
 </details>
 
@@ -241,46 +251,48 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | Exact match | Micro-F1 | Macro-F1 | il | ilçe | birim@1 | birim@5 | MRR | ECE |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| regex-baseline | 21.0 [15.0–27.5] | 79.0 [75.8–81.8] | 57.8 | 58.1 | 53.3 | 22.8 | 22.8 | 22.8 | – |
-| libpostal | 24.0 [17.4–29.9] | 71.3 [67.3–74.7] | 48.8 | – | – | – | – | – | – |
+| adrestr | 86.8 [81.4–92.2] | 96.2 [94.5–97.8] | 91.9 | 99.4 | 99.4 | 96.5 | 98.6 | 97.6 | 0.127 |
+| regex-baseline | 21.0 [15.0–27.5] | 79.1 [76.0–81.9] | 57.8 | 58.1 | 53.3 | 22.9 | 22.9 | 22.9 | – |
+| libpostal | 24.6 [18.0–31.1] | 71.4 [67.5–74.9] | 48.9 | – | – | – | – | – | – |
 
 <details><summary>Per-field F1</summary>
 
 | System | il | ilce | mahalle | semt | csbm_tur | csbm_ad | site | blok | dis_kapi | kat | daire | posta_kodu | tarif |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| regex-baseline | 91.4 | 70.1 | 71.7 | 0.0 | 92.2 | 82.4 | 0.0 | 0.0 | 80.7 | 85.7 | 76.9 | 100.0 | 0.0 |
-| libpostal | 87.7 | 79.9 | 68.8 | 0.0 | 89.7 | 74.3 | 4.2 | 0.0 | 58.9 | 58.8 | 17.6 | 94.7 | 0.0 |
+| adrestr | 99.6 | 98.3 | 95.9 | 87.0 | 96.1 | 94.4 | 100.0 | 85.7 | 96.0 | 95.7 | 91.7 | 100.0 | 54.5 |
+| regex-baseline | 91.4 | 70.1 | 72.5 | 0.0 | 92.2 | 82.4 | 0.0 | 0.0 | 80.7 | 85.7 | 76.9 | 100.0 | 0.0 |
+| libpostal | 87.7 | 79.9 | 69.6 | 0.0 | 89.7 | 74.3 | 4.2 | 0.0 | 58.9 | 58.8 | 17.6 | 94.7 | 0.0 |
 
 </details>
 
 <details><summary>Exact match by tag / noise</summary>
 
-| Tag | n | regex-baseline | libpostal |
-|---|---:|---:|---:|
-| abbreviation | 14 | 7.1 | 0.0 |
-| ambiguous-name | 46 | 41.3 | 52.2 |
-| ascii | 14 | 14.3 | 7.1 |
-| broken-i | 8 | 12.5 | 25.0 |
-| d-k-ambiguity | 9 | 11.1 | 11.1 |
-| duplicate-token | 11 | 18.2 | 18.2 |
-| glued | 12 | 0.0 | 0.0 |
-| historic-name | 7 | 28.6 | 57.1 |
-| koy | 15 | 0.0 | 20.0 |
-| kume-evler | 4 | 0.0 | 0.0 |
-| landmark | 6 | 0.0 | 0.0 |
-| merkez | 19 | 26.3 | 36.8 |
-| missing-il | 53 | 7.5 | 17.0 |
-| missing-ilce | 15 | 53.3 | 46.7 |
-| numbered-street | 33 | 27.3 | 15.2 |
-| osb | 9 | 0.0 | 11.1 |
-| phone | 6 | 33.3 | 0.0 |
-| postal-code | 10 | 80.0 | 50.0 |
-| reordered | 22 | 0.0 | 13.6 |
-| semt | 16 | 0.0 | 6.2 |
-| site-blok | 10 | 0.0 | 0.0 |
-| slash-door | 14 | 0.0 | 21.4 |
-| typo | 12 | 0.0 | 8.3 |
-| uppercase | 13 | 15.4 | 0.0 |
+| Tag | n | adrestr | regex-baseline | libpostal |
+|---|---:|---:|---:|---:|
+| abbreviation | 14 | 85.7 | 7.1 | 0.0 |
+| ambiguous-name | 46 | 95.7 | 41.3 | 54.3 |
+| ascii | 14 | 78.6 | 14.3 | 7.1 |
+| broken-i | 8 | 100.0 | 12.5 | 25.0 |
+| d-k-ambiguity | 9 | 66.7 | 11.1 | 11.1 |
+| duplicate-token | 11 | 81.8 | 18.2 | 18.2 |
+| glued | 12 | 66.7 | 0.0 | 0.0 |
+| historic-name | 7 | 100.0 | 28.6 | 57.1 |
+| koy | 15 | 73.3 | 0.0 | 20.0 |
+| kume-evler | 4 | 0.0 | 0.0 | 0.0 |
+| landmark | 6 | 50.0 | 0.0 | 0.0 |
+| merkez | 19 | 78.9 | 26.3 | 36.8 |
+| missing-il | 53 | 84.9 | 7.5 | 18.9 |
+| missing-ilce | 15 | 93.3 | 53.3 | 46.7 |
+| numbered-street | 33 | 97.0 | 27.3 | 15.2 |
+| osb | 9 | 100.0 | 0.0 | 11.1 |
+| phone | 6 | 100.0 | 33.3 | 0.0 |
+| postal-code | 10 | 100.0 | 80.0 | 50.0 |
+| reordered | 22 | 90.9 | 0.0 | 13.6 |
+| semt | 16 | 81.2 | 0.0 | 6.2 |
+| site-blok | 10 | 70.0 | 0.0 | 0.0 |
+| slash-door | 14 | 85.7 | 0.0 | 21.4 |
+| typo | 12 | 83.3 | 0.0 | 8.3 |
+| uppercase | 13 | 84.6 | 15.4 | 0.0 |
 
 </details>
 

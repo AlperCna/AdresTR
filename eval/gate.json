@@ -1,0 +1,17 @@
+{
+  "synthetic-dev": {
+    "exact_match": 0.99,
+    "micro_f1": 0.9985,
+    "birim_accuracy": 0.9917
+  },
+  "real-dev": {
+    "exact_match": 0.9633,
+    "micro_f1": 0.9947,
+    "birim_accuracy": 1
+  },
+  "challenge-dev": {
+    "exact_match": 0.9398,
+    "micro_f1": 0.9855,
+    "birim_accuracy": 0.9865
+  }
+}

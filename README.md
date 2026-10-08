@@ -7,7 +7,7 @@ Türkçe serbest metin adresleri ayrıştıran, normalize eden ve resmi il/ilçe
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 ![Status](https://img.shields.io/badge/status-early%20development-orange)
 
-> 🚧 **Early development.** The roadmap and the research behind it are public: [plan](docs/plan/PLAN.md) · [research](docs/plan/ARASTIRMA.md) · [decisions](docs/adr/).
+> 🚧 **Pre-release (not on NuGet yet).** The roadmap and the research behind it are public: [plan](docs/plan/PLAN.md) · [research](docs/plan/ARASTIRMA.md) · [decisions](docs/adr/).
 
 ## Why?
 
@@ -29,24 +29,47 @@ Yet there is **no free, offline, explainable** Turkish address parser:
 
 AdresTR aims to fill that gap, and to publish the first open Turkish address benchmark along the way.
 
-## What it will do (v1.0)
+## Quick start
 
 ```csharp
-var parser = AddressParser.CreateDefault();
-var result = parser.Parse("kadikoy caferaga mh moda cd no:12 d3 istanbul");
+using AdresTR;
+using AdresTR.Data;
 
-result.Mahalle.Value;          // "Caferağa"  (id + confidence)
-result.ToCanonicalString();    // "Caferağa Mah. Moda Cad. No:12 D:3 34710 Kadıköy/İstanbul"
-result.Corrections;            // diacritics, abbreviations, inferred postal code…
+ParseResult r = TurkishGazetteer.Parser.Parse("kadikoy caferaga mh moda cd no:12 d3 istanbul");
+
+r.Unit;                 // Caferağa (mahalle, id 34230005) — null when the text is ambiguous
+r.District;             // Kadıköy
+r.Street;               // "Moda" (r.StreetType == StreetType.Cadde)
+r.DoorNumber; r.Flat;   // "12", "3"
+r.Confidence;           // calibrated probability that the parse is correct
+r.Corrections;          // Diacritics: kadikoy → Kadıköy, …
+r.ToCanonicalString();  // "Caferağa Mah. Moda Cad. No:12 D:3 34710 Kadıköy/İstanbul"
 ```
 
-- **Parse** il, ilçe, mahalle/köy, semt, street (type + name), site, blok, door, floor, flat, postal code.
-- **Normalize** to official names and stable IDs; understands *semt* names (Moda → Caferağa) and pre-2014 village names.
-- **Validate** the hierarchy and postal code consistency.
-- **Explain** every correction, with per-field confidence and top-k alternatives.
-- **Offline & deterministic**, no ICU dependency — runs in containers, Native AOT and the browser (Blazor WASM).
+- **Parses** il, ilçe, mahalle/köy, semt, street (type + name), site, blok, door, floor, flat, postal code, landmark.
+- **Resolves** to official names and stable ids; understands *semt* names (Moda → Caferağa), pre-2014 village
+  names, abbreviations, glued words (`147sok`, `CaferağaMah.`), typos and ASCII-only input.
+- **Never guesses:** "Cumhuriyet Mah." without an ilçe returns no unit, plus ranked candidates.
+- **Explains** every correction and returns a calibrated confidence.
+- **Offline & deterministic**, no ICU dependency, ~0.2–0.5 ms per address on one core.
 
-## Available today
+## Benchmark
+
+Test splits of the [AdresTR benchmark](eval/README.md) (never used for tuning). Exact match = every annotated
+component correct; birim = the neighbourhood the text determines, resolved to the right gazetteer id.
+
+| Test set | AdresTR | libpostal | regex baseline |
+|---|---:|---:|---:|
+| Synthetic (2,000, noisy) — exact match | **97.4%** | 10.0% | 14.0% |
+| Real public-institution addresses (1,200) — exact match | **95.8%** | 26.2% | 8.2% |
+| Hand-written hard cases (167) — exact match | **86.8%** | 24.6% | 21.0% |
+| Real — birim accuracy | **100%** | – | 19.2% |
+| Real — calibration error (ECE) | **0.036** | – | – |
+
+Full tables with confidence intervals, per-field F1 and per-phenomenon breakdowns: [eval/results](eval/results/README.md).
+libpostal has no mahalle/ilçe concept for Turkey, so it cannot return gazetteer ids.
+
+## Also available
 
 `AdresTR.Text.TurkishText` — culture-independent Turkish text handling ([why it matters](docs/adr/0002-icu-independent-turkish-text.md)):
 
@@ -54,19 +77,14 @@ result.Corrections;            // diacritics, abbreviations, inferred postal cod
 TurkishText.Fold("  KADIKÖY’de\u00A0Şişli ");   // "kadikoy'de sisli"  (matching key)
 TurkishText.ToUpperTr("istanbul");               // "İSTANBUL"
 TurkishText.ToTitleTr("ığdır");                  // "Iğdır"
-TurkishText.Normalize("i\u0307stanbul");         // "istanbul" (repairs JS/Python lowercasing of İ)
 ```
-
-Results are identical with or without ICU and regardless of `CultureInfo.CurrentCulture`; CI verifies this.
 
 `AdresTR.Data` — the bundled gazetteer (81 il, 973 ilçe, 78,790 mahalle/köy/… units with postal codes, 18,816 aliases):
 
 ```csharp
-var g = TurkishGazetteer.Default;                       // ~1.3 MB embedded, loaded once
-var kadikoy  = g.FindDistricts("KADIKOY", plaka: 34)[0].Entity;
-var caferaga = g.FindUnits("moda", kadikoy.Id)[0];      // semt alias → Caferağa Mahallesi
-caferaga.Entity.PostalCode;                             // "34710"
+var g = TurkishGazetteer.Default;
 g.FindProvinces("Urfa")[0].Entity.Name;                 // "Şanlıurfa"
+g.FindUnitsByPostalCode("34710");                       // Caferağa, …
 ```
 
 ## Roadmap
@@ -76,8 +94,8 @@ g.FindProvinces("Urfa")[0].Entity.Name;                 // "Şanlıurfa"
 | 0 | Repo, CI, ADRs | ✅ |
 | 1 | Gazetteer: il / ilçe / mahalle / postal codes, aliases, versioned binary format | ✅ (curation ongoing) |
 | 2 | Turkish text core | ✅ |
-| 3 | Benchmark: synthetic + real + challenge sets, metrics, baselines | ⏳ |
-| 4 | Parser MVP with confidence and corrections log | ⏳ |
+| 3 | Benchmark: synthetic + real + challenge sets, metrics, baselines | ✅ |
+| 4 | Parser MVP with calibrated confidence and corrections log | ✅ |
 | 5 | NuGet v0.1 | ⏳ |
 | 6 | REST API + Docker | ⏳ |
 | 7 | In-browser playground | ⏳ |

@@ -211,7 +211,7 @@ public static class TurkishText
     };
 
     /// <summary>Maps one character to its folded form, <see cref="Space"/> for whitespace or <see cref="Drop"/> to remove it.</summary>
-    private static char FoldChar(char c)
+    internal static char FoldChar(char c)
     {
         if (c < 0x80)
         {

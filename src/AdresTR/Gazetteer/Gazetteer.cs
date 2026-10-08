@@ -23,6 +23,7 @@ public sealed class Gazetteer
     private readonly FrozenDictionary<string, GazetteerMatch<District>[]> _districtIndex;
     private readonly FrozenDictionary<string, GazetteerMatch<SettlementUnit>[]> _unitIndex;
     private readonly FrozenDictionary<string, SettlementUnit[]> _unitsByPostalCode;
+    private Parsing.ParserIndex? _parserIndex;
 
     internal Gazetteer(
         string dataVersion,
@@ -107,6 +108,18 @@ public sealed class Gazetteer
         GazetteerMatch<SettlementUnit>[] all = _unitIndex.GetValueOrDefault(Key(name)) ?? [];
         return districtId == 0 ? all : Array.FindAll(all, m => m.Entity.District.Id == districtId);
     }
+
+    internal IReadOnlyList<GazetteerMatch<Province>> FindProvincesByKey(string key) =>
+        _provinceIndex.GetValueOrDefault(key) ?? [];
+
+    internal IReadOnlyList<GazetteerMatch<District>> FindDistrictsByKey(string key) =>
+        _districtIndex.GetValueOrDefault(key) ?? [];
+
+    internal IReadOnlyList<GazetteerMatch<SettlementUnit>> FindUnitsByKey(string key) =>
+        _unitIndex.GetValueOrDefault(key) ?? [];
+
+    /// <summary>Lookup structures used by the parser (fuzzy candidate lists), built on first use.</summary>
+    internal Parsing.ParserIndex ParserIndex => LazyInitializer.EnsureInitialized(ref _parserIndex, () => new Parsing.ParserIndex(this));
 
     /// <summary>Returns the settlement units served by a five-digit postal code.</summary>
     public IReadOnlyList<SettlementUnit> FindUnitsByPostalCode(string postalCode) =>
