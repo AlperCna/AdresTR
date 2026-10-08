@@ -1,0 +1,30 @@
+name: Kısaltma / semt / eski ad önerisi
+description: Yeni bir kısaltma, semt→mahalle eşlemesi veya eski köy/mahalle adı önerin. / Suggest an abbreviation, semt alias or historic name.
+labels: [data, good first issue]
+body:
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Tür / Kind
+      options: [Kısaltma / abbreviation, Semt → mahalle, Eski ad / historic name, Yazım hatası / common typo]
+    validations:
+      required: true
+  - type: input
+    id: variant
+    attributes:
+      label: Yazılış / Variant
+      placeholder: "mhl. | Moda | Esenkent Köyü"
+    validations:
+      required: true
+  - type: input
+    id: canonical
+    attributes:
+      label: Karşılığı / Canonical
+      placeholder: "Mahallesi | Caferağa Mah. (Kadıköy/İstanbul)"
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Kaynak / Source
+      description: Resmi bir kaynak veya bağlantı varsa ekleyin. / Official source or link if available.

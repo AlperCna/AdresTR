@@ -1,0 +1,20 @@
+name: Hata / Bug
+description: Exception, crash, wrong API behaviour or packaging problem.
+labels: [bug]
+body:
+  - type: textarea
+    id: what
+    attributes:
+      label: Ne oldu? / What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: repro
+    attributes:
+      label: Yeniden üretme / Repro
+      render: csharp
+  - type: input
+    id: env
+    attributes:
+      label: Ortam / Environment
+      placeholder: "AdresTR 0.1.0, .NET 10.0.3, linux-x64 container"

@@ -1,0 +1,13 @@
+version: 2
+updates:
+  - package-ecosystem: nuget
+    directory: /
+    schedule:
+      interval: weekly
+    groups:
+      test:
+        patterns: ["xunit*", "Verify*", "CsCheck", "coverlet*", "Microsoft.NET.Test.Sdk", "Microsoft.AspNetCore.Mvc.Testing"]
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

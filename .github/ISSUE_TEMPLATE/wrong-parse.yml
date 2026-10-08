@@ -1,0 +1,35 @@
+name: Yanlış ayrıştırma / Wrong parse
+description: Bir adres yanlış ayrıştırıldı veya çözümlenemedi. / An address was parsed or resolved incorrectly.
+labels: [wrong-parse]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ⚠️ **Kişisel veri paylaşmayın.** Gerçek bir kişinin ev adresini yazmayın; kapı/daire numarasını değiştirin
+        veya bir kurum/işyeri adresi kullanın. / **Do not share personal data.** Change door/flat numbers or use a business address.
+  - type: textarea
+    id: input
+    attributes:
+      label: Girdi / Input
+      description: Ayrıştırılan metin / The text you parsed
+      render: text
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Çıktı / Actual result
+      description: AdresTR'ın döndürdüğü JSON / The JSON AdresTR returned
+      render: json
+  - type: textarea
+    id: expected
+    attributes:
+      label: Beklenen / Expected
+      description: Hangi alan ne olmalıydı? / Which component should have been what?
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Sürüm / Version
+      placeholder: "AdresTR 0.1.0, data 2026.10"
