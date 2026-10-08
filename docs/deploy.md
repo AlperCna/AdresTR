@@ -7,7 +7,7 @@ the OpenAPI document at `/openapi/v1.json`.
 ## Self-host (recommended for production)
 
 ```bash
-docker run -d --name adrestr -p 8080:8080 ghcr.io/alpercna/adrestr-api:0.1.0-preview.1
+docker run -d --name adrestr -p 8080:8080 ghcr.io/alpercna/adrestr-api:0.1.0-preview.2
 curl -s -X POST http://localhost:8080/v1/parse -H "Content-Type: application/json" -d "{\"text\":\"Moda Kadıköy\"}"
 ```
 
@@ -45,7 +45,7 @@ az provider register --namespace Microsoft.App --wait
 az group create -n $RG -l $LOC
 az containerapp env create -n $ENV -g $RG -l $LOC --logs-destination none
 az containerapp create -n $APP -g $RG --environment $ENV \
-  --image ghcr.io/alpercna/adrestr-api:0.1.0-preview.1 \
+  --image ghcr.io/alpercna/adrestr-api:0.1.0-preview.2 \
   --ingress external --target-port 8080 --cpu 0.25 --memory 0.5Gi \
   --min-replicas 0 --max-replicas 1 \
   --scale-rule-name http --scale-rule-type http --scale-rule-http-concurrency 50
