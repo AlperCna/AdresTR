@@ -2,7 +2,7 @@
 
 **Türkçe serbest metin adresleri ayrıştıran, normalize eden ve doğrulayan .NET kütüphanesi.** → [English README](README.md)
 
-> 🚧 **Yayın öncesi (henüz NuGet'te değil).** Yol haritası ve arkasındaki araştırma açık: [plan](docs/plan/PLAN.md) · [araştırma](docs/plan/ARASTIRMA.md) · [kararlar (ADR)](docs/adr/).
+> 🚧 **Önizleme sürümü.** 1.0'dan önce API'ler değişebilir. Yol haritası ve arkasındaki araştırma açık: [plan](docs/plan/PLAN.md) · [araştırma](docs/plan/ARASTIRMA.md) · [kararlar (ADR)](docs/adr/).
 
 ## Neden?
 
@@ -21,6 +21,10 @@ Bu karmaşa e-ticaret ve kargo şirketlerine her gün maliyet çıkarıyor. Heps
 - Açık, etiketli bir Türkçe adres benchmark'ı yok.
 
 ## Hızlı başlangıç
+
+```bash
+dotnet add package AdresTR.Data --prerelease
+```
 
 ```csharp
 using AdresTR;
