@@ -6,6 +6,8 @@
     <ContainerRepository>alpercna/adrestr-api</ContainerRepository>
     <ContainerFamily>noble-chiseled</ContainerFamily>
     <ContainerRuntimeIdentifiers>linux-x64;linux-arm64</ContainerRuntimeIdentifiers>
+    <!-- Restore assets for the container RIDs (a normal build stays RID-agnostic). -->
+    <RuntimeIdentifiers>linux-x64;linux-arm64</RuntimeIdentifiers>
   </PropertyGroup>
 
   <ItemGroup>
