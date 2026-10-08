@@ -15,8 +15,14 @@ public static class TurkishGazetteer
 
     private static readonly Lazy<AdresTR.Gazetteer> s_default = new(Load, LazyThreadSafetyMode.ExecutionAndPublication);
 
+    private static readonly Lazy<AddressParser> s_parser = new(() => new AddressParser(Default), LazyThreadSafetyMode.ExecutionAndPublication);
+
     /// <summary>The bundled gazetteer, loaded once on first access (thread-safe).</summary>
     public static AdresTR.Gazetteer Default => s_default.Value;
+
+    /// <summary>A shared, thread-safe <see cref="AddressParser"/> over <see cref="Default"/>.</summary>
+    /// <example><code>var result = TurkishGazetteer.Parser.Parse("caferaga mh moda cd no:12 kadikoy");</code></example>
+    public static AddressParser Parser => s_parser.Value;
 
     /// <summary>Loads a fresh copy of the bundled gazetteer.</summary>
     public static AdresTR.Gazetteer Load()

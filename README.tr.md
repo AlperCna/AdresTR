@@ -2,7 +2,7 @@
 
 **Türkçe serbest metin adresleri ayrıştıran, normalize eden ve doğrulayan .NET kütüphanesi.** → [English README](README.md)
 
-> 🚧 **Erken geliştirme aşamasında.** Yol haritası ve arkasındaki araştırma açık: [plan](docs/plan/PLAN.md) · [araştırma](docs/plan/ARASTIRMA.md) · [kararlar (ADR)](docs/adr/).
+> 🚧 **Yayın öncesi (henüz NuGet'te değil).** Yol haritası ve arkasındaki araştırma açık: [plan](docs/plan/PLAN.md) · [araştırma](docs/plan/ARASTIRMA.md) · [kararlar (ADR)](docs/adr/).
 
 ## Neden?
 
@@ -20,23 +20,34 @@ Bu karmaşa e-ticaret ve kargo şirketlerine her gün maliyet çıkarıyor. Heps
 - libpostal'da mahalle ve ilçe etiketi yok.
 - Açık, etiketli bir Türkçe adres benchmark'ı yok.
 
-## Hedef (v1.0)
-
-- **Ayrıştırma:** il, ilçe, mahalle/köy, semt, cadde/sokak (tür + ad), site, blok, kapı no, kat, daire, posta kodu.
-- **Normalizasyon:** resmi adlara ve kararlı kimliklere çevirme. Semt adlarını (Moda → Caferağa) ve 2014 öncesi köy adlarını anlar.
-- **Doğrulama:** il ⊃ ilçe ⊃ mahalle hiyerarşisi ve posta kodu tutarlılığı.
-- **Açıklama:** her düzeltmenin logu, alan bazında güven skoru ve alternatifler.
-- **Çevrimdışı ve deterministik**, ICU'ya bağımlı değil: container, Native AOT ve tarayıcıda (Blazor WASM) aynı sonucu verir.
-
-## Şu an kullanılabilir olan
-
-`AdresTR.Text.TurkishText`: kültürden bağımsız Türkçe metin işleme. "Türkçe I problemi" için [ADR-0002](docs/adr/0002-icu-independent-turkish-text.md)'ye bakın.
+## Hızlı başlangıç
 
 ```csharp
-TurkishText.Fold("  KADIKÖY’de\u00A0Şişli ");   // "kadikoy'de sisli"
-TurkishText.ToUpperTr("istanbul");               // "İSTANBUL"
-TurkishText.ToTitleTr("ığdır");                  // "Iğdır"
+using AdresTR;
+using AdresTR.Data;
+
+ParseResult r = TurkishGazetteer.Parser.Parse("kadikoy caferaga mh moda cd no:12 d3 istanbul");
+r.Unit;                 // Caferağa Mahallesi (kimlik 34230005); metin belirsizse null
+r.ToCanonicalString();  // "Caferağa Mah. Moda Cad. No:12 D:3 34710 Kadıköy/İstanbul"
+r.Corrections;          // kadikoy → Kadıköy (aksan), …
+r.Confidence;           // kalibre edilmiş güven
 ```
+
+- **Ayrıştırma:** il, ilçe, mahalle/köy, semt, cadde/sokak, site, blok, kapı no, kat, daire, posta kodu, tarif.
+- **Çözümleme:** resmi adlar ve kararlı kimlikler. Semt (Moda → Caferağa), 2014 öncesi köy adları, kısaltmalar,
+  yapışık yazım (`147sok`), yazım hataları ve ASCII yazım desteklenir.
+- **Tahmin etmez:** ilçesiz "Cumhuriyet Mah." için birim döndürmez, sıralı adaylar verir.
+- **Açıklar:** her düzeltmeyi ve kalibre edilmiş güveni döndürür. Çevrimdışı, ICU'suz, adres başına ~0,2–0,5 ms.
+
+## Benchmark (test setleri)
+
+| Set | AdresTR | libpostal | regex |
+|---|---:|---:|---:|
+| Sentetik (2.000) — tam eşleşme | **%97,4** | %10,0 | %14,0 |
+| Gerçek kurum adresleri (1.200) — tam eşleşme | **%95,8** | %26,2 | %8,2 |
+| Elle yazılmış zor vakalar (167) — tam eşleşme | **%86,8** | %24,6 | %21,0 |
+
+Ayrıntılar: [eval/results](eval/results/README.md) · Metodoloji: [eval/README.md](eval/README.md)
 
 ## Lisans
 

@@ -23,6 +23,7 @@
     <InternalsVisibleTo Include="AdresTR.Tests" />
     <InternalsVisibleTo Include="AdresTR.Benchmarks" />
     <InternalsVisibleTo Include="AdresTR.DataBuilder" />
+    <InternalsVisibleTo Include="AdresTR.Eval" />
   </ItemGroup>
 
 </Project>
