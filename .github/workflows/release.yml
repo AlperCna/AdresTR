@@ -1,0 +1,128 @@
+name: Release
+
+# Publishes AdresTR and AdresTR.Data to nuget.org when a version tag is pushed (git tag v0.1.0-preview.1).
+# The version comes from the tag through MinVer. Publishing uses NuGet Trusted Publishing (OIDC, ADR-0010):
+# there is no stored API key. The nuget.org policy must name this file (release.yml) and the "nuget" environment.
+
+on:
+  push:
+    tags: ["v*"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release
+  cancel-in-progress: false
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.version.outputs.version }}
+      prerelease: ${{ steps.version.outputs.prerelease }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0 # MinVer reads the version from the tag
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+
+      - id: version
+        run: |
+          version="${GITHUB_REF_NAME#v}"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+          if [[ "$version" == *-* ]]; then echo "prerelease=true" >> "$GITHUB_OUTPUT"; else echo "prerelease=false" >> "$GITHUB_OUTPUT"; fi
+
+      - run: dotnet restore AdresTR.slnx
+      - run: dotnet build AdresTR.slnx -c Release --no-restore
+      - run: dotnet test --solution AdresTR.slnx -c Release --no-build
+
+      - name: Data and benchmark checks
+        run: |
+          dotnet run --project tools/AdresTR.DataBuilder -c Release --no-build -- check
+          dotnet run --project tools/AdresTR.Eval -c Release --no-build -- validate
+          dotnet run --project tools/AdresTR.Eval -c Release --no-build -- gate
+
+      - name: Pack
+        run: |
+          dotnet pack src/AdresTR/AdresTR.csproj -c Release --no-build -o artifacts
+          dotnet pack src/AdresTR.Data/AdresTR.Data.csproj -c Release --no-build -o artifacts
+
+      - name: Packages carry the tag's version
+        env:
+          VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          ls -la artifacts
+          test -f "artifacts/AdresTR.${VERSION}.nupkg"
+          test -f "artifacts/AdresTR.${VERSION}.snupkg"
+          test -f "artifacts/AdresTR.Data.${VERSION}.nupkg"
+
+      - uses: actions/upload-artifact@v7
+        with:
+          name: nuget
+          path: artifacts/
+          if-no-files-found: error
+
+  publish-nuget:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: nuget # must match the Environment field of the nuget.org trusted publishing policy
+      url: https://www.nuget.org/packages/AdresTR/${{ needs.build.outputs.version }}
+    permissions:
+      id-token: write # OIDC token exchanged for a short-lived NuGet API key
+    steps:
+      - uses: actions/download-artifact@v8
+        with:
+          name: nuget
+          path: artifacts
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: 10.0.x
+
+      - id: login
+        uses: NuGet/login@v1
+        with:
+          user: ${{ secrets.NUGET_USER }} # nuget.org profile name (not the e-mail address)
+
+      - name: Push packages and symbols
+        run: >
+          dotnet nuget push "artifacts/*.nupkg"
+          --api-key "${{ steps.login.outputs.NUGET_API_KEY }}"
+          --source https://api.nuget.org/v3/index.json
+          --skip-duplicate
+
+  github-release:
+    needs: [build, publish-nuget]
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/download-artifact@v8
+        with:
+          name: nuget
+          path: artifacts
+
+      - name: Create GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ needs.build.outputs.version }}
+          PRERELEASE: ${{ needs.build.outputs.prerelease }}
+        run: |
+          # Release notes: the CHANGELOG section of this version.
+          awk -v v="$VERSION" 'index($0, "## [" v "]") == 1 { found = 1; next } /^## \[/ { if (found) exit } found' CHANGELOG.md > notes.md
+          if [ ! -s notes.md ]; then echo "See [CHANGELOG.md](CHANGELOG.md)." > notes.md; fi
+          echo -e "\n**NuGet:** https://www.nuget.org/packages/AdresTR/${VERSION} · https://www.nuget.org/packages/AdresTR.Data/${VERSION}" >> notes.md
+          flags=()
+          if [ "$PRERELEASE" = "true" ]; then flags+=(--prerelease); fi
+          gh release create "$GITHUB_REF_NAME" artifacts/* --title "AdresTR ${VERSION}" --notes-file notes.md "${flags[@]}"

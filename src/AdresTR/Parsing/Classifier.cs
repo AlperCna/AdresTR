@@ -607,6 +607,18 @@ internal sealed class Classifier(Gazetteer gazetteer, string text, IReadOnlyList
 
     private void Flat(int i)
     {
+        // Glued "d3" / "D12" (flat) and "k2" (floor) after a door number.
+        if (tokens[i].Kind == TokenKind.AlphaNum && tokens[i].Fold.Length is >= 2 and <= 4 && tokens[i].Fold[0] is 'd' or 'k' &&
+            tokens[i].Fold.AsSpan(1).IndexOfAnyExceptInRange('0', '9') < 0 && i > 0 && tokens[i - 1].Kind != TokenKind.Alpha)
+        {
+            Add(new Hyp
+            {
+                From = i, To = i + 1, Role = tokens[i].Fold[0] == 'd' ? Role.Flat : Role.Floor, Local = 0.8,
+                Value = tokens[i].Fold[1..].TrimStart('0') is "" ? "0" : tokens[i].Fold[1..].TrimStart('0'),
+                TextStart = tokens[i].Start + 1, TextEnd = tokens[i].End, KeywordSupported = true,
+            });
+        }
+
         if (KeywordAt(i) == Keyword.Daire && i + 1 < tokens.Count && tokens[i + 1].Kind != TokenKind.Alpha && tokens[i + 1].Fold.Length <= 5)
         {
             Token v = tokens[i + 1];
