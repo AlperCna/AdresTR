@@ -100,8 +100,39 @@ jobs:
           --source https://api.nuget.org/v3/index.json
           --skip-duplicate
 
+  publish-container:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write # GHCR push with the workflow token
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+
+      - uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Publish multi-arch image to GHCR
+        env:
+          # "latest" only for stable releases; MSBuild reads the property from the environment.
+          ContainerImageTags: ${{ needs.build.outputs.prerelease == 'true' && needs.build.outputs.version || format('{0};latest', needs.build.outputs.version) }}
+        run: >
+          dotnet publish src/AdresTR.Api/AdresTR.Api.csproj
+          -c Release
+          -t:PublishContainer
+          -p:ContainerRegistry=ghcr.io
+
   github-release:
-    needs: [build, publish-nuget]
+    needs: [build, publish-nuget, publish-container]
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -123,6 +154,7 @@ jobs:
           awk -v v="$VERSION" 'index($0, "## [" v "]") == 1 { found = 1; next } /^## \[/ { if (found) exit } found' CHANGELOG.md > notes.md
           if [ ! -s notes.md ]; then echo "See [CHANGELOG.md](CHANGELOG.md)." > notes.md; fi
           echo -e "\n**NuGet:** https://www.nuget.org/packages/AdresTR/${VERSION} · https://www.nuget.org/packages/AdresTR.Data/${VERSION}" >> notes.md
+          printf '\n**Container:** `docker run -p 8080:8080 ghcr.io/alpercna/adrestr-api:%s`\n' "$VERSION" >> notes.md
           flags=()
           if [ "$PRERELEASE" = "true" ]; then flags+=(--prerelease); fi
           gh release create "$GITHUB_REF_NAME" artifacts/* --title "AdresTR ${VERSION}" --notes-file notes.md "${flags[@]}"

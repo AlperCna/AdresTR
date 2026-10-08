@@ -101,7 +101,7 @@ g.FindUnitsByPostalCode("34710");                       // Caferağa, …
 | 3 | Benchmark: synthetic + real + challenge sets, metrics, baselines | ✅ |
 | 4 | Parser MVP with calibrated confidence and corrections log | ✅ |
 | 5 | NuGet v0.1 (`0.1.0-preview.1`) | ✅ |
-| 6 | REST API + Docker | ⏳ |
+| 6 | REST API + Docker ([deploy guide](docs/deploy.md)) | ✅ |
 | 7 | In-browser playground | ⏳ |
 | 8 | Docs, Hugging Face dataset, v1.0 | ⏳ |
 
