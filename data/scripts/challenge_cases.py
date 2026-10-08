@@ -15,14 +15,14 @@ Optional:
     fields       overrides for derived gold.fields values.
     nonmatch_ok  a labeled il/ilce/mahalle span intentionally does not fold to the gold name
                  (e.g. parent köy of a küme evler unit, partial official name).
-    allow_null   suppress the "name resolves uniquely but id is null" check.
     pk_conflict  the postal code intentionally contradicts the written il.
 
 Rules used for gold (see eval/challenge/README.md):
 - gold.fields holds what the TEXT expresses (null when a component is not written), normalised to the
   official name for il/ilce/mahalle. Inferred components appear only in the ids.
-- gold ids are what the address determines with the staging gazetteer (aliases and postal codes
-  included). A bare postal code without any settlement name does not determine a birim.
+- gold ids are what the address determines with the staging gazetteer (eval/SCHEMA.md resolution
+  rule: name/alias match, written il/ilce/postal code, type word, settlement preference). The builder
+  recomputes them from the spans (`determine()`) and fails on any difference with `adm`.
 - "No:25/4" = dış kapı 25, iç kapı (daire) 4, unless a daire is given explicitly.
 
 No personal data: no person names (except inside official street/mahalle names), door/flat numbers
@@ -185,9 +185,9 @@ CASES = [
       (IST, None, None), ["ambiguous-name", "missing-ilce"],
       "With 'Mah.' it is a mahalle (13 in İstanbul), not the Fatih ilçe."),
     C([("Fatih", MAH), " Mah. ", ("Sapanca", ILCE)],
-      ("Sakarya", "Sapanca", "Kurtköy Fatih"), ["ambiguous-name", "missing-il"],
-      "Only a partial official name; the single Fatih-containing mahalle of Sapanca is Kurtköy Fatih.",
-      nonmatch_ok=True),
+      ("Sakarya", "Sapanca", None), ["ambiguous-name", "missing-il"],
+      "Partial official name: no unit of Sapanca is named 'Fatih' (the official one is Kurtköy Fatih), so birim is null; ilçe and il are determined (Sapanca is unique).",
+      fields={MAH: "Fatih"}),
     C([("Atatürk", MAH), " Mah. ", ("34307", PK)],
       (IST, "Küçükçekmece", "Atatürk"), ["ambiguous-name", "postal-code", "missing-ilce", "missing-il"],
       "Postal code alone selects one of the 8 Atatürk mahalle in İstanbul."),

@@ -58,7 +58,9 @@ the dataset builders (`data/scripts/`, `tools/AdresTR.Eval generate`) and the ev
   Components that are not written are `null`, even when they could be inferred.
 - **Resolution — `gold.il/ilce/birim`: what does the text determine?** Start from the units whose official name
   (or semt/historic alias) matches the written mahalle; keep those consistent with the written il, ilçe and postal
-  code. `birim` = the single remaining unit, else `null`; `ilce` = the single remaining district, else `null`;
+  code, and with the unit type the text names (`Mah./Mh.` → mahalle or OSB, `Köyü` → köy, `Mevkii` → mevkii).
+  Without a type word, real settlements (mahalle, köy, OSB) are preferred: mevkii/mezra/yayla/küme evler units with the
+  same name only count when no settlement matches. `birim` = the single remaining unit, else `null`; `ilce` = the single remaining district, else `null`;
   `il` = the written il or the single remaining province, else `null`. Without a written mahalle, `birim` is `null`
   and il/ilçe are resolved from what is written (a nationally unique ilçe name determines its il).
   A system that guesses where the text is ambiguous is penalized; real sets keep the publisher's true location in `note`.
@@ -75,9 +77,9 @@ the dataset builders (`data/scripts/`, `tools/AdresTR.Eval generate`) and the ev
 | `csbm_ad` | street name without the type word, as written but with spacing cleaned | `1203/5 Sk.` → `1203/5` |
 | `site` | site / apartment / building name without the type word | `Güneş Sitesi` → `Güneş` |
 | `blok` | block identifier | `B Blok` → `B` |
-| `dis_kapi` | door number including letter suffix, `/` kept | `No:17/A` → `17/A` |
+| `dis_kapi` | door number (dış kapı) including a letter suffix; ranges kept | `No:17/A` → `17/A`, `No:58 F` → `58F`, `No:1-3` → `1-3`; `No:17/5` → `17` (and `daire` = `5`); `No:3/2C` → `3` (and `daire` = `2C`) |
 | `kat` | floor | `K:3`, `kat 3` → `3`; `zemin` → `0`; `bodrum` → `-1` |
-| `daire` | flat (iç kapı) number | `D:5`, `daire 5` → `5` |
+| `daire` | flat (iç kapı) number, also the part after the slash in `No:17/5` | `D:5`, `daire 5`, `No:17/5` → `5` |
 | `posta_kodu` | 5 digits | `34710` |
 | `tarif` | landmark description | `PTT karşısı` → `PTT karşısı` |
 | `diger` | anything else that should be ignored (phone number, person/company name) | — |

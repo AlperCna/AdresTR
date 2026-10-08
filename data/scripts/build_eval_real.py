@@ -411,6 +411,24 @@ STRUCT_RX = re.compile(rf"(?<![a-z])({TYPE_ALT}|no|mah|mh|mahallesi)(?![a-z])")
 MAH_HEAD_RX = re.compile(r"^\s*(?P<mah>\S.*?)\s*(?<![a-z])(?:mahallesi|mah|mh)(?![a-z])\.?")
 
 
+def door_segments(t: str, s: int, e: int) -> list:
+    """Split the door text t[s:e] per eval/SCHEMA.md: `17/5` -> dis_kapi 17 + daire 5, `3 /2C` -> 3 + 2C,
+    `15/1-B` -> 15 + 1-B; a letter-only part after the slash stays in the door (`17/A`), ranges stay (`1 -3`)."""
+    raw = t[s:e]
+    k = raw.find("/")
+    if k >= 0:
+        right = raw[k + 1:].strip()
+        if right and right[0].isdigit():
+            left = raw[:k]
+            ls, le = s + len(left) - len(left.lstrip()), s + len(left.rstrip())
+            r0 = s + k + 1
+            rs = r0 + (len(raw[k + 1:]) - len(raw[k + 1:].lstrip()))
+            re_ = r0 + len(raw[k + 1:].rstrip())
+            return [(ls, le, "dis_kapi", re.sub(r"\s+", "", t[ls:le])),
+                    (rs, re_, "daire", re.sub(r"\s+", "", t[rs:re_]))]
+    return [(s, e, "dis_kapi", re.sub(r"\s+", "", raw))]
+
+
 def parse_street_door(t: str, f: str, a: int, b: int):
     """Parse original[a:b] (folded f) as `<street> <type>[ No:<door>]` or `No:<door>` or ''. Returns segment
     list or None. Segment = (start, end, label, value)."""
@@ -422,7 +440,7 @@ def parse_street_door(t: str, f: str, a: int, b: int):
     street_end = b
     if m:
         ds, de = a + m.start("no"), a + m.end("no")
-        door = (ds, de, "dis_kapi", re.sub(r"\s+", "", t[ds:de]))
+        door = door_segments(t, ds, de)
         street_end = a + m.start()
     elif re.search(r"(?<![a-z])no(?![a-z])", seg):
         return None
@@ -442,7 +460,7 @@ def parse_street_door(t: str, f: str, a: int, b: int):
         out.append((ad_s, ad_e, "csbm_ad", re.sub(r"\s+", " ", t[ad_s:ad_e]).strip()))
         out.append((tur_s, tur_e, "csbm_tur", TYPE_MAP[sm.group("tur")]))
     if door:
-        out.append(door)
+        out += door
     return out
 
 
@@ -582,14 +600,12 @@ def set_mahalle(row: dict, ilce_id: int, name: str, gaz: Gaz, ctx: dict, fuzzy: 
     return False
 
 
-def finish_full(row: dict, segs: list, slash_daire_unknown: bool) -> None:
+def finish_full(row: dict, segs: list, slash_daire_unknown: bool = False) -> None:
     """Whole text parsed: components that do not occur are annotated as null."""
     fields = row["gold"]["fields"]
     for lab in ("semt", "csbm_tur", "csbm_ad", "site", "blok", "dis_kapi", "kat", "daire", "posta_kodu", "tarif"):
         if lab not in fields:
             fields[lab] = None
-    if slash_daire_unknown:
-        fields.pop("daire", None)  # "No:5 /1" may be dış kapı/iç kapı; the iç kapı is not annotated
 
 
 def attach_spans(row: dict, segs: list) -> bool:
@@ -605,8 +621,8 @@ def attach_spans(row: dict, segs: list) -> bool:
             ok = key(w) == key(g) and w == w.strip()
         elif lab == "csbm_tur":
             ok = TYPE_MAP.get(cfold(w).rstrip(".")) == g
-        elif lab in ("dis_kapi", "blok"):
-            ok = compact(w) == compact(g)
+        elif lab in ("dis_kapi", "blok", "daire"):
+            ok = compact(w) == compact(g) and w == w.strip()
         else:
             ok = w.strip() == g
         if not ok or lab in seen:
@@ -614,7 +630,7 @@ def attach_spans(row: dict, segs: list) -> bool:
         seen.add(lab)
     # street/door values only ever come from the parse, so they must be spanned (il/ilçe may be unwritten;
     # the parsers add a segment for every admin name they consumed)
-    for lab in ("csbm_ad", "csbm_tur", "dis_kapi"):
+    for lab in ("csbm_ad", "csbm_tur", "dis_kapi", "daire"):
         if fields.get(lab) is not None and lab not in seen:
             return False
     ordered = sorted(segs)
@@ -686,7 +702,7 @@ def build_ibb_text_rows(source: str, recs: list[dict], gaz: Gaz, stats: collecti
             segs = sd + segs_tail
             for (s, e, lab, val) in sd:
                 row["gold"]["fields"][lab] = val
-            finish_full(row, segs, "/" in (row["gold"]["fields"].get("dis_kapi") or ""))
+            finish_full(row, segs)
             stats["parsed: full"] += 1
         else:
             stats["parsed: admin only"] += 1
@@ -695,6 +711,7 @@ def build_ibb_text_rows(source: str, recs: list[dict], gaz: Gaz, stats: collecti
         ist = re.search(r"(?<![a-z])istanbul(?![a-z])", f)
         ctx["w"] = {"il": "no" if not ist or sd is not None else "unknown", "ilce": "yes", "mahalle": "yes"}
         ctx["w_mah"] = mah_col
+        ctx["w_type"] = None  # İBB tail "MAHALLE/İLÇE" has no type word
         row["_entity"] = [("name", source, key(name), ilce_id)]
         row["_ctx"] = ctx
         row["_segs"] = segs if "spans" in row else segs_tail
@@ -791,6 +808,7 @@ def load_ibb_pazar(gaz: Gaz, stats) -> list[dict]:
             row.pop("spans", None)
         ctx["w"] = {"il": "yes", "ilce": "yes", "mahalle": "yes"}
         ctx["w_mah"] = mah_name
+        ctx["w_type"] = "mahalle"  # "X mh"
         row["_entity"] = [("name", "ibb-pazar", ilce_id, key(r.get("Pazar Adı") or ""))]
         row["_ctx"] = ctx
         row["_segs"] = segs
@@ -887,15 +905,16 @@ def load_izmir_eczane(gaz: Gaz, stats) -> list[dict]:
                     if re.match(r"\s*[a-z](?![a-z])|[/\-a-z0-9]", tail):
                         door_ok = False
                     else:
-                        fields["dis_kapi"] = re.sub(r"\s+", "", text[m.start("no"):m.end("no")])
-                        segs.append((m.start("no"), m.end("no"), "dis_kapi", fields["dis_kapi"]))
+                        for dseg in door_segments(text, m.start("no"), m.end("no")):
+                            fields[dseg[2]] = dseg[3]
+                            segs.append(dseg)
                 tsegs, full = tail_admin(text, f, tail_s, fields.get("ilce"), "İzmir")
                 text_full = full and door_ok
                 if full and door_ok and fields.get("ilce") is not None:
                     segs += tsegs
                     if not m.group("no"):
                         fields["dis_kapi"] = None
-                    finish_full(row, segs, "/" in (fields.get("dis_kapi") or ""))
+                    finish_full(row, segs)
                     stats["parsed: full"] += 1
                 else:
                     segs = None
@@ -938,6 +957,7 @@ def load_izmir_eczane(gaz: Gaz, stats) -> list[dict]:
             "il": "yes" if il_written else ("no" if text_full or not any_il_word else "unknown"),
         }
         ctx["w_mah"] = mah_name
+        ctx["w_type"] = "mahalle" if mah_name else None  # written as "X MAH./MH./MAHALLESİ"
         row["_entity"] = [("name", "izmir-eczane", key(r.get("ADI") or ""), ilce_id),
                           ("id", "izmir-eczane", r.get("ECZANE_ID"))]
         row["_ctx"] = ctx
@@ -972,11 +992,9 @@ def izmir_structured_rows(source: str, recs: list[dict], gaz: Gaz, stats, entity
             continue
         fields = row["gold"]["fields"]
         fields["csbm_ad"] = yol
-        fields["dis_kapi"] = kapi or None
-        for lab in ("semt", "site", "blok", "kat", "posta_kodu", "tarif"):
+        fields["dis_kapi"] = None
+        for lab in ("semt", "site", "blok", "kat", "daire", "posta_kodu", "tarif"):
             fields[lab] = None
-        if "/" not in kapi:
-            fields["daire"] = None
         p = len(mah_col)
         segs = [(0, p, "mahalle", mah_col)]
         p += len(" MAH. ")
@@ -984,7 +1002,9 @@ def izmir_structured_rows(source: str, recs: list[dict], gaz: Gaz, stats, entity
         p += len(yol)
         if kapi:
             p += len(" NO:")
-            segs.append((p, p + len(kapi), "dis_kapi", kapi))
+            for dseg in door_segments(text, p, p + len(kapi)):
+                fields[dseg[2]] = dseg[3]
+                segs.append(dseg)
             p += len(kapi)
         p += 1
         segs.append((p, p + len(ilce_col), "ilce", ilce_col))
@@ -994,6 +1014,7 @@ def izmir_structured_rows(source: str, recs: list[dict], gaz: Gaz, stats, entity
             row.pop("spans", None)
         ctx["w"] = {"il": "yes", "ilce": "yes", "mahalle": "yes"}
         ctx["w_mah"] = mah_col
+        ctx["w_type"] = "mahalle"  # template "{MAHALLE} MAH."
         row["_entity"] = [("name", entity_prefix, key(r.get("ADI") or ""), ilce_id)]
         row["_ctx"] = ctx
         row["_segs"] = segs
@@ -1110,6 +1131,20 @@ def _unique(xs):
     return xs.pop() if len(xs) == 1 else None
 
 
+SETTLEMENT_TURS = {"mahalle", "koy", "osb"}
+TYPE_WORD_TURS = {"mahalle": {"mahalle", "osb"}, "koy": {"koy"}, "mevki": {"mevki"}}
+
+
+def type_filter(cands: set, written_type: str | None, gaz: Gaz) -> set:
+    """eval/SCHEMA.md: a written type word restricts the unit type (`Mah.` -> mahalle/OSB, `Köyü` -> köy,
+    `Mevkii` -> mevkii); without one, settlements (mahalle, köy, OSB) win over mevkii/mezra/yayla/küme evler/site
+    units of the same name, which only count when no settlement matches."""
+    if written_type:
+        return {b for b in cands if gaz.birim[b]["tur"] in TYPE_WORD_TURS[written_type]}
+    settled = {b for b in cands if gaz.birim[b]["tur"] in SETTLEMENT_TURS}
+    return settled or cands
+
+
 def retarget(row: dict, ctx: dict, gaz: Gaz) -> None:
     """Turn the publisher's true location (built by the loaders) into text-based gold.
 
@@ -1159,8 +1194,10 @@ def retarget(row: dict, ctx: dict, gaz: Gaz) -> None:
             keys.add(key(fields["mahalle"]))
         cands = {b for k in keys for b in gaz.units_by_key.get(k, ())}
         cands |= {b for k in keys for b in gaz.alias_units.get(k, ())}
+        cands = type_filter(cands, ctx.get("w_type"), gaz)
         if not fields.get("mahalle"):
-            exact = [gaz.birim[b]["ad"] for b in gaz.units_by_key.get(key(written_mah), ())]
+            exact = [gaz.birim[b]["ad"] for b in
+                     type_filter(set(gaz.units_by_key.get(key(written_mah), ())), ctx.get("w_type"), gaz)]
             if exact:
                 fields["mahalle"] = collections.Counter(exact).most_common(1)[0][0]
                 old = "mahalle written in text not found in the ilçe; not annotated"
@@ -1334,7 +1371,7 @@ def validate(paths: list[Path], gaz: Gaz | None = None) -> list[str]:
                         errors.append(f"{where}: span {lab} {w!r} != {gv!r} after folding")
                     elif lab == "csbm_tur" and TYPE_MAP.get(cfold(w).rstrip(".")) != gv:
                         errors.append(f"{where}: csbm_tur span {w!r} != {gv!r}")
-                    elif lab in ("dis_kapi", "blok") and compact(w) != compact(gv):
+                    elif lab in ("dis_kapi", "blok", "daire") and compact(w) != compact(gv):
                         errors.append(f"{where}: span {lab} {w!r} != {gv!r}")
     for k, splits in texts.items():
         if len(splits) > 1:
@@ -1419,7 +1456,9 @@ Known issues and conventions to keep in mind:
   spellings, not the text-determined ids.
 - **`Yolu` as street type.** `Alemdağ Yan Yolu` → `csbm_ad=Alemdağ Yan`, `csbm_tur=yol`; but
   `Baraj Yolu Cad.` → `csbm_ad=Baraj Yolu`, `csbm_tur=cadde` (the last type word decides).
-- **Slash doors.** `No:5 /1` → `dis_kapi=5/1`, `daire` not annotated (the `/1` may be an iç kapı).
+- **Doors (dış kapı / iç kapı).** `No:5 /1` → `dis_kapi=5`, `daire=1`; `No:3 /2C` → `3` + `2C`;
+  `No:120/1-B` → `120` + `1-B`; a letter-only part stays in the door (`No:17/A` → `17/A`, `No:58 F` → `58F`);
+  ranges stay (`No:90 -92A` → `90-92A`). Some publishers may use `/` differently; this is the schema convention.
 - **Numbered streets keep the dot as written** (`892. Sk.` → `csbm_ad=892.`); `Gazetteer.Key` ignores it.
 - **Tags are heuristic.** `ambiguous-name` follows the synthetic-set meaning (the mahalle name exists more than
   once nationally) and is therefore frequent; `landmark` can fire on names such as `İSTASYON ALTI`; `semt` is
@@ -1490,8 +1529,10 @@ from the human-written sources (`ibb-saglik`, `ibb-muhtarlik`, `izmir-eczane`).
   could not isolate (e.g. `…NO:144/AKINIK/IZMIR`, a bare semt/mahalle in the trailing text), that field is left
   **absent** rather than `null`.
 - **`gold.il/ilce/birim` = what the text determines** via the gazetteer, with the synthetic generator's rule:
-  start from the units whose official name (or semt/historic alias) matches the written mahalle, keep those in
-  the written il and ilçe; `birim` = the single remaining unit, `ilce` = the single remaining district, `il` = the
+  start from the units whose official name (or semt/historic alias) matches the written mahalle, keep only the
+  unit type the text names (`X MAH./MH.` → mahalle or OSB; İBB tails `MAHALLE/İLÇE` have no type word, so
+  settlements — mahalle, köy, OSB — win over mevkii/mezra/yayla/küme evler/site units of the same name), keep
+  those in the written il and ilçe; `birim` = the single remaining unit, `ilce` = the single remaining district, `il` = the
   written il or the single remaining province, else `null`. Without a written mahalle `birim` is `null` and
   il/ilçe come from what is written (a nationally unique ilçe name determines its il). If a needed component's
   presence is undecidable (see above), a non-unique result is left absent instead of `null`.
@@ -1505,8 +1546,9 @@ from the human-written sources (`ibb-saglik`, `ibb-muhtarlik`, `izmir-eczane`).
   street type is not published, so `csbm_tur` is absent. Semt pazarı rows with both a cadde and a sokak column
   leave the street unannotated.
 - **Null fields**: when the whole text was parsed, components that do not occur (`semt`, `site`, `blok`, `kat`,
-  `daire`, `posta_kodu`, `tarif`, missing street/door) are annotated as `null`. For slash doors (`No:5 /1`)
-  `dis_kapi` keeps the slash (`5/1`) and `daire` is left unannotated.
+  `daire`, `posta_kodu`, `tarif`, missing street/door) are annotated as `null`. Doors follow the schema's
+  dış kapı / iç kapı split: `No:5 /1` → `dis_kapi=5`, `daire=1` (both spanned separately); `No:17/A` →
+  `dis_kapi=17/A`, `daire=null`. Templated İzmir rows split `KAPINO` the same way.
 - **posta_kodu** only if written in the text (none were found).
 - **spans** only when the whole text was parsed and every labeled substring equals its gold value after
   folding (`Gazetteer.Key`); otherwise the row has no `spans` (partial spans are never written).
