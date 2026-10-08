@@ -1,0 +1,301 @@
+variant,canonical,component,notes,source
+mahalle,mahalle,mahalle,resmi terim; 'Yeni Mahalle Mah.' gibi adın içinde de geçer,Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/h | libpostal:dictionaries/tr/qualifiers.txt | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+mahallesi,mahalle,mahalle,en yaygın tam yazım,libpostal:dictionaries/tr/qualifiers.txt | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+mah,mahalle,mahalle,,libpostal:dictionaries/tr/qualifiers.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+mah.,mahalle,mahalle,yapışık yazımı sık: 'MAH.GÜNSAZAK',github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+mh,mahalle,mahalle,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+mh.,mahalle,mahalle,yapışık yazımı sık: 'MH.SEYFİ',github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+mhl,mahalle,mahalle,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+mhl.,mahalle,mahalle,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+mhal.,mahalle,mahalle,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+m.,mahalle,mahalle,"ÇOK RİSKLİ: kişi adı kısaltması da olur ('M.Akif Cd.', 'M.İHSAN ZEYREK SOK'); yalnız mahalle bağlamında aç",github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+mahal,mahalle,mahalle,kesik yazım,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+mahlesi,mahalle,mahalle,yazım hatası (harf düşmesi),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+mhallesi,mahalle,mahalle,yazım hatası (harf düşmesi),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+mahellesi,mahalle,mahalle,yazım hatası (ünlü değişimi),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+mahelle,mahalle,mahalle,yazım hatası (ünlü değişimi),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+maallesi,mahalle,mahalle,yazım hatası (h düşmesi),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+mahalesi,mahalle,mahalle,yazım hatası (tek l),github:mtarikozcan/turkish-address-system (config/spelling_corrections.json; kısmen sentetik olabilir)
+mahallesı,mahalle,mahalle,kırık i (ı ile yazılmış),github:mtarikozcan/turkish-address-system (config/spelling_corrections.json; kısmen sentetik olabilir)
+mahalesı,mahalle,mahalle,tek l + kırık i,github:mtarikozcan/turkish-address-system (config/spelling_corrections.json; kısmen sentetik olabilir)
+cadde,cadde,cadde,resmi terim,Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/e | libpostal:dictionaries/tr/street_types.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+caddesi,cadde,cadde,,libpostal:dictionaries/tr/street_types.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+cad,cadde,cadde,,libpostal:dictionaries/tr/street_types.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+cad.,cadde,cadde,yapışık yazımı sık: 'CAD.NO:60/B',github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:TBB şube listesi (tbb.org.tr; Denizli sorgusu) | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+cd,cadde,cadde,,libpostal:dictionaries/tr/street_types.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+cd.,cadde,cadde,İBB verisinde 'Bağdat Cd' noktasız da geçer,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+cdd.,cadde,cadde,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+cadd,cadde,cadde,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR)
+cde,cadde,cadde,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+cads,cadde,cadde,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+cds,cadde,cadde,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+cadessi,cadde,cadde,yazım hatası (çift s),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+caddee,cadde,cadde,yazım hatası (çift e),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+cadesi,cadde,cadde,yazım hatası (tek d),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:mtarikozcan/turkish-address-system (config/spelling_corrections.json; kısmen sentetik olabilir)
+cadeesi,cadde,cadde,yazım hatası ('Kaptanı Derya Cadeesi'),gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+caddesı,cadde,cadde,kırık i,github:mtarikozcan/turkish-address-system (config/spelling_corrections.json; kısmen sentetik olabilir)
+cadesı,cadde,cadde,tek d + kırık i,github:mtarikozcan/turkish-address-system (config/spelling_corrections.json; kısmen sentetik olabilir)
+sokak,sokak,sokak,resmi terim; UAVT kısaltması 'SK.',Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/o | libpostal:dictionaries/tr/street_types.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+sokağı,sokak,sokak,,libpostal:dictionaries/tr/street_types.txt | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+sokagi,sokak,sokak,ASCII gözlendi,libpostal:dictionaries/tr/street_types.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+sok,sokak,sokak,,libpostal:dictionaries/tr/street_types.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+sok.,sokak,sokak,yapışık yazımı sık: 'SOK.NO:1-3A'; OSM'de '1 Nolu Sümbül Sok.',github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+sk,sokak,sokak,numaralı sokakta sık: '7448/4 SK',libpostal:dictionaries/tr/street_types.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+sk.,sokak,sokak,en yaygın kısaltma; '2437. Sk.' gibi numaralı sokaklar,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+sokak.,sokak,sokak,gereksiz nokta: '4811 SOKAK. NO14/A',gözlem:İzmir BB Açık Veri eczane-listesi.csv
+skk.,sokak,sokak,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+soka,sokak,sokak,kesik yazım,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR)
+sokar,sokak,sokak,yazım hatası (k→r),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+soklar,sokak,sokak,yazım hatası,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+sokalar,sokak,sokak,yazım hatası ('sokaklar' kastı olabilir),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+sokk,sokak,sokak,yazım hatası (çift k),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+sokakk,sokak,sokak,yazım hatası (çift k),github:mtarikozcan/turkish-address-system (config/spelling_corrections.json; kısmen sentetik olabilir)
+sokaği,sokak,sokak,ğ korunmuş ama ı→i kırık,github:mtarikozcan/turkish-address-system (config/spelling_corrections.json; kısmen sentetik olabilir)
+so.,sokak,sokak,RİSKLİ: İzmir verisinde 'SO' = Sağlık Ocağı ('GEDİZ SO KARŞISI'),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+bulvar,bulvar,bulvar,resmi terim,Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/d | libpostal:dictionaries/tr/street_types.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+bulvarı,bulvar,bulvar,,libpostal:dictionaries/tr/street_types.txt | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+bulvari,bulvar,bulvar,ASCII gözlendi ('Menderes Bulvari'),libpostal:dictionaries/tr/street_types.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+blv,bulvar,bulvar,,libpostal:dictionaries/tr/street_types.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+blv.,bulvar,bulvar,yapışık: 'BLV.NO:61/C',github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+bl,bulvar,bulvar,"ÇAKIŞMA: libpostal 'bl'=bulvarı, mtarikozcan 'bl'=blok; bağlamdan çöz",libpostal:dictionaries/tr/street_types.txt
+bul.,bulvar,bulvar,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+bulv,bulvar,bulvar,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+bulv.,bulvar,bulvar,"'Ankara Bulv.', 'SAIR ESREF BULV.'",github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:TBB şube listesi (tbb.org.tr; Denizli sorgusu) | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+blvr,bulvar,bulvar,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+blvr.,bulvar,bulvar,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+bulvr,bulvar,bulvar,yazım hatası,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+bulw,bulvar,bulvar,v→w klavye/telaffuz hatası,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+bulwar,bulvar,bulvar,v→w,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+bulbar,bulvar,bulvar,v→b,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+bulvri,bulvar,bulvar,yazım hatası,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+bulvarii,bulvar,bulvar,yazım hatası,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+bulvaa,bulvar,bulvar,yazım hatası,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+bulver,bulvar,bulvar,yazım hatası,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+bulvarıı,bulvar,bulvar,yazım hatası (çift ı),github:mtarikozcan/turkish-address-system (config/spelling_corrections.json; kısmen sentetik olabilir)
+meydan,meydan,meydan,resmi terim; 'Meydan Sokağı' gibi ad içinde de geçer,Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/i | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+meydanı,meydan,meydan,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+meydani,meydan,meydan,ASCII,github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+mey.,meydan,meydan,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+meyd.,meydan,meydan,,github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+myd.,meydan,meydan,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+küme evler,küme evler,kume_evler,resmi terim (sokağa bağlanamayan dağınık binalar),Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/ğ | PTT A.Ş. Adres Standardı Uygulama Talimatı (16.07.2018) md.3.8 | gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+küme evleri,küme evler,kume_evler,"'ODTÜ KÜME EVLERİ', 'KIROVASI KÜME EVLERİ'; ASCII 'kume evleri' katlama ile kapsanır",gözlem:MEB okul iletişim sayfası (ankarafenlisesi.meb.k12.tr) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+kümeevler,küme evler,kume_evler,bitişik yazım ('Akkuzulu Kümeevler Sokağı'),gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+kümeevleri,küme evler,kume_evler,bitişik yazım ('Kuruçay Kümeevleri Sokağı'),gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+kume evler,küme evler,kume_evler,"ASCII gözlendi (OSM, tek kayıt)",gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+çıkmaz,çıkmaz,cikmaz,dış kapı numaralama kuralları çıkmaz sokakları da kapsar,Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.26/2 | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+çıkmazı,çıkmaz,cikmaz,'Halife Çıkmazı Sokağı' gibi tür üst üste binebilir,gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+çikmaz,çıkmaz,cikmaz,kırık ı ('4 Nolu Çikmaz Sokak'),gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+çkm,çıkmaz,cikmaz,[DOĞRULANMADI] taginfo'da bulunamadı,yaygın kullanım [DOĞRULANMADI]
+site,site,site,resmi terim (bir merkezden yönetilen bina grubu),Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/n | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+sitesi,site,site,mahalle adı içinde de geçer: 'BASINSİTESİ MAH.',github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+sit.,site,site,,github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR)
+ste,site,site,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+ste.,site,site,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+st,site,site,RİSKLİ: kısa; 'st' başka anlamlar (stadyum vb.) taşıyabilir,github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+st.,site,site,RİSKLİ: kısa,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+sıtesı,site,site,kırık i ×2,github:mtarikozcan/turkish-address-system (config/spelling_corrections.json; kısmen sentetik olabilir)
+sanayi sitesi,sanayi sitesi,site,"'İsteks Sanayi Sitesi', 'ATA SANAYİ SİTESİ'",gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+san. sit.,sanayi sitesi,site,[DOĞRULANMADI] incelenen veride görülmedi,yaygın kullanım [DOĞRULANMADI]
+apartman,apartman,apartman,,libpostal:dictionaries/tr/unit_types_numbered.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+apartmanı,apartman,apartman,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+apartmani,apartman,apartman,ASCII,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+apt,apartman,apartman,,libpostal:dictionaries/tr/unit_types_numbered.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+apt.,apartman,apartman,'Ufuk Apt. Altı' (tarif ile birlikte),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:TBB şube listesi (tbb.org.tr; Denizli sorgusu) | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+ap,apartman,apartman,,libpostal:dictionaries/tr/unit_types_numbered.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+ap.,apartman,apartman,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+aprt,apartman,apartman,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+aprt.,apartman,apartman,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+aprtmn,apartman,apartman,ünlü düşmesi,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+apartmn,apartman,apartman,ünlü düşmesi,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+apartm,apartman,apartman,kesik,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+apartaman,apartman,apartman,yazım hatası (fazla a),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+apart,apartman,apartman,RİSKLİ: 'apart otel' ile çakışır,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+blok,blok,blok,"'A BLOK', 'C2 BLOK', '96 BLOK' — harf/sayı önde veya arkada olabilir",github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:İBB Açık Veri saglik-tesisleri.xlsx
+bl.,blok,blok,ÇAKIŞMA: bulvar ile ('bl' libpostal'da bulvarı),github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+blokları,blok,blok,'İETT Blokları Yolu' gibi ad içinde de geçer,github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx
+bloklari,blok,blok,ASCII,github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+no,no,dis_kapi,,libpostal:dictionaries/tr/number.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+no:,no,dis_kapi,"en yaygın; 'No: 76/C', 'No:10 /1' boşluk varyasyonları",libpostal:dictionaries/tr/number.txt | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+no :,no,dis_kapi,'No : 175 / A',libpostal:dictionaries/tr/number.txt | gözlem:TBB şube listesi (tbb.org.tr; Denizli sorgusu)
+no.,no,dis_kapi,'NO.74/C',github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+numara,no,dis_kapi,,libpostal:dictionaries/tr/number.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+numarası,no,dis_kapi,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+numarasi,no,dis_kapi,ASCII,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+num.,no,dis_kapi,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+nr,no,dis_kapi,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+nr.,no,dis_kapi,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+n.,no,dis_kapi,RİSKLİ: kısa,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+numr,no,dis_kapi,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+nmr,no,dis_kapi,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+nmra,no,dis_kapi,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+nmara,no,dis_kapi,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+nomara,no,dis_kapi,yazım hatası (u→o),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+numraa,no,dis_kapi,yazım hatası,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+nomra,no,dis_kapi,yazım hatası,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+nolu,numaralı,dis_kapi,"ÇAKIŞMA: çoğu zaman kapı no DEĞİL, kurum/sokak sırası: '5 Nolu ASM', '1 Nolu Sümbül Sok.'",libpostal:dictionaries/tr/number.txt | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+no lu,numaralı,dis_kapi,ayrık yazım: '5 NO LU AÇS'; bkz. nolu,gözlem:İzmir BB Açık Veri eczane-listesi.csv
+numaralı,numaralı,dis_kapi,bkz. nolu,yaygın kullanım [DOĞRULANMADI]
+kapı,kapı,dis_kapi,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+kap.,kapı,dis_kapi,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+kp.,kapı,dis_kapi,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+dış kapı,dış kapı,dis_kapi,resmi terim (dış kapı numarası),Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.26 | PTT A.Ş. Adres Standardı Uygulama Talimatı (16.07.2018) md.5.3.1
+bina no,no,dis_kapi,[DOĞRULANMADI] yönetmelik 'bina numarası' terimini kullanır,Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/b
+kat,kat,kat,,libpostal:dictionaries/tr/level_types_numbered.txt | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+katı,kat,kat,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+kati,kat,kat,ASCII; finch-stack bunu yanlışlıkla daire'ye eşliyor,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+katt,kat,kat,yazım hatası,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:mtarikozcan/turkish-address-system (config/spelling_corrections.json; kısmen sentetik olabilir)
+k,kat,kat,ÇAKIŞMA: libpostal 'k' kat ve kuzey olarak listeler (ambiguous_expansions.txt),libpostal:dictionaries/tr/level_types_numbered.txt | libpostal:dictionaries/tr/ambiguous_expansions.txt
+k.,kat,kat,ÇAKIŞMA: whofeeddrogon sözlüğü 'k.' için hem kat hem kuzey içerir,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+k:,kat,kat,regex ile 'K:3' → kat 3,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+kt,kat,kat,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+kt.,kat,kat,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+zemin kat,zemin kat,kat,resmi tanım: ana girişe göre yol seviyesindeki kat,Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/s | libpostal:dictionaries/tr/level_types_standalone.txt
+zemin,zemin kat,kat,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+zk,zemin kat,kat,,libpostal:dictionaries/tr/level_types_standalone.txt
+z.k,zemin kat,kat,,libpostal:dictionaries/tr/level_types_standalone.txt
+z.k.,zemin kat,kat,[DOĞRULANMADI] sonda noktalı biçim,yaygın kullanım [DOĞRULANMADI]
+z k,zemin kat,kat,,libpostal:dictionaries/tr/level_types_standalone.txt
+z.,zemin kat,kat,RİSKLİ: tek harf,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+zmn.,zemin kat,kat,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+z,zemin kat,daire,"iç kapı öneki: zemin kat iç kapı numaralarının önüne 'Z' konur (Z1, Z2)",Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.31
+bodrum,bodrum kat,kat,,libpostal:dictionaries/tr/level_types_basement.txt | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+bodrum kat,bodrum kat,kat,,yaygın kullanım [DOĞRULANMADI]
+b.k.,bodrum kat,kat,[DOĞRULANMADI]; 'b' tek başına batı olabilir,yaygın kullanım [DOĞRULANMADI]
+bdr.,bodrum kat,kat,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+bod.,bodrum kat,kat,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+asma kat,asma kat,kat,,libpostal:dictionaries/tr/level_types_mezzanine.txt
+çatı,çatı katı,kat,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+çt.,çatı katı,kat,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+cat.,çatı katı,kat,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+daire,daire,daire,iç kapı numarası,libpostal:dictionaries/tr/unit_types_numbered.txt | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+dairesi,daire,daire,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+d,daire,daire,ÇAKIŞMA: libpostal 'd' daire ve doğu olarak listeler,libpostal:dictionaries/tr/unit_types_numbered.txt | libpostal:dictionaries/tr/ambiguous_expansions.txt
+d.,daire,daire,ÇAKIŞMA: whofeeddrogon sözlüğü 'd.' için hem doğu hem daire içerir,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+d:,daire,daire,'D:No:10' gibi bozuk birleşimler görülür,gözlem:İBB Açık Veri saglik-tesisleri.xlsx
+da,daire,daire,RİSKLİ: Türkçe 'da/de' bağlacı ile çakışır (whofeeddrogon 'da'yı stopword olarak da siler),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+da.,daire,daire,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+dai,daire,daire,regex 'DAI:5',github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+dr,daire,daire,ÇAKIŞMA: Asli-nur-t 'dr.' → doktor; ad önünde unvan ('Dr. Sadık Ahmet Cad.'),github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+dr.,daire,daire,ÇAKIŞMA: 'Dr. Sadık Ahmet Cad.' (İBB) — sayıdan önce mi ada önce mi bak,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx
+dair,daire,daire,kesik/hatalı,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+dair.,daire,daire,,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+dairsi,daire,daire,yazım hatası,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+dairisi,daire,daire,yazım hatası,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+dairee,daire,daire,yazım hatası,github:mtarikozcan/turkish-address-system (config/spelling_corrections.json; kısmen sentetik olabilir)
+daıre,daire,daire,kırık i,github:mtarikozcan/turkish-address-system (config/spelling_corrections.json; kısmen sentetik olabilir)
+iç kapı,iç kapı,daire,resmi terim (iç kapı numarası),Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.31 | PTT A.Ş. Adres Standardı Uygulama Talimatı (16.07.2018) md.5.3.1
+oda,oda,daire,bağımsız bölüm türü,libpostal:dictionaries/tr/unit_types_numbered.txt
+ofis,ofis,daire,bağımsız bölüm türü,libpostal:dictionaries/tr/unit_types_numbered.txt
+posta kodu,posta kodu,posta_kodu,resmi terim; 5 hane,Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/l | PTT A.Ş. Adres Standardı Uygulama Talimatı (16.07.2018) md.5.1
+pk,posta kutusu,other,"ÇAKIŞMA: PK = posta KUTUSU (libpostal, Asli-nur-t), posta KODU değil; mtarikozcan 'pk'=parkı",libpostal:dictionaries/tr/post_office.txt | github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | PTT A.Ş. Adres Standardı Uygulama Talimatı (16.07.2018) md.5.3.1
+p.k,posta kutusu,other,bkz. pk,libpostal:dictionaries/tr/post_office.txt
+p.k.,posta kutusu,other,bkz. pk,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+p k,posta kutusu,other,bkz. pk,libpostal:dictionaries/tr/post_office.txt
+pk.,posta kutusu,other,bkz. pk,github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR)
+posta kutusu,posta kutusu,other,,libpostal:dictionaries/tr/post_office.txt
+köy,köy,koy,'TEPEKÖY MAH.' gibi ad içinde de geçer,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+köyü,köy,koy,,libpostal:dictionaries/tr/qualifiers.txt | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+koyu,köy,koy,ASCII,libpostal:dictionaries/tr/qualifiers.txt
+koy,köy,koy,ASCII; 'koy' (deniz koyu) ile çakışır,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+ky,köy,koy,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+ky.,köy,koy,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+mezra,mezra,koy,resmi terim (köye bağlı kırsal yerleşim),Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/j | PTT A.Ş. Adres Standardı Uygulama Talimatı (16.07.2018) md.5.3.1
+mevkii,mevkii,mevkii,"'Taşocakları Mevkii', 'KESİKBAŞ MEVKİİ'",gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+mevki,mevkii,mevkii,yönetmelikteki yazım; tek i ile de yaygın,Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/ı | PTT A.Ş. Adres Standardı Uygulama Talimatı (16.07.2018) md.5.3.1 | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+osb,organize sanayi bölgesi,osb,,github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR)
+organize sanayi bölgesi,organize sanayi bölgesi,osb,,github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR)
+org.,organize,osb,RİSKLİ: 'ORG. HULUSİ AKAR' gibi askeri rütbe (orgeneral) ile çakışır,github:Asli-nur-t/T3-TEKNOFEST-2025-Hepsiburada-Address-Matching-Resolution (main.ipynb _ABBR) | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+aosb,atatürk organize sanayi bölgesi,osb,yerel özel kısaltma (İzmir/Çiğli),gözlem:İzmir BB Açık Veri eczane-listesi.csv
+o.s.b.,organize sanayi bölgesi,osb,[DOĞRULANMADI],yaygın kullanım [DOĞRULANMADI]
+kuzey,kuzey,yon,,libpostal:dictionaries/tr/directionals.txt | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+k,kuzey,yon,ÇAKIŞMA: kat,libpostal:dictionaries/tr/directionals.txt | libpostal:dictionaries/tr/ambiguous_expansions.txt
+k.,kuzey,yon,ÇAKIŞMA: kat,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+kuz.,kuzey,yon,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+güney,güney,yon,,libpostal:dictionaries/tr/directionals.txt | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+guney,güney,yon,ASCII,libpostal:dictionaries/tr/directionals.txt | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+g,güney,yon,RİSKLİ: tek harf,libpostal:dictionaries/tr/directionals.txt | libpostal:dictionaries/tr/ambiguous_expansions.txt
+g.,güney,yon,RİSKLİ: tek harf,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+gün.,güney,yon,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+gun.,güney,yon,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+doğu,doğu,yon,,libpostal:dictionaries/tr/directionals.txt | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+dogu,doğu,yon,ASCII,libpostal:dictionaries/tr/directionals.txt | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+d,doğu,yon,ÇAKIŞMA: daire (sayıdan önce/sonra gelirse daire),libpostal:dictionaries/tr/directionals.txt | libpostal:dictionaries/tr/ambiguous_expansions.txt
+d.,doğu,yon,ÇAKIŞMA: daire,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+doğ.,doğu,yon,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+dog.,doğu,yon,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+batı,batı,yon,,libpostal:dictionaries/tr/directionals.txt | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+bati,batı,yon,ASCII,libpostal:dictionaries/tr/directionals.txt | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+b,batı,yon,RİSKLİ: blok harfi ('B BLOK') ve harfli kapı no ('No:17 B') ile çakışır,libpostal:dictionaries/tr/directionals.txt | libpostal:dictionaries/tr/ambiguous_expansions.txt | gözlem:İBB Açık Veri saglik-tesisleri.xlsx
+b.,batı,yon,RİSKLİ: tek harf,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+bat.,batı,yon,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+sağ,sağ,yon,iç kapı yönü (birim yönü),libpostal:dictionaries/tr/unit_directions.txt
+sag,sağ,yon,ASCII,libpostal:dictionaries/tr/unit_directions.txt
+sol,sol,yon,iç kapı yönü,libpostal:dictionaries/tr/unit_directions.txt
+yolu,yol,other,yol tipi (bileşen listesinde yok; csbm_tur): 'Baraj Yolu Cad.' gibi tür yığılması,libpostal:dictionaries/tr/street_types.txt | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx
+yol,yol,other,yol tipi,libpostal:dictionaries/tr/street_types.txt | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+yokuşu,yokuş,other,yol tipi: 'Balcı Yokuşu No:4',gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+çevre yolu,çevre yolu,other,yol tipi,libpostal:dictionaries/tr/street_types.txt
+çevreyolu,çevre yolu,other,bitişik,libpostal:dictionaries/tr/street_types.txt
+asfaltı,asfalt,other,yol tipi: 'Eski Edirne Asfaltı Cad.',gözlem:İBB Açık Veri saglik-tesisleri.xlsx | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+km.,kilometre,other,karayolu konumu: 'Datça Yolu 35. Km.',gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+iş merkezi,iş merkezi,other,bina adı türü: 'EROĞLU İŞ MERKEZİ',gözlem:İzmir BB Açık Veri eczane-listesi.csv
+işhanı,iş hanı,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+işhan,iş hanı,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+pasajı,pasaj,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+pasaj,pasaj,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+pas.,pasaj,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+psj.,pasaj,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+plaza,plaza,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+plazası,plaza,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+plz.,plaza,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+çarşısı,çarşı,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+çarşı,çarşı,other,'HESKOOP Çarşı Blok Sk.' gibi ad içinde de geçer,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx
+çrş.,çarşı,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+avm,alışveriş merkezi,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+a.v.m.,alışveriş merkezi,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+alışveriş merkezi,alışveriş merkezi,other,,gözlem:İzmir BB Açık Veri eczane-listesi.csv | gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+bin.,bina,other,RİSKLİ: sayı sözcüğü 'bin' ile çakışır,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+hast.,hastane,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+eğit. ve araşt.,eğitim ve araştırma,other,kurum adı kısaltması: 'EĞİT. VE ARAŞT. HASTANESİ',gözlem:İzmir BB Açık Veri eczane-listesi.csv
+asm,aile sağlığı merkezi,other,'5 Nolu ASM' (tarif içinde),gözlem:İzmir BB Açık Veri eczane-listesi.csv
+so,sağlık ocağı,other,[ÇIKARIM] 'GEDİZ SO KARŞISI'; sokak kısaltması 'so.' ile çakışır,gözlem:İzmir BB Açık Veri eczane-listesi.csv
+ist.,istasyon,other,ÇAKIŞMA: mtarikozcan 'ist.' = İstanbul,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+durağı,durak,other,tarif: 'ÇİTLENBİK DURAĞI',github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+karşısı,karşısı,other,tarif (yer tarifi),github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+karşı,karşısı,other,tarif,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+krş.,karşısı,other,tarif: 'Buca Devlet Hastanesi Krş.',github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+yanı,yanı,other,tarif: 'MEZARLIK YANI',github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+arkası,arkası,other,tarif,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+önü,önü,other,tarif,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+altı,altı,other,tarif: 'Ufuk Apt. Altı'; ÇAKIŞMA: sayı 'altı' (6),github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | gözlem:TBB şube listesi (tbb.org.tr; Denizli sorgusu)
+üstü,üstü,other,tarif: 'TANSAŞ ÜSTÜ',github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+köşe,köşe,other,kesişim,libpostal:dictionaries/tr/cross_streets.txt
+köşesinde,köşe,other,kesişim,libpostal:dictionaries/tr/cross_streets.txt
+kose,köşe,other,ASCII,libpostal:dictionaries/tr/cross_streets.txt
+arasında,arasında,other,kesişim ('X ile Y arasında'),libpostal:dictionaries/tr/cross_streets.txt
+giriş,giriş,other,'ATA CADDESİ GİRİŞİ',libpostal:dictionaries/tr/entrances.txt | github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+girişi,giriş,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+giris,giriş,other,ASCII,libpostal:dictionaries/tr/entrances.txt
+semt,semt,other,resmi olmayan alan adı; PTT adres satırında semt/bucak/belde yazılabilir,PTT A.Ş. Adres Standardı Uygulama Talimatı (16.07.2018) md.5.3.1
+bucak,bucak,other,,Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/b | PTT A.Ş. Adres Standardı Uygulama Talimatı (16.07.2018) md.5.3.1
+belde,belde,other,,PTT A.Ş. Adres Standardı Uygulama Talimatı (16.07.2018) md.5.3.1
+ilçe,ilçe,other,,libpostal:dictionaries/tr/qualifiers.txt | Adres ve Numaralamaya İlişkin Yönetmelik (RG 31.07.2006/26245) md.4/b
+merkez,merkez,other,ÇAKIŞMA: hem ilçe adı ('Merkez') hem semt eki ('GÖKTÜRK MERKEZ'),github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb) | github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İBB Açık Veri saglik-tesisleri.xlsx
+mrk.,merkez,other,,github:whofeeddrogon/TEKNOFEST-2025-Hepsiburada-AI-Powered-Address-Parsing-Hackathon (notebooks/standardize.ipynb)
+ist,istanbul,other,il kısaltması; ÇAKIŞMA: istasyon,github:mtarikozcan/turkish-address-system (config/abbreviations.json) | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+ank,ankara,other,il kısaltması,github:mtarikozcan/turkish-address-system (config/abbreviations.json) | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+ank.,ankara,other,il kısaltması,github:mtarikozcan/turkish-address-system (config/abbreviations.json)
+izm,izmir,other,il kısaltması,github:mtarikozcan/turkish-address-system (config/abbreviations.json) | github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+urfa,şanlıurfa,other,il halk adı,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+maraş,kahramanmaraş,other,il halk adı (FINCH ASCII 'maras' yazar),github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+içel,mersin,other,il eski adı,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+icel,mersin,other,ASCII,github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+adapazarı,sakarya,other,"DİKKAT: Adapazarı Sakarya'nın ilçesidir, il yerine kullanılır",github:finch-stack/Hepsiburada-Hackathon-Teknofest (notebook regex)
+eski,eski,other,ad öneki; 'ESKİ İZMİR CD.' / 'ESKIIZMIR' bitişik yazılır,github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+yeni,yeni,other,ad öneki; 'YENİ MAHALLE MAH.' (Yenimahalle) tür ile karışır,github:mtarikozcan/turkish-address-system (config/abbreviations.json) | gözlem:İzmir BB Açık Veri eczane-listesi.csv
+şht.,şehit,other,ad içi unvan: 'Şht. Ömer Halisdemir Blv.',gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+şehi̇t,şehit,other,kırık İ (birleşik nokta U+0307): 'Şehi̇t Er ...',gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+prof.,profesör,other,ad içi unvan: 'Prof. Dr. Hıfzı Özcan Cd',gözlem:İBB Açık Veri istanbul-ili-semt-pazarlari
+org.,orgeneral,other,ad içi rütbe: 'ORG. HULUSİ AKAR BULVARI'; ÇAKIŞMA: organize,gözlem:OSM taginfo Türkiye addr:street (yalnız kanıt; veri kopyalanmadı)
+ve,ve,other,kesişim/stopword,libpostal:dictionaries/tr/stopwords.txt | libpostal:dictionaries/tr/cross_streets.txt

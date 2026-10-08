@@ -233,7 +233,7 @@ Her fazın sonunda: **çalışan bir şey + test + commit + kısa not (CHANGELOG
 - [ ] `TurkishText.ToUpperTr`, `ToTitleTr`: i↔İ, ı↔I eşlemeleri elle; çıktıda "İstanbul", "Iğdır" doğru olmalı
 - [ ] `TurkishText.Normalize`: NFC (ICU yoksa güvenli geri dönüş), orijinal metne **offset haritası**
 - [ ] Testler:
-  - **Birim:** `"İSTANBUL"`, `"istanbul"`, `"ISTANBUL"`, `"i̇stanbul"` (U+0307) → aynı anahtar
+  - **Birim:** `"İSTANBUL"`, `"istanbul"`, `"ISTANBUL"`, `"i\u0307stanbul"` (U+0307) → aynı anahtar
   - **Özellik tabanlı (CsCheck):**
     - `Fold(Fold(x)) == Fold(x)`
     - büyük/küçük harf ve aksan değişmezliği
@@ -534,17 +534,41 @@ Her fazın sonunda: **çalışan bir şey + test + commit + kısa not (CHANGELOG
 
 ---
 
-## 6. Senin karar vermen gerekenler
+## 6. Alınan kararlar (2026-10-08)
 
-1. **Proje adı:** `AdresTR` (NuGet'te boş) mı, başka bir ad mı? Diğer boş adaylar: `TurkiyeAdres`, `TrAddress`.
-2. **Playground:** Blazor WASM (önerilen; tarayıcıda çalışır, KVKK artısı) mı, Angular + API mi (bildiğin stack)?
-3. **Lisans:** MIT (önerilen) mi, Apache-2.0 mi?
-4. **README dili:** EN ana + TR ikinci dosya (önerilen) mi, yalnızca TR mi?
-5. **Haftalık zaman:** Takvim 15–20 saat varsayıyor; farklıysa takvimi güncellerim.
-6. **Veri sahiplerine izin e-postası:** Taslakları ben yazarım, sen gönderirsin.
+| Konu | Karar |
+|---|---|
+| Ad | **AdresTR**; repo [AlperCna/AdresTR](https://github.com/AlperCna/AdresTR) |
+| Playground | **Blazor WASM**; parser tarayıcıda çalışır |
+| Lisans | Kod **MIT**, veri kaynak bazında (`data/LICENSE-DATA.md`) |
+| README | İngilizce ana dosya + `README.tr.md` |
+| Veri yolu | Pakete yalnızca **PTT türevi (MIT) + Wikidata (CC0)** girer. NVİ kopyası yalnızca fark raporu için kullanılır; izin gelirse birincil kaynak olur (`docs/research/veri-analizi.md` §11). |
 
 ---
 
-## 7. İlk adım (onaydan sonra)
+## 7. Araştırma sonrası plan güncellemeleri
 
-Faz 0'ı birlikte başlatırız: repo iskeleti, `Directory.*.props`, CI matrisi ve ADR'ler. Ben dosyaları hazırlarım; GitHub'da repoyu oluşturup push etmeden önce sana sorarım.
+Ayrıntılar `docs/research/` altındaki raporlarda.
+
+| Faz | Güncelleme | Kaynak |
+|---|---|---|
+| 1 | **Wikidata NVİ kimliklerini CC0 ile taşıyor:** P12883 (mahalle `kimlikNo`), P13588 (köy), P14366 (ilçe), P14358 (plaka). Plaka için P395 kullanılmamalı (Konya ve Uşak yanlış). | veri-analizi.md §7 |
+| 1 | İki PTT kaynağı (muratgozel ve epigra) pratikte aynı 2022-08 anlık görüntüsü. PTT "semt" sütunu dağıtım bölgesi adı; 364 tanesi gerçek alias adayı. | veri-analizi.md §5 |
+| 1 | 6360 sayılı Kanun'a ait köy→mahalle alias'ları Wikidata P2123'ten otomatik üretilebilir (16.505 kayıt). | veri-analizi.md §10 |
+| 1 | Sıkıştırma **Brotli yerine ZLib**: .NET 10 tarayıcı (WASM) build'lerinde Brotli desteklenmiyor. | teslimat-altyapisi.md §5 |
+| 2 | ✅ Tamamlandı. CsCheck özellik testleri gerçek bir uç durum buldu: `ı` + U+0307. | — |
+| 3 | Gerçek veri: **İBB Açık Veri** (sağlık tesisi 20.469 satır, muhtarlık 963), **İzmir Açık Veri** (CC BY 4.0; eczane 2.036 satır, en gürültülü gerçek metin), OSM (ODbL, ayrı set). TBB izin gerektiriyor; MEB kazınmayacak. | gercek-veri-kaynaklari.md |
+| 3–4 | 300 satırlık kısaltma taslağı (`data/curated/abbreviations.draft.csv`) ve 18 hata kalıbı. Not: `pk` = posta kutusu, `nolu` genelde kapı numarası değil. | yazim-hatalari.md |
+| 4 | Şablon **pelias/parser**: kapsanan karakter × güven × (1 − ceza). Yapı için soldan sağa beam search; il → ilçe → mahalle için hiyerarşik beam (her seviyede "yok" adayı). 27 skor özelliği; güven top-N uzlaşısından hesaplanıp isotonic/Platt ile kalibre edilir. 58 snapshot test vakası hazır. | parser-tasarimi.md |
+| 4 | Snapshot testleri için **Verify kullanılmayacak**: paket lisansı bakım ücreti/muafiyet beyanı istiyor. Kendi JSON snapshot yardımcımız yazılacak. | — |
+| 5–8 | Actions sürümleri: checkout@v7, setup-dotnet@v6, upload-artifact@v7, codecov@v7, release-please@v5. MinVer + release-please (`simple`) birlikte çalışıyor (GitHub App token gerekli). NuGet uzun ömürlü anahtarları 2026-11-01'de bitiyor → Trusted Publishing. | teslimat-altyapisi.md |
+| 6 | Azure Container Apps: `--logs-destination none`, GHCR'dan çekme, max 1 replika, $1 bütçe alarmı. Öğrenci kredileri büyük olasılıkla geçerli değil. KVKK: yurt dışında barındırma = Madde 9 aktarımı → playground ana demo, API durumsuz ve loglamasız. | teslimat-altyapisi.md §4, §8 |
+| 7 | Tek GitHub Pages sitesi: playground `/AdresTR/`, DocFX `/AdresTR/docs/`. | teslimat-altyapisi.md §6 |
+| 9 | Model: **ELECTRA-small Türkçe** (13,7M parametre, MIT, int8 ile ~14 MB), BERTurk'ten damıtılır. .NET `BertTokenizer` için `LowerCaseBeforeTokenization=false` ve `RemoveNonSpacingMarks=false` **zorunlu** (Türkçe I hatası). Kural tabanlı eşleştirici ML'den bağımsız olarak erken yayımlanabilir. | ml-ve-eslestirme.md |
+
+### Durum
+
+- [x] Faz 0: repo, CI (linux, windows, ICU'suz), ADR'ler
+- [x] Faz 2: `TurkishText`
+- [ ] Faz 1: gazetteer modeli, ikili format ve DataBuilder yazıldı; ara CSV'ler üretiliyor
+- [ ] Veri sahiplerine izin e-postaları: melihozkara (NVİ kopyası), TBB (şube listesi)
