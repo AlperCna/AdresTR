@@ -574,4 +574,5 @@ Ayrıntılar `docs/research/` altındaki raporlarda.
 - [x] Faz 3: sentetik/gerçek/zor vaka setleri, değerlendirici, regex + libpostal baseline, CI doğruluk kapısı
 - [x] Faz 4: parser MVP. Test tam eşleşme: sentetik %97,4 · gerçek %95,8 · zor vakalar %86,8 (libpostal: %10,0 / %26,2 / %24,6)
 - [x] Faz 5: `AdresTR` ve `AdresTR.Data` 0.1.0-preview.1 NuGet'te (Trusted Publishing, tag ile tetiklenen release.yml), GitHub Release, örnekler, ikon
-- [ ] Veri sahiplerine izin e-postaları: melihozkara (NVİ kopyası), TBB (şube listesi)
+- [x] Faz 6: REST API (parse/batch/csv/validate/reference/autocomplete), hız sınırı, GHCR container (her sürümde), dağıtım rehberi. Azure dağıtımı abonelik gerektirdiği için isteğe bağlı bırakıldı.
+- [ ] Veri sahiplerine izin e-postaları (melihozkara için Gmail taslağı hazır): melihozkara (NVİ kopyası), TBB (şube listesi)

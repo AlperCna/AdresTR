@@ -1,9 +1,18 @@
 <Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
+    <!-- The core library is ICU-independent (ADR-0002), so the smallest chiseled image works. -->
     <InvariantGlobalization>true</InvariantGlobalization>
     <ContainerRepository>alpercna/adrestr-api</ContainerRepository>
+    <ContainerFamily>noble-chiseled</ContainerFamily>
+    <ContainerRuntimeIdentifiers>linux-x64;linux-arm64</ContainerRuntimeIdentifiers>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ContainerLabel Include="org.opencontainers.image.source" Value="https://github.com/AlperCna/AdresTR" />
+    <ContainerLabel Include="org.opencontainers.image.description" Value="AdresTR REST API: Turkish address parsing, normalization and validation" />
+    <ContainerLabel Include="org.opencontainers.image.licenses" Value="MIT" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
@@ -11,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\AdresTR\AdresTR.csproj" />
+    <ProjectReference Include="../AdresTR.Data/AdresTR.Data.csproj" />
   </ItemGroup>
 
 </Project>
