@@ -129,14 +129,14 @@ public sealed class GazetteerBuilder
                 continue;
             }
 
-            if (!Enum.IsDefined(u.Kind))
+            if (u.Kind is < UnitKind.Mahalle or > UnitKind.Diger)
             {
                 errors.Add($"{where}: unknown kind {(byte)u.Kind}");
             }
 
             string? postalCode = string.IsNullOrEmpty(u.PostalCode) ? null : u.PostalCode;
             if (postalCode is not null &&
-                (postalCode.Length != 5 || !postalCode.All(char.IsAsciiDigit) ||
+                (postalCode.Length != 5 || postalCode.AsSpan().ContainsAnyExceptInRange('0', '9') ||
                  int.Parse(postalCode.AsSpan(0, 2), System.Globalization.CultureInfo.InvariantCulture) != district.Province.Plaka))
             {
                 errors.Add($"{where}: postal code '{postalCode}' must be 5 digits starting with plate {district.Province.Plaka:D2}");

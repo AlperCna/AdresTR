@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AdresTR Playground</title>
+    <meta name="description" content="Türkçe adresleri tarayıcıda ayrıştırın: il, ilçe, mahalle, sokak, kapı no, posta kodu. Adresiniz cihazınızdan çıkmaz." />
+    <base href="/" />
+    <link rel="icon" type="image/png" href="icon.png" />
+    <link rel="preload" id="webassembly" />
+    <link rel="stylesheet" href="css/app.css" />
+    <script type="importmap"></script>
+</head>
+
+<body>
+    <div id="app">
+        <div class="boot">
+            <img src="icon.png" alt="" width="64" height="64" />
+            <p>AdresTR yükleniyor…</p>
+            <p class="muted">Ayrıştırıcı ve 78.790 mahalle/köy tarayıcınıza iniyor (bir kez). Adresleriniz cihazınızdan çıkmaz.</p>
+        </div>
+    </div>
+
+    <div id="blazor-error-ui">
+        Beklenmeyen bir hata oluştu.
+        <a href="." class="reload">Yenile</a>
+        <span class="dismiss">✕</span>
+    </div>
+    <script>
+        window.adrestr = {
+            copy: text => navigator.clipboard.writeText(text),
+            download: (name, text) => {
+                const url = URL.createObjectURL(new Blob(["\uFEFF" + text], { type: "text/csv;charset=utf-8" }));
+                const a = Object.assign(document.createElement("a"), { href: url, download: name });
+                a.click();
+                URL.revokeObjectURL(url);
+            }
+        };
+    </script>
+    <script src="_framework/blazor.webassembly#[.{fingerprint}].js"></script>
+</body>
+
+</html>

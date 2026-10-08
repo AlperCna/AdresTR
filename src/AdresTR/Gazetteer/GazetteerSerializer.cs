@@ -141,8 +141,16 @@ internal static class GazetteerSerializer
             throw new InvalidDataException($"Unsupported AdresTR gazetteer format version {version}; expected {FormatVersion}.");
         }
 
-        using var zlib = new ZLibStream(stream, CompressionMode.Decompress, leaveOpen: true);
-        using var r = new BinaryReader(zlib, Encoding.UTF8, leaveOpen: true);
+        // Inflate in one go: BinaryReader issues many tiny reads, which are slow on a decompression stream
+        // (and very slow in WebAssembly).
+        var payload = new MemoryStream(capacity: 4 * 1024 * 1024);
+        using (var zlib = new ZLibStream(stream, CompressionMode.Decompress, leaveOpen: true))
+        {
+            zlib.CopyTo(payload);
+        }
+
+        payload.Position = 0;
+        using var r = new BinaryReader(payload, Encoding.UTF8, leaveOpen: false);
 
         try
         {

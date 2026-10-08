@@ -1,4 +1,3 @@
-using System.Collections.Frozen;
 using AdresTR.Text;
 
 namespace AdresTR;
@@ -17,12 +16,12 @@ public readonly record struct GazetteerMatch<T>(T Entity, GazetteerAlias? Alias)
 public sealed class Gazetteer
 {
     private readonly Province?[] _provincesByPlaka;
-    private readonly FrozenDictionary<int, District> _districts;
-    private readonly FrozenDictionary<int, SettlementUnit> _units;
-    private readonly FrozenDictionary<string, GazetteerMatch<Province>[]> _provinceIndex;
-    private readonly FrozenDictionary<string, GazetteerMatch<District>[]> _districtIndex;
-    private readonly FrozenDictionary<string, GazetteerMatch<SettlementUnit>[]> _unitIndex;
-    private readonly FrozenDictionary<string, SettlementUnit[]> _unitsByPostalCode;
+    private readonly Dictionary<int, District> _districts;
+    private readonly Dictionary<int, SettlementUnit> _units;
+    private readonly Dictionary<string, GazetteerMatch<Province>[]> _provinceIndex;
+    private readonly Dictionary<string, GazetteerMatch<District>[]> _districtIndex;
+    private readonly Dictionary<string, GazetteerMatch<SettlementUnit>[]> _unitIndex;
+    private readonly Dictionary<string, SettlementUnit[]> _unitsByPostalCode;
     private Parsing.ParserIndex? _parserIndex;
 
     internal Gazetteer(
@@ -46,17 +45,17 @@ public sealed class Gazetteer
             _provincesByPlaka[p.Plaka] = p;
         }
 
-        _districts = districts.ToFrozenDictionary(d => d.Id);
-        _units = units.ToFrozenDictionary(u => u.Id);
+        _districts = districts.ToDictionary(d => d.Id);
+        _units = units.ToDictionary(u => u.Id);
 
-        _provinceIndex = BuildIndex(provinces, p => p.Name, EntityLevel.Il, aliases, id => _provincesByPlaka[id]);
-        _districtIndex = BuildIndex(districts, d => d.Name, EntityLevel.Ilce, aliases, id => _districts.GetValueOrDefault(id));
-        _unitIndex = BuildIndex(units, u => u.Name, EntityLevel.Birim, aliases, id => _units.GetValueOrDefault(id));
+        _provinceIndex = BuildIndex(provinces, p => p.Key, EntityLevel.Il, aliases, id => _provincesByPlaka[id]);
+        _districtIndex = BuildIndex(districts, d => d.Key, EntityLevel.Ilce, aliases, id => _districts.GetValueOrDefault(id));
+        _unitIndex = BuildIndex(units, u => u.Key, EntityLevel.Birim, aliases, id => _units.GetValueOrDefault(id));
 
         _unitsByPostalCode = units
             .Where(u => u.PostalCode is not null)
             .GroupBy(u => u.PostalCode!, StringComparer.Ordinal)
-            .ToFrozenDictionary(g => g.Key, g => g.ToArray(), StringComparer.Ordinal);
+            .ToDictionary(g => g.Key, g => g.ToArray(), StringComparer.Ordinal);
     }
 
     /// <summary>Data snapshot version, e.g. "2026.10".</summary>
@@ -168,9 +167,9 @@ public sealed class Gazetteer
         static bool IsSkipped(char c) => c is ' ' or '.' or '-' or '\'' or '/';
     }
 
-    private static FrozenDictionary<string, GazetteerMatch<T>[]> BuildIndex<T>(
+    private static Dictionary<string, GazetteerMatch<T>[]> BuildIndex<T>(
         IReadOnlyList<T> entities,
-        Func<T, string> name,
+        Func<T, string> key,
         EntityLevel level,
         IReadOnlyList<GazetteerAlias> aliases,
         Func<int, T?> resolve)
@@ -180,34 +179,34 @@ public sealed class Gazetteer
 
         foreach (T entity in entities)
         {
-            Add(Key(name(entity)), new GazetteerMatch<T>(entity, null));
+            Add(key(entity), new GazetteerMatch<T>(entity, null));
         }
 
         foreach (GazetteerAlias alias in aliases)
         {
             if (alias.Level == level && resolve(alias.TargetId) is { } target)
             {
-                string key = Key(alias.Name);
+                string aliasKey = Key(alias.Name);
                 // An alias equal to the official name adds nothing.
-                if (!index.TryGetValue(key, out var existing) || !existing.Exists(m => ReferenceEquals(m.Entity, target)))
+                if (!index.TryGetValue(aliasKey, out var existing) || !existing.Exists(m => ReferenceEquals(m.Entity, target)))
                 {
-                    Add(key, new GazetteerMatch<T>(target, alias));
+                    Add(aliasKey, new GazetteerMatch<T>(target, alias));
                 }
             }
         }
 
-        return index.ToFrozenDictionary(kv => kv.Key, kv => kv.Value.ToArray(), StringComparer.Ordinal);
+        return index.ToDictionary(kv => kv.Key, kv => kv.Value.ToArray(), StringComparer.Ordinal);
 
-        void Add(string key, GazetteerMatch<T> match)
+        void Add(string k, GazetteerMatch<T> match)
         {
-            if (key.Length == 0)
+            if (k.Length == 0)
             {
                 return;
             }
 
-            if (!index.TryGetValue(key, out var list))
+            if (!index.TryGetValue(k, out var list))
             {
-                index[key] = list = [];
+                index[k] = list = [];
             }
 
             list.Add(match);

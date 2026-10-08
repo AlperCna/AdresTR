@@ -72,6 +72,7 @@ public sealed class Province
     {
         Plaka = plaka;
         Name = name;
+        Key = Gazetteer.Key(name);
         WikidataId = wikidata;
         Location = location;
     }
@@ -81,6 +82,9 @@ public sealed class Province
 
     /// <summary>Official name, e.g. "İstanbul".</summary>
     public string Name { get; }
+
+    /// <summary>Lookup key of <see cref="Name"/> (<see cref="Gazetteer.Key"/>), computed once.</summary>
+    internal string Key { get; }
 
     /// <summary>Wikidata item number (Q-number without the "Q"), or 0 when unknown.</summary>
     public int WikidataId { get; }
@@ -103,6 +107,7 @@ public sealed class District
         Id = id;
         Province = province;
         Name = name;
+        Key = Gazetteer.Key(name);
         WikidataId = wikidata;
         Location = location;
     }
@@ -115,6 +120,9 @@ public sealed class District
 
     /// <summary>Official name, e.g. "Kadıköy" or "Merkez".</summary>
     public string Name { get; }
+
+    /// <summary>Lookup key of <see cref="Name"/>, computed once.</summary>
+    internal string Key { get; }
 
     /// <summary>Wikidata item number, or 0 when unknown.</summary>
     public int WikidataId { get; }
@@ -140,6 +148,7 @@ public sealed class SettlementUnit
         District = district;
         Kind = kind;
         Name = name;
+        Key = Gazetteer.Key(name);
         ParentName = parentName;
         PostalCode = postalCode;
         Semt = semt;
@@ -159,6 +168,9 @@ public sealed class SettlementUnit
 
     /// <summary>Official name without the type suffix, e.g. "Caferağa".</summary>
     public string Name { get; }
+
+    /// <summary>Lookup key of <see cref="Name"/>, computed once.</summary>
+    internal string Key { get; }
 
     /// <summary>Name of the enclosing köy or belde for nested units, otherwise <see langword="null"/>.</summary>
     public string? ParentName { get; }
