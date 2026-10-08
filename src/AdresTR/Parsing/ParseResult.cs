@@ -166,12 +166,12 @@ public sealed class ParseResult
 
         if (Street is not null)
         {
-            Add($"{Street.Value} {StreetAbbreviation(StreetType)}".TrimEnd());
+            Add($"{Display(Street.Value)} {StreetAbbreviation(StreetType)}".TrimEnd());
         }
 
         if (Site is not null)
         {
-            Add($"{Site.Value} Sitesi");
+            Add($"{Display(Site.Value)} Sitesi");
         }
 
         if (Blok is not null)
@@ -204,6 +204,12 @@ public sealed class ParseResult
 
     /// <inheritdoc />
     public override string ToString() => ToCanonicalString();
+
+    /// <summary>Names written all in lower or upper case are shown in Turkish title case ("moda" → "Moda").</summary>
+    private static string Display(string written) =>
+        written.Any(char.IsLetter) && (written.Where(char.IsLetter).All(char.IsLower) || written.Where(char.IsLetter).All(char.IsUpper))
+            ? Text.TurkishText.ToTitleTr(written)
+            : written;
 
     private static string StreetAbbreviation(StreetType? type) => type switch
     {

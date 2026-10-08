@@ -2,6 +2,10 @@
   <Folder Name="/benchmarks/">
     <Project Path="benchmarks/AdresTR.Benchmarks/AdresTR.Benchmarks.csproj" />
   </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/CsvCleaner/CsvCleaner.csproj" />
+    <Project Path="samples/QuickStart/QuickStart.csproj" />
+  </Folder>
   <Folder Name="/src/">
     <Project Path="src/AdresTR.Api/AdresTR.Api.csproj" />
     <Project Path="src/AdresTR.Data/AdresTR.Data.csproj" />

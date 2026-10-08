@@ -5,6 +5,10 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.0-preview.1] - 2026-10-08
+
+First preview on NuGet: `AdresTR` and `AdresTR.Data`.
+
 ### Added
 - Repository scaffold, CI (Linux, Windows and globalization-invariant mode), ADRs 0000–0010.
 - `AdresTR.Text.TurkishText`: ICU-independent folding, Turkish casing and normalization.
@@ -19,3 +23,8 @@ All notable changes to this project are documented here. The format follows
   solver, hierarchical il/ilçe/mahalle resolution with scoped fuzzy matching, calibrated confidence, ranked unit
   candidates, corrections log and canonical formatting. `TurkishGazetteer.Parser` for a shared instance.
   Test results: exact match 97.4% (synthetic), 95.8% (real), 86.8% (challenge).
+- Samples (`samples/QuickStart`, `samples/CsvCleaner`), package icon and NuGet README, tag-triggered release
+  workflow with NuGet Trusted Publishing (no stored API key).
+
+[Unreleased]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.1...HEAD
+[0.1.0-preview.1]: https://github.com/AlperCna/AdresTR/releases/tag/v0.1.0-preview.1

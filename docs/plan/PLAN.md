@@ -573,4 +573,5 @@ Ayrıntılar `docs/research/` altındaki raporlarda.
 - [x] Faz 1: gazetteer 2026.10 (PTT MIT + Wikidata CC0), ikili format, DataBuilder, CI kontrolü
 - [x] Faz 3: sentetik/gerçek/zor vaka setleri, değerlendirici, regex + libpostal baseline, CI doğruluk kapısı
 - [x] Faz 4: parser MVP. Test tam eşleşme: sentetik %97,4 · gerçek %95,8 · zor vakalar %86,8 (libpostal: %10,0 / %26,2 / %24,6)
+- [ ] Faz 5: release.yml (tag → test → gate → pack → NuGet Trusted Publishing → GitHub Release), örnekler, ikon; nuget.org politikası bekleniyor
 - [ ] Veri sahiplerine izin e-postaları: melihozkara (NVİ kopyası), TBB (şube listesi)
