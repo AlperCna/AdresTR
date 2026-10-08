@@ -531,8 +531,9 @@ internal sealed class SyntheticGenerator
 
         var fields = new Dictionary<string, string?>(StringComparer.Ordinal)
         {
-            [Labels.Il] = ilKnown ? a.Unit.District.Province.Name : null,
-            [Labels.Ilce] = ilceKnown ? a.Unit.District.Name : null,
+            // Fields say what the text says; ids say what the text determines (eval/SCHEMA.md).
+            [Labels.Il] = Written(Labels.Il) ? a.Unit.District.Province.Name : null,
+            [Labels.Ilce] = Written(Labels.Ilce) ? a.Unit.District.Name : null,
             [Labels.Mahalle] = a.Unit.Name,
             [Labels.Semt] = null,
             [Labels.CsbmTur] = Value(Labels.CsbmTur),

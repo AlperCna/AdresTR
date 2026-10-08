@@ -45,11 +45,23 @@ the dataset builders (`data/scripts/`, `tools/AdresTR.Eval generate`) and the ev
 | `license` | string | ✓ | SPDX-like id of the row's license (`CC-BY-4.0`, `CC0-1.0`, `ODbL-1.0`, `IBB-Acik-Veri`). |
 | `split` | `"dev"` \| `"test"` | ✓ | Test rows are never used for tuning. |
 | `spans` | array | – | Character spans `[start, end)` (UTF-16 code units, like .NET `string`) with a `label` from the label set. Omit when not span-annotated. |
-| `gold.il` / `gold.ilce` / `gold.birim` | int \| null | – | AdresTR gazetteer ids (`data/staging`). `null` = the address does not determine it; key absent = not annotated. |
+| `gold.il` / `gold.ilce` / `gold.birim` | int \| null | – | AdresTR gazetteer ids (`data/staging`) of what the **text determines** (see below). `null` = the text does not determine it; key absent = not annotated. |
 | `gold.fields` | object | ✓ | Expected component values (see below). **Key absent = not annotated (ignored in metrics). `null` = annotated as absent.** |
 | `noise` | string[] | – | Synthetic noise operations applied (for breakdowns). |
 | `tags` | string[] | – | Phenomena present (for breakdowns): see the tag list below. |
 | `note` | string | – | Free-text remark for humans. |
+
+## Two questions, two kinds of gold
+
+- **Parsing — `gold.fields`: what does the text say?** A component gets a value only if it is written in the text
+  (in any spelling, abbreviation or with typos); il/ilçe/mahalle values are normalized to the official name.
+  Components that are not written are `null`, even when they could be inferred.
+- **Resolution — `gold.il/ilce/birim`: what does the text determine?** Start from the units whose official name
+  (or semt/historic alias) matches the written mahalle; keep those consistent with the written il, ilçe and postal
+  code. `birim` = the single remaining unit, else `null`; `ilce` = the single remaining district, else `null`;
+  `il` = the written il or the single remaining province, else `null`. Without a written mahalle, `birim` is `null`
+  and il/ilçe are resolved from what is written (a nationally unique ilçe name determines its il).
+  A system that guesses where the text is ambiguous is penalized; real sets keep the publisher's true location in `note`.
 
 ## Label set (`spans[].label` and `gold.fields` keys)
 

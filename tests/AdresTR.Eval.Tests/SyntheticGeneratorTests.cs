@@ -58,6 +58,19 @@ public class SyntheticGeneratorTests
     }
 
     [Fact]
+    public void Fields_say_what_the_text_says()
+    {
+        List<EvalExample> examples = [.. new SyntheticGenerator(G, 11).Generate("dev", 600)];
+
+        Assert.All(examples.Where(e => e.Noise.Contains("missing-il")), e => Assert.Null(e.Fields[Labels.Il]));
+        Assert.All(examples.Where(e => e.Noise.Contains("missing-ilce")), e => Assert.Null(e.Fields[Labels.Ilce]));
+        Assert.All(examples, e => Assert.Equal(e.Fields[Labels.Il] is not null, e.Spans!.Any(s => s.Label == Labels.Il)));
+
+        // The il can still be determined from a unique ilçe/mahalle even when it is not written.
+        Assert.Contains(examples, e => e.Fields[Labels.Il] is null && e.Il.Value is not null);
+    }
+
+    [Fact]
     public void Covers_noise_operations_and_tags()
     {
         List<EvalExample> examples = [.. new SyntheticGenerator(G, 5).Generate("dev", 1000)];

@@ -1,0 +1,83 @@
+{"id": "chal-0003", "fields": {"il": "İstanbul", "ilce": "Şişli", "mahalle": "Nişantaşı Teşvikiye", "csbm_ad": "Valikonağı", "csbm_tur": "cadde", "dis_kapi": "85"}}
+{"id": "chal-0006", "fields": {"il": "Ankara", "ilce": "Altındağ", "csbm_ad": "Ulus Anafartalar", "csbm_tur": "cadde", "dis_kapi": "20"}}
+{"id": "chal-0009", "fields": {"il": "İstanbul", "ilce": "Başakşehir", "mahalle": "Bahçeşehir 2. Kısım", "csbm_ad": "Doğa", "csbm_tur": "sokak", "dis_kapi": "7"}}
+{"id": "chal-0012", "fields": {"il": "İstanbul", "ilce": "Kadıköy", "csbm_ad": "Bağdat", "csbm_tur": "cadde", "dis_kapi": "200", "site": "Göztepe"}}
+{"id": "chal-0015", "fields": {"il": "İzmir", "ilce": "Buca", "csbm_ad": "Şirinyer Menderes", "csbm_tur": "cadde", "dis_kapi": "150"}}
+{"id": "chal-0018", "fields": {"il": "İzmir", "ilce": "Urla"}}
+{"id": "chal-0021", "fields": {"il": "İzmir", "ilce": "Menderes", "mahalle": "Çatalca"}}
+{"id": "chal-0024", "fields": {"il": "ANTALYA", "ilce": "AKSU", "mahalle": "KUNDU"}}
+{"id": "chal-0027", "fields": {"il": "Bursa", "ilce": "Mustafakemalpaşa", "mahalle": "Karapınar"}}
+{"id": "chal-0030", "fields": {"il": "Erzurum", "ilce": "Ilıca", "mahalle": "Adaçay"}}
+{"id": "chal-0033", "fields": {"il": "İstanbul", "ilce": "Şişli", "mahalle": "Cumhuriyet"}}
+{"id": "chal-0036", "fields": {"il": "İstanbul", "ilce": "Gaziosmanpaşa", "mahalle": "Yeni Mahalle"}}
+{"id": "chal-0039", "fields": {"il": "İstanbul", "ilce": "Fatih"}}
+{"id": "chal-0042", "fields": {"mahalle": "Atatürk", "posta_kodu": "34307"}}
+{"id": "chal-0045", "fields": {"il": "İstanbul", "ilce": "Bahçelievler"}}
+{"id": "chal-0048", "fields": {"site": "Tabaklar Mah. Merkez/Bolu"}}
+{"id": "chal-0051", "fields": {"site": "Akçaalan Köyü Küme Evler No:12 Merkez Bolu"}}
+{"id": "chal-0054", "fields": {"il": "Kars", "ilce": "Merkez", "mahalle": "Merkez"}}
+{"id": "chal-0057", "fields": {"il": "Düzce", "ilce": "Mah. Merkez"}}
+{"id": "chal-0060", "fields": {"il": "Ankara", "ilce": "Çankaya", "mahalle": "Çankaya"}}
+{"id": "chal-0063", "fields": {"il": "Bursa", "ilce": "Osmangazi", "mahalle": "Osmangazi"}}
+{"id": "chal-0066", "fields": {"il": "Sinop", "mahalle": "Ordu"}}
+{"id": "chal-0069", "fields": {"il": "İstanbul", "ilce": "Kadıköy"}}
+{"id": "chal-0072", "fields": {"il": "İzmir", "ilce": "Konak", "mahalle": "Atilla", "csbm_ad": "127 nolu", "csbm_tur": "sokak"}}
+{"id": "chal-0075", "fields": {"il": "İzmir", "ilce": "Bayraklı", "mahalle": "Osmangazi", "csbm_ad": "2810/1", "csbm_tur": "sokak", "dis_kapi": "4"}}
+{"id": "chal-0078", "fields": {"il": "İzmir", "ilce": "Bayraklı", "csbm_ad": "1580/1", "csbm_tur": "sokak", "dis_kapi": "1/C"}}
+{"id": "chal-0081", "fields": {"il": "Adana", "ilce": "Seyhan", "mahalle": "2000 Evler", "csbm_ad": "1", "csbm_tur": "sokak"}}
+{"id": "chal-0084", "fields": {"ilce": "Konak", "mahalle": "Çınarlı", "csbm_ad": "1571", "csbm_tur": "sokak", "dis_kapi": "16"}}
+{"id": "chal-0087", "fields": {"il": "İstanbul", "ilce": "Kadıköy", "mahalle": "Caferağa", "site": "No:17/A Kat:Zemin"}}
+{"id": "chal-0090", "fields": {"ilce": "Kadıköy", "mahalle": "Göztepe", "csbm_ad": "Bağdat", "csbm_tur": "cadde", "dis_kapi": "151/A"}}
+{"id": "chal-0093", "fields": {"ilce": "Şişli", "mahalle": "Mecidiyeköy", "csbm_ad": "Büyükdere", "csbm_tur": "cadde", "dis_kapi": "8/2"}}
+{"id": "chal-0096", "fields": {"ilce": "Kadıköy", "mahalle": "Caferağa", "csbm_ad": "Moda", "csbm_tur": "cadde", "daire": "17"}}
+{"id": "chal-0099", "fields": {"ilce": "Kadıköy", "mahalle": "Fenerbahçe", "csbm_ad": "Kuzey", "csbm_tur": "sokak"}}
+{"id": "chal-0102", "fields": {"ilce": "Ataşehir", "mahalle": "Barbaros", "csbm_ad": "Doğu", "csbm_tur": "sokak", "daire": "2"}}
+{"id": "chal-0105", "fields": {"il": "Muğla", "ilce": "Bodrum", "mahalle": "Çarşı", "csbm_ad": "Kale", "csbm_tur": "sokak", "dis_kapi": "5", "kat": "-1"}}
+{"id": "chal-0108", "fields": {"ilce": "Kadıköy", "daire": "7", "site": "Caferağa mh. Moda cd. no"}}
+{"id": "chal-0111", "fields": {"il": "İstanbul", "ilce": "Pendik", "mahalle": "Doğu", "csbm_ad": "Ankara", "csbm_tur": "cadde", "daire": "6"}}
+{"id": "chal-0114", "fields": {"il": "İzmir", "ilce": "Karşıyaka", "csbm_ad": "147sok", "dis_kapi": "2", "daire": "5"}}
+{"id": "chal-0117", "fields": {"site": "BARBAROSMAHALLESİ 5.SOKAK NO:3 BORNOVA"}}
+{"id": "chal-0120", "fields": {"il": "İZMİR", "mahalle": "KARABAĞLAR", "csbm_ad": "220", "csbm_tur": "sokak", "dis_kapi": "14"}}
+{"id": "chal-0123", "fields": {"il": "Balıkesir", "ilce": "Altıeylül", "site": "GAZİOSMANPAŞAOSB"}}
+{"id": "chal-0126", "fields": {"mahalle": "Kadıköy'de Fenerbahçe"}}
+{"id": "chal-0129", "fields": {"il": "İstanbul", "ilce": "Şişli", "mahalle": "cumhuriyet"}}
+{"id": "chal-0132", "fields": {"ilce": "şişli", "mahalle": "nişantaşı teşvikiye", "site": "ıstanbul"}}
+{"id": "chal-0135", "fields": {"il": "izmir", "ilce": "buca", "mahalle": "i nönü"}}
+{"id": "chal-0138", "fields": {"il": "ISTANBUL", "ilce": "KADIKOY", "mahalle": "CAFERAGA", "csbm_ad": "MODA", "csbm_tur": "cadde", "dis_kapi": "12"}}
+{"id": "chal-0141", "fields": {"il": "Istanbul", "ilce": "Esenyurt", "mahalle": "Ataturk", "csbm_ad": "Ataturk", "csbm_tur": "cadde"}}
+{"id": "chal-0144", "fields": {"il": "Izmir", "site": "Guzelyali mah. Mithatpasa cd. No:5 Konak"}}
+{"id": "chal-0147", "fields": {"mahalle": "Basaksehir Bahcesehir 2. Kisim"}}
+{"id": "chal-0150", "fields": {"csbm_ad": "GAZİ", "csbm_tur": "cadde", "dis_kapi": "60/B", "site": "ALTINDAĞ BORNOVA İZMİR"}}
+{"id": "chal-0153", "fields": {"ilce": "bayraklı", "mahalle": "OSMANGAZİ", "csbm_ad": "YAVUZ", "csbm_tur": "cadde", "dis_kapi": "299/A"}}
+{"id": "chal-0156", "fields": {"il": "IĞDIR", "ilce": "OSB MERKEZ"}}
+{"id": "chal-0159", "fields": {"il": "İzmir", "ilce": "Karşıyka", "mahalle": "Bostanlı", "csbm_ad": "Cemal Gürsel", "csbm_tur": "cadde", "dis_kapi": "300"}}
+{"id": "chal-0162", "fields": {"il": "İstanbul", "mahalle": "Atatürk Mah. Esenyrt"}}
+{"id": "chal-0165", "fields": {"ilce": "Yenişehir", "mahalle": "Yenişehir", "site": "Diyarbkır"}}
+{"id": "chal-0168", "fields": {"il": "İzmir", "ilce": "Konak", "mahalle": "Alsancak", "csbm_ad": "sokar", "dis_kapi": "1453"}}
+{"id": "chal-0171", "fields": {"site": "Istanbol Kadıköy Caferağa"}}
+{"id": "chal-0174", "fields": {"mahalle": "Caferağa", "csbm_ad": "Moda", "csbm_tur": "cadde", "dis_kapi": "12", "site": "İstanbul Kadıköy"}}
+{"id": "chal-0177", "fields": {"il": "İstanbul", "ilce": "Kadıköy", "mahalle": "Caferağa", "csbm_ad": "Moda", "csbm_tur": "cadde", "site": "No:12"}}
+{"id": "chal-0180", "fields": {"il": "İstanbul", "ilce": "Şişli", "mahalle": "Mecidiyeköy", "csbm_ad": "Büyükdere", "csbm_tur": "cadde", "dis_kapi": "10", "kat": "3"}}
+{"id": "chal-0183", "fields": {"ilce": "Çankaya", "mahalle": "Kızılay", "csbm_ad": "Meşrutiyet", "csbm_tur": "cadde", "dis_kapi": "12/4", "site": "Ankara GSM:+90 312 555 01 02"}}
+{"id": "chal-0186", "fields": {"mahalle": "Caferağa", "csbm_ad": "Moda", "csbm_tur": "cadde", "dis_kapi": "12"}}
+{"id": "chal-0189", "fields": {"il": "Ankara", "ilce": "Çankaya", "mahalle": "PTT karşısı, Kocatepe", "csbm_ad": "Mithatpaşa", "csbm_tur": "cadde", "dis_kapi": "20"}}
+{"id": "chal-0192", "fields": {"mahalle": "Bostanlı", "csbm_ad": "Cemal Gürsel", "csbm_tur": "cadde", "dis_kapi": "300", "site": "Devlet Hastanesi Krş. Karşıyaka"}}
+{"id": "chal-0195", "fields": {"il": "İstanbul", "ilce": "Bahçelievler", "mahalle": "Hürriyet", "csbm_ad": "İstasyon karşısı"}}
+{"id": "chal-0198", "fields": {"il": "İzmir", "mahalle": "Ata Mah. Menderes", "csbm_ad": "Ata", "csbm_tur": "cadde"}}
+{"id": "chal-0201", "fields": {"il": "Ankara", "ilce": "Çankaya", "mahalle": "İşçi Blokları", "csbm_ad": "1532", "csbm_tur": "sokak", "dis_kapi": "3"}}
+{"id": "chal-0204", "fields": {"il": "Çanakkale", "ilce": "Lapseki", "site": "Demirli Sahil"}}
+{"id": "chal-0207", "fields": {"il": "Ankara", "ilce": "Çankaya", "mahalle": "Cumhuriyet", "csbm_ad": "1", "csbm_tur": "sokak", "dis_kapi": "2", "site": "Güneş Apt. Kat"}}
+{"id": "chal-0210", "fields": {"ilce": "Tuzla", "mahalle": "Deri OSB", "csbm_ad": "Kazlıçeşme", "csbm_tur": "cadde"}}
+{"id": "chal-0213", "fields": {"il": "Aydın", "ilce": "Söke", "site": "Söke O.S.B"}}
+{"id": "chal-0216", "fields": {"mahalle": "Kepçeli", "csbm_ad": "Kuruca", "csbm_tur": "kume_evler", "daire": "4"}}
+{"id": "chal-0219", "fields": {"il": "Kastamonu", "ilce": "Taşköprü", "site": "Örhen Köyü Yukarı Küme Evler No:7"}}
+{"id": "chal-0222", "fields": {"il": "Yozgat", "ilce": "Yerköy", "site": "Kömüşören Köyü Aşağı Küme Evleri No:2"}}
+{"id": "chal-0225", "fields": {"il": "Uşak", "ilce": "Merkez"}}
+{"id": "chal-0228", "fields": {"il": "Bingöl", "ilce": "Karlıova"}}
+{"id": "chal-0231", "fields": {"il": "Sinop", "ilce": "Dikmen", "mahalle": "Yeniköy"}}
+{"id": "chal-0234", "fields": {"mahalle": "Fatih", "posta_kodu": "06932"}}
+{"id": "chal-0237", "fields": {"il": "İzmir", "mahalle": "Bahçelievler", "posta_kodu": "35150"}}
+{"id": "chal-0240", "fields": {"il": "İstanbul", "ilce": "Kadıköy", "posta_kodu": "34710"}}
+{"id": "chal-0243", "fields": {"ilce": "Bornova", "mahalle": "Atatürk", "csbm_ad": "1203/5", "csbm_tur": "sokak", "dis_kapi": "7", "posta_kodu": "35030"}}
+{"id": "chal-0246", "fields": {"il": "İzmir", "ilce": "Bornova Bornova"}}
+{"id": "chal-0249", "fields": {"ilce": "Kadıköy", "mahalle": "Feneryolu", "csbm_ad": "Bağdat", "csbm_tur": "cadde", "dis_kapi": "44", "kat": "3"}}

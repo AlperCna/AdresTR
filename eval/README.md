@@ -10,8 +10,8 @@ The first open benchmark for Turkish free-text address parsing. It is used to me
 | Set | Rows | How it is made | Labels | License |
 |---|---|---|---|---|
 | `synthetic/` | dev 1,000 · test 2,000 | `AdresTR.Eval generate`: real il/ilçe/mahalle/köy names from the gazetteer, invented streets and numbers, 4 layouts, varied abbreviations, 0–3 logged noise operations | Full spans and fields; gold ids only when the text determines them | CC BY 4.0 |
-| `real/` | see [real/SOURCES.md](real/SOURCES.md) | Public-institution addresses from İBB and İzmir open data (no personal data) | il/ilçe/mahalle from structured columns; other fields only when reliably aligned | per source |
-| `challenge/` | ~250 | Hand-written hard cases (semt, historic names, ambiguity, numbered streets, glued tokens …) | Full | CC0 1.0 |
+| `real/` | dev 300 · test 1,200 ([SOURCES.md](real/SOURCES.md)) | Public-institution addresses from İBB and İzmir open data (no personal data) | Written il/ilçe/mahalle aligned with the publisher's structured columns; other fields only when reliably aligned | per source |
+| `challenge/` | dev 83 · test 167 ([README](challenge/README.md)) | Hand-written hard cases (semt, historic names, ambiguity, numbered streets, glued tokens …) | Full | CC0 1.0 |
 
 **Splits:** `dev` may be used for tuning and error analysis; `test` is only for reporting. Never tune on test.
 
@@ -19,8 +19,12 @@ The first open benchmark for Turkish free-text address parsing. It is used to me
 deletion, transposition, duplication), `glued` (`CaferağaMah.`, `147sok`), `missing-il`, `missing-ilce`,
 `reordered`, `phone`, `landmark`, `broken-i` (`i smet`), `duplicate-token`. Each example records which ones were applied.
 
-**Gold ids are honest:** when an operation removes the information needed to identify the unit (e.g. a
-"Cumhuriyet Mahallesi" whose ilçe was dropped), the gold `birim` is `null` and a system that guesses is penalized.
+**Two kinds of gold** ([SCHEMA.md](SCHEMA.md)): `fields` measure *parsing* (what the text says), ids measure
+*resolution* (what the text determines). When the text no longer identifies the unit (e.g. a "Cumhuriyet Mahallesi"
+whose ilçe was dropped), the gold `birim` is `null` and a system that guesses is penalized.
+
+`real/` rows whose text was built from structured columns have a `-tpl` source suffix; read the per-source breakdown
+when comparing systems on real data.
 
 ## Metrics
 
