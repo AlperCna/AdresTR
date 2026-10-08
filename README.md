@@ -3,6 +3,8 @@
 **Turkish free-text address parser, normalizer and validator for .NET.**
 Türkçe serbest metin adresleri ayrıştıran, normalize eden ve resmi il/ilçe/mahalle hiyerarşisine göre doğrulayan .NET kütüphanesi. → [Türkçe README](README.tr.md)
 
+**▶ [Try it in your browser](https://alpercna.github.io/AdresTR/)** — the parser runs entirely client-side (WebAssembly); nothing is sent anywhere.
+
 [![CI](https://github.com/AlperCna/AdresTR/actions/workflows/ci.yml/badge.svg)](https://github.com/AlperCna/AdresTR/actions/workflows/ci.yml)
 [![NuGet](https://img.shields.io/nuget/vpre/AdresTR.svg?label=NuGet)](https://www.nuget.org/packages/AdresTR.Data)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
@@ -102,7 +104,7 @@ g.FindUnitsByPostalCode("34710");                       // Caferağa, …
 | 4 | Parser MVP with calibrated confidence and corrections log | ✅ |
 | 5 | NuGet v0.1 (`0.1.0-preview.1`) | ✅ |
 | 6 | REST API + Docker ([deploy guide](docs/deploy.md)) | ✅ |
-| 7 | In-browser playground | ⏳ |
+| 7 | [In-browser playground](https://alpercna.github.io/AdresTR/) | ✅ |
 | 8 | Docs, Hugging Face dataset, v1.0 | ⏳ |
 
 ## Data & licensing
