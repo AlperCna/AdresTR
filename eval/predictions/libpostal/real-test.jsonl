@@ -1,0 +1,1200 @@
+{"id": "real-ibb-saglik-000eefea61", "fields": {"csbm_ad": "Ataşehir", "csbm_tur": "bulvar", "site": "14 ATATÜRK/ATAŞEHİR"}}
+{"id": "real-ibb-saglik-0018d37931", "fields": {"ilce": "TOKATKÖY/BEYKOZ", "csbm_ad": "Sultan Aziz", "csbm_tur": "cadde", "dis_kapi": "226"}}
+{"id": "real-ibb-saglik-001d15e586", "fields": {"csbm_ad": "Büyük Saray Meydanı", "csbm_tur": "cadde", "site": "62 B ŞEHREMİNİ/FATİH"}}
+{"id": "real-ibb-saglik-0020dc3b04", "fields": {"site": "Hasbahçe Cd MERKEZ/KAĞITHANE"}}
+{"id": "real-ibb-saglik-002aef4310", "fields": {"csbm_ad": "Koca Sinan", "csbm_tur": "cadde", "dis_kapi": "4", "site": "KÜÇÜKBAKKALKÖY/ATAŞEHİR"}}
+{"id": "real-ibb-saglik-00399e2def", "fields": {"csbm_ad": "Kışla", "csbm_tur": "cadde", "dis_kapi": "97"}}
+{"id": "real-ibb-saglik-0042d536b3", "fields": {"site": "Çam Ağacı Sk. No:3 A ORTA/KARTAL"}}
+{"id": "real-ibb-saglik-004c6d6e2f", "fields": {"csbm_ad": "2388", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-0077fde988", "fields": {"ilce": "İNÖNÜ/ESENYURT", "csbm_ad": "365", "csbm_tur": "sokak", "dis_kapi": "8"}}
+{"id": "real-ibb-saglik-00a8b25c83", "fields": {"ilce": "Kırklar", "site": "Sk. No:1 FEVZİ ÇAKMAK/PENDİK"}}
+{"id": "real-ibb-saglik-00c9fe70a8", "fields": {"ilce": "HACI", "csbm_ad": "Katip Çelebi", "csbm_tur": "cadde", "site": "KADIN/FATİH"}}
+{"id": "real-ibb-saglik-00e1b76107", "fields": {"csbm_ad": "Çiçekçi Bostan", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-00e746a36d", "fields": {"ilce": "KULOĞLU/BEYOĞLU", "csbm_ad": "Sadri Alışık", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-00fc779790", "fields": {"site": "NAMIK KEMAL/ESENYURT"}}
+{"id": "real-ibb-saglik-0109ad32e6", "fields": {"csbm_ad": "Meriç", "csbm_tur": "cadde", "dis_kapi": "18"}}
+{"id": "real-ibb-saglik-010a33e452", "fields": {"mahalle": "BARBAROS/ÜSKÜDAR", "csbm_ad": "Veysipaşa", "csbm_tur": "sokak", "dis_kapi": "14/1"}}
+{"id": "real-ibb-saglik-01394659b7", "fields": {"site": "Tosya Cd No:5 HUZUR/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-013ba46d53", "fields": {"csbm_ad": "Abide-i Hürriyet", "csbm_tur": "cadde", "dis_kapi": "125"}}
+{"id": "real-ibb-saglik-013f0221ab", "fields": {"csbm_ad": "Yeşilyurt İstasyon", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-015d3bb37f", "fields": {"csbm_ad": "Alemdağ", "csbm_tur": "cadde", "site": "20 ATATÜRK/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-01749d8d61", "fields": {"csbm_ad": "Meşrutiyet", "csbm_tur": "cadde", "dis_kapi": "79"}}
+{"id": "real-ibb-saglik-01a47be006", "fields": {"ilce": "Tatlısu", "site": "Sk No:2 HÜRRİYET/KARTAL"}}
+{"id": "real-ibb-saglik-01a690f4b4", "fields": {"csbm_ad": "Çavuşbaşı", "csbm_tur": "cadde", "dis_kapi": "7"}}
+{"id": "real-ibb-saglik-01b8fcad33", "fields": {"ilce": "AMBARLI/AVCILAR", "csbm_ad": "Şahin", "csbm_tur": "cadde", "daire": "9"}}
+{"id": "real-ibb-saglik-01bea7144c", "fields": {"csbm_ad": "Rauf Denktaş", "csbm_tur": "cadde", "dis_kapi": "43-45", "site": "BEŞTELSİZ/ZEYTİNBURNU"}}
+{"id": "real-ibb-saglik-01c1d42231", "fields": {"csbm_ad": "Bozacı Odaları", "csbm_tur": "sokak", "daire": "1"}}
+{"id": "real-ibb-saglik-01c86defa9", "fields": {"csbm_ad": "Adnan Kahveci", "csbm_tur": "bulvar", "dis_kapi": "136", "site": "SİYAVUŞPAŞA/BAHÇELİEVLER"}}
+{"id": "real-ibb-saglik-01e0af2ce2", "fields": {"ilce": "Yeniyurt", "site": "Sk No:2 ŞEYHLİ/PENDİK"}}
+{"id": "real-ibb-saglik-01f8445b1f", "fields": {"csbm_ad": "Turgut Özal Millet", "csbm_tur": "cadde", "site": "53 D HASEKİ SULTAN/FATİH"}}
+{"id": "real-ibb-saglik-01fab12687", "fields": {"csbm_ad": "Gümüşsuyu Davutpaşa", "csbm_tur": "cadde", "dis_kapi": "76", "site": "A MERKEZEFENDİ/ZEYTİNBURNU"}}
+{"id": "real-ibb-saglik-01fae2486d", "fields": {"site": "Serdar Sk No:13 VATAN/BAYRAMPAŞA"}}
+{"id": "real-ibb-saglik-0200724d68", "fields": {"site": "Turgut Özal Millet Cd No:12 MOLLA GÜRANİ/FATİH"}}
+{"id": "real-ibb-saglik-0201485aad", "fields": {"csbm_ad": "Saip Molla", "csbm_tur": "cadde", "dis_kapi": "6"}}
+{"id": "real-ibb-saglik-0210447c24", "fields": {"csbm_ad": "Otopark Arkası", "csbm_tur": "sokak", "dis_kapi": "18/1"}}
+{"id": "real-ibb-saglik-02143ec07d", "fields": {"csbm_ad": "Cengiz Topel", "csbm_tur": "cadde", "site": "70 B ŞEMSİPAŞA/GAZİOSMANPAŞA"}}
+{"id": "real-ibb-saglik-0227224afd", "fields": {"csbm_ad": "Yakacık", "csbm_tur": "cadde", "dis_kapi": "94", "site": "VELİBABA/PENDİK"}}
+{"id": "real-ibb-saglik-022a878b66", "fields": {"csbm_ad": "Alemdağ", "csbm_tur": "cadde", "site": "14 ATATÜRK/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-022e56ca6d", "fields": {"csbm_ad": "Koru", "csbm_tur": "cadde", "dis_kapi": "8"}}
+{"id": "real-ibb-saglik-023405f017", "fields": {"csbm_ad": "Neyzen Dede", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-02a4f0de54", "fields": {"csbm_ad": "Dr. Orhan Maltepe", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-02d14276df", "fields": {"csbm_ad": "Feyzullah", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-02d88ed4e4", "fields": {"site": "Mavideniz Sk. No:2 KÜÇÜKBAKKALKÖY/ATAŞEHİR"}}
+{"id": "real-ibb-saglik-02dac4d1be", "fields": {"site": "FERAHEVLER/SARIYER"}}
+{"id": "real-ibb-saglik-02de0bbe43", "fields": {"csbm_ad": "Orgeneral Şahap Gürler", "csbm_tur": "cadde", "site": "8 B RASİMPAŞA/KADIKÖY"}}
+{"id": "real-ibb-saglik-02df1c7d60", "fields": {"csbm_ad": "Demokrasi", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-02e744dfda", "fields": {"csbm_ad": "117", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-02eea30ce2", "fields": {"site": "Softa Sinan Sk. No:55 MOLLA GÜRANİ/FATİH"}}
+{"id": "real-ibb-saglik-02ff5d0748", "fields": {"csbm_ad": "Turgut Özal 1", "csbm_tur": "cadde", "site": "25 Z PINARTEPE/BÜYÜKÇEKMECE"}}
+{"id": "real-ibb-saglik-0310405f24", "fields": {"site": "Sedef Sk No:17 ATATÜRK/ESENYURT"}}
+{"id": "real-ibb-saglik-031304c62b", "fields": {"ilce": "KISIKLI/ÜSKÜDAR", "csbm_ad": "Çağrıbey", "csbm_tur": "sokak", "dis_kapi": "8"}}
+{"id": "real-ibb-saglik-031de5749b", "fields": {"csbm_ad": "Kıztaşı", "csbm_tur": "cadde", "dis_kapi": "16", "site": "İSKENDERPAŞA/FATİH"}}
+{"id": "real-ibb-saglik-03204474ba", "fields": {"site": "ÇAVUŞOĞLU/KARTAL"}}
+{"id": "real-ibb-saglik-03362862f0", "fields": {"ilce": "ÇAKMAK/GÜNGÖREN", "csbm_ad": "Soğanlı", "csbm_tur": "cadde", "dis_kapi": "72"}}
+{"id": "real-ibb-saglik-0337c65571", "fields": {"ilce": "Gelincik", "site": "Sk. No:8 A DENİZKÖŞKLER/AVCILAR"}}
+{"id": "real-ibb-saglik-033c6c4745", "fields": {"site": "Erseven Sk. No:2 MOLLA GÜRANİ/FATİH"}}
+{"id": "real-ibb-saglik-035dcff3d9", "fields": {"ilce": "ALTUNİZADE/ÜSKÜDAR", "csbm_ad": "Dadaşlar", "csbm_tur": "sokak", "dis_kapi": "23"}}
+{"id": "real-ibb-saglik-0394f6d427", "fields": {"csbm_ad": "Alemdağ", "csbm_tur": "cadde", "dis_kapi": "95"}}
+{"id": "real-ibb-saglik-03972c9c62", "fields": {"ilce": "MECLİS/SANCAKTEPE", "csbm_ad": "Atatürk", "csbm_tur": "cadde", "dis_kapi": "109/D"}}
+{"id": "real-ibb-saglik-03aac45043", "fields": {"csbm_ad": "Ticaret", "csbm_tur": "cadde", "site": "53 A ORUÇREİS/ESENLER"}}
+{"id": "real-ibb-saglik-03afa8b5e8", "fields": {"csbm_ad": "Emir Sultan", "csbm_tur": "cadde", "dis_kapi": "39"}}
+{"id": "real-ibb-saglik-03c4a1c38a", "fields": {"site": "TEPEÜSTÜ/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-03e32010c0", "fields": {"csbm_ad": "Cengiz Topel", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-03f156df5f", "fields": {"ilce": "Aksu", "csbm_ad": "Osmaniye Yolu", "csbm_tur": "sokak", "site": "25 A OSMANİYE/BAKIRKÖY"}}
+{"id": "real-ibb-saglik-041a08b616", "fields": {"site": "CEVİZLİK/BAKIRKÖY"}}
+{"id": "real-ibb-saglik-041ed44b47", "fields": {"csbm_ad": "Cengiz Topel", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-04266474c7", "fields": {"csbm_ad": "Atatürk", "csbm_tur": "bulvar", "site": "32 KEMALPAŞA/FATİH"}}
+{"id": "real-ibb-saglik-0455161ac7", "fields": {"site": "HÜRRİYET/KARTAL"}}
+{"id": "real-ibb-saglik-045e1de1f8", "fields": {"site": "Mahir İz Cd ALTUNİZADE/ÜSKÜDAR"}}
+{"id": "real-ibb-saglik-0467bbe0bc", "fields": {"site": "Tibet Sk. No:8 A ÇELİKTEPE/KAĞITHANE"}}
+{"id": "real-ibb-saglik-046ae57334", "fields": {"csbm_ad": "2105", "csbm_tur": "sokak", "site": "17 FEVZİ ÇAKMAK/BAĞCILAR"}}
+{"id": "real-ibb-saglik-047578d72a", "fields": {"site": "Ata Sk. No:5 A ACIBADEM/KADIKÖY"}}
+{"id": "real-ibb-saglik-048bef7fc2", "fields": {"csbm_ad": "Bosna", "csbm_tur": "bulvar"}}
+{"id": "real-ibb-saglik-049e666817", "fields": {"site": "Çağlayan Sk. No:5 A SİYAVUŞPAŞA/BAHÇELİEVLER"}}
+{"id": "real-ibb-saglik-04a8c25c81", "fields": {"mahalle": "ZUHURATBABA/BAKIRKÖY", "csbm_ad": "Refet Bele", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-04b045e814", "fields": {"csbm_ad": "Avni Dilligil", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-04e0b0abb1", "fields": {"csbm_ad": "Barbaros", "csbm_tur": "bulvar", "site": "30 BALMUMCU/BEŞİKTAŞ"}}
+{"id": "real-ibb-saglik-04e13e26d4", "fields": {"csbm_ad": "Esentepe", "csbm_tur": "cadde", "site": "6 ADNAN KAHVECİ/BEYLİKDÜZÜ"}}
+{"id": "real-ibb-saglik-04e771f1f8", "fields": {"site": "Bir Sk. No:2 A YILDIRIM/BAYRAMPAŞA"}}
+{"id": "real-ibb-saglik-04f2fdf0c1", "fields": {"csbm_ad": "Sevdalı Çıkmazı", "csbm_tur": "sokak", "site": "1 MERKEZ/BEYKOZ"}}
+{"id": "real-ibb-saglik-0504616120", "fields": {"site": "Sıdıka Cebecioğlu Sk. No:10 SULTANİYE/ESENYURT"}}
+{"id": "real-ibb-saglik-0505fdf9bc", "fields": {"ilce": "FERHATPAŞA/ÇATALCA", "csbm_ad": "TahtaKöprü", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-05205bdca1", "fields": {"csbm_ad": "Ziya Gökalp", "csbm_tur": "sokak", "dis_kapi": "69", "site": "SEYYİD ÖMER/FATİH"}}
+{"id": "real-ibb-saglik-0554c8896e", "fields": {"csbm_ad": "Mustafa Kemal", "csbm_tur": "bulvar", "dis_kapi": "4/1"}}
+{"id": "real-ibb-saglik-0571eda06a", "fields": {"csbm_ad": "Cemal Yener Tosyalı", "csbm_tur": "cadde", "dis_kapi": "10", "site": "KALENDERHANE/FATİH"}}
+{"id": "real-ibb-saglik-058b69e661", "fields": {"csbm_ad": "Selimiye", "csbm_tur": "cadde", "dis_kapi": "25"}}
+{"id": "real-ibb-saglik-059a63cfae", "fields": {"csbm_ad": "Bosna", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-05c1511daf", "fields": {"ilce": "ORUÇREİS/ESENLER", "csbm_ad": "528.Sk", "dis_kapi": "2"}}
+{"id": "real-ibb-saglik-05c351de4c", "fields": {"site": "Erseven Sk No:12/-14a MERKEZ/KAĞITHANE"}}
+{"id": "real-ibb-saglik-05e80592bb", "fields": {"csbm_ad": "892", "csbm_tur": "sokak", "site": "5 SANCAKTEPE/BAĞCILAR"}}
+{"id": "real-ibb-saglik-05f20ced2e", "fields": {"ilce": "BAĞLARÇEŞME/ESENYURT", "csbm_ad": "1131.Sk", "dis_kapi": "1/2"}}
+{"id": "real-ibb-saglik-05fa717035", "fields": {"ilce": "ÜNALAN/ÜSKÜDAR", "csbm_ad": "Baraj", "csbm_tur": "yol", "dis_kapi": "31"}}
+{"id": "real-ibb-saglik-06038be842", "fields": {"mahalle": "KÜÇÜKBAKKALKÖY/ATAŞEHİR", "csbm_ad": "Prof. Dr. Hıfzı Özcan", "csbm_tur": "cadde", "daire": "8"}}
+{"id": "real-ibb-saglik-061fb8a3c1", "fields": {"csbm_ad": "Ahmet Mithatefendi", "csbm_tur": "cadde", "site": "17 FENERBAHÇE/KADIKÖY"}}
+{"id": "real-ibb-saglik-0627d11639", "fields": {"csbm_ad": "Tophanelioğlu", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-062d970700", "fields": {"csbm_ad": "Turgut Özal", "csbm_tur": "bulvar", "dis_kapi": "149", "site": "ŞERİFALİ/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-0640526a8d", "fields": {"csbm_ad": "Abdulhamit Han", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-068b82ad3b", "fields": {"site": "Anadolu Sk No:2 HÜRRİYET/BAHÇELİEVLER"}}
+{"id": "real-ibb-saglik-06aab1c650", "fields": {"csbm_ad": "Sanayi", "csbm_tur": "cadde", "dis_kapi": "13/2", "site": "YENİBOSNA MERKEZ/BAHÇELİEVLER"}}
+{"id": "real-ibb-saglik-06bdbce3d1", "fields": {"csbm_ad": "Turgut Özal Millet", "csbm_tur": "cadde", "dis_kapi": "21", "site": "A HASEKİ SULTAN/FATİH"}}
+{"id": "real-ibb-saglik-06c46d2ca2", "fields": {"csbm_ad": "1941", "csbm_tur": "sokak", "site": "3 MEVLANA/ESENYURT"}}
+{"id": "real-ibb-saglik-06cda4af75", "fields": {"csbm_ad": "Yan Yol", "csbm_tur": "cadde", "dis_kapi": "20/B", "site": "Çobançeşme"}}
+{"id": "real-ibb-saglik-06e3a23060", "fields": {"csbm_ad": "Atatürk", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-06fc29d899", "fields": {"ilce": "SARIYER MERKEZ/SARIYER", "csbm_ad": "Şehit Mithat Yılmaz", "csbm_tur": "cadde", "dis_kapi": "47"}}
+{"id": "real-ibb-saglik-0703174e8e", "fields": {"csbm_ad": "Prof. Dr. Turan Güneş", "csbm_tur": "cadde", "dis_kapi": "157", "site": "A ÇIRPICI/ZEYTİNBURNU"}}
+{"id": "real-ibb-saglik-070347f937", "fields": {"csbm_ad": "Koca Mustafapaşa", "csbm_tur": "cadde", "dis_kapi": "7", "site": "AKSARAY/FATİH"}}
+{"id": "real-ibb-saglik-071499c6d3", "fields": {"csbm_ad": "Sağlam Fikir Aralığı No:4 ESENTEPE/ŞİŞLİ"}}
+{"id": "real-ibb-saglik-0715db0d3d", "fields": {"il": "Gümüşhane", "site": "Sk No:1 CEVİZLİ/KARTAL"}}
+{"id": "real-ibb-saglik-071ac8f406", "fields": {"csbm_ad": "CUMHURİYET/SARIYER"}}
+{"id": "real-ibb-saglik-071d737086", "fields": {"site": "Fedakar Sk. No:3 FATİH/BÜYÜKÇEKMECE"}}
+{"id": "real-ibb-saglik-0727c1c046", "fields": {"mahalle": "ÇAMLIK/ÇEKMEKÖY", "csbm_ad": "Şahinbey", "csbm_tur": "cadde", "dis_kapi": "22"}}
+{"id": "real-ibb-saglik-074d318ea8", "fields": {"csbm_ad": "Kırmızıkuşak", "csbm_tur": "sokak", "site": "11 RASİMPAŞA/KADIKÖY"}}
+{"id": "real-ibb-saglik-07743f4bb5", "fields": {"csbm_ad": "Şair Çelebi", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-07811ed284", "fields": {"csbm_ad": "Fişekhane", "csbm_tur": "cadde", "site": "5 ZEYTİNLİK/BAKIRKÖY"}}
+{"id": "real-ibb-saglik-0798dddce6", "fields": {"csbm_ad": "Çınar 9", "csbm_tur": "sokak", "site": "3 B ÇIRPICI/ZEYTİNBURNU"}}
+{"id": "real-ibb-saglik-07a9b4e390", "fields": {"csbm_ad": "Turgut Özal Millet", "csbm_tur": "cadde", "dis_kapi": "92", "site": "F MOLLA GÜRANİ/FATİH"}}
+{"id": "real-ibb-saglik-07add95c84", "fields": {"site": "Huban Sk. No:3 B CEVİZLİK/BAKIRKÖY"}}
+{"id": "real-ibb-saglik-07bed91ea6", "fields": {"csbm_ad": "Ferah", "csbm_tur": "sokak", "site": "25 A TEŞVİKİYE/ŞİŞLİ"}}
+{"id": "real-ibb-saglik-07c50e07f7", "fields": {"ilce": "MERKEZ/KÜÇÜKÇEKMECE", "csbm_ad": "Mahmutbey", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-07dd3e0c20", "fields": {"csbm_ad": "İstasyon", "csbm_tur": "cadde", "dis_kapi": "48", "site": "YEŞİLKÖY/BAKIRKÖY"}}
+{"id": "real-ibb-saglik-07dd4923be", "fields": {"site": "Karanfil Sk No:15 LEVENT/BEŞİKTAŞ"}}
+{"id": "real-ibb-saglik-07deeb4c67", "fields": {"site": "FEVZİ ÇAKMAK/PENDİK"}}
+{"id": "real-ibb-saglik-07e5b06417", "fields": {"csbm_ad": "Refah", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-07f1b1528b", "fields": {"csbm_ad": "Çukurçeşme", "csbm_tur": "cadde", "dis_kapi": "63"}}
+{"id": "real-ibb-saglik-0817168943", "fields": {"ilce": "BAŞIBÜYÜK/MALTEPE", "csbm_ad": "Başıbüyük", "csbm_tur": "cadde", "daire": "10"}}
+{"id": "real-ibb-saglik-083185dc8d", "fields": {"csbm_ad": "2486/1", "csbm_tur": "sokak", "dis_kapi": "1", "kat": "3", "site": "CEBECİ/SULTANGAZİ"}}
+{"id": "real-ibb-saglik-0839d1dc77", "fields": {"csbm_ad": "Şeyh Şamil", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-087599f822", "fields": {"site": "Aslangazi Cd No:10 TALATPAŞA/KAĞITHANE"}}
+{"id": "real-ibb-saglik-0876f1199d", "fields": {"csbm_ad": "Pazar Yolu", "csbm_tur": "sokak", "site": "6 OSMANAĞA/KADIKÖY"}}
+{"id": "real-ibb-saglik-087acbac42", "fields": {"csbm_ad": "Hürriyet", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-088252b7fb", "fields": {"csbm_ad": "Gülerce", "csbm_tur": "sokak", "dis_kapi": "9/2", "site": "BURHANİYE/ÜSKÜDAR"}}
+{"id": "real-ibb-saglik-0886ad301a", "fields": {"mahalle": "FEYZULLAH/MALTEPE", "csbm_ad": "Bağdat", "csbm_tur": "cadde", "dis_kapi": "346"}}
+{"id": "real-ibb-saglik-08877d4862", "fields": {"csbm_ad": "Gürpınar Yolu", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-08a8299f20", "fields": {"csbm_ad": "Lâlezade", "csbm_tur": "sokak", "daire": "2", "site": "MEVLANAKAPI/FATİH"}}
+{"id": "real-ibb-saglik-08ca257d81", "fields": {"csbm_ad": "Rıfat Ilgaz", "csbm_tur": "cadde", "dis_kapi": "112"}}
+{"id": "real-ibb-saglik-08e0ed4a81", "fields": {"csbm_ad": "206", "csbm_tur": "sokak", "site": "10 BARBAROS/BAĞCILAR"}}
+{"id": "real-ibb-saglik-08e72a11b6", "fields": {"csbm_ad": "Ormanlı", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-08e9eb1d69", "fields": {"site": "VEYSEL KARANİ/SANCAKTEPE"}}
+{"id": "real-ibb-saglik-08ef75a054", "fields": {"site": "BATTALGAZİ/SULTANBEYLİ"}}
+{"id": "real-ibb-saglik-09067de894", "fields": {"mahalle": "FENERYOLU/KADIKÖY", "csbm_ad": "Bağdat", "csbm_tur": "cadde", "daire": "117"}}
+{"id": "real-ibb-saglik-0913ff3740", "fields": {"csbm_ad": "Adnan Menderes Vatan", "csbm_tur": "bulvar", "dis_kapi": "6", "kat": "8", "site": "AKŞEMSETTİN/FATİH"}}
+{"id": "real-ibb-saglik-091f1fa4d7", "fields": {"site": "Modabağ 2.Ara Sk No:1 ÇIRPICI/ZEYTİNBURNU"}}
+{"id": "real-ibb-saglik-092e3b619a", "fields": {"csbm_ad": "Akçam", "csbm_tur": "cadde", "site": "20 KONAKLAR/BEŞİKTAŞ"}}
+{"id": "real-ibb-saglik-094948db44", "fields": {"csbm_ad": "Gazi", "csbm_tur": "cadde", "dis_kapi": "149", "site": "151B ŞEHİTLER/ESENYURT"}}
+{"id": "real-ibb-saglik-0953d1cad5", "fields": {"mahalle": "BARBAROS/ÜSKÜDAR", "csbm_ad": "Denizmen", "csbm_tur": "sokak", "dis_kapi": "14/1"}}
+{"id": "real-ibb-saglik-095742ed74", "fields": {"ilce": "AKEVLER/ESENYURT", "csbm_ad": "1059", "csbm_tur": "sokak", "dis_kapi": "6"}}
+{"id": "real-ibb-saglik-0977b019df", "fields": {"ilce": "YAKACIK ÇARŞI/KARTAL", "csbm_ad": "Cevdet", "csbm_tur": "sokak", "dis_kapi": "10"}}
+{"id": "real-ibb-saglik-097cab15b4", "fields": {"ilce": "KAZIM", "csbm_ad": "1052", "csbm_tur": "sokak", "daire": "1", "site": "KARABEKİR/ESENLER"}}
+{"id": "real-ibb-saglik-098302b3e5", "fields": {"csbm_ad": "Eskiyıldız", "csbm_tur": "cadde", "dis_kapi": "16", "site": "18A YILDIZ/BEŞİKTAŞ"}}
+{"id": "real-ibb-saglik-09a60f2dec", "fields": {"csbm_ad": "Molla Gürani", "csbm_tur": "cadde", "site": "49 A MOLLA GÜRANİ/FATİH"}}
+{"id": "real-ibb-saglik-09aa70fd03", "fields": {"ilce": "BAŞAK/BAŞAKŞEHİR", "csbm_ad": "Yeşil Vadi", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-09b31ec122", "fields": {"csbm_ad": "Bağdat", "csbm_tur": "cadde", "site": "26 B MEHMET AKİF ERSOY/ESENYURT"}}
+{"id": "real-ibb-saglik-09de8204bc", "fields": {"ilce": "GÜNEŞTEPE/GÜNGÖREN", "csbm_ad": "Çelebi", "csbm_tur": "sokak", "dis_kapi": "4-6A"}}
+{"id": "real-ibb-saglik-09e475b8a5", "fields": {"ilce": "No", "csbm_ad": "Behçet Kemal Çağlar", "csbm_tur": "sokak", "site": "6 B SOĞANLIK YENİ/KARTAL"}}
+{"id": "real-ibb-saglik-0a17d3eb4c", "fields": {"csbm_ad": "Begonya", "csbm_tur": "sokak", "dis_kapi": "3"}}
+{"id": "real-ibb-saglik-0a26dff024", "fields": {"site": "18 Mart Cd No:5 YUKARI DUDULLU/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-0a2fb9a76d", "fields": {"site": "Hasat Sk. No:3 A MERKEZ/ŞİŞLİ"}}
+{"id": "real-ibb-saglik-0a840c919e", "fields": {"ilce": "CENNET/KÜÇÜKÇEKMECE", "csbm_ad": "Alparslan", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-0a89523358", "fields": {"csbm_ad": "Osmangazi", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-0aa07041c7", "fields": {"ilce": "ORTA/BAYRAMPAŞA", "csbm_ad": "İbrahimağa", "csbm_tur": "cadde", "daire": "27"}}
+{"id": "real-ibb-saglik-0abb94f81e", "fields": {"csbm_ad": "Kuzey Yanyol", "dis_kapi": "72/1", "site": "Soğanlık"}}
+{"id": "real-ibb-saglik-0add455075", "fields": {"csbm_ad": "50", "csbm_tur": "sokak", "site": "38 YENİDOĞAN/ZEYTİNBURNU"}}
+{"id": "real-ibb-saglik-0af4b0c336", "fields": {"csbm_ad": "Halk", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-0b4be67692", "fields": {"csbm_ad": "Bağdat", "csbm_tur": "cadde", "dis_kapi": "468", "site": "BOSTANCI/KADIKÖY"}}
+{"id": "real-ibb-saglik-0b4d9de58a", "fields": {"csbm_ad": "Oymak", "csbm_tur": "sokak", "dis_kapi": "6"}}
+{"id": "real-ibb-saglik-0b5208c7c1", "fields": {"csbm_ad": "Gündoğdu", "csbm_tur": "sokak", "dis_kapi": "66"}}
+{"id": "real-ibb-saglik-0b5f23d985", "fields": {"csbm_ad": "Halaskargazi", "csbm_tur": "cadde", "dis_kapi": "191"}}
+{"id": "real-ibb-saglik-0b73f7d91f", "fields": {"csbm_ad": "Zübeyde Hanım", "csbm_tur": "cadde", "dis_kapi": "28/1", "site": "BAHÇELİEVLER/ÜSKÜDAR"}}
+{"id": "real-ibb-saglik-0b7c1f3c4e", "fields": {"site": "Künye Sk. No:3 GÜZELYALI/PENDİK"}}
+{"id": "real-ibb-saglik-0b88c97158", "fields": {"csbm_ad": "Haraççı-Hadımköy Yolu", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-0bab443941", "fields": {"csbm_ad": "İncirli", "csbm_tur": "cadde", "site": "36 KARTALTEPE/BAKIRKÖY"}}
+{"id": "real-ibb-saglik-0bb522a0d3", "fields": {"csbm_ad": "Ayhan Işık", "csbm_tur": "sokak", "dis_kapi": "11"}}
+{"id": "real-ibb-saglik-0bcb57035c", "fields": {"csbm_ad": "Fener Kalamış", "csbm_tur": "cadde", "dis_kapi": "69", "site": "FENERBAHÇE/KADIKÖY"}}
+{"id": "real-ibb-saglik-0bd56bbfe3", "fields": {"site": "Adap Sk No:17 ESENYALI/PENDİK"}}
+{"id": "real-ibb-saglik-0bd59c67f5", "fields": {"site": "YAKACIK ÇARŞI/KARTAL"}}
+{"id": "real-ibb-saglik-0be46a1b7f", "fields": {"site": "Selimiye İskele Cd No:17 SELİMİYE/ÜSKÜDAR"}}
+{"id": "real-ibb-saglik-0bf700b3ab", "fields": {"csbm_ad": "Aydınlar", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-0c18f51e99", "fields": {"site": "Aytar Cd No:10 NİSBETİYE/BEŞİKTAŞ"}}
+{"id": "real-ibb-saglik-0c21f1999d", "fields": {"csbm_ad": "Koçman", "csbm_tur": "cadde", "dis_kapi": "4", "site": "GÜNEŞLİ/BAĞCILAR"}}
+{"id": "real-ibb-saglik-0c2434b3a9", "fields": {"ilce": "MURATPAŞA/BAYRAMPAŞA", "csbm_ad": "Kamil", "csbm_tur": "cadde", "dis_kapi": "90"}}
+{"id": "real-ibb-saglik-0c4f03785d", "fields": {"csbm_ad": "Demokrasi", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-0c5c630092", "fields": {"site": "Çeçen Sk. No:52 ACIBADEM/ÜSKÜDAR"}}
+{"id": "real-ibb-saglik-0c5f467d33", "fields": {"site": "Talatbey Sk No:1 RASİMPAŞA/KADIKÖY"}}
+{"id": "real-ibb-saglik-0c60af4496", "fields": {"ilce": "ÇEŞME/KÜÇÜKÇEKMECE", "csbm_ad": "Camialtı", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-0c74a464b6", "fields": {"site": "BAĞLAR/BAĞCILAR"}}
+{"id": "real-ibb-saglik-0c8c267a9a", "fields": {"csbm_ad": "Marmara", "csbm_tur": "cadde", "site": "51 KOCA MUSTAFAPAŞA/FATİH"}}
+{"id": "real-ibb-saglik-0c8e16926e", "fields": {"ilce": "USKUMRUKÖY/SARIYER", "csbm_ad": "Kilyos", "csbm_tur": "cadde", "dis_kapi": "2/1"}}
+{"id": "real-ibb-saglik-0cbac2205f", "fields": {"csbm_ad": "Kamer Hatun", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-0cbfea63de", "fields": {"site": "Barbaros Cd No:66 ŞERİFALİ/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-0ccf109413", "fields": {"ilce": "Plevne", "site": "Sk No:24 YENİ/SİLİVRİ"}}
+{"id": "real-ibb-saglik-0d0a70353c", "fields": {"ilce": "CEVİZLİ/MALTEPE", "csbm_ad": "Akasya", "csbm_tur": "sokak", "dis_kapi": "67"}}
+{"id": "real-ibb-saglik-0d0d636769", "fields": {"csbm_ad": "Turgut Özal Millet", "csbm_tur": "cadde", "site": "53 E HASEKİ SULTAN/FATİH"}}
+{"id": "real-ibb-saglik-0d1556c8ac", "fields": {"csbm_ad": "Fedakar", "csbm_tur": "sokak", "dis_kapi": "17"}}
+{"id": "real-ibb-saglik-0d365ad68d", "fields": {"site": "İsteks Sanayi Sitesi No:10 ZİYA GÖKALP/BAŞAKŞEHİR"}}
+{"id": "real-ibb-saglik-0d4a1aeee6", "fields": {"ilce": "PINAR/ESENYURT", "csbm_ad": "1271", "csbm_tur": "sokak", "dis_kapi": "52"}}
+{"id": "real-ibb-saglik-0d66cac3a3", "fields": {"csbm_ad": "Ahmet Haşim", "csbm_tur": "sokak", "dis_kapi": "4", "site": "KAZLIÇEŞME/ZEYTİNBURNU"}}
+{"id": "real-ibb-saglik-0d69d1d495", "fields": {"site": "Pakdil Sk. No:6 TATLISU/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-0d7b4e04b3", "fields": {"ilce": "GÜMÜŞSUYU/BEYOĞLU", "csbm_ad": "Dünya Sağlık", "csbm_tur": "sokak", "dis_kapi": "23"}}
+{"id": "real-ibb-saglik-0db5e9297d", "fields": {"ilce": "KOCATEPE/BAYRAMPAŞA", "csbm_ad": "Hal Yolu", "csbm_tur": "sokak", "dis_kapi": "532"}}
+{"id": "real-ibb-saglik-0db76814ad", "fields": {"site": "Narin Sk No:6 VELİBABA/PENDİK"}}
+{"id": "real-ibb-saglik-0db86c8b31", "fields": {"ilce": "HASANPAŞA/KADIKÖY", "csbm_ad": "Uhuvvet", "csbm_tur": "sokak", "dis_kapi": "44"}}
+{"id": "real-ibb-saglik-0ded900025", "fields": {"ilce": "Ihlara", "site": "Sk SOĞANLIK YENİ/KARTAL"}}
+{"id": "real-ibb-saglik-0df000f50f", "fields": {"csbm_ad": "Yeniyol", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-0dfcceb15a", "fields": {"csbm_ad": "Büyükdere", "csbm_tur": "cadde", "dis_kapi": "65"}}
+{"id": "real-ibb-saglik-0e1786cfa5", "fields": {"csbm_ad": "Alemdağ", "csbm_tur": "cadde", "dis_kapi": "726", "site": "YUKARI DUDULLU/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-0e2a7bbf3c", "fields": {"site": "Destan Sk. No:4 POSTANE/TUZLA"}}
+{"id": "real-ibb-saglik-0e2b5182c7", "fields": {"csbm_ad": "Balıklı Kazlıçeşme Yolu", "csbm_tur": "sokak", "dis_kapi": "1/1", "site": "TELSİZ/ZEYTİNBURNU"}}
+{"id": "real-ibb-saglik-0e3406df7c", "fields": {"ilce": "PİYALEPAŞA/BEYOĞLU", "csbm_ad": "Kurudere", "csbm_tur": "sokak", "dis_kapi": "64"}}
+{"id": "real-ibb-saglik-0e3cd60892", "fields": {"site": "Fesleğen Sk. No:6 BARBAROS/ATAŞEHİR"}}
+{"id": "real-ibb-saglik-0e3dc1bcfa", "fields": {"ilce": "BÜYÜKDERE/SARIYER", "csbm_ad": "Çayırbaşı", "csbm_tur": "cadde", "dis_kapi": "77"}}
+{"id": "real-ibb-saglik-0e606dd86b", "fields": {"site": "SELAMİ ALİ/ÜSKÜDAR"}}
+{"id": "real-ibb-saglik-0e7becafd9", "fields": {"site": "Kutlu Sk No:3 FATİH/SANCAKTEPE"}}
+{"id": "real-ibb-saglik-0e7fc32066", "fields": {"csbm_ad": "Davutpaşa Çeşmesi", "csbm_tur": "sokak", "dis_kapi": "22"}}
+{"id": "real-ibb-saglik-0e80529e67", "fields": {"site": "Akdeniz Cad. No:107 A AKŞEMSETTİN/FATİH"}}
+{"id": "real-ibb-saglik-0e8cbd9968", "fields": {"csbm_ad": "Akdeniz", "csbm_tur": "cadde", "dis_kapi": "38", "site": "AKŞEMSETTİN/FATİH"}}
+{"id": "real-ibb-saglik-0e951e770a", "fields": {"csbm_ad": "Halk", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-0ea88a0fb0", "fields": {"csbm_ad": "AMBARLI/AVCILAR"}}
+{"id": "real-ibb-saglik-0ea9db2962", "fields": {"csbm_ad": "2394", "csbm_tur": "sokak", "dis_kapi": "93"}}
+{"id": "real-ibb-saglik-0eabe56918", "fields": {"csbm_ad": "Ortanca", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-0ecce2723d", "fields": {"csbm_ad": "İnönü", "csbm_tur": "cadde", "dis_kapi": "129"}}
+{"id": "real-ibb-saglik-0ee8dfbb1b", "fields": {"mahalle": "KAVACIK/BEYKOZ", "csbm_ad": "Fatih Sultan Mehmet", "csbm_tur": "cadde", "dis_kapi": "38/A"}}
+{"id": "real-ibb-saglik-0eeea49265", "fields": {"csbm_ad": "Akdağ", "csbm_tur": "cadde", "dis_kapi": "10", "site": "12A TATLISU/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-0eefe59d36", "fields": {"csbm_ad": "Halil Rahman", "csbm_tur": "cadde", "dis_kapi": "43", "site": "YEŞİLCE/KAĞITHANE"}}
+{"id": "real-ibb-saglik-0f20533bdf", "fields": {"ilce": "Esen", "site": "Sk. No:22 A ÇAĞLAYAN/KAĞITHANE"}}
+{"id": "real-ibb-saglik-0f2b59a318", "fields": {"csbm_ad": "Hatboyu", "csbm_tur": "cadde", "dis_kapi": "6"}}
+{"id": "real-ibb-saglik-0f31945c4c", "fields": {"site": "Yeni Ay Sk. No:29 A ŞEYHLİ/PENDİK"}}
+{"id": "real-ibb-saglik-0f46447bad", "fields": {"csbm_ad": "Deniz", "csbm_tur": "cadde", "daire": "58", "site": "KAYNARCA/PENDİK"}}
+{"id": "real-ibb-saglik-0f51d40b51", "fields": {"site": "Şeker Maslak Sk. No:2 NAMIK KEMAL/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-0fafc9f183", "fields": {"csbm_ad": "Piyalepaşa", "csbm_tur": "bulvar", "dis_kapi": "69/1"}}
+{"id": "real-ibb-saglik-0fbb43de36", "fields": {"csbm_ad": "Saraçlar", "dis_kapi": "11", "site": "11/Bl İKİTELLİ OSB/BAŞAKŞEHİR"}}
+{"id": "real-ibb-saglik-0fcfd5bf79", "fields": {"ilce": "No", "csbm_ad": "322", "csbm_tur": "sokak", "site": "4 B HÜRRİYET/GAZİOSMANPAŞA"}}
+{"id": "real-ibb-saglik-0fd019dbda", "fields": {"csbm_ad": "Namık Kemal", "csbm_tur": "cadde", "dis_kapi": "89", "site": "İDEALTEPE/MALTEPE"}}
+{"id": "real-ibb-saglik-0fd286b613", "fields": {"csbm_ad": "Kenar", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-0ff837b345", "fields": {"ilce": "YILDIRIM/BAYRAMPAŞA", "csbm_ad": "Eski Edirne Asfaltı", "csbm_tur": "cadde", "dis_kapi": "103"}}
+{"id": "real-ibb-saglik-0ffb4bc5ff", "fields": {"csbm_ad": "Asil", "csbm_tur": "cadde", "dis_kapi": "56/1", "site": "TOPAĞACI/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-10135de5b7", "fields": {"csbm_ad": "Hanımefendi", "csbm_tur": "sokak", "dis_kapi": "16"}}
+{"id": "real-ibb-saglik-101bae216c", "fields": {"csbm_ad": "Koca Mustafapaşa", "csbm_tur": "cadde", "dis_kapi": "142"}}
+{"id": "real-ibb-saglik-104e42b5ea", "fields": {"ilce": "SARIYER MERKEZ/SARIYER", "csbm_ad": "Orta Çeşme", "csbm_tur": "cadde", "dis_kapi": "45"}}
+{"id": "real-ibb-saglik-105b8b0fbb", "fields": {"site": "Efe Mehmet Sk No:30 FEVZİ ÇAKMAK/GAZİOSMANPAŞA"}}
+{"id": "real-ibb-saglik-1097a53544", "fields": {"csbm_ad": "Dr.Sadık Ahmet", "csbm_tur": "sokak", "dis_kapi": "28", "site": "ÇOBANÇEŞME/BAHÇELİEVLER"}}
+{"id": "real-ibb-saglik-109d164d6f", "fields": {"csbm_ad": "Cumhuriyet", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-10a76bb718", "fields": {"site": "Gümüş Sk. No:2 NAMIK KEMAL/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-10a8a8b507", "fields": {"ilce": "ORUÇREİS/ESENLER", "csbm_ad": "Giyimkent 1", "csbm_tur": "sokak", "dis_kapi": "68/A"}}
+{"id": "real-ibb-saglik-10ac529147", "fields": {"ilce": "No", "csbm_ad": "Şair Arşi", "csbm_tur": "cadde", "site": "15 MERDİVENKÖY/KADIKÖY"}}
+{"id": "real-ibb-saglik-10ad286dac", "fields": {"csbm_ad": "Turgut Özal Millet", "csbm_tur": "cadde", "dis_kapi": "155", "site": "ŞEHREMİNİ/FATİH"}}
+{"id": "real-ibb-saglik-10b41b5e4f", "fields": {"ilce": "Süleymanpaşa", "site": "Sk. No:18 A OSMANAĞA/KADIKÖY"}}
+{"id": "real-ibb-saglik-10b99ce31b", "fields": {"ilce": "İNÖNÜ/SANCAKTEPE", "site": "Yeşilova Sk. No:1"}}
+{"id": "real-ibb-saglik-10c2452398", "fields": {"ilce": "İNÖNÜ/SANCAKTEPE", "csbm_ad": "Ankara", "csbm_tur": "cadde", "dis_kapi": "71"}}
+{"id": "real-ibb-saglik-10d0eec862", "fields": {"site": "Yeşil Adalı Sk. No:1 KARTALTEPE/BAKIRKÖY"}}
+{"id": "real-ibb-saglik-10e767daca", "fields": {"csbm_ad": "Şehit Sunay Biçer", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-10ee9edfa5", "fields": {"site": "Üçlü Sk No:1 ÇINAR/MALTEPE"}}
+{"id": "real-ibb-saglik-1110976585", "fields": {"site": "YENİ MAHALLE/GAZİOSMANPAŞA"}}
+{"id": "real-ibb-saglik-111bfa923d", "fields": {"site": "Karakoyunlu Sk. No:10 MOLLA GÜRANİ/FATİH"}}
+{"id": "real-ibb-saglik-11388d9410", "fields": {"ilce": "İHSANİYE/ÇATALCA", "csbm_ad": "Sağlık Ocağı", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-11655ea254", "fields": {"csbm_ad": "Dr. Orhan Maltepe", "csbm_tur": "cadde", "dis_kapi": "16"}}
+{"id": "real-ibb-saglik-116db637f2", "fields": {"site": "Bahriye Hastanesi Arka Sk. No:4 KADIMEHMET EFENDİ/BEYOĞLU"}}
+{"id": "real-ibb-saglik-117a9e4ebe", "fields": {"site": "Nedim Beyazgül Sk No:11 YENİ/SİLİVRİ"}}
+{"id": "real-ibb-saglik-118ebaed2c", "fields": {"csbm_ad": "Sütçü İmam", "csbm_tur": "cadde", "dis_kapi": "20"}}
+{"id": "real-ibb-saglik-11a4a6bfcd", "fields": {"csbm_ad": "Ekin", "csbm_tur": "sokak", "dis_kapi": "4"}}
+{"id": "real-ibb-saglik-11c4f25ea8", "fields": {"csbm_ad": "Atatürk", "csbm_tur": "cadde", "dis_kapi": "31", "site": "SAHRAYICEDİT/KADIKÖY"}}
+{"id": "real-ibb-saglik-11dbb87588", "fields": {"csbm_ad": "Mecidiyeköy", "csbm_tur": "yol", "dis_kapi": "18"}}
+{"id": "real-ibb-saglik-11ddeac1f2", "fields": {"csbm_ad": "Arda", "csbm_tur": "sokak", "site": "3 KOŞUYOLU/KADIKÖY"}}
+{"id": "real-ibb-saglik-11ed6edc47", "fields": {"csbm_ad": "Mimar Sinan", "csbm_tur": "cadde", "dis_kapi": "47-49"}}
+{"id": "real-ibb-saglik-11f3d1c2b3", "fields": {"site": "Safa Sk. No:13 HAMİDİYE/KAĞITHANE"}}
+{"id": "real-ibb-saglik-123017d4fa", "fields": {"csbm_ad": "Paşazade", "csbm_tur": "cadde", "site": "6 ADNAN KAHVECİ/BEYLİKDÜZÜ"}}
+{"id": "real-ibb-saglik-1234c53c8a", "fields": {"csbm_ad": "15", "csbm_tur": "sokak", "dis_kapi": "23"}}
+{"id": "real-ibb-saglik-128a2eee44", "fields": {"csbm_ad": "Yeditepe", "csbm_tur": "cadde", "dis_kapi": "44", "site": "FERHATPAŞA/ATAŞEHİR"}}
+{"id": "real-ibb-saglik-12a030ae0d", "fields": {"csbm_ad": "Dr. Orhan Maltepe", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-12a17e1e8c", "fields": {"csbm_ad": "Darülaceze", "csbm_tur": "cadde", "dis_kapi": "18"}}
+{"id": "real-ibb-saglik-12ac163f2d", "fields": {"site": "OSMANİYE/BAKIRKÖY"}}
+{"id": "real-ibb-saglik-12b7415705", "fields": {"site": "Köknar Sk. No:2 İNKILAP/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-12c7d8d50a", "fields": {"csbm_ad": "Cenap", "csbm_tur": "sokak", "dis_kapi": "2"}}
+{"id": "real-ibb-saglik-1302cd529d", "fields": {"site": "Bayram Sk No:11 BARBAROS/ATAŞEHİR"}}
+{"id": "real-ibb-saglik-130d55235a", "fields": {"site": "Fazilet Cd No:40 KARLIKTEPE/KARTAL"}}
+{"id": "real-ibb-saglik-13235a36d2", "fields": {"site": "YAMANEVLER/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-1324d5653b", "fields": {"csbm_ad": "1292", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-132bb7484a", "fields": {"csbm_ad": "İstiklal", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-133af59ee7", "fields": {"site": "GİRNE/MALTEPE"}}
+{"id": "real-ibb-saglik-1345e5b259", "fields": {"site": "Refah Sk. No:1 NAMIK KEMAL/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-134c19fcc0", "fields": {"csbm_ad": "Dr. Sadık Ahmet", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-135d252213", "fields": {"csbm_ad": "Avrupa", "csbm_tur": "cadde", "dis_kapi": "106", "site": "A ADNAN KAHVECİ/BEYLİKDÜZÜ"}}
+{"id": "real-ibb-saglik-137034ee58", "fields": {"ilce": "AYDINTEPE/TUZLA", "csbm_ad": "Sahil", "csbm_tur": "bulvar", "daire": "126"}}
+{"id": "real-ibb-saglik-137e82fedb", "fields": {"csbm_ad": "Şehit Taner Özdemir", "csbm_tur": "sokak", "dis_kapi": "8"}}
+{"id": "real-ibb-saglik-138f258e71", "fields": {"csbm_ad": "Mithatpaşa", "csbm_tur": "cadde", "daire": "4", "site": "İSTİKLAL/ÜMRANİYE"}}
+{"id": "real-ibb-saglik-13973636c4", "fields": {"ilce": "YILDIZTEPE/BAĞCILAR", "csbm_ad": "463", "csbm_tur": "sokak", "daire": "1"}}
+{"id": "real-ibb-saglik-13998c19a6", "fields": {"ilce": "MADEN/SARIYER", "csbm_ad": "Kilyos", "csbm_tur": "cadde", "dis_kapi": "153"}}
+{"id": "real-ibb-saglik-13a8113b96", "fields": {"csbm_ad": "Nüzhetiye", "csbm_tur": "cadde", "site": "52 A TÜRKALİ/BEŞİKTAŞ"}}
+{"id": "real-ibb-saglik-13c4a13400", "fields": {"csbm_ad": "Köprülü", "csbm_tur": "sokak", "dis_kapi": "18"}}
+{"id": "real-ibb-saglik-13e4f6b017", "fields": {"site": "Namzet Sk. No:1 GÜRSEL/KAĞITHANE"}}
+{"id": "real-ibb-saglik-13e7072620", "fields": {"ilce": "BAŞIBÜYÜK/MALTEPE", "csbm_ad": "Maltepe-Başıbüyük", "csbm_tur": "yol", "dis_kapi": "3"}}
+{"id": "real-ibb-saglik-140f9671ae", "fields": {"csbm_ad": "Fahri Korutürk", "csbm_tur": "cadde", "dis_kapi": "2", "site": "CEVİZLİK/BAKIRKÖY"}}
+{"id": "real-ibb-saglik-1420aa4a99", "fields": {"csbm_ad": "Hastahane", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-1446538127", "fields": {"csbm_ad": "Eski Edirne Asfaltı", "csbm_tur": "cadde", "dis_kapi": "577", "site": "SULTANÇİFTLİĞİ/SULTANGAZİ"}}
+{"id": "real-ibb-saglik-1446ae3e98", "fields": {"csbm_ad": "Yeni", "csbm_tur": "cikmaz"}}
+{"id": "real-ibb-saglik-1459957bb2", "fields": {"ilce": "Manyas", "site": "Sk. No:15 A ORTA/BAYRAMPAŞA"}}
+{"id": "real-ibb-saglik-14992a6411", "fields": {"site": "Değerbilir Sk. No:25 C ERENKÖY/KADIKÖY"}}
+{"id": "real-ibb-saglik-14c0c7a16c", "fields": {"csbm_ad": "Karabük", "csbm_tur": "cadde", "daire": "25", "site": "CEVİZLİ/KARTAL"}}
+{"id": "real-ibb-saglik-14cfa070f7", "fields": {"csbm_ad": "Ünlü", "csbm_tur": "sokak", "dis_kapi": "37/A"}}
+{"id": "real-ibb-saglik-14d97b0a87", "fields": {"ilce": "HADIMKÖY/ARNAVUTKÖY", "csbm_ad": "Müşerref", "csbm_tur": "sokak", "dis_kapi": "18"}}
+{"id": "real-ibb-saglik-14f384ce70", "fields": {"csbm_ad": "1450", "csbm_tur": "sokak", "dis_kapi": "58"}}
+{"id": "real-ibb-saglik-1506f5ebce", "fields": {"site": "259.Sk No:11/A HÜRRİYET/GAZİOSMANPAŞA"}}
+{"id": "real-ibb-saglik-150f6b4316", "fields": {"ilce": "FINDIKLI/MALTEPE", "csbm_ad": "Erdem", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-15175a3a0f", "fields": {"csbm_ad": "Atatürk", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-151d070bf3", "fields": {"csbm_ad": "Harman Yolu Üst", "csbm_tur": "sokak", "dis_kapi": "4"}}
+{"id": "real-ibb-saglik-1525188bf3", "fields": {"site": "İslambey Cd No:33 İSLAMBEY/EYÜPSULTAN"}}
+{"id": "real-ibb-saglik-152efc9ceb", "fields": {"site": "Ünlü Sk. No:4 MERKEZ/GÜNGÖREN"}}
+{"id": "real-ibb-saglik-155cbfcd33", "fields": {"ilce": "MUSTAFA KEMALPAŞA/AVCILAR", "csbm_ad": "Köroğlu", "csbm_tur": "sokak", "dis_kapi": "12"}}
+{"id": "real-ibb-saglik-157e55e217", "fields": {"csbm_ad": "Cebeci", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-15b5d0903b", "fields": {"ilce": "BAKLACI/BEYKOZ", "csbm_ad": "Çeçenistan", "csbm_tur": "cadde", "daire": "8"}}
+{"id": "real-ibb-saglik-15d5a6753d", "fields": {"csbm_ad": "Turgut Reis", "csbm_tur": "cadde", "daire": "55", "site": "KAVAKPINAR/PENDİK"}}
+{"id": "real-ibb-saglik-15dd305f03", "fields": {"csbm_ad": "Koca Mustafapaşa", "csbm_tur": "cadde", "dis_kapi": "116"}}
+{"id": "real-ibb-saglik-15f0028a39", "fields": {"mahalle": "CAFERAĞA/KADIKÖY", "csbm_ad": "Mühürdar", "csbm_tur": "cadde", "dis_kapi": "109"}}
+{"id": "real-ibb-saglik-15ff5a8bc9", "fields": {"site": "78.Sk No:6 YAKUPLU/BEYLİKDÜZÜ"}}
+{"id": "real-ibb-saglik-160063b39a", "fields": {"csbm_ad": "Orgeneral Şahap Gürler", "csbm_tur": "cadde", "site": "18 A RASİMPAŞA/KADIKÖY"}}
+{"id": "real-ibb-saglik-160f865318", "fields": {"csbm_ad": "Eraykent", "csbm_tur": "cadde", "dis_kapi": "3", "site": "GB SOĞANLIK YENİ/KARTAL"}}
+{"id": "real-ibb-saglik-1630126c12", "fields": {"mahalle": "PAŞABAHÇE/BEYKOZ", "csbm_ad": "Beyaz Erguvan", "csbm_tur": "cadde", "dis_kapi": "58"}}
+{"id": "real-ibb-saglik-16777b0410", "fields": {"csbm_ad": "Turgut Özal Millet", "csbm_tur": "cadde", "site": "43 A HASEKİ SULTAN/FATİH"}}
+{"id": "real-ibb-saglik-168e421580", "fields": {"csbm_ad": "Hoca Ahmet Yesevi", "csbm_tur": "bulvar", "dis_kapi": "77"}}
+{"id": "real-ibb-saglik-16abee6ff9", "fields": {"site": "Karakoyunlu Sk. MOLLA GÜRANİ/FATİH"}}
+{"id": "real-ibb-saglik-16c9b920e7", "fields": {"site": "Papatya Sk. No:18 DOĞU/PENDİK"}}
+{"id": "real-ibb-saglik-16d038020e", "fields": {"ilce": "HAZNEDAR/GÜNGÖREN", "csbm_ad": "Marmara", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-16dc241174", "fields": {"csbm_ad": "Tütüncü Mehmetefendi", "csbm_tur": "cadde", "daire": "25", "site": "GÖZTEPE/KADIKÖY"}}
+{"id": "real-ibb-saglik-16e626d222", "fields": {"csbm_ad": "Kızılelma", "csbm_tur": "cadde", "site": "26 SEYYİD ÖMER/FATİH"}}
+{"id": "real-ibb-saglik-16fab32d5d", "fields": {"ilce": "HAZNEDAR/GÜNGÖREN", "csbm_ad": "Bağcılar", "csbm_tur": "cadde", "dis_kapi": "16"}}
+{"id": "real-ibb-saglik-17019dc814", "fields": {"csbm_ad": "Barbaros", "csbm_tur": "bulvar", "dis_kapi": "109", "site": "DİKİLİTAŞ/BEŞİKTAŞ"}}
+{"id": "real-ibb-saglik-170ab38bb1", "fields": {"csbm_ad": "Rumeli", "csbm_tur": "cadde", "dis_kapi": "71", "site": "HALASKARGAZİ/ŞİŞLİ"}}
+{"id": "real-ibb-saglik-173376b1a2", "fields": {"csbm_ad": "Adnan Menderes", "csbm_tur": "cadde", "dis_kapi": "44", "site": "48A ESATPAŞA/ATAŞEHİR"}}
+{"id": "real-ibb-saglik-173c0a90a5", "fields": {"site": "Yalnız Selvi Cd No:43 ORTA/KARTAL"}}
+{"id": "real-ibb-saglik-17534574de", "fields": {"csbm_ad": "Osmanlı", "csbm_tur": "bulvar", "site": "6 YENİŞEHİR/PENDİK"}}
+{"id": "real-ibb-saglik-1778c10887", "fields": {"site": "Karanfil Sk. No:5 LEVENT/BEŞİKTAŞ"}}
+{"id": "real-ibb-saglik-17b91f9e7a", "fields": {"ilce": "KÜÇÜKÇEKMECE", "mahalle": "HALKALI MERKEZ/", "csbm_ad": "Fatih", "csbm_tur": "cadde", "dis_kapi": "13-15"}}
+{"id": "real-ibb-saglik-17c6e6ede6", "fields": {"csbm_ad": "Talatpaşa", "csbm_tur": "cadde", "daire": "19", "site": "BAHÇELİEVLER/BAHÇELİEVLER"}}
+{"id": "real-ibb-saglik-17dd1fa2ac", "fields": {"csbm_ad": "Fevzipaşa", "csbm_tur": "cadde", "dis_kapi": "44", "site": "ALİ KUŞÇU/FATİH"}}
+{"id": "real-ibb-saglik-17e2f72e00", "fields": {"ilce": "ÖMERLİ/ARNAVUTKÖY", "csbm_ad": "Hadımköy-Ömerli", "csbm_tur": "cadde", "dis_kapi": "62"}}
+{"id": "real-ibb-saglik-18086f3cde", "fields": {"ilce": "Karakeçili", "site": "Sk. No:3 A MOLLA GÜRANİ/FATİH"}}
+{"id": "real-ibb-saglik-180a234a87", "fields": {"ilce": "ÖRNEKKÖY/BEYKOZ", "csbm_ad": "Nİsan", "csbm_tur": "cadde", "dis_kapi": "23"}}
+{"id": "real-ibb-saglik-180c1ca806", "fields": {"csbm_ad": "Düstur", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-185cd6ec72", "fields": {"site": "Halitpaşa Cd No:32 MERKEZ/GAZİOSMANPAŞA"}}
+{"id": "real-ibb-saglik-1881c894d0", "fields": {"ilce": "TURGUT REİS/ESENLER", "csbm_ad": "Cengiz Topel", "csbm_tur": "cadde", "dis_kapi": "68"}}
+{"id": "real-ibb-saglik-18a2093bca", "fields": {"ilce": "Pınarönü", "site": "Sk. No:1 KURTKÖY/PENDİK"}}
+{"id": "real-ibb-saglik-18a6dd37f4", "fields": {"csbm_ad": "Rıdvanpaşa", "csbm_tur": "sokak", "dis_kapi": "22", "site": "GÖZTEPE/KADIKÖY"}}
+{"id": "real-ibb-saglik-18d4241ce9", "fields": {"csbm_ad": "Çukurçeşme", "csbm_tur": "cadde", "dis_kapi": "48"}}
+{"id": "real-ibb-saglik-18f5d83620", "fields": {"csbm_ad": "Dr. Erkin", "csbm_tur": "cadde", "dis_kapi": "3/3", "site": "EĞİTİM/KADIKÖY"}}
+{"id": "real-ibb-saglik-196e1341e0", "fields": {"site": "Bağdat Cd No:242 CADDEBOSTAN/KADIKÖY"}}
+{"id": "real-ibb-saglik-197f01f09a", "fields": {"csbm_ad": "Söğütlüçeşme", "csbm_tur": "cadde", "dis_kapi": "186"}}
+{"id": "real-ibb-saglik-19a60a45b9", "fields": {"site": "AHMET YESEVİ/SULTANBEYLİ"}}
+{"id": "real-ibb-saglik-19dc5f2cd7", "fields": {"site": "Levent Cd No:51/C LEVENT/BEŞİKTAŞ"}}
+{"id": "real-ibb-saglik-19efea25da", "fields": {"csbm_ad": "Selvili", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-1a8468fa31", "fields": {"site": "Çamlı Sk. No:18 ALTAYÇEŞME/MALTEPE"}}
+{"id": "real-ibb-saglik-1ad7d992b4", "fields": {"csbm_ad": "Merkez Cami", "csbm_tur": "sokak", "dis_kapi": "32/1G"}}
+{"id": "real-ibb-saglik-1ae5f4201a", "fields": {"mahalle": "CAFERAĞA/KADIKÖY", "csbm_ad": "Şair Nefi", "csbm_tur": "sokak", "dis_kapi": "26/2"}}
+{"id": "real-ibb-saglik-1b17809cc0", "fields": {"csbm_ad": "Fevzi Çakmak", "csbm_tur": "cadde", "dis_kapi": "121"}}
+{"id": "real-ibb-saglik-1b338cbe79", "fields": {"csbm_ad": "101", "csbm_tur": "sokak", "site": "52 A İSMETPAŞA/SULTANGAZİ"}}
+{"id": "real-ibb-saglik-1b53abcf48", "fields": {"ilce": "BAĞLARÇEŞME/ESENYURT", "csbm_ad": "1108", "csbm_tur": "sokak", "dis_kapi": "1"}}
+{"id": "real-ibb-saglik-1b6a8d889f", "fields": {"csbm_ad": "Fahrettin Kerim Gökay", "csbm_tur": "cadde", "dis_kapi": "175", "site": "A MERDİVENKÖY/KADIKÖY"}}
+{"id": "real-ibb-saglik-1b91b8b2da", "fields": {"csbm_ad": "Mimar Sinan", "csbm_tur": "cadde", "dis_kapi": "72", "site": "MİMAR SİNAN/SİLİVRİ"}}
+{"id": "real-ibb-saglik-1bae25c451", "fields": {"site": "Erciyes Sk. No:5 ÇAMLIK/ÇEKMEKÖY"}}
+{"id": "real-ibb-saglik-1bb0a5d0c3", "fields": {"csbm_ad": "Emir", "csbm_tur": "cadde", "dis_kapi": "7-9A"}}
+{"id": "real-ibb-saglik-1bdf0fa58d", "fields": {"csbm_ad": "Yunus Emre", "csbm_tur": "cadde", "dis_kapi": "21"}}
+{"id": "real-ibb-saglik-1be32f97fe", "fields": {"ilce": "ÇAKIL/ÇATALCA", "csbm_ad": "Mustafa Kemal Atatürk", "csbm_tur": "cadde", "dis_kapi": "29"}}
+{"id": "real-ibb-saglik-1be4a23733", "fields": {"csbm_ad": "Çeltikçi", "csbm_tur": "sokak", "dis_kapi": "4", "site": "RASİMPAŞA/KADIKÖY"}}
+{"id": "real-ibb-saglik-1bfe8e08bb", "fields": {"csbm_ad": "Ondokuz Mayıs", "csbm_tur": "bulvar", "site": "59 FATİH/ESENYURT"}}
+{"id": "real-ibb-saglik-1c706cd59a", "fields": {"csbm_ad": "947", "csbm_tur": "sokak", "dis_kapi": "7/1", "site": "FATİH/ESENYURT"}}
+{"id": "real-ibb-saglik-1c7d8e32f6", "fields": {"ilce": "YEŞİLOVA/KÜÇÜKÇEKMECE", "csbm_ad": "Emsal", "csbm_tur": "sokak", "dis_kapi": "9"}}
+{"id": "real-ibb-saglik-1ca3420456", "fields": {"csbm_ad": "Şehit Yavuz Bahar", "csbm_tur": "sokak", "dis_kapi": "4/1"}}
+{"id": "real-ibb-saglik-1cc214a196", "fields": {"ilce": "KARTALTEPE/KÜÇÜKÇEKMECE"}}
+{"id": "real-ibb-saglik-1cf4776c71", "fields": {"csbm_ad": "2116", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-1d03746249", "fields": {"csbm_ad": "Rıza Küçükoğlupaşa", "csbm_tur": "cadde", "site": "36 FATİH/BÜYÜKÇEKMECE"}}
+{"id": "real-ibb-saglik-1d68912033", "fields": {"site": "Galeri Sk. No:1 HAVAALANI/ESENLER"}}
+{"id": "real-ibb-saglik-1d9c640f72", "fields": {"csbm_ad": "Fazıl Hüsnü Dağlarca", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-1db55376e8", "fields": {"csbm_ad": "Gülnar", "csbm_tur": "sokak", "dis_kapi": "38"}}
+{"id": "real-ibb-saglik-1df0084d34", "fields": {"csbm_ad": "Muhtar Asım Nuryüz", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-1e0f313f7c", "fields": {"csbm_ad": "Eyüp Sultan", "csbm_tur": "bulvar", "dis_kapi": "101"}}
+{"id": "real-ibb-saglik-1f10e8e85e", "fields": {"site": "CUMHURİYET/BAHÇELİEVLER"}}
+{"id": "real-ibb-saglik-1f16949bed", "fields": {"csbm_ad": "Adnan Kahveci Bulvar", "csbm_tur": "cadde", "dis_kapi": "145", "site": "BAHÇELİEVLER/BAHÇELİEVLER"}}
+{"id": "real-ibb-saglik-1f25ce0a9d", "fields": {"csbm_ad": "Cumhuriyet", "csbm_tur": "cadde", "dis_kapi": "57"}}
+{"id": "real-ibb-saglik-1f6fd4fe42", "fields": {"csbm_ad": "İkitelli", "csbm_tur": "cadde", "dis_kapi": "126"}}
+{"id": "real-ibb-saglik-1fc0087ee2", "fields": {"csbm_ad": "Abdülhamithan", "csbm_tur": "cadde", "daire": "5", "site": "BAŞAK/BAŞAKŞEHİR"}}
+{"id": "real-ibb-saglik-1fcdbb5c26", "fields": {"ilce": "YAVUZ", "csbm_ad": "Birlik", "csbm_tur": "cadde", "site": "SELİM/BAĞCILAR"}}
+{"id": "real-ibb-saglik-2054e13c4f", "fields": {"ilce": "MİMAROBA/BÜYÜKÇEKMECE", "csbm_ad": "Sağlık 1", "csbm_tur": "sokak", "dis_kapi": "1"}}
+{"id": "real-ibb-saglik-20e061ac83", "fields": {"site": "Kana Sk No:36 SİYAVUŞPAŞA/BAHÇELİEVLER"}}
+{"id": "real-ibb-saglik-2116fd6ca7", "fields": {"csbm_ad": "Adnan Kahveci", "csbm_tur": "bulvar", "site": "36 BAHÇELİEVLER/BAHÇELİEVLER"}}
+{"id": "real-ibb-saglik-21209b3b25", "fields": {"ilce": "EKŞİOĞLU/ÇEKMEKÖY", "csbm_ad": "Atabey", "csbm_tur": "cadde", "dis_kapi": "22"}}
+{"id": "real-ibb-saglik-2164c5f090", "fields": {"site": "Namık Kemal Cd No:6 SİYAVUŞPAŞA/BAHÇELİEVLER"}}
+{"id": "real-ibb-saglik-219f990da9", "fields": {"csbm_ad": "Fatih", "csbm_tur": "cadde", "dis_kapi": "59"}}
+{"id": "real-ibb-saglik-229f11de2c", "fields": {"site": "Camcı Sk. No:2 B ŞİRİNEVLER/BAHÇELİEVLER"}}
+{"id": "real-ibb-saglik-22bbe2ce1e", "fields": {"ilce": "GÜLTEPE/KÜÇÜKÇEKMECE", "csbm_ad": "Halkalı", "csbm_tur": "cadde", "dis_kapi": "99"}}
+{"id": "real-ibb-saglik-22df926265", "fields": {"ilce": "TEVFİKBEY/KÜÇÜKÇEKMECE", "csbm_ad": "Mektep", "csbm_tur": "sokak", "dis_kapi": "16"}}
+{"id": "real-ibb-saglik-23922c6c18", "fields": {"csbm_ad": "Gülek", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-239e05e7ae", "fields": {"ilce": "TEVFİKBEY/KÜÇÜKÇEKMECE", "csbm_ad": "Vahit Efendi", "csbm_tur": "sokak", "dis_kapi": "2"}}
+{"id": "real-ibb-saglik-23f654e7ea", "fields": {"csbm_ad": "715", "csbm_tur": "sokak", "dis_kapi": "22"}}
+{"id": "real-ibb-saglik-24172b6b90", "fields": {"ilce": "CENNET/KÜÇÜKÇEKMECE", "csbm_ad": "Hürriyet", "csbm_tur": "cadde", "dis_kapi": "7"}}
+{"id": "real-ibb-saglik-24783ee2e6", "fields": {"csbm_ad": "Esenkent Bahçeşehir Yolu", "csbm_tur": "cadde", "dis_kapi": "68"}}
+{"id": "real-ibb-saglik-25771efb4b", "fields": {"site": "ESENTEPE/EYÜPSULTAN"}}
+{"id": "real-ibb-saglik-25ee033b54", "fields": {"csbm_ad": "Egemen", "csbm_tur": "cadde", "dis_kapi": "112"}}
+{"id": "real-ibb-saglik-265b5eb225", "fields": {"ilce": "PINARTEPE/BÜYÜKÇEKMECE", "csbm_ad": "Yavuz Sultan Selim", "csbm_tur": "bulvar", "daire": "6"}}
+{"id": "real-ibb-saglik-269cfbaa33", "fields": {"csbm_ad": "1020", "csbm_tur": "sokak", "site": "5 YAVUZ SELİM/BAĞCILAR"}}
+{"id": "real-ibb-saglik-26dcb45a0d", "fields": {"csbm_ad": "2004", "csbm_tur": "sokak", "site": "38 FEVZİ ÇAKMAK/BAĞCILAR"}}
+{"id": "real-ibb-saglik-284188a66d", "fields": {"csbm_ad": "Menderes", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-2841fc9c21", "fields": {"site": "KAVAKLI HÜRRİYET/SİLİVRİ"}}
+{"id": "real-ibb-saglik-28f0c9c2c8", "fields": {"csbm_ad": "958", "csbm_tur": "sokak", "site": "10 SANCAKTEPE/BAĞCILAR"}}
+{"id": "real-ibb-saglik-2a8096b7c1", "fields": {"csbm_ad": "Düğmeciler", "csbm_tur": "cadde", "dis_kapi": "26"}}
+{"id": "real-ibb-saglik-2b4b9d7ecd", "fields": {"csbm_ad": "Havuzbaşı", "csbm_tur": "sokak"}}
+{"id": "real-ibb-saglik-2b83735c57", "fields": {"ilce": "YAYLA/TUZLA", "csbm_ad": "Ali İhsan Paşa", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-2c34dcac04", "fields": {"ilce": "DİZDARİYE/BÜYÜKÇEKMECE", "csbm_ad": "Kemal Atatürk", "csbm_tur": "cadde", "dis_kapi": "4"}}
+{"id": "real-ibb-saglik-2e46c284c6", "fields": {"csbm_ad": "Cumhuriyet", "csbm_tur": "cadde", "daire": "10", "site": "HACI KASIM/ŞİLE"}}
+{"id": "real-ibb-saglik-2e616422c7", "fields": {"ilce": "DİZDARİYE/BÜYÜKÇEKMECE", "csbm_ad": "Enverpaşa", "csbm_tur": "cadde", "daire": "4"}}
+{"id": "real-ibb-saglik-2e710fede2", "fields": {"csbm_ad": "Şeyh Şamil", "csbm_tur": "cadde"}}
+{"id": "real-ibb-saglik-2f7fe85bcc", "fields": {"ilce": "TEPEÖREN/TUZLA", "csbm_ad": "Deyyan", "csbm_tur": "sokak", "dis_kapi": "6"}}
+{"id": "real-ibb-saglik-3053bf322b", "fields": {"site": "Zeki Yüksel Sk. No:8 A ALİBEY/SİLİVRİ"}}
+{"id": "real-ibb-saglik-3227d6bb1e", "fields": {"site": "Düldül Sk. No:1 ARNAVUTKÖY MERKEZ/ARNAVUTKÖY"}}
+{"id": "real-ibb-saglik-35422db45d", "fields": {"site": "TEPEÖREN/TUZLA"}}
+{"id": "real-ibb-saglik-37612c3da3", "fields": {"site": "Fatih Cd No:46 İSLAMBEY/ARNAVUTKÖY"}}
+{"id": "real-ibb-saglik-3a5d67c148", "fields": {"mahalle": "İSLAMBEY/ARNAVUTKÖY"}}
+{"id": "real-ibb-saglik-42f766478f", "fields": {"csbm_ad": "Üsküdar", "csbm_tur": "cadde", "dis_kapi": "135"}}
+{"id": "real-ibb-saglik-7bad469be1", "fields": {"site": "Keyif Sk. No:4 KINALIADA/ADALAR"}}
+{"id": "real-ibb-saglik-940b074fea", "fields": {"csbm_ad": "23 Nisan", "csbm_tur": "cadde", "dis_kapi": "7", "site": "NİZAM/ADALAR"}}
+{"id": "real-ibb-muhtarlik-008cf10891", "fields": {"site": "Levent Sk. No:5 C KARAKİRAZ/ŞİLE"}}
+{"id": "real-ibb-muhtarlik-00cc4e4170", "fields": {"site": "Hemşehri Sk. No:40 NİŞANCA/FATİH"}}
+{"id": "real-ibb-muhtarlik-00d633a148", "fields": {"site": "Gümüş Sk. No:14 A KİRAZLIDERE/ÇEKMEKÖY"}}
+{"id": "real-ibb-muhtarlik-01287318e3", "fields": {"csbm_ad": "Muradiye Deresi", "csbm_tur": "sokak"}}
+{"id": "real-ibb-muhtarlik-015ed338a4", "fields": {"ilce": "Palanga", "site": "Sk. No:4 MURAT ÇESME/BÜYÜKÇEKMECE"}}
+{"id": "real-ibb-muhtarlik-0248fe9dc4", "fields": {"csbm_ad": "Yaşam", "csbm_tur": "cadde", "site": "66 A ÇAYIRBAŞI/ŞİLE"}}
+{"id": "real-ibb-muhtarlik-032dfc839f", "fields": {"csbm_ad": "Rabia", "csbm_tur": "cadde", "site": "5 KAYABAŞI/BAŞAKŞEHİR"}}
+{"id": "real-ibb-muhtarlik-033dace287", "fields": {"ilce": "ORMANLI/ÇATALCA", "csbm_ad": "Boğaçhan", "csbm_tur": "sokak"}}
+{"id": "real-ibb-muhtarlik-05add62e63", "fields": {"csbm_ad": "Papaz Çeşme", "csbm_tur": "cadde", "site": "8 CAMİ/TUZLA"}}
+{"id": "real-ibb-muhtarlik-05e041e025", "fields": {"site": "Balkan Sk. No:4 RAMAZANOĞLU/PENDİK"}}
+{"id": "real-ibb-muhtarlik-06a983a48b", "fields": {"csbm_ad": "Duyum", "csbm_tur": "sokak", "dis_kapi": "4", "site": "MEŞRUTİYET/ŞİLE"}}
+{"id": "real-ibb-muhtarlik-071c63be67", "fields": {"csbm_ad": "Dereiçi", "csbm_tur": "sokak", "dis_kapi": "21", "site": "ÇIRÇIR/EYÜPSULTAN"}}
+{"id": "real-ibb-muhtarlik-07a95adaec", "fields": {"csbm_ad": "Mahmut Yesari", "csbm_tur": "cadde", "dis_kapi": "50/8", "site": "KOŞUYOLU/KADIKÖY"}}
+{"id": "real-ibb-muhtarlik-086c05a3ca", "fields": {"csbm_ad": "Semerkant", "csbm_tur": "cadde", "dis_kapi": "46"}}
+{"id": "real-ibb-muhtarlik-08ab6a44ee", "fields": {"ilce": "GENÇOSMAN/GÜNGÖREN", "csbm_ad": "Uzay", "csbm_tur": "sokak", "dis_kapi": "29"}}
+{"id": "real-ibb-muhtarlik-08ddb0eba9", "fields": {"csbm_ad": "Namık Kemal", "csbm_tur": "cadde", "dis_kapi": "79", "site": "A ALİBEYKÖY/EYÜPSULTAN"}}
+{"id": "real-ibb-muhtarlik-099be44730", "fields": {"csbm_ad": "Tuğ", "csbm_tur": "sokak", "dis_kapi": "16"}}
+{"id": "real-ibb-muhtarlik-0a09ed1175", "fields": {"csbm_ad": "Mithat Paşa", "csbm_tur": "cadde", "dis_kapi": "20"}}
+{"id": "real-ibb-muhtarlik-0a3f75be3c", "fields": {"ilce": "KURFALLI/SİLİVRİ", "csbm_ad": "Safranbolu", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-0b34f2c4d0", "fields": {"csbm_ad": "Sarıgül", "csbm_tur": "sokak", "dis_kapi": "18/1", "site": "CADDEBOSTAN/KADIKÖY"}}
+{"id": "real-ibb-muhtarlik-0b368d9c49", "fields": {"csbm_ad": "2371", "csbm_tur": "sokak", "dis_kapi": "16", "site": "GÖZTEPE/BAĞCILAR"}}
+{"id": "real-ibb-muhtarlik-0b4d0542e2", "fields": {"csbm_ad": "Boğaç", "csbm_tur": "sokak", "site": "2 SÜLÜNTEPE/PENDİK"}}
+{"id": "real-ibb-muhtarlik-0b93b4c0ec", "fields": {"csbm_ad": "Yay Meydanı", "csbm_tur": "cadde", "dis_kapi": "46"}}
+{"id": "real-ibb-muhtarlik-0bee41bcec", "fields": {"csbm_ad": "Tuna", "csbm_tur": "cadde", "dis_kapi": "30"}}
+{"id": "real-ibb-muhtarlik-0ca6ef87ab", "fields": {"ilce": "Güldalı", "site": "Sk. No:8 DEREAĞZI/BEYLİKDÜZÜ"}}
+{"id": "real-ibb-muhtarlik-0cb3efc412", "fields": {"ilce": "ŞİRİNTEPE/KAĞITHANE", "csbm_ad": "Gümüşhane", "csbm_tur": "cadde", "dis_kapi": "101"}}
+{"id": "real-ibb-muhtarlik-0cfc212cdf", "fields": {"csbm_ad": "Misakı Milli", "csbm_tur": "cadde", "dis_kapi": "24", "site": "ÇAMÇEŞME/PENDİK"}}
+{"id": "real-ibb-muhtarlik-0dd002385f", "fields": {"csbm_ad": "Yakacık", "csbm_tur": "cadde", "dis_kapi": "35/1", "site": "VELİBABA/PENDİK"}}
+{"id": "real-ibb-muhtarlik-0dd3da86ea", "fields": {"csbm_ad": "Piyer Loti", "csbm_tur": "cadde", "dis_kapi": "16", "site": "BİNBİRDİREK/FATİH"}}
+{"id": "real-ibb-muhtarlik-0df283e3bf", "fields": {"ilce": "Kazan", "site": "Sk. No:3 SİNANPAŞA/BEŞİKTAŞ"}}
+{"id": "real-ibb-muhtarlik-0e1be1b3c9", "fields": {"ilce": "ÇINAR/ESENYURT", "csbm_ad": "1462", "csbm_tur": "sokak", "dis_kapi": "20"}}
+{"id": "real-ibb-muhtarlik-0e2e6e754d", "fields": {"csbm_ad": "2070", "csbm_tur": "sokak", "daire": "11", "site": "YIL/SULTANGAZİ"}}
+{"id": "real-ibb-muhtarlik-0e920382b5", "fields": {"csbm_ad": "Küçükyalı", "csbm_tur": "cadde", "dis_kapi": "21"}}
+{"id": "real-ibb-muhtarlik-0f02dc7a97", "fields": {"ilce": "YENİDOĞAN/SANCAKTEPE", "csbm_ad": "Ömer Hayyam", "csbm_tur": "cadde", "daire": "31"}}
+{"id": "real-ibb-muhtarlik-0f10ed0298", "fields": {"ilce": "DURUSU/ARNAVUTKÖY", "site": "Darı Ali Sk. No:1"}}
+{"id": "real-ibb-muhtarlik-0f95f76396", "fields": {"csbm_ad": "Piripaşa", "csbm_tur": "sokak", "dis_kapi": "1/1", "site": "FATİH/SİLİVRİ"}}
+{"id": "real-ibb-muhtarlik-0fdc6f0d64", "fields": {"csbm_ad": "Çelebi Mehmet", "csbm_tur": "cadde", "dis_kapi": "21", "site": "MEVLANA/ESENYURT"}}
+{"id": "real-ibb-muhtarlik-1008a8c09d", "fields": {"site": "Mercan Hanı Çıkmazı No:24 BEYAZIT/FATİH"}}
+{"id": "real-ibb-muhtarlik-10408a60e1", "fields": {"csbm_ad": "Sarıdede", "csbm_tur": "sokak"}}
+{"id": "real-ibb-muhtarlik-10693eb9b8", "fields": {"csbm_ad": "Rıfkı Tongsir", "csbm_tur": "cadde", "dis_kapi": "52", "site": "İDEALTEPE/MALTEPE"}}
+{"id": "real-ibb-muhtarlik-10aa9e04ce", "fields": {"csbm_ad": "İstiklal", "csbm_tur": "cadde", "dis_kapi": "28", "site": "CEMİL MERİÇ/ÜMRANİYE"}}
+{"id": "real-ibb-muhtarlik-10ba6f198b", "fields": {"csbm_ad": "2721", "csbm_tur": "sokak", "site": "2 HABİBLER/SULTANGAZİ"}}
+{"id": "real-ibb-muhtarlik-10f586d166", "fields": {"csbm_ad": "Mimar Sinan", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-114add273a", "fields": {"site": "Papatya Sk. No:1 ÖRNEKTEPE/BEYOĞLU"}}
+{"id": "real-ibb-muhtarlik-115bb6dac9", "fields": {"ilce": "CENNET/KÜÇÜKÇEKMECE", "csbm_ad": "Yavuz Selim", "csbm_tur": "cadde", "dis_kapi": "2"}}
+{"id": "real-ibb-muhtarlik-12322e1406", "fields": {"csbm_ad": "2467", "csbm_tur": "sokak", "dis_kapi": "4", "site": "CEBECİ/SULTANGAZİ"}}
+{"id": "real-ibb-muhtarlik-124abf65b0", "fields": {"ilce": "ORTA/BAYRAMPAŞA", "csbm_ad": "Numunebağı", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-124b616d44", "fields": {"ilce": "HACIMİMİ/BEYOĞLU", "csbm_ad": "Karabaş Mektebi", "csbm_tur": "sokak", "dis_kapi": "11"}}
+{"id": "real-ibb-muhtarlik-12845d9d2f", "fields": {"ilce": "Nevruz", "site": "Sk. No:2 SOĞANLI/BAHÇELİEVLER"}}
+{"id": "real-ibb-muhtarlik-12909d0784", "fields": {"csbm_ad": "832", "csbm_tur": "sokak", "site": "30 MEVLANA/GAZİOSMANPAŞA"}}
+{"id": "real-ibb-muhtarlik-12a1989713", "fields": {"csbm_ad": "Velibey", "csbm_tur": "cadde", "site": "2 C GAZİTEPE/SİLİVRİ"}}
+{"id": "real-ibb-muhtarlik-12a6fc9c1a", "fields": {"csbm_ad": "Kalemköy", "csbm_tur": "cadde", "site": "44 A KALEM/ŞİLE"}}
+{"id": "real-ibb-muhtarlik-12f1036339", "fields": {"csbm_ad": "Mismarcı 1", "csbm_tur": "sokak", "dis_kapi": "12", "site": "SEYYİD ÖMER/FATİH"}}
+{"id": "real-ibb-muhtarlik-13030793a4", "fields": {"site": "Vadi Sk. No:2 /4 ZAFER/BAHÇELİEVLER"}}
+{"id": "real-ibb-muhtarlik-1343aef600", "fields": {"csbm_ad": "Demokrasi", "csbm_tur": "cadde", "dis_kapi": "168"}}
+{"id": "real-ibb-muhtarlik-13a05c1c62", "fields": {"csbm_ad": "Gazi", "csbm_tur": "cadde", "dis_kapi": "39", "site": "MURATREİS/ÜSKÜDAR"}}
+{"id": "real-ibb-muhtarlik-14126f5ce7", "fields": {"csbm_ad": "Köroğlu", "csbm_tur": "sokak", "dis_kapi": "71"}}
+{"id": "real-ibb-muhtarlik-14ce7a5306", "fields": {"ilce": "POYRAZKÖY/BEYKOZ", "csbm_ad": "Canayakın", "csbm_tur": "cadde", "daire": "2"}}
+{"id": "real-ibb-muhtarlik-152d6b7179", "fields": {"ilce": "AYDINLAR/ÇATALCA", "csbm_ad": "Mimar Sinan", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-1598faf39d", "fields": {"ilce": "MAHALLE/BEYKOZ", "csbm_ad": "Besim Paşa", "csbm_tur": "cadde", "dis_kapi": "57", "site": "Dr.Ömer"}}
+{"id": "real-ibb-muhtarlik-15a0833cbd", "fields": {"csbm_ad": "Osmangazi", "csbm_tur": "cadde", "dis_kapi": "19"}}
+{"id": "real-ibb-muhtarlik-15dcbb048b", "fields": {"ilce": "ÇEŞME/KÜÇÜKÇEKMECE", "mahalle": "SÖĞÜTLÜ", "csbm_ad": "Camialtı", "csbm_tur": "sokak", "daire": "5"}}
+{"id": "real-ibb-muhtarlik-160051239f", "fields": {"csbm_ad": "Su Çiçeği", "csbm_tur": "sokak"}}
+{"id": "real-ibb-muhtarlik-16f4b92208", "fields": {"site": "Fırat Sk. No:2 İÇMELER/TUZLA"}}
+{"id": "real-ibb-muhtarlik-16f665e97d", "fields": {"csbm_ad": "Baltalimanı Çayır", "csbm_tur": "cadde", "dis_kapi": "6", "site": "BALTALİMANI/SARIYER"}}
+{"id": "real-ibb-muhtarlik-17ad3b5ea6", "fields": {"site": "Bezciler Sk. No:2 SURURİ/FATİH"}}
+{"id": "real-ibb-muhtarlik-18371b18b0", "fields": {"csbm_ad": "Dr. Sadık Ahmet", "csbm_tur": "cadde", "dis_kapi": "181"}}
+{"id": "real-ibb-muhtarlik-18a8ca4224", "fields": {"ilce": "ÇANAKÇA/ÇATALCA", "csbm_ad": "Karacaköy", "csbm_tur": "cadde", "dis_kapi": "168"}}
+{"id": "real-ibb-muhtarlik-1904d529dd", "fields": {"csbm_ad": "Yay", "csbm_tur": "sokak", "dis_kapi": "22"}}
+{"id": "real-ibb-muhtarlik-1a2c922678", "fields": {"csbm_ad": "Demirciköy", "csbm_tur": "cadde", "dis_kapi": "72"}}
+{"id": "real-ibb-muhtarlik-1a30885e4f", "fields": {"csbm_ad": "Salma Tomruk", "csbm_tur": "cadde", "dis_kapi": "6/1", "site": "DERVİŞ ALİ/FATİH"}}
+{"id": "real-ibb-muhtarlik-1a50b92192", "fields": {"csbm_ad": "Başöğretmen", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-1a9f6a8e0e", "fields": {"site": "Soydaş Sk. No:3 KURTKÖY/PENDİK"}}
+{"id": "real-ibb-muhtarlik-1b5a00c0e2", "fields": {"csbm_ad": "Baraj Yolu", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-1b8c151fb8", "fields": {"csbm_ad": "Ârifzade", "csbm_tur": "sokak", "site": "2 ZEYREK/FATİH"}}
+{"id": "real-ibb-muhtarlik-1bcc90c2cd", "fields": {"csbm_ad": "Çırağan", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-1c70d7dbda", "fields": {"site": "Gürcükızı Sk. No:4 ORTAKÖY/BEŞİKTAŞ"}}
+{"id": "real-ibb-muhtarlik-1cc926d5ff", "fields": {"site": "Şubat Sk. No:1 BATTALGAZİ/ESENYURT"}}
+{"id": "real-ibb-muhtarlik-1d085d09f5", "fields": {"csbm_ad": "Yıldırım Beyazıt", "csbm_tur": "cadde", "dis_kapi": "3/1", "site": "FEVZİ ÇAKMAK/BAHÇELİEVLER"}}
+{"id": "real-ibb-muhtarlik-1d28d8932e", "fields": {"csbm_ad": "160", "csbm_tur": "sokak", "site": "9 HÜRRİYET/BAĞCILAR"}}
+{"id": "real-ibb-muhtarlik-1d4675d171", "fields": {"site": "Gülnihal Sk. No:1 CEVİZLİ/MALTEPE"}}
+{"id": "real-ibb-muhtarlik-1d6686557c", "fields": {"ilce": "İNCİRTEPE/ESENYURT", "csbm_ad": "240", "csbm_tur": "sokak", "dis_kapi": "44"}}
+{"id": "real-ibb-muhtarlik-1d7c1ccf08", "fields": {"site": "Zergerdan Sk. No:50 A REŞİTPAŞA/SARIYER"}}
+{"id": "real-ibb-muhtarlik-1e62b0b0da", "fields": {"ilce": "ÇAMLIBAHÇE/BEYKOZ", "csbm_ad": "Aydın Reis", "csbm_tur": "cadde", "dis_kapi": "17"}}
+{"id": "real-ibb-muhtarlik-1eb037007f", "fields": {"ilce": "PAŞAMANDIRA/BEYKOZ", "csbm_ad": "Demirkapı", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-1f798aee96", "fields": {"site": "Hakan Sk. No:8 ESENTEPE/KARTAL"}}
+{"id": "real-ibb-muhtarlik-2005e87f1e", "fields": {"csbm_ad": "Tarlabaşı", "csbm_tur": "bulvar", "dis_kapi": "270/1"}}
+{"id": "real-ibb-muhtarlik-2020a1744c", "fields": {"csbm_ad": "Gülnar", "csbm_tur": "sokak", "dis_kapi": "19"}}
+{"id": "real-ibb-muhtarlik-20c141c5ca", "fields": {"site": "Yalı Sk. No:1 YENİKÖY/SARIYER"}}
+{"id": "real-ibb-muhtarlik-20ef2f12ab", "fields": {"csbm_ad": "46", "csbm_tur": "sokak", "dis_kapi": "77-79", "site": "YENİDOĞAN/ZEYTİNBURNU"}}
+{"id": "real-ibb-muhtarlik-217e03d359", "fields": {"csbm_ad": "Şehit Kubilay", "csbm_tur": "sokak", "dis_kapi": "12"}}
+{"id": "real-ibb-muhtarlik-21eaacc54e", "fields": {"mahalle": "BOLLUCA/ARNAVUTKÖY", "csbm_ad": "Battalgazi", "csbm_tur": "cadde", "dis_kapi": "14/A"}}
+{"id": "real-ibb-muhtarlik-22092f4a45", "fields": {"site": "Neşe Sk. No:10 ÇAĞLAYAN/KAĞITHANE"}}
+{"id": "real-ibb-muhtarlik-22371283de", "fields": {"ilce": "ÖRENCİK/ÇATALCA", "csbm_ad": "Kavak", "csbm_tur": "sokak", "dis_kapi": "2"}}
+{"id": "real-ibb-muhtarlik-22b22210fd", "fields": {"csbm_ad": "Sarıkaya", "csbm_tur": "sokak", "dis_kapi": "1/1", "site": "KOZYATAĞI/KADIKÖY"}}
+{"id": "real-ibb-muhtarlik-22cbfe5143", "fields": {"csbm_ad": "538", "csbm_tur": "sokak"}}
+{"id": "real-ibb-muhtarlik-235d515a54", "fields": {"csbm_ad": "Taşova", "csbm_tur": "sokak", "dis_kapi": "21", "site": "KÜÇÜK SİNEKLİ/SİLİVRİ"}}
+{"id": "real-ibb-muhtarlik-23759d4229", "fields": {"ilce": "TOZKOPARAN/GÜNGÖREN", "csbm_ad": "Cevat Açıkalın", "csbm_tur": "cadde", "dis_kapi": "6/1"}}
+{"id": "real-ibb-muhtarlik-23ad605fe5", "fields": {"site": "Sultan Sk. No:29 19 MAYIS/KADIKÖY"}}
+{"id": "real-ibb-muhtarlik-23c4e84e20", "fields": {"ilce": "No", "csbm_ad": "919", "csbm_tur": "sokak", "site": "20 KAZIM KARABEKİR/GAZİOSMANPAŞA"}}
+{"id": "real-ibb-muhtarlik-2421e3cba9", "fields": {"csbm_ad": "Beyaz Erguvan", "csbm_tur": "cadde", "dis_kapi": "3"}}
+{"id": "real-ibb-muhtarlik-2620140b10", "fields": {"csbm_ad": "134", "csbm_tur": "sokak", "dis_kapi": "4", "site": "NİNE HATUN/ESENLER"}}
+{"id": "real-ibb-muhtarlik-27a0fc7fed", "fields": {"csbm_ad": "Bilal-i Habeşi", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-27be0cb794", "fields": {"csbm_ad": "Hacı Ömer", "csbm_tur": "cadde", "site": "29 SAYALAR/SİLİVRİ"}}
+{"id": "real-ibb-muhtarlik-27cafe906a", "fields": {"site": "Heyet Sk. No:11 A SAKIZAĞACI/BAKIRKÖY"}}
+{"id": "real-ibb-muhtarlik-2844169cde", "fields": {"csbm_ad": "Aydın 1", "csbm_tur": "sokak", "dis_kapi": "4/1", "site": "AHMEDİYE/BÜYÜKÇEKMECE"}}
+{"id": "real-ibb-muhtarlik-296ef0efda", "fields": {"ilce": "ATAKENT/KÜÇÜKÇEKMECE", "csbm_ad": "19", "csbm_tur": "sokak", "dis_kapi": "3"}}
+{"id": "real-ibb-muhtarlik-2a2ecea943", "fields": {"site": "Neval Sk. No:1 NECİP FAZIL/ÜMRANİYE"}}
+{"id": "real-ibb-muhtarlik-2a9c17c02e", "fields": {"ilce": "TEKE/ŞİLE", "csbm_ad": "Teke", "csbm_tur": "cadde", "dis_kapi": "16"}}
+{"id": "real-ibb-muhtarlik-2b3b4ef5f4", "fields": {"ilce": "İzci", "site": "Sk. No:10 PETROL İŞ/KARTAL"}}
+{"id": "real-ibb-muhtarlik-2b762f974c", "fields": {"ilce": "YENİŞEHİR/BEYOĞLU", "csbm_ad": "Babadağ", "csbm_tur": "sokak", "dis_kapi": "1"}}
+{"id": "real-ibb-muhtarlik-2bb97389b6", "fields": {"csbm_ad": "Evrim", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-2bbfa43496", "fields": {"csbm_ad": "Cemal Gürsel", "csbm_tur": "cadde", "dis_kapi": "128", "site": "A MECLİS/SANCAKTEPE"}}
+{"id": "real-ibb-muhtarlik-2e30f9cc3e", "fields": {"csbm_ad": "Düğmeciler", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-2f3d836bcb", "fields": {"ilce": "Ekenek", "site": "Sk. No:3 KERVANSARAY/ŞİLE"}}
+{"id": "real-ibb-muhtarlik-30d2f027ee", "fields": {"site": "Gökdemir Sk. No:2 YAKACIK ÇARŞI/KARTAL"}}
+{"id": "real-ibb-muhtarlik-312c9d1f16", "fields": {"csbm_ad": "Dr. Adnan Büyükdeniz", "csbm_tur": "cadde", "dis_kapi": "16", "site": "SARAY/ÜMRANİYE"}}
+{"id": "real-ibb-muhtarlik-318384647e", "fields": {"csbm_ad": "Ömerli", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-33074c3d27", "fields": {"csbm_ad": "Malazgirt", "csbm_tur": "cadde", "dis_kapi": "27", "site": "REİS/SULTANBEYLİ"}}
+{"id": "real-ibb-muhtarlik-353378a946", "fields": {"csbm_ad": "Ertuğrul Gazi", "csbm_tur": "cadde", "dis_kapi": "22/3", "site": "BAŞAK/BAŞAKŞEHİR"}}
+{"id": "real-ibb-muhtarlik-3563cd2dbf", "fields": {"csbm_ad": "Haydar Aliyev", "csbm_tur": "cadde", "site": "3 AKAT/BEŞİKTAŞ"}}
+{"id": "real-ibb-muhtarlik-356a17db02", "fields": {"site": "Meşruta Sk. No:1 KUZGUNCUK/ÜSKÜDAR"}}
+{"id": "real-ibb-muhtarlik-360b0c2d96", "fields": {"csbm_ad": "Sakarya", "csbm_tur": "cadde", "dis_kapi": "21"}}
+{"id": "real-ibb-muhtarlik-36b7b5535c", "fields": {"csbm_ad": "Meriç", "csbm_tur": "cadde", "dis_kapi": "10/13", "site": "ATATÜRK/ATAŞEHİR"}}
+{"id": "real-ibb-muhtarlik-372cfc3a1e", "fields": {"site": "Şehit Hasan Elbenna Sk. No:3 YAMANEVLER/ÜMRANİYE"}}
+{"id": "real-ibb-muhtarlik-393b8ab60a", "fields": {"csbm_ad": "Çamlıbel", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-39691fce6b", "fields": {"ilce": "No", "csbm_ad": "Mektep Arkası", "csbm_tur": "sokak", "site": "17 B YENİMAHALLE/BAKIRKÖY"}}
+{"id": "real-ibb-muhtarlik-3ad1432f5c", "fields": {"csbm_ad": "Şener", "csbm_tur": "sokak", "dis_kapi": "23", "site": "ÇIRPICI/ZEYTİNBURNU"}}
+{"id": "real-ibb-muhtarlik-3c2c656ae8", "fields": {"csbm_ad": "Arzu", "csbm_tur": "cikmaz", "daire": "4", "site": "GÜLTEPE/KAĞITHANE"}}
+{"id": "real-ibb-muhtarlik-3d6f2c4079", "fields": {"csbm_ad": "Kaldırım", "csbm_tur": "cadde", "dis_kapi": "79"}}
+{"id": "real-ibb-muhtarlik-3d797753e1", "fields": {"site": "Diyar Sk. No:30 ELMALIKENT/ÜMRANİYE"}}
+{"id": "real-ibb-muhtarlik-3e7022f0d1", "fields": {"csbm_ad": "Trabzon", "csbm_tur": "cadde", "dis_kapi": "49"}}
+{"id": "real-ibb-muhtarlik-3f4e965fb1", "fields": {"csbm_ad": "Çilehane", "csbm_tur": "sokak"}}
+{"id": "real-ibb-muhtarlik-3f70775344", "fields": {"csbm_ad": "Atatürk", "csbm_tur": "bulvar", "dis_kapi": "11"}}
+{"id": "real-ibb-muhtarlik-4036900a8f", "fields": {"csbm_ad": "Karadeniz", "csbm_tur": "cadde", "dis_kapi": "22/2"}}
+{"id": "real-ibb-muhtarlik-4505aaf4a3", "fields": {"csbm_ad": "Şahadet", "csbm_tur": "sokak", "dis_kapi": "27"}}
+{"id": "real-ibb-muhtarlik-473d0ba0d7", "fields": {"csbm_ad": "Bakır", "csbm_tur": "sokak", "dis_kapi": "6/5", "site": "ZUHURATBABA/BAKIRKÖY"}}
+{"id": "real-ibb-muhtarlik-4a4c2fca2c", "fields": {"csbm_ad": "Kamil", "csbm_tur": "cadde", "dis_kapi": "114"}}
+{"id": "real-ibb-muhtarlik-4b8e674716", "fields": {"ilce": "VATAN/BAYRAMPAŞA", "csbm_ad": "Esenler", "csbm_tur": "cadde", "dis_kapi": "22"}}
+{"id": "real-ibb-muhtarlik-4cb48defbd", "fields": {"site": "Diyar Sk. No:13 MİMAR SİNAN/SULTANBEYLİ"}}
+{"id": "real-ibb-muhtarlik-54c51b3f5a", "fields": {"ilce": "MENDERES/ESENLER", "csbm_ad": "Endülüs", "csbm_tur": "cadde", "daire": "9"}}
+{"id": "real-ibb-muhtarlik-5b76e66e21", "fields": {"csbm_ad": "Şahinbey", "csbm_tur": "cadde"}}
+{"id": "real-ibb-muhtarlik-5da06eb95c", "fields": {"csbm_ad": "Alsancak", "csbm_tur": "cadde", "daire": "10", "site": "KINALIADA/ADALAR"}}
+{"id": "real-ibb-muhtarlik-a98300c3f6", "fields": {"site": "Erbay Sk. No:2 HEYBELİADA/ADALAR"}}
+{"id": "real-ibb-pazar-tpl-008e1eeaf4", "fields": {"site": "Zafer mh Cumhuriyet cd Gümüş, Kuzey sk Bahçelievler/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-0303f6bb08", "fields": {"ilce": "Tufan", "mahalle": "Yalı", "csbm_ad": "Bağlar", "csbm_tur": "cadde", "site": "sk Kartal/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-033d898a65", "fields": {"site": "Armağan Evler mh Sırt sk Ümraniye/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-04090884e8", "fields": {"il": "İstanbul", "ilce": "Küçükçekmece", "mahalle": "Halkalı merkez", "csbm_ad": "Şehit Murat Akın cd Mehmetçik", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-05807aabed", "fields": {"il": "İstanbul", "ilce": "Kağıthane", "mahalle": "Hürriyet", "csbm_ad": "İzzet Paşa cd Beyder", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-0593593834", "fields": {"il": "İstanbul", "ilce": "Esenler", "mahalle": "Kazım Karabekir", "csbm_ad": "1041", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-0605ba65ca", "fields": {"il": "İstanbul", "ilce": "Beylikdüzü", "mahalle": "Yakuplu", "csbm_ad": "Hakimiyet", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-0beac52818", "fields": {"il": "İstanbul", "ilce": "Şişli", "mahalle": "Mecidiyeköy", "csbm_ad": "Selahattin Pınar cd Oğuz", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-0c3afd0a41", "fields": {"site": "Yeşilpınar mh Karadeniz sk Eyüpsultan/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-0c60375679", "fields": {"ilce": "Cemil Akdoğan", "mahalle": "Kozyatağı", "csbm_ad": "Bayar", "csbm_tur": "cadde", "site": "sk Kadıköy/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-0ec70480df", "fields": {"il": "İstanbul", "ilce": "Kadıköy", "mahalle": "Hasanpaşa", "csbm_ad": "Mandıra", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-105d3d7a55", "fields": {"il": "İstanbul", "ilce": "Arnavutköy", "mahalle": "İmrahor", "csbm_ad": "İmrahor", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-108c2ed152", "fields": {"il": "İstanbul", "ilce": "Büyükçekmece", "mahalle": "Hürriyet", "csbm_ad": "Millet", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-10cab45631", "fields": {"mahalle": "Karadolap", "csbm_ad": "Veyselkarani cd Öğüt", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-130473d57c", "fields": {"il": "İstanbul", "ilce": "Büyükçekmece", "mahalle": "Celaliye", "csbm_ad": "Cumhuriyet cd Kahraman Mehmetcik", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-152d360cdc", "fields": {"il": "İstanbul", "ilce": "Çekmeköy", "mahalle": "Güngören", "csbm_ad": "Turgutözal bulvarı zülfikar", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-16e323446f", "fields": {"site": "Sakarya mh Silahtarağa cd Eyüpsultan/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-1870e54deb", "fields": {"site": "Küçük Piyale mh Pişmaniye sk Beyoğlu/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-19cbeea3ab", "fields": {"mahalle": "Mimarsinan", "csbm_ad": "İstanbul", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-1a9106b7f8", "fields": {"site": "Eski Habipler mh Orkideler cd Sultangazi/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-1aaf4971b3", "fields": {"mahalle": "Yukarı", "csbm_ad": "Belediye cd Kuyumcu", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-1b6e5b5275", "fields": {"il": "İstanbul", "ilce": "Küçükçekmece", "mahalle": "Cumhuriyet", "csbm_ad": "Leylek", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-1bea445505", "fields": {"site": "Çiftlik mh Pazar sk Beykoz/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-1c06fb052a", "fields": {"il": "İstanbul", "ilce": "Başakşehir", "mahalle": "Başak", "csbm_ad": "Yunus Emre cd 4.Etap 1.kısım içi", "csbm_tur": "yol"}}
+{"id": "real-ibb-pazar-tpl-1c7e008d44", "fields": {"il": "İstanbul", "ilce": "Esenyurt", "mahalle": "Akçaburgaz", "csbm_ad": "Halil Fahri Ormancı", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-1d22333106", "fields": {"il": "İstanbul", "ilce": "Bahçelievler", "mahalle": "Çobançeşme", "csbm_ad": "Fatih cd Ahmet Haşim 1", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-1e47213685", "fields": {"site": "Necipfazıl mh İslam Sk Ümraniye/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-1e837f83b4", "fields": {"il": "İstanbul", "ilce": "Sultangazi", "mahalle": "Malkoçoğlu", "csbm_ad": "Namık Kemal", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-2081f34aff", "fields": {"il": "İstanbul", "ilce": "Maltepe", "mahalle": "Girne", "csbm_ad": "Doğuşkent cd Nehir", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-213357632b", "fields": {"site": "Tarabya mh Çoban sk Sarıyer/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-224a28a8d0", "fields": {"il": "İstanbul", "ilce": "Başakşehir", "mahalle": "Güvercintepe", "csbm_ad": "Gül", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-22e63906df", "fields": {"il": "İstanbul", "ilce": "Ümraniye", "mahalle": "Namık kemal", "csbm_ad": "Hatboyu , Marmara cd Köşk", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-260ec43264", "fields": {"il": "İstanbul", "ilce": "Üsküdar", "mahalle": "Yavuztürk", "csbm_ad": "Sütçü Yolu", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-2956e878be", "fields": {"site": "Orta mh Polina sk Tuzla/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-2a580b52d8", "fields": {"site": "Taşoluk mh Rumeli cd Arnavutköy/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-2ac6a0faac", "fields": {"il": "İstanbul", "ilce": "Avcılar", "mahalle": "Üniversite", "csbm_ad": "ve Meriç", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-2b2c5a6825", "fields": {"il": "İstanbul", "ilce": "Avcılar", "csbm_ad": "ve Pazar cd özgürlük", "csbm_tur": "sokak", "site": "Tahtakale mh Ata"}}
+{"id": "real-ibb-pazar-tpl-2d2d57fb61", "fields": {"il": "İstanbul", "ilce": "Beyoğlu", "mahalle": "Piyalepaşa", "csbm_ad": "Baruthane Sırtı", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-2d57f34e89", "fields": {"il": "İstanbul", "ilce": "Şişli", "csbm_ad": "Hilmi", "csbm_tur": "sokak", "site": "19 Mayıs mh Veteriner"}}
+{"id": "real-ibb-pazar-tpl-2e74d7e21e", "fields": {"il": "İstanbul", "ilce": "Kağıthane", "mahalle": "Merkez", "csbm_ad": "Havuzlar", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-2e8d417389", "fields": {"il": "İstanbul", "ilce": "Ataşehir", "mahalle": "İnönü", "csbm_ad": "Üniversite Yolu", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-31668eb560", "fields": {"il": "İstanbul", "ilce": "Bayrampaşa", "mahalle": "Cevatpaşa", "csbm_ad": "Tevfik Fikret cd Kıyı", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-31c04f5b19", "fields": {"il": "İstanbul", "ilce": "Ataşehir", "mahalle": "Örnek", "csbm_ad": "Hasan çelebi", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-3453d9fac1", "fields": {"il": "İstanbul", "ilce": "Güngören", "mahalle": "Tozkoparan", "csbm_ad": "Albay Sedat Öcalan", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-34f8f7de95", "fields": {"site": "Mimarsinan mh Halk cd Silivri/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-38dac8130a", "fields": {"site": "Yenimahalle mh Pazar sk Bakırköy/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-396be46e9a", "fields": {"site": "Çubuklu mh Engürü Bağı cd Beykoz/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-3bfbc2b64f", "fields": {"il": "İstanbul", "ilce": "Fatih", "csbm_ad": "Elma cd Hatip Naci ve Tevfik Fikret", "csbm_tur": "sokak", "site": "Haseki Sultan mh Kızıl"}}
+{"id": "real-ibb-pazar-tpl-4151e0efef", "fields": {"il": "İstanbul", "ilce": "Sultanbeyli", "mahalle": "Mehmet Akif", "csbm_ad": "Gül", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-4408bcbfd0", "fields": {"il": "İstanbul", "ilce": "Gaziosmanpaşa", "mahalle": "Karadeniz", "csbm_ad": "Mehmet Akif", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-46bebe26e9", "fields": {"il": "İstanbul", "ilce": "Bağcılar", "mahalle": "Demirkapı", "csbm_ad": "İnönü", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-49cd0cd396", "fields": {"il": "İstanbul", "ilce": "Silivri", "mahalle": "Mimarsinan", "csbm_ad": "Atasoy", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-4a4d3d3eec", "fields": {"il": "İstanbul", "ilce": "Maltepe", "mahalle": "Altayçeşme", "csbm_ad": "Kışlalı cd Kiraz", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-4ab5997b97", "fields": {"site": "Velibaba mh Bereket sk Pendik/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-4bb6d09cf6", "fields": {"il": "İstanbul", "ilce": "Gaziosmanpaşa", "mahalle": "Sarıgöl", "csbm_ad": "Güllü cd Tulumba", "csbm_tur": "sokak"}}
+{"id": "real-ibb-pazar-tpl-56d778889f", "fields": {"site": "Eyüp Sultan mh Müminler cd Sancaktepe/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-6c6a31c8eb", "fields": {"site": "Veysel Karani mh Asıl Türk cd Sancaktepe/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-6f19bf5a00", "fields": {"site": "Levazım mh Çınar sk Beşiktaş/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-70ba584c1f", "fields": {"site": "Yunus Emre mh Karşıyaka cd Sancaktepe/İstanbul"}}
+{"id": "real-ibb-pazar-tpl-787846ca2b", "fields": {"il": "İstanbul", "ilce": "Çekmeköy", "mahalle": "Merkez", "csbm_ad": "Üsküdar", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-7b1cc56074", "fields": {"il": "İstanbul", "ilce": "Pendik", "mahalle": "Çınardere", "csbm_ad": "Ayazma", "csbm_tur": "cadde"}}
+{"id": "real-ibb-pazar-tpl-80420f25f9", "fields": {"il": "İstanbul", "ilce": "Bayrampaşa", "csbm_ad": "İzzet Begoviç", "csbm_tur": "cadde", "site": "Yıldırım mh Aliya"}}
+{"id": "real-ibb-pazar-tpl-9fdfd1905e", "fields": {"il": "İstanbul", "ilce": "Zeytinburnu", "mahalle": "Beştelsiz", "csbm_ad": "101.sk"}}
+{"id": "real-ibb-pazar-tpl-a7c57c60ef", "fields": {"il": "İstanbul", "ilce": "Zeytinburnu", "mahalle": "Veliefendi", "csbm_ad": "Hoca Ahmet Yesevi cd 75/2", "csbm_tur": "sokak"}}
+{"id": "real-izmir-eczane-00034f3807", "fields": {"ilce": "YENISEHIR", "dis_kapi": "307"}}
+{"id": "real-izmir-eczane-000f6859ca", "fields": {"mahalle": "CELAL BAYAR", "csbm_ad": "5152", "csbm_tur": "sokak", "dis_kapi": "24/B"}}
+{"id": "real-izmir-eczane-0094ac63df", "fields": {"csbm_ad": "323", "csbm_tur": "sokak", "dis_kapi": "23/C", "site": "B. Evler PARKI ARKASI"}}
+{"id": "real-izmir-eczane-00bb0f3d93", "fields": {"mahalle": "GAZİPAŞA", "csbm_ad": "SARAY", "csbm_tur": "sokak", "dis_kapi": "2/A"}}
+{"id": "real-izmir-eczane-00ca2ff61c", "fields": {"mahalle": "ATAŞEHİR", "csbm_ad": "8211/8", "csbm_tur": "sokak", "dis_kapi": "21/B"}}
+{"id": "real-izmir-eczane-00d0be914b", "fields": {"csbm_ad": "MEHMET AKİF ERSOY MAH.ATATÜRK", "csbm_tur": "bulvar", "dis_kapi": "9/D"}}
+{"id": "real-izmir-eczane-00eba4f4eb", "fields": {"csbm_ad": "ISMAIL SIVRI CAD. 222", "csbm_tur": "sokak", "dis_kapi": "126/A"}}
+{"id": "real-izmir-eczane-00ef900e29", "fields": {"site": "AKINCILAR MH. AKDOĞAN CD. NO:140/C"}}
+{"id": "real-izmir-eczane-01334ae445", "fields": {"mahalle": "KURTULUŞ", "csbm_ad": "KINIK", "csbm_tur": "cadde", "dis_kapi": "141/B"}}
+{"id": "real-izmir-eczane-01687cc90f", "fields": {"csbm_ad": "ILICA MH.5065", "csbm_tur": "sokak", "dis_kapi": "54/A"}}
+{"id": "real-izmir-eczane-01bb162460", "fields": {"csbm_ad": "Donanmacı Mh.1728", "csbm_tur": "sokak", "dis_kapi": "65/A", "site": "Polinikliği Yanı"}}
+{"id": "real-izmir-eczane-01d450287d", "fields": {"ilce": "NARLIDERE", "dis_kapi": "295/B", "site": "ÇAMTEPE MAH.MITHATPASA"}}
+{"id": "real-izmir-eczane-01dc04b487", "fields": {"mahalle": "Kazım Dirik", "csbm_ad": "213", "csbm_tur": "sokak", "dis_kapi": "29/A"}}
+{"id": "real-izmir-eczane-02164a3abe", "fields": {"csbm_ad": "ORHAN SAIK GÖKYAY", "dis_kapi": "20/A"}}
+{"id": "real-izmir-eczane-0226f38db9", "fields": {"mahalle": "30 AĞUSTOS", "csbm_ad": "4", "csbm_tur": "cadde", "dis_kapi": "29/B"}}
+{"id": "real-izmir-eczane-02424f39cc", "fields": {"mahalle": "ŞEMİKLER", "csbm_ad": "1671", "csbm_tur": "sokak", "dis_kapi": "414/2A"}}
+{"id": "real-izmir-eczane-0256b14eca", "fields": {"mahalle": "KAZIM DIRIK", "csbm_ad": "ISTIKLAL", "csbm_tur": "cadde", "dis_kapi": "86/C"}}
+{"id": "real-izmir-eczane-026f29647a", "fields": {"mahalle": "YEŞİLYURT", "csbm_ad": "9500", "csbm_tur": "sokak", "dis_kapi": "5/B"}}
+{"id": "real-izmir-eczane-0312baeaab", "fields": {"mahalle": "ADATEPE", "csbm_ad": "3", "csbm_tur": "sokak", "dis_kapi": "39/A"}}
+{"id": "real-izmir-eczane-032c95394f", "fields": {"csbm_ad": "KAZIM KARABEKIR", "csbm_tur": "cadde", "site": "47 BORNOVA ATA DURAĞI (ZİRAAT BANKASI KARŞISI"}}
+{"id": "real-izmir-eczane-038ebd8a03", "fields": {"mahalle": "ÇINAR", "csbm_ad": "297", "csbm_tur": "sokak", "dis_kapi": "6/E"}}
+{"id": "real-izmir-eczane-03becbbe10", "fields": {"csbm_ad": "ONUR MAH.ATA", "csbm_tur": "cadde", "dis_kapi": "12/B"}}
+{"id": "real-izmir-eczane-03d6bc60b1", "fields": {"mahalle": "KÜLTÜR", "csbm_ad": "TALATPAŞA", "csbm_tur": "bulvar", "dis_kapi": "16/A"}}
+{"id": "real-izmir-eczane-03dd9c4bdd", "fields": {"mahalle": "YALI", "csbm_ad": "6479", "csbm_tur": "sokak", "dis_kapi": "17/C"}}
+{"id": "real-izmir-eczane-040ec513e1", "fields": {"dis_kapi": "456", "site": "SOK.NO.17/B"}}
+{"id": "real-izmir-eczane-04445445e0", "fields": {"mahalle": "UGUR MUMCU", "csbm_ad": "1249", "csbm_tur": "sokak", "dis_kapi": "6"}}
+{"id": "real-izmir-eczane-044993da4b", "fields": {"mahalle": "YALI", "csbm_ad": "İSTİKBAL", "csbm_tur": "cadde", "dis_kapi": "19/B"}}
+{"id": "real-izmir-eczane-0453960411", "fields": {"mahalle": "YENİ", "csbm_ad": "SAMURLU", "csbm_tur": "cadde", "dis_kapi": "49/A"}}
+{"id": "real-izmir-eczane-04d607293c", "fields": {"il": "IZMIR", "mahalle": "KARABAGLAR", "csbm_ad": "4171", "csbm_tur": "sokak", "dis_kapi": "5/B"}}
+{"id": "real-izmir-eczane-04e22b0862", "fields": {"csbm_ad": "MIMAR SINAN MAH.1420 SOK.NO", "dis_kapi": "102/A"}}
+{"id": "real-izmir-eczane-04f4c91ebd", "fields": {"mahalle": "ATATÜRK", "csbm_ad": "1045/1", "csbm_tur": "sokak", "dis_kapi": "5/1A"}}
+{"id": "real-izmir-eczane-0505b0927c", "fields": {"ilce": "TORBALI", "mahalle": "MURAT BEY", "csbm_ad": "3606", "csbm_tur": "sokak", "dis_kapi": "5"}}
+{"id": "real-izmir-eczane-053985ae7d", "fields": {"mahalle": "KAZIMDIRIK", "csbm_ad": "ÜNIVERSITE", "csbm_tur": "cadde", "dis_kapi": "18/A"}}
+{"id": "real-izmir-eczane-0553e4c74a", "fields": {"mahalle": "KASIMPASA", "csbm_ad": "1028/2", "csbm_tur": "sokak"}}
+{"id": "real-izmir-eczane-056bf26b54", "fields": {"mahalle": "YENİMAHALLE", "csbm_ad": "8764/5", "csbm_tur": "sokak", "dis_kapi": "20/B"}}
+{"id": "real-izmir-eczane-05747601b0", "fields": {"csbm_ad": "499", "csbm_tur": "sokak", "dis_kapi": "19/A"}}
+{"id": "real-izmir-eczane-05929afd2b", "fields": {"site": "KÜLTÜR MH. ALİ ÇETİNKAYA CD. NO:33/C"}}
+{"id": "real-izmir-eczane-05f0786472", "fields": {"mahalle": "ÇUKURALTI", "csbm_ad": "ATATÜRK", "csbm_tur": "bulvar", "dis_kapi": "199/A"}}
+{"id": "real-izmir-eczane-05fb2756a6", "fields": {"mahalle": "KARŞIYAKA TERSANE", "csbm_ad": "1671", "csbm_tur": "sokak", "dis_kapi": "21/B"}}
+{"id": "real-izmir-eczane-06026e47a4", "fields": {"csbm_ad": "SOK.NO", "dis_kapi": "5760"}}
+{"id": "real-izmir-eczane-0619050f0b", "fields": {"mahalle": "KAZIM DİRİK", "csbm_ad": "364/11", "csbm_tur": "sokak", "dis_kapi": "1/3J"}}
+{"id": "real-izmir-eczane-064933d6cf", "fields": {"csbm_ad": "Polat", "csbm_tur": "cadde", "dis_kapi": "143/D"}}
+{"id": "real-izmir-eczane-0662e0f105", "fields": {"mahalle": "BEY", "csbm_ad": "133", "csbm_tur": "sokak", "dis_kapi": "25/B", "site": "VALİ RAHMİ"}}
+{"id": "real-izmir-eczane-0675af93a6", "fields": {"mahalle": "AYRANCILAR", "csbm_ad": "KOCATEPE", "csbm_tur": "cadde", "dis_kapi": "10/A"}}
+{"id": "real-izmir-eczane-068e260b4d", "fields": {"csbm_ad": "177/5", "csbm_tur": "sokak", "dis_kapi": "13/A"}}
+{"id": "real-izmir-eczane-069b3d1160", "fields": {"csbm_ad": "ATATÜRK", "csbm_tur": "bulvar", "kat": "9"}}
+{"id": "real-izmir-eczane-06ad1524e6", "fields": {"ilce": "ÜÇYOL", "csbm_ad": "502/2", "csbm_tur": "sokak", "dis_kapi": "45/A"}}
+{"id": "real-izmir-eczane-06bb4dac14", "fields": {"ilce": "KONAK", "mahalle": "ZAFERTEPE", "csbm_ad": "YEŞİLLİK", "csbm_tur": "cadde", "dis_kapi": "105"}}
+{"id": "real-izmir-eczane-06c3cd1744", "fields": {"dis_kapi": "128/B", "site": "YAYLACIK MH. GAZİOSMANPAŞA"}}
+{"id": "real-izmir-eczane-07156e5c6e", "fields": {"mahalle": "ZAFER", "csbm_ad": "623", "csbm_tur": "sokak", "dis_kapi": "3/24"}}
+{"id": "real-izmir-eczane-077928025a", "fields": {"mahalle": "DOĞANLAR", "csbm_ad": "1517", "csbm_tur": "sokak", "dis_kapi": "37/A"}}
+{"id": "real-izmir-eczane-07bfd59f23", "fields": {"site": "KUBİLAY CD. YAMANLAR MH. NO:320/B"}}
+{"id": "real-izmir-eczane-07d0d56109", "fields": {"site": "M.Akif Cd. No:4/M FIRIN KARŞISI EROĞLU İŞ MERKEZİ"}}
+{"id": "real-izmir-eczane-07eec62055", "fields": {"csbm_ad": "ÖZMEN", "csbm_tur": "cadde", "dis_kapi": "40"}}
+{"id": "real-izmir-eczane-080308ac35", "fields": {"mahalle": "TURABİYE", "csbm_ad": "52/4", "csbm_tur": "sokak", "dis_kapi": "62/A"}}
+{"id": "real-izmir-eczane-081a7c2683", "fields": {"csbm_ad": "YENIMAHALLE ZAFER", "csbm_tur": "cadde", "dis_kapi": "36"}}
+{"id": "real-izmir-eczane-082ec683de", "fields": {"mahalle": "30 AĞUSTOS", "csbm_ad": "7129", "csbm_tur": "sokak", "dis_kapi": "4/B"}}
+{"id": "real-izmir-eczane-0833ad034b", "fields": {"mahalle": "BAHARİYE", "csbm_ad": "DOÇ. DR. BAHRİYE ÜÇOK", "csbm_tur": "bulvar", "dis_kapi": "20/A"}}
+{"id": "real-izmir-eczane-0879628e83", "fields": {"csbm_ad": "ALI ÇETINKAYA", "csbm_tur": "bulvar", "dis_kapi": "35-B"}}
+{"id": "real-izmir-eczane-08886d06bd", "fields": {"mahalle": "KÜLTÜR", "csbm_ad": "ŞEVKET ÖZÇELİK", "csbm_tur": "sokak", "dis_kapi": "22"}}
+{"id": "real-izmir-eczane-08bcc3a63a", "fields": {"mahalle": "ZAFER", "csbm_ad": "ORTAÇ", "csbm_tur": "sokak", "dis_kapi": "13/C"}}
+{"id": "real-izmir-eczane-08c1e9b7b9", "fields": {"csbm_ad": "Ergene Mh.456", "csbm_tur": "sokak", "dis_kapi": "11/C"}}
+{"id": "real-izmir-eczane-08db283814", "fields": {"mahalle": "CENGİZHAN", "csbm_ad": "1620/39", "csbm_tur": "sokak", "dis_kapi": "48/A"}}
+{"id": "real-izmir-eczane-08ee2ab069", "fields": {"csbm_ad": "KARAOĞLANOĞLU", "csbm_tur": "cadde", "dis_kapi": "39/2A", "site": "GAZİ MH. ALBAY İBRAHİM"}}
+{"id": "real-izmir-eczane-09048cb024", "fields": {"mahalle": "DONANMACI", "csbm_ad": "ULVİ BAŞMAN", "csbm_tur": "sokak", "dis_kapi": "19/A"}}
+{"id": "real-izmir-eczane-09151bed6f", "fields": {"mahalle": "CUMHURİYET", "csbm_ad": "HALUK ALPSU", "csbm_tur": "bulvar", "dis_kapi": "43/35F"}}
+{"id": "real-izmir-eczane-098afd971b", "fields": {"mahalle": "GÜZELYALI", "csbm_ad": "34", "csbm_tur": "sokak", "dis_kapi": "10/C"}}
+{"id": "real-izmir-eczane-09b8b2fd91", "fields": {"csbm_ad": "AKSAY", "csbm_tur": "cadde", "dis_kapi": "19/B", "site": "HÜRRİYET MH. ORHAN"}}
+{"id": "real-izmir-eczane-09e6368c8d", "fields": {"mahalle": "ATATÜRK", "csbm_ad": "99", "csbm_tur": "sokak", "dis_kapi": "28/75"}}
+{"id": "real-izmir-eczane-09f8a4261a", "fields": {"csbm_ad": "8034", "csbm_tur": "sokak", "dis_kapi": "51/A"}}
+{"id": "real-izmir-eczane-0a0beaaf8a", "fields": {"mahalle": "MANSUROĞLU", "csbm_ad": "273/6", "csbm_tur": "sokak", "dis_kapi": "6/C"}}
+{"id": "real-izmir-eczane-0a300df1ca", "fields": {"site": "CUMHURIYET MH.AYDINOGLU CD.NO.26"}}
+{"id": "real-izmir-eczane-0a9ec3db53", "fields": {"csbm_ad": "SOK.NO", "dis_kapi": "1847/26"}}
+{"id": "real-izmir-eczane-0ab7a22697", "fields": {"site": "ATATÜRK MH. KIZILAY CD.22/B"}}
+{"id": "real-izmir-eczane-0acc6817ad", "fields": {"mahalle": "KEMALPAŞA", "csbm_ad": "102", "csbm_tur": "sokak", "dis_kapi": "8/A"}}
+{"id": "real-izmir-eczane-0ad3d8f509", "fields": {"mahalle": "KAZIM KARABEKİR", "csbm_ad": "YILDIZ", "csbm_tur": "cadde", "dis_kapi": "99-103A"}}
+{"id": "real-izmir-eczane-0afb243f53", "fields": {"csbm_ad": "HAVAALANI", "csbm_tur": "cadde", "dis_kapi": "108", "site": "YENİMAHALLE MAH. ESKİ"}}
+{"id": "real-izmir-eczane-0b2e09fe76", "fields": {"csbm_ad": "FIRAT MAH.287/3", "csbm_tur": "sokak", "dis_kapi": "11"}}
+{"id": "real-izmir-eczane-0b43c4d6e3", "fields": {"mahalle": "MİMAR SİNAN", "csbm_ad": "1420", "csbm_tur": "sokak", "dis_kapi": "98/D"}}
+{"id": "real-izmir-eczane-0ca8a444fc", "fields": {"mahalle": "YEŞİLOVA", "csbm_ad": "ABDİ İPEKÇİ", "csbm_tur": "cadde", "dis_kapi": "102/A"}}
+{"id": "real-izmir-eczane-0cb3f9e54e", "fields": {"site": "EFELER MAH.313 SOK.NO.5/B SIRINYER BUCA-IZMIR"}}
+{"id": "real-izmir-eczane-0cd1e01e69", "fields": {"mahalle": "POLİGON", "csbm_ad": "123/1", "csbm_tur": "sokak"}}
+{"id": "real-izmir-eczane-0cdeb8baff", "fields": {"mahalle": "ESATPAŞA", "csbm_ad": "ABDİ İPEKÇİ", "csbm_tur": "cadde", "dis_kapi": "9/D"}}
+{"id": "real-izmir-eczane-0cec2e3499", "fields": {"mahalle": "ATATÜRK", "csbm_ad": "1067", "csbm_tur": "sokak", "dis_kapi": "1/A"}}
+{"id": "real-izmir-eczane-0cf020e206", "fields": {"mahalle": "ARAP HASAN", "csbm_ad": "235", "csbm_tur": "sokak", "dis_kapi": "116/A"}}
+{"id": "real-izmir-eczane-0d07e03b97", "fields": {"mahalle": "VALİ RAHMİ BEY", "csbm_ad": "MENDERES", "csbm_tur": "cadde", "dis_kapi": "91/B"}}
+{"id": "real-izmir-eczane-0d219df9d8", "fields": {"mahalle": "TÜRKCEDİT", "csbm_ad": "TURAN GÜNEŞ", "csbm_tur": "cadde", "dis_kapi": "2/B"}}
+{"id": "real-izmir-eczane-0d33fc87bc", "fields": {"csbm_ad": "GAZİLER", "csbm_tur": "cadde", "dis_kapi": "406/A"}}
+{"id": "real-izmir-eczane-0df41d6041", "fields": {"mahalle": "MALTEPE", "csbm_ad": "418", "csbm_tur": "sokak", "dis_kapi": "2/A"}}
+{"id": "real-izmir-eczane-0e12e5c718", "fields": {"site": "ATATÜRK BLV.NO.199/A"}}
+{"id": "real-izmir-eczane-0e57b6a52d", "fields": {"mahalle": "YUNUS EMRE", "csbm_ad": "4012", "csbm_tur": "sokak", "dis_kapi": "65/A"}}
+{"id": "real-izmir-eczane-0e822f1ba9", "fields": {"dis_kapi": "1/Z", "site": "ATATÜRK MAH. BELEDIYE BINASI"}}
+{"id": "real-izmir-eczane-0ebda1fe20", "fields": {"mahalle": "YALI", "csbm_ad": "İSTİKBAL", "csbm_tur": "cadde", "dis_kapi": "28/A"}}
+{"id": "real-izmir-eczane-0ed2162d7e", "fields": {"csbm_ad": "INÖNÜ MAH.784", "csbm_tur": "sokak", "dis_kapi": "18/A"}}
+{"id": "real-izmir-eczane-0efca07578", "fields": {"ilce": "BAYRAKLI", "csbm_ad": "MANAVKUYU MAH.M.KEMAL", "csbm_tur": "cadde", "dis_kapi": "144/A"}}
+{"id": "real-izmir-eczane-0f144edfba", "fields": {"site": "UMUT MAH.ESKIIZMIR CAD.NO.644/A KARABAGLAR-IZMIR"}}
+{"id": "real-izmir-eczane-0f275041c2", "fields": {"csbm_ad": "273/1", "csbm_tur": "sokak", "dis_kapi": "2/B"}}
+{"id": "real-izmir-eczane-0f2f74f24f", "fields": {"mahalle": "KORUTÜRK", "csbm_ad": "MİTHATPAŞA", "csbm_tur": "cadde", "dis_kapi": "223/A"}}
+{"id": "real-izmir-eczane-0f4e1588a6", "fields": {"mahalle": "ARAP HASAN", "csbm_ad": "İNÖNÜ", "csbm_tur": "cadde", "dis_kapi": "277/A"}}
+{"id": "real-izmir-eczane-0f63eda8f4", "fields": {"mahalle": "KARABAĞLAR", "csbm_ad": "POLAT", "csbm_tur": "cadde", "dis_kapi": "89/B"}}
+{"id": "real-izmir-eczane-0f7854122f", "fields": {"csbm_ad": "7233", "csbm_tur": "sokak", "dis_kapi": "35", "site": "GÜMÜSPALA BAYRAKLI"}}
+{"id": "real-izmir-eczane-0fc9df4e44", "fields": {"csbm_ad": "1707", "csbm_tur": "sokak", "dis_kapi": "10/B"}}
+{"id": "real-izmir-eczane-0fd7d91cfa", "fields": {"mahalle": "YEŞİLYURT", "csbm_ad": "9097", "csbm_tur": "sokak", "dis_kapi": "18/A"}}
+{"id": "real-izmir-eczane-0fe0f18776", "fields": {"mahalle": "CUMHURİYET", "csbm_ad": "TALATPAŞA", "csbm_tur": "cadde", "dis_kapi": "3/A"}}
+{"id": "real-izmir-eczane-10133f9a8a", "fields": {"mahalle": "ATIF BEY", "csbm_ad": "PROF.TÜRKAN SAYLAN", "csbm_tur": "cadde", "dis_kapi": "15/A"}}
+{"id": "real-izmir-eczane-10188daaad", "fields": {"mahalle": "ALTINTAŞ", "csbm_ad": "İNÖNÜ", "csbm_tur": "cadde", "dis_kapi": "116/A"}}
+{"id": "real-izmir-eczane-1027e26687", "fields": {"mahalle": "ÖRNEKKÖY", "csbm_ad": "7401", "csbm_tur": "sokak", "dis_kapi": "28/A"}}
+{"id": "real-izmir-eczane-1032daf566", "fields": {"csbm_ad": "SİVRİ", "csbm_tur": "sokak", "dis_kapi": "12/A", "site": "BOSTANLI MH. İSMAİL"}}
+{"id": "real-izmir-eczane-1042d808c3", "fields": {"csbm_ad": "KAZIM DİRİK MH.ANKARA CD.NO", "dis_kapi": "241"}}
+{"id": "real-izmir-eczane-105bd7e7ed", "fields": {"csbm_ad": "313", "csbm_tur": "sokak", "dis_kapi": "73"}}
+{"id": "real-izmir-eczane-11a5e607c9", "fields": {"csbm_ad": "ERDOĞAN AKKAYA", "csbm_tur": "sokak", "dis_kapi": "6/A"}}
+{"id": "real-izmir-eczane-11d1710eef", "fields": {"ilce": "ÜÇYOL", "mahalle": "ALTINTAŞ", "csbm_ad": "İNÖNÜ", "csbm_tur": "cadde", "dis_kapi": "74/A"}}
+{"id": "real-izmir-eczane-1202d97e06", "fields": {"mahalle": "Kazım Dirik", "csbm_ad": "185", "csbm_tur": "sokak", "dis_kapi": "17/A"}}
+{"id": "real-izmir-eczane-121e38117e", "fields": {"mahalle": "ATATÜRK", "csbm_ad": "ATATÜRK CD.NO", "dis_kapi": "43/A"}}
+{"id": "real-izmir-eczane-1223f3a663", "fields": {"dis_kapi": "10/D", "site": "MANAVKUYU MAH.275/8 SOK.NO"}}
+{"id": "real-izmir-eczane-12ba8cf90b", "fields": {"mahalle": "AKSOY", "csbm_ad": "1767", "csbm_tur": "sokak", "dis_kapi": "24/A"}}
+{"id": "real-izmir-eczane-1358b8d6e9", "fields": {"mahalle": "ÇİMENTEPE", "csbm_ad": "682", "csbm_tur": "sokak", "dis_kapi": "34/A"}}
+{"id": "real-izmir-eczane-138f01f419", "fields": {"mahalle": "BOZYAKA", "csbm_ad": "SAIM ÇIKRIKÇI", "csbm_tur": "cadde", "dis_kapi": "106/A"}}
+{"id": "real-izmir-eczane-13912b0bd2", "fields": {"ilce": "BAYRAKLI", "csbm_ad": "Kazım Dirik Mah..FATIH SULTAN MEHMET", "csbm_tur": "cadde", "dis_kapi": "34/A"}}
+{"id": "real-izmir-eczane-13f3673bb0", "fields": {"mahalle": "AYRANCILAR", "csbm_ad": "74", "csbm_tur": "sokak", "dis_kapi": "29/A"}}
+{"id": "real-izmir-eczane-144e685471", "fields": {"il": "IZMIR", "ilce": "GÜZELBAHÇE", "mahalle": "YALI", "csbm_ad": "MITHATPASA", "dis_kapi": "126/B"}}
+{"id": "real-izmir-eczane-1458f34779", "fields": {"mahalle": "Heykel Meyd", "csbm_ad": "Uğur Mumcu", "csbm_tur": "cadde", "dis_kapi": "1/B"}}
+{"id": "real-izmir-eczane-14a80507ea", "fields": {"ilce": "BORNOVA", "mahalle": "RAFETPASA", "csbm_ad": "ABDI IPEKÇI", "csbm_tur": "cadde", "dis_kapi": "141/A"}}
+{"id": "real-izmir-eczane-14d110a91b", "fields": {"mahalle": "ESENYALI", "csbm_ad": "SOK.NO", "dis_kapi": "52/70"}}
+{"id": "real-izmir-eczane-150cc27915", "fields": {"csbm_ad": "ÜÇOK", "csbm_tur": "cadde", "dis_kapi": "47/A", "site": "BAHÇELİEVLER MAH. BAHRİYE"}}
+{"id": "real-izmir-eczane-152259730f", "fields": {"mahalle": "KÖYIÇI", "csbm_ad": "DERE", "csbm_tur": "cadde", "dis_kapi": "16"}}
+{"id": "real-izmir-eczane-153c85d954", "fields": {"csbm_ad": "TEPEKULE MH.2084/8", "csbm_tur": "sokak", "dis_kapi": "43/A"}}
+{"id": "real-izmir-eczane-154077aab1", "fields": {"mahalle": "SARIYER", "csbm_ad": "5714/1", "csbm_tur": "sokak", "dis_kapi": "21/A"}}
+{"id": "real-izmir-eczane-159d4ef3f9", "fields": {"mahalle": "R.ŞEVKET İNCE", "csbm_ad": "2148/9", "csbm_tur": "sokak", "dis_kapi": "1", "site": "WESTPARK ALIŞVERİŞ MERKEZİ"}}
+{"id": "real-izmir-eczane-15ae6b2038", "fields": {"csbm_ad": "1671", "csbm_tur": "sokak", "dis_kapi": "27/B"}}
+{"id": "real-izmir-eczane-15c178c53a", "fields": {"mahalle": "BAHÇELİEVLER", "csbm_ad": "YAŞAR AKSOY", "csbm_tur": "sokak", "dis_kapi": "121/D"}}
+{"id": "real-izmir-eczane-160386a6d3", "fields": {"mahalle": "ATATÜRK", "csbm_ad": "206/13", "csbm_tur": "sokak", "dis_kapi": "7"}}
+{"id": "real-izmir-eczane-160c252cf5", "fields": {"csbm_ad": "SAGLIK", "csbm_tur": "sokak", "dis_kapi": "46/A", "site": "TELEFERIK MAH.ÖZ"}}
+{"id": "real-izmir-eczane-1617791208", "fields": {"mahalle": "MEHMET AKİF ERSOY", "csbm_ad": "157", "csbm_tur": "sokak", "dis_kapi": "37/A"}}
+{"id": "real-izmir-eczane-161920c828", "fields": {"mahalle": "YENI", "csbm_ad": "RUMELI", "csbm_tur": "cadde", "dis_kapi": "8/A"}}
+{"id": "real-izmir-eczane-162b8af96a", "fields": {"csbm_ad": "EVKA-3 MAH.129. SOK.NO", "dis_kapi": "1/A"}}
+{"id": "real-izmir-eczane-1638567630", "fields": {"site": "FEVZIÇAKMAK MH.CENGIZ TOPEL SOK.NO:11"}}
+{"id": "real-izmir-eczane-1666b67ffb", "fields": {"mahalle": "MUSTAFA KEMAL PAŞA", "csbm_ad": "2730", "csbm_tur": "sokak", "dis_kapi": "23/A"}}
+{"id": "real-izmir-eczane-168d05e8a7", "fields": {"mahalle": "MANSUROĞLU", "csbm_ad": "283/12", "csbm_tur": "sokak", "dis_kapi": "10/A"}}
+{"id": "real-izmir-eczane-16c028f4b2", "fields": {"mahalle": "ZÜBEYDE HANIM", "dis_kapi": "7448/11", "site": "SK NO:7/A ELİT SİTESİ 100. YIL PARKI KARŞISI"}}
+{"id": "real-izmir-eczane-16cdb1a334", "fields": {"mahalle": "GÜNEŞLİ", "csbm_ad": "529/1", "csbm_tur": "sokak", "dis_kapi": "11/B"}}
+{"id": "real-izmir-eczane-16e972e400", "fields": {"site": "VALI RAHMI BEY MH.ÖZMEN CAD.124/A"}}
+{"id": "real-izmir-eczane-16e9f4a87c", "fields": {"mahalle": "ALTAY", "csbm_ad": "65/8", "csbm_tur": "sokak", "dis_kapi": "6/A", "site": "FAHRETTİN"}}
+{"id": "real-izmir-eczane-16ea8d771c", "fields": {"mahalle": "KAZIM DİRİK", "csbm_ad": "FATİH SULTAN MEHMET", "csbm_tur": "cadde", "dis_kapi": "3/A"}}
+{"id": "real-izmir-eczane-16f5f9f862", "fields": {"mahalle": "MERSİNALANI", "csbm_ad": "CUMHURİYET", "csbm_tur": "cadde", "dis_kapi": "49/A"}}
+{"id": "real-izmir-eczane-1700564c5e", "fields": {"mahalle": "GAZİ", "csbm_ad": "KEMAL REİS", "csbm_tur": "cadde", "dis_kapi": "26/B"}}
+{"id": "real-izmir-eczane-1712037753", "fields": {"mahalle": "BOSTANLI", "csbm_ad": "1671", "csbm_tur": "sokak", "dis_kapi": "189/B"}}
+{"id": "real-izmir-eczane-1766379117", "fields": {"mahalle": "HACI İSA", "csbm_ad": "ZAFER", "csbm_tur": "cadde", "dis_kapi": "18"}}
+{"id": "real-izmir-eczane-179dc70747", "fields": {"mahalle": "UĞUR MUMCU", "csbm_ad": "1347", "csbm_tur": "sokak", "dis_kapi": "12/C"}}
+{"id": "real-izmir-eczane-17b376ee97", "fields": {"site": "ATATÜRK MH. DENIZCILER SOK.NO:8 ÖDEMIS"}}
+{"id": "real-izmir-eczane-17e75fd799", "fields": {"site": "UFUK MAH.885 SOK.NO:8 BUCA-IZMIR"}}
+{"id": "real-izmir-eczane-1882f37fdd", "fields": {"mahalle": "UFUK", "csbm_ad": "ÇAKMAK", "csbm_tur": "cadde", "dis_kapi": "204/A"}}
+{"id": "real-izmir-eczane-18b17f915c", "fields": {"mahalle": "DOĞANLAR", "csbm_ad": "1550", "csbm_tur": "sokak", "dis_kapi": "51/C"}}
+{"id": "real-izmir-eczane-18c0c2b39f", "fields": {"mahalle": "ALTAY", "csbm_ad": "6183", "csbm_tur": "sokak", "dis_kapi": "26/A", "site": "FİKRİ"}}
+{"id": "real-izmir-eczane-18d859a485", "fields": {"mahalle": "MANSUROĞLU", "csbm_ad": "286/10", "csbm_tur": "sokak", "dis_kapi": "5/B"}}
+{"id": "real-izmir-eczane-18f74e74d0", "fields": {"site": "KILIÇREİS MH. ŞÜKRÜ SARAÇOĞLU CD NO:47"}}
+{"id": "real-izmir-eczane-190cc5ce07", "fields": {"mahalle": "ONUR", "csbm_ad": "SARMASIK", "csbm_tur": "sokak", "dis_kapi": "18/A"}}
+{"id": "real-izmir-eczane-1910f80b53", "fields": {"mahalle": "ÖRNEKKÖY", "csbm_ad": "7442", "csbm_tur": "sokak", "dis_kapi": "1/A"}}
+{"id": "real-izmir-eczane-1998392a44", "fields": {"mahalle": "KURTULUŞ", "csbm_ad": "FEVZİPAŞA", "csbm_tur": "cadde", "dis_kapi": "107/C"}}
+{"id": "real-izmir-eczane-19f81ad1c3", "fields": {"ilce": "YESILYURT", "csbm_ad": "9033", "csbm_tur": "sokak", "dis_kapi": "21/A"}}
+{"id": "real-izmir-eczane-19f94228cc", "fields": {"mahalle": "HÜRRIYET", "csbm_ad": "463/4", "csbm_tur": "sokak", "dis_kapi": "7/A"}}
+{"id": "real-izmir-eczane-1a482ce8cd", "fields": {"csbm_ad": "UGUR MUMCU MAH.1347", "csbm_tur": "sokak", "dis_kapi": "12/D"}}
+{"id": "real-izmir-eczane-1acf31a1de", "fields": {"site": "YILDIZ MH AHMET HOCA YESEVİ CD. NO: 36 BUCA DOĞUM HASTANESİ ÇAPRAZI"}}
+{"id": "real-izmir-eczane-1aeaa02553", "fields": {"mahalle": "BAHARİYE", "csbm_ad": "ZÜBEYDE HANIM", "csbm_tur": "cadde", "dis_kapi": "102/A"}}
+{"id": "real-izmir-eczane-1b0711c6fb", "fields": {"csbm_ad": "ÖZMEN", "csbm_tur": "cadde", "dis_kapi": "118/B"}}
+{"id": "real-izmir-eczane-1b0be53e4b", "fields": {"ilce": "ÇİĞLİ", "mahalle": "MALTEPE", "csbm_ad": "8110/5", "csbm_tur": "sokak", "dis_kapi": "9/B"}}
+{"id": "real-izmir-eczane-1b2fed9061", "fields": {"csbm_ad": "İZMİR", "csbm_tur": "cadde", "dis_kapi": "345/A", "site": "ESKİ"}}
+{"id": "real-izmir-eczane-1bc0ec905e", "fields": {"csbm_ad": "SARAÇOĞLU", "csbm_tur": "cadde", "dis_kapi": "75/A"}}
+{"id": "real-izmir-eczane-1c8cd08881", "fields": {"csbm_ad": "MITHATPASA", "csbm_tur": "cadde", "dis_kapi": "223/C"}}
+{"id": "real-izmir-eczane-1c95212517", "fields": {"mahalle": "NARLIDERE", "csbm_ad": "MITHATPASA", "csbm_tur": "cadde", "dis_kapi": "281/B"}}
+{"id": "real-izmir-eczane-1cb53d8a24", "fields": {"ilce": "YENISEHIR", "csbm_ad": "GAZILER", "csbm_tur": "cadde", "dis_kapi": "222/A"}}
+{"id": "real-izmir-eczane-1cd6440986", "fields": {"mahalle": "TUNA", "csbm_ad": "1696", "csbm_tur": "sokak", "dis_kapi": "41/C"}}
+{"id": "real-izmir-eczane-1d080257cc", "fields": {"csbm_ad": "MITHATPASA", "csbm_tur": "cadde", "dis_kapi": "301/C"}}
+{"id": "real-izmir-eczane-1d2b230107", "fields": {"site": "KASIMPASA MAH.17/B"}}
+{"id": "real-izmir-eczane-1d2f8368af", "fields": {"mahalle": "İSMETPAŞA", "csbm_ad": "3/1", "csbm_tur": "sokak", "dis_kapi": "11/A"}}
+{"id": "real-izmir-eczane-1d37e2c3a7", "fields": {"mahalle": "ZAFER", "csbm_ad": "ORTAÇ", "csbm_tur": "sokak", "dis_kapi": "3/A"}}
+{"id": "real-izmir-eczane-1d3d417b1c", "fields": {"site": "FATIH CD.NO.2/B MORDOGAN"}}
+{"id": "real-izmir-eczane-1d9fd35afe", "fields": {"csbm_ad": "ORDU", "csbm_tur": "cadde", "dis_kapi": "1/C"}}
+{"id": "real-izmir-eczane-1dd5e6dda8", "fields": {"mahalle": "FATIH", "csbm_ad": "M.AKIF ERSOY", "csbm_tur": "cadde", "dis_kapi": "29/A"}}
+{"id": "real-izmir-eczane-1df9fa3c2f", "fields": {"mahalle": "ALİ FUAT CEBESOY", "csbm_ad": "9125/6", "csbm_tur": "sokak", "dis_kapi": "32/1B"}}
+{"id": "real-izmir-eczane-1e76c23e96", "fields": {"mahalle": "MANSUROGLU", "csbm_ad": "273/6", "csbm_tur": "sokak", "dis_kapi": "6/A"}}
+{"id": "real-izmir-eczane-1ebf370446", "fields": {"mahalle": "ATATÜRK", "csbm_ad": "1529", "csbm_tur": "sokak", "dis_kapi": "3/A"}}
+{"id": "real-izmir-eczane-1ef724a414", "fields": {"mahalle": "MANAVKUYU", "csbm_ad": "249/2", "csbm_tur": "sokak", "dis_kapi": "19/C"}}
+{"id": "real-izmir-eczane-1f0cb97f94", "fields": {"mahalle": "Güney", "csbm_ad": "1440", "csbm_tur": "sokak", "dis_kapi": "2/G", "site": "ESKİ ÜLKÜ SİNEMSI KARŞISI ZEYTİNLİK"}}
+{"id": "real-izmir-eczane-1f3f8fc01f", "fields": {"mahalle": "ALAYBEY", "csbm_ad": "1690", "csbm_tur": "sokak", "dis_kapi": "134/A"}}
+{"id": "real-izmir-eczane-1fa75bd9de", "fields": {"mahalle": "PİRİ REİS", "csbm_ad": "269", "csbm_tur": "sokak", "dis_kapi": "91/C"}}
+{"id": "real-izmir-eczane-1ff6d06aac", "fields": {"mahalle": "KAZIM DİRİK", "csbm_ad": "ANKARA", "csbm_tur": "cadde", "dis_kapi": "237/1B"}}
+{"id": "real-izmir-eczane-200176c282", "fields": {"mahalle": "CUMHURİYET", "csbm_ad": "2026", "csbm_tur": "sokak", "dis_kapi": "11/1A"}}
+{"id": "real-izmir-eczane-2001c1a122", "fields": {"mahalle": "GÜZELYALI", "csbm_ad": "56", "csbm_tur": "sokak", "dis_kapi": "3/A"}}
+{"id": "real-izmir-eczane-203c0b4b1a", "fields": {"mahalle": "SERİNTEPE", "csbm_ad": "4304", "csbm_tur": "sokak", "dis_kapi": "27/1A"}}
+{"id": "real-izmir-eczane-2076b15f0e", "fields": {"mahalle": "İSABEY", "csbm_ad": "ATATÜRK", "csbm_tur": "cadde", "dis_kapi": "103/A"}}
+{"id": "real-izmir-eczane-20ab9071e7", "fields": {"csbm_ad": "SOK.NO", "dis_kapi": "1710"}}
+{"id": "real-izmir-eczane-20c3c2dc7d", "fields": {"csbm_ad": "340", "csbm_tur": "sokak", "dis_kapi": "69/C"}}
+{"id": "real-izmir-eczane-20e2b096fb", "fields": {"csbm_ad": "ÖZMEN", "csbm_tur": "cadde", "dis_kapi": "130"}}
+{"id": "real-izmir-eczane-21027c256a", "fields": {"mahalle": "MENDERES", "csbm_ad": "ERDEM", "csbm_tur": "cadde", "dis_kapi": "191/A"}}
+{"id": "real-izmir-eczane-2116eb54d6", "fields": {"mahalle": "KORUTÜRK", "csbm_ad": "MİTHATPAŞA", "csbm_tur": "cadde", "dis_kapi": "283/A"}}
+{"id": "real-izmir-eczane-2119d0a4ee", "fields": {"csbm_ad": "Gaziler", "csbm_tur": "cadde", "dis_kapi": "228", "site": "MOTOR MESLEK LİSESİ KARŞISI"}}
+{"id": "real-izmir-eczane-212e124b9a", "fields": {"mahalle": "YENİDOĞAN", "csbm_ad": "2223", "csbm_tur": "sokak", "dis_kapi": "34"}}
+{"id": "real-izmir-eczane-219edf025b", "fields": {"csbm_ad": "BLV.NO", "dis_kapi": "61/C", "site": "GONCALAR MAH.GÜNSAZAK"}}
+{"id": "real-izmir-eczane-2218e3062f", "fields": {"csbm_ad": "SOK.NO", "dis_kapi": "1748"}}
+{"id": "real-izmir-eczane-2220924f4e", "fields": {"mahalle": "EĞİTİM", "csbm_ad": "ZİYA GÖKALP", "csbm_tur": "sokak", "dis_kapi": "20/A"}}
+{"id": "real-izmir-eczane-2221579b3b", "fields": {"mahalle": "YENİMAHALLE", "csbm_ad": "1671/1", "csbm_tur": "sokak", "dis_kapi": "863/A"}}
+{"id": "real-izmir-eczane-22784f62b0", "fields": {"csbm_ad": "ALİ FUAT CEBESOY MH.ESKI IZMIR", "csbm_tur": "cadde", "dis_kapi": "416"}}
+{"id": "real-izmir-eczane-22a78d9747", "fields": {"mahalle": "DUMLUPINAR", "csbm_ad": "ÖZMEN", "csbm_tur": "cadde", "dis_kapi": "56/A"}}
+{"id": "real-izmir-eczane-22b5c5c267", "fields": {"mahalle": "YENİ MAHALLE", "csbm_ad": "8764/5", "csbm_tur": "sokak", "dis_kapi": "22A"}}
+{"id": "real-izmir-eczane-22bc25f7d7", "fields": {"csbm_ad": "Sakarya Cad. 273/5", "csbm_tur": "sokak", "dis_kapi": "12/C"}}
+{"id": "real-izmir-eczane-22da2f4c29", "fields": {"mahalle": "Bostanlı", "csbm_ad": "Girne", "csbm_tur": "bulvar", "dis_kapi": "51/3B"}}
+{"id": "real-izmir-eczane-2300464a87", "fields": {"mahalle": "KUVVETLİ", "csbm_ad": "MANYASI", "csbm_tur": "cadde", "dis_kapi": "146/A"}}
+{"id": "real-izmir-eczane-230dceb0e4", "fields": {"mahalle": "CAMİKEBİR", "csbm_ad": "52", "csbm_tur": "sokak", "dis_kapi": "1/A"}}
+{"id": "real-izmir-eczane-2319b45946", "fields": {"csbm_ad": "İNÖNÜ", "csbm_tur": "cadde", "dis_kapi": "320/B"}}
+{"id": "real-izmir-eczane-231ca2d83e", "fields": {"mahalle": "KAZIM DİRİK", "csbm_ad": "408", "csbm_tur": "sokak", "dis_kapi": "1"}}
+{"id": "real-izmir-eczane-232531128d", "fields": {"mahalle": "YENİKENT", "csbm_ad": "SAMANYOLU", "csbm_tur": "sokak", "dis_kapi": "6/6", "site": "BAMBOO İŞ MERKEZİ"}}
+{"id": "real-izmir-eczane-232d2c16ad", "fields": {"site": "EMMİOĞLU MH.HÜRRIYET MEYD.35"}}
+{"id": "real-izmir-eczane-23b4e76774", "fields": {"mahalle": "GÜZELYALI", "csbm_ad": "MİTHATPAŞA CAD. 95", "csbm_tur": "sokak", "dis_kapi": "3/E"}}
+{"id": "real-izmir-eczane-2468a03cc4", "fields": {"mahalle": "İSKELE", "csbm_ad": "İSKELE", "csbm_tur": "cadde", "dis_kapi": "19/B"}}
+{"id": "real-izmir-eczane-248018cd7f", "fields": {"csbm_ad": "AKBULUT", "csbm_tur": "cadde", "dis_kapi": "7A", "site": "İSMETPAŞA MAH. ŞEHİT SAMİ"}}
+{"id": "real-izmir-eczane-24bcc1d796", "fields": {"mahalle": "ARAP HASAN", "csbm_ad": "235", "csbm_tur": "sokak", "dis_kapi": "70/A"}}
+{"id": "real-izmir-eczane-24d2cb4dd0", "fields": {"csbm_ad": "HIDIRLIK MH.İNÖNÜ", "csbm_tur": "cadde", "dis_kapi": "1A"}}
+{"id": "real-izmir-eczane-24e1082e81", "fields": {"csbm_ad": "ARLI", "csbm_tur": "cadde", "dis_kapi": "24", "site": "CUMHURİYET MAH. SABİT"}}
+{"id": "real-izmir-eczane-24fa21460a", "fields": {"mahalle": "9 EYLÜL", "csbm_ad": "253", "csbm_tur": "sokak", "dis_kapi": "19/A"}}
+{"id": "real-izmir-eczane-2518e8805b", "fields": {"ilce": "Altıntaş", "csbm_ad": "İnönü", "csbm_tur": "cadde", "dis_kapi": "77/A"}}
+{"id": "real-izmir-eczane-252b6274fe", "fields": {"csbm_ad": "TUNCER", "csbm_tur": "cadde", "dis_kapi": "22/A", "site": "ALP KENT MH. CEMALİ"}}
+{"id": "real-izmir-eczane-25396b2911", "fields": {"csbm_ad": "ATATÜRK", "csbm_tur": "cadde", "dis_kapi": "23/A", "site": "ALAÇATI MH. ALAÇATI"}}
+{"id": "real-izmir-eczane-2547c784cf", "fields": {"ilce": "BAYRAKLI", "mahalle": "MANSUROGLU", "csbm_ad": "266", "csbm_tur": "sokak", "dis_kapi": "10/C"}}
+{"id": "real-izmir-eczane-25514c5a85", "fields": {"mahalle": "MEHMET AKİF ERSOY", "csbm_ad": "157", "csbm_tur": "sokak", "dis_kapi": "41/A"}}
+{"id": "real-izmir-eczane-256d2af2c8", "fields": {"csbm_ad": "TOPEL", "csbm_tur": "cadde", "dis_kapi": "33/F", "site": "YENİ MAHALLESİ CENGİZ"}}
+{"id": "real-izmir-eczane-26010aabe2", "fields": {"mahalle": "İSTİKLAL", "csbm_ad": "5.CADDE", "dis_kapi": "26/A"}}
+{"id": "real-izmir-eczane-2608cfc17b", "fields": {"csbm_ad": "BURAK REİS", "csbm_tur": "cadde", "dis_kapi": "136"}}
+{"id": "real-izmir-eczane-264e991fc3", "fields": {"mahalle": "ÜÇ EYLÜL", "csbm_ad": "2021", "csbm_tur": "sokak", "dis_kapi": "4/A"}}
+{"id": "real-izmir-eczane-26aeed3636", "fields": {"mahalle": "BOSTANLI", "csbm_ad": "CEMAL GÜRSEL", "csbm_tur": "cadde", "dis_kapi": "528/B"}}
+{"id": "real-izmir-eczane-2724c82731", "fields": {"mahalle": "CUMHURİYET", "dis_kapi": "6719", "site": "SK NO:1 MİGROS YANI"}}
+{"id": "real-izmir-eczane-272f9ace52", "fields": {"mahalle": "Yeşilova", "csbm_ad": "4070", "csbm_tur": "sokak", "dis_kapi": "59/A"}}
+{"id": "real-izmir-eczane-273352565b", "fields": {"csbm_ad": "TOPEL", "csbm_tur": "sokak", "dis_kapi": "9/B", "site": "FEVZİ ÇAKMAK MAH. CENGİZ"}}
+{"id": "real-izmir-eczane-2739c47a95", "fields": {"mahalle": "FIRAT", "csbm_ad": "287/9", "csbm_tur": "sokak", "dis_kapi": "17/A"}}
+{"id": "real-izmir-eczane-27757c6d40", "fields": {"csbm_ad": "3480", "csbm_tur": "sokak", "dis_kapi": "128/1", "site": "FERAHLI LEVENT SON DURAK"}}
+{"id": "real-izmir-eczane-2784cb56f6", "fields": {"mahalle": "BAHÇELİEVLER", "csbm_ad": "325", "csbm_tur": "sokak", "dis_kapi": "5/A"}}
+{"id": "real-izmir-eczane-27ab31d6b3", "fields": {"ilce": "HAVA", "csbm_ad": "G.Aksel", "csbm_tur": "bulvar", "dis_kapi": "1127/C", "site": "HAST KARŞISI"}}
+{"id": "real-izmir-eczane-27cb96ac83", "fields": {"mahalle": "VATAN", "csbm_ad": "POLAT", "csbm_tur": "cadde", "dis_kapi": "41"}}
+{"id": "real-izmir-eczane-27cc324cd1", "fields": {"ilce": "Karataş", "csbm_ad": "Mithatpaşa", "csbm_tur": "cadde", "dis_kapi": "99/A"}}
+{"id": "real-izmir-eczane-281707048f", "fields": {"csbm_ad": "1847/26", "csbm_tur": "sokak", "dis_kapi": "5/E"}}
+{"id": "real-izmir-eczane-28be5cd7f2", "fields": {"mahalle": "ERZENE", "csbm_ad": "HASAN ALİ YÜCEL", "csbm_tur": "cadde", "dis_kapi": "12/1B"}}
+{"id": "real-izmir-eczane-28ec213e49", "fields": {"mahalle": "ALTINTAŞ", "csbm_ad": "ZAFER", "csbm_tur": "cadde", "dis_kapi": "142/A"}}
+{"id": "real-izmir-eczane-28f59abd52", "fields": {"mahalle": "ZAFER", "csbm_ad": "ORTAÇ", "csbm_tur": "sokak", "dis_kapi": "19/A"}}
+{"id": "real-izmir-eczane-28f709c27d", "fields": {"mahalle": "ŞEMİKLER", "csbm_ad": "6294", "csbm_tur": "sokak", "dis_kapi": "32/A"}}
+{"id": "real-izmir-eczane-28fc479c89", "fields": {"ilce": "KARSIYAKA", "csbm_ad": "6251", "csbm_tur": "sokak", "dis_kapi": "8/A"}}
+{"id": "real-izmir-eczane-29b8b1deb6", "fields": {"mahalle": "KASIMPASA", "csbm_ad": "1028/2", "csbm_tur": "sokak", "dis_kapi": "1/A"}}
+{"id": "real-izmir-eczane-2a3cab3142", "fields": {"mahalle": "YENİ", "csbm_ad": "612", "csbm_tur": "sokak", "dis_kapi": "1/A"}}
+{"id": "real-izmir-eczane-2a7a5224ce", "fields": {"mahalle": "EFELER", "csbm_ad": "338", "csbm_tur": "sokak", "dis_kapi": "9/A"}}
+{"id": "real-izmir-eczane-2ad872e941", "fields": {"mahalle": "Ufuk", "csbm_ad": "897", "csbm_tur": "sokak", "dis_kapi": "6/A"}}
+{"id": "real-izmir-eczane-2b30c17e47", "fields": {"mahalle": "Onur", "csbm_ad": "Dalya", "csbm_tur": "sokak", "dis_kapi": "46-B"}}
+{"id": "real-izmir-eczane-2b45f24276", "fields": {"csbm_ad": "SOK.NO", "dis_kapi": "1735"}}
+{"id": "real-izmir-eczane-2b7201fa06", "fields": {"csbm_ad": "KEMALPASA MAH.HÜKÜMET CD.NO", "dis_kapi": "7"}}
+{"id": "real-izmir-eczane-2b8b790b44", "fields": {"mahalle": "IMBATLI", "csbm_ad": "6076/4", "csbm_tur": "sokak", "dis_kapi": "5/F"}}
+{"id": "real-izmir-eczane-2b93250951", "fields": {"mahalle": "PİRİ REİS", "csbm_ad": "İNÖNÜ", "csbm_tur": "cadde", "dis_kapi": "228A-228B"}}
+{"id": "real-izmir-eczane-2bb1d1d077", "fields": {"mahalle": "BAHÇELİEVLER", "csbm_ad": "501", "csbm_tur": "sokak", "dis_kapi": "16/A"}}
+{"id": "real-izmir-eczane-2bf108f07f", "fields": {"mahalle": "GAZİ OSMANPAŞA", "csbm_ad": "5401/2", "csbm_tur": "sokak", "dis_kapi": "13/A"}}
+{"id": "real-izmir-eczane-2c4fa160b8", "fields": {"mahalle": "LEVENT", "csbm_ad": "3483", "csbm_tur": "sokak", "dis_kapi": "3/A"}}
+{"id": "real-izmir-eczane-2c59c23fc4", "fields": {"mahalle": "BASARI CAD. YAYLACIK", "dis_kapi": "69/B"}}
+{"id": "real-izmir-eczane-2c79709c2b", "fields": {"dis_kapi": "16", "site": "TEPEKÖY MAH.SERDAR"}}
+{"id": "real-izmir-eczane-2c89aac196", "fields": {"mahalle": "VALİ RAHMİ BEY", "csbm_ad": "FORBES", "csbm_tur": "sokak", "dis_kapi": "161/A"}}
+{"id": "real-izmir-eczane-2ca746e836", "fields": {"ilce": "GÜLTEPE", "mahalle": "ZEYBEK", "csbm_ad": "GAZIPASA", "csbm_tur": "cadde", "dis_kapi": "129/C"}}
+{"id": "real-izmir-eczane-2cb8acedee", "fields": {"mahalle": "POLİGON", "csbm_ad": "İNÖNÜ", "csbm_tur": "cadde", "dis_kapi": "667/A"}}
+{"id": "real-izmir-eczane-2d044961d1", "fields": {"mahalle": "EFELER", "csbm_ad": "325", "csbm_tur": "sokak", "dis_kapi": "49/A"}}
+{"id": "real-izmir-eczane-2d16cf1ac2", "fields": {"site": "KORUTÜRK MH. MİTHATPAŞA CD. NO:285 İNCİRALTI"}}
+{"id": "real-izmir-eczane-2da98876ec", "fields": {"csbm_ad": "682/4", "csbm_tur": "sokak", "dis_kapi": "16/1"}}
+{"id": "real-izmir-eczane-2dfb2784ee", "fields": {"mahalle": "UĞUR MUMCU", "csbm_ad": "1249", "csbm_tur": "sokak", "dis_kapi": "14/A"}}
+{"id": "real-izmir-eczane-2e3f54e061", "fields": {"mahalle": "MENDERES", "csbm_ad": "157", "csbm_tur": "sokak", "dis_kapi": "37/A"}}
+{"id": "real-izmir-eczane-2e67a66906", "fields": {"mahalle": "REİS", "csbm_ad": "ORDU", "csbm_tur": "cadde", "dis_kapi": "50/B"}}
+{"id": "real-izmir-eczane-2e6f6e5c59", "fields": {"csbm_ad": "Haşim İşcan", "csbm_tur": "cadde", "dis_kapi": "9/A", "site": "Özkanlar"}}
+{"id": "real-izmir-eczane-2e8e7da0d1", "fields": {"mahalle": "MURAT REİS", "csbm_ad": "201", "csbm_tur": "sokak", "dis_kapi": "50/A"}}
+{"id": "real-izmir-eczane-2eb9f303b7", "fields": {"dis_kapi": "10/B", "site": "ERTUGRUL MAH.TORBALI"}}
+{"id": "real-izmir-eczane-2ec5320f54", "fields": {"mahalle": "Üç Eylül", "csbm_ad": "2038", "csbm_tur": "sokak", "dis_kapi": "6/A"}}
+{"id": "real-izmir-eczane-2efe2a56fe", "fields": {"mahalle": "ÇAMTEPE", "csbm_ad": "MİTHATPAŞA", "csbm_tur": "cadde", "dis_kapi": "241/A"}}
+{"id": "real-izmir-eczane-2f0824b5ed", "fields": {"mahalle": "KAHRAMANLAR", "csbm_ad": "AKINCILAR", "csbm_tur": "cadde", "dis_kapi": "40/A"}}
+{"id": "real-izmir-eczane-2f3f804a60", "fields": {"csbm_ad": "KAHRAMANLAR CD. 1397", "csbm_tur": "sokak", "dis_kapi": "16/A"}}
+{"id": "real-izmir-eczane-2f48172400", "fields": {"mahalle": "KÜLTÜR", "csbm_ad": "1392", "csbm_tur": "sokak", "dis_kapi": "3/B"}}
+{"id": "real-izmir-eczane-2f4a9d3ff0", "fields": {"mahalle": "BALATÇIK", "csbm_ad": "8788", "csbm_tur": "sokak", "dis_kapi": "15/A"}}
+{"id": "real-izmir-eczane-2f6192e211", "fields": {"mahalle": "KAZIM DİRİK", "csbm_ad": "MUSTAFA KEMAL", "csbm_tur": "cadde", "dis_kapi": "120/1"}}
+{"id": "real-izmir-eczane-2f994d5a25", "fields": {"mahalle": "BOSTANLI", "csbm_ad": "BESTEKAR YUSUF NALKESEN", "csbm_tur": "sokak", "dis_kapi": "38/A"}}
+{"id": "real-izmir-eczane-2ff16efe9d", "fields": {"mahalle": "OSMANGAZİ", "csbm_ad": "YAVUZ", "csbm_tur": "cadde", "dis_kapi": "350/C"}}
+{"id": "real-izmir-eczane-2ffb832241", "fields": {"csbm_ad": "ATAKENT MAH.BESTEKAR SADİ HOŞSES", "csbm_tur": "sokak", "dis_kapi": "40/A"}}
+{"id": "real-izmir-eczane-30393bf229", "fields": {"mahalle": "ALSANCAK", "csbm_ad": "TALATPAŞA", "csbm_tur": "bulvar", "dis_kapi": "47/B"}}
+{"id": "real-izmir-eczane-304bfd88e2", "fields": {"mahalle": "ÇATALKAYA", "csbm_ad": "MİTHATPAŞA", "csbm_tur": "cadde", "dis_kapi": "427/A"}}
+{"id": "real-izmir-eczane-3072062799", "fields": {"mahalle": "IRMAK", "csbm_ad": "29", "csbm_tur": "sokak", "dis_kapi": "1/2A"}}
+{"id": "real-izmir-eczane-30a75d1269", "fields": {"mahalle": "YEŞİLOVA", "csbm_ad": "4174/3", "csbm_tur": "sokak", "dis_kapi": "10/A"}}
+{"id": "real-izmir-eczane-30c578a4db", "fields": {"dis_kapi": "16/D"}}
+{"id": "real-izmir-eczane-30e8cadfcb", "fields": {"csbm_ad": "HAVAALANI", "csbm_tur": "cadde", "dis_kapi": "74/B", "site": "YENİ MAHALLE ESKİ"}}
+{"id": "real-izmir-eczane-312a7d30d7", "fields": {"mahalle": "FIRAT", "csbm_ad": "287/3", "csbm_tur": "sokak", "dis_kapi": "9/C"}}
+{"id": "real-izmir-eczane-31763bcd26", "fields": {"csbm_ad": "HAVAALANI", "csbm_tur": "cadde", "dis_kapi": "74/B", "site": "YENİ MH. ESKİ"}}
+{"id": "real-izmir-eczane-317ccd58e5", "fields": {"site": "M. ERENER MAH.2174 SOK.NO.45"}}
+{"id": "real-izmir-eczane-320c70011d", "fields": {"mahalle": "AYDIN", "csbm_ad": "4276", "csbm_tur": "sokak", "dis_kapi": "44"}}
+{"id": "real-izmir-eczane-328535a280", "fields": {"ilce": "BAYRAKLI", "mahalle": "ALPARSLAN", "csbm_ad": "1620/15", "csbm_tur": "sokak", "dis_kapi": "1/A"}}
+{"id": "real-izmir-eczane-328fdf23ee", "fields": {"site": "ESKİ İZMİR CD. NO:122"}}
+{"id": "real-izmir-eczane-329eb29c9b", "fields": {"mahalle": "Güzelyalı", "csbm_ad": "34", "csbm_tur": "sokak", "dis_kapi": "10/C"}}
+{"id": "real-izmir-eczane-3339e6fcb4", "fields": {"il": "IZMIR", "ilce": "KARSIYAKA", "mahalle": "BAHARIYE", "csbm_ad": "ATATÜRK", "csbm_tur": "bulvar", "dis_kapi": "4/B"}}
+{"id": "real-izmir-eczane-33407cf96c", "fields": {"csbm_ad": "Mah.236", "csbm_tur": "sokak", "dis_kapi": "3/B", "site": "Manavkuyu"}}
+{"id": "real-izmir-eczane-3342e7f812", "fields": {"mahalle": "KORUTÜRK", "csbm_ad": "MİTHATPAŞA", "csbm_tur": "cadde", "dis_kapi": "285/H"}}
+{"id": "real-izmir-eczane-336a6e7c19", "fields": {"mahalle": "ŞEMİKLER", "csbm_ad": "6182", "csbm_tur": "sokak", "dis_kapi": "69/A"}}
+{"id": "real-izmir-eczane-3373a4df50", "fields": {"ilce": "KONAK", "csbm_ad": "MITHATPASA", "csbm_tur": "cadde", "dis_kapi": "552/B"}}
+{"id": "real-izmir-eczane-3389eca517", "fields": {"csbm_ad": "CEMAL GÜRSEL", "csbm_tur": "cadde"}}
+{"id": "real-izmir-eczane-339b822941", "fields": {"csbm_ad": "5329/1", "csbm_tur": "sokak", "dis_kapi": "6/B"}}
+{"id": "real-izmir-eczane-33b5cad1cd", "fields": {"csbm_ad": "SUNAR", "csbm_tur": "cadde", "dis_kapi": "63/B", "site": "MURATBEY MAH. ATİLLA"}}
+{"id": "real-izmir-eczane-33d9d7e910", "fields": {"mahalle": "ALSANCAK", "csbm_ad": "MIMAR SINAN MAH.1394", "csbm_tur": "sokak", "dis_kapi": "16/A"}}
+{"id": "real-izmir-eczane-33ec87ef55", "fields": {"mahalle": "ATAŞEHİR", "csbm_ad": "8211/8", "csbm_tur": "sokak", "dis_kapi": "21/B"}}
+{"id": "real-izmir-eczane-34273d49a3", "fields": {"csbm_ad": "ÇANDARLI MH.HÜRRİYET MEYD.NO", "dis_kapi": "16"}}
+{"id": "real-izmir-eczane-342b115812", "fields": {"mahalle": "İmbatlı", "csbm_ad": "6076/4", "csbm_tur": "sokak", "dis_kapi": "5/B"}}
+{"id": "real-izmir-eczane-344a780726", "fields": {"ilce": "ÜÇYOL", "csbm_ad": "SOK.NO", "dis_kapi": "501"}}
+{"id": "real-izmir-eczane-3475444026", "fields": {"mahalle": "BUCA KOOP", "csbm_ad": "1413", "csbm_tur": "sokak"}}
+{"id": "real-izmir-eczane-34a16d5660", "fields": {"csbm_ad": "GİRNE", "csbm_tur": "bulvar", "dis_kapi": "77/A"}}
+{"id": "real-izmir-eczane-34aa769e14", "fields": {"mahalle": "HÜRRİYET", "csbm_ad": "MENDERES", "csbm_tur": "cadde", "dis_kapi": "311/B"}}
+{"id": "real-izmir-eczane-359c5b4891", "fields": {"mahalle": "ATATÜRK CD. KEMALPASA", "csbm_ad": "103", "csbm_tur": "sokak", "dis_kapi": "90/1"}}
+{"id": "real-izmir-eczane-35b7f33488", "fields": {"mahalle": "SIĞACIK", "csbm_ad": "AKKUM", "csbm_tur": "cadde", "dis_kapi": "9/C"}}
+{"id": "real-izmir-eczane-35da0de757", "fields": {"mahalle": "GÜNEY", "csbm_ad": "GAZILER", "csbm_tur": "cadde", "dis_kapi": "402/B"}}
+{"id": "real-izmir-eczane-35f0e65f2b", "fields": {"mahalle": "GÜZELYALI", "csbm_ad": "MİTHATPAŞA", "csbm_tur": "cadde", "dis_kapi": "1032/B"}}
+{"id": "real-izmir-eczane-3614d11e2c", "fields": {"mahalle": "TÜRKCEDIT", "csbm_ad": "ATATÜRK", "csbm_tur": "cadde"}}
+{"id": "real-izmir-eczane-364d60e3bb", "fields": {"csbm_ad": "ABDİ İPEKÇİ CD. 173", "csbm_tur": "sokak", "dis_kapi": "70/A"}}
+{"id": "real-izmir-eczane-365a907e6e", "fields": {"mahalle": "CENGIZHAN", "csbm_ad": "1620/39", "csbm_tur": "sokak", "dis_kapi": "56"}}
+{"id": "real-izmir-eczane-366674a563", "fields": {"csbm_ad": "KURTULUS MAH.TÜRKOCAGI", "csbm_tur": "cadde", "dis_kapi": "1/A"}}
+{"id": "real-izmir-eczane-3737c28361", "fields": {"il": "IZMIR", "mahalle": "CUMHURIYET", "csbm_ad": "CAD.NO", "dis_kapi": "8/C"}}
+{"id": "real-izmir-eczane-37aaf207cd", "fields": {"mahalle": "ADALET", "csbm_ad": "HAYDAR ALİYEV CAD.NO", "dis_kapi": "18/C"}}
+{"id": "real-izmir-eczane-37c8f3ba68", "fields": {"mahalle": "BOSTANLI", "csbm_ad": "CEMAL BÜLBÜL", "csbm_tur": "sokak", "dis_kapi": "14/A"}}
+{"id": "real-izmir-eczane-381f51fe7b", "fields": {"mahalle": "ADALET", "csbm_ad": "1645/20", "csbm_tur": "sokak", "dis_kapi": "2/A"}}
+{"id": "real-izmir-eczane-3838eb06a3", "fields": {"mahalle": "BAHÇELİEVLER", "csbm_ad": "GÜN SAZAK", "csbm_tur": "bulvar", "dis_kapi": "30/C"}}
+{"id": "real-izmir-eczane-38699c8044", "fields": {"mahalle": "TORASAN", "csbm_ad": "623", "csbm_tur": "sokak", "dis_kapi": "8/B"}}
+{"id": "real-izmir-eczane-3882a78858", "fields": {"mahalle": "MURATBEY", "csbm_ad": "İBRAHİM KESİCİ", "csbm_tur": "cadde", "dis_kapi": "55/B"}}
+{"id": "real-izmir-eczane-389acf9bdf", "fields": {"mahalle": "ÜÇKUYULAR", "csbm_ad": "İNÖNÜ", "csbm_tur": "cadde", "dis_kapi": "879/A"}}
+{"id": "real-izmir-eczane-38ac579464", "fields": {"mahalle": "YAYLACIK", "csbm_ad": "BAŞARI", "csbm_tur": "cadde", "dis_kapi": "104/A"}}
+{"id": "real-izmir-eczane-38b7cfc7aa", "fields": {"mahalle": "ÖDEMİŞ ZAFER", "csbm_ad": "ORTAÇ", "csbm_tur": "sokak", "dis_kapi": "15"}}
+{"id": "real-izmir-eczane-390100251c", "fields": {"mahalle": "4 EYLÜL", "csbm_ad": "YUNUS EMRE", "csbm_tur": "cadde", "dis_kapi": "31/A"}}
+{"id": "real-izmir-eczane-3911bb7554", "fields": {"mahalle": "GÜNEŞLİ", "csbm_ad": "526", "csbm_tur": "sokak", "dis_kapi": "21/A"}}
+{"id": "real-izmir-eczane-392b6f48a1", "fields": {"mahalle": "YENİGÜN", "csbm_ad": "222/11", "csbm_tur": "sokak", "dis_kapi": "22/A"}}
+{"id": "real-izmir-eczane-3962c2f8f8", "fields": {"mahalle": "YALI", "csbm_ad": "6439", "csbm_tur": "sokak", "dis_kapi": "62/B"}}
+{"id": "real-izmir-eczane-3977978f57", "fields": {"mahalle": "VATAN", "csbm_ad": "POLAT", "csbm_tur": "cadde", "dis_kapi": "107/A"}}
+{"id": "real-izmir-eczane-39d8757810", "fields": {"mahalle": "YEŞİLBAĞLAR", "csbm_ad": "647/1", "csbm_tur": "sokak", "dis_kapi": "61/A"}}
+{"id": "real-izmir-eczane-39fe7b338f", "fields": {"mahalle": "UĞUR MUMCU", "csbm_ad": "8968", "csbm_tur": "sokak", "dis_kapi": "11/A"}}
+{"id": "real-izmir-eczane-3a20117b29", "fields": {"mahalle": "ISTASYON ALTI", "csbm_ad": "8010", "csbm_tur": "sokak", "kat": "6"}}
+{"id": "real-izmir-eczane-3a270deabe", "fields": {"mahalle": "Göztepe", "csbm_ad": "Mithatpaşa", "csbm_tur": "cadde", "dis_kapi": "878/A"}}
+{"id": "real-izmir-eczane-3a399a0593", "fields": {"csbm_ad": "SOK.ALI ALP BÖKE", "dis_kapi": "1777"}}
+{"id": "real-izmir-eczane-3a549eacd2", "fields": {"site": "MITHATPASA CAD.1155/A ÜÇKUYULAR"}}
+{"id": "real-izmir-eczane-3a61b4da9d", "fields": {"mahalle": "BARIŞ", "csbm_ad": "4545", "csbm_tur": "sokak", "dis_kapi": "38/A"}}
+{"id": "real-izmir-eczane-3a75e75a94", "fields": {"site": "HIDIRLIK MH. KURTULUŞ CD. NO:2"}}
+{"id": "real-izmir-eczane-3b2053d119", "fields": {"mahalle": "YUNUS EMRE", "csbm_ad": "4229", "csbm_tur": "sokak", "dis_kapi": "45"}}
+{"id": "real-izmir-eczane-3b2ce2d62f", "fields": {"mahalle": "KORUTÜRK", "csbm_ad": "MİTHATPAŞA", "csbm_tur": "cadde", "dis_kapi": "287/B"}}
+{"id": "real-izmir-eczane-3b3a06e990", "fields": {"mahalle": "ATAMER", "csbm_ad": "2580", "csbm_tur": "sokak", "dis_kapi": "52/A"}}
+{"id": "real-izmir-eczane-3bedf80499", "fields": {"mahalle": "AKSOY", "csbm_ad": "1748", "csbm_tur": "sokak", "dis_kapi": "115/A"}}
+{"id": "real-izmir-eczane-3c8b1f9e2d", "fields": {"mahalle": "FEVZİ ÇAKMAK", "csbm_ad": "ATA", "csbm_tur": "cadde", "dis_kapi": "152/A"}}
+{"id": "real-izmir-eczane-3cc06906b9", "fields": {"mahalle": "KÜLTÜR", "csbm_ad": "ATATÜRK", "csbm_tur": "cadde", "dis_kapi": "66/B"}}
+{"id": "real-izmir-eczane-3cc2abbc84", "fields": {"ilce": "BAYRAKLI", "mahalle": "MANSUROGLU", "csbm_ad": "273/4", "csbm_tur": "sokak", "dis_kapi": "8/B"}}
+{"id": "real-izmir-eczane-3cc610deec", "fields": {"ilce": "KARSIYAKA", "csbm_ad": "1703", "csbm_tur": "sokak", "dis_kapi": "50/F"}}
+{"id": "real-izmir-eczane-3cd7e08559", "fields": {"mahalle": "KAZIMDİRİK", "csbm_ad": "ÜNİVERSİTE", "csbm_tur": "cadde", "dis_kapi": "84/1D"}}
+{"id": "real-izmir-eczane-3ce3322b18", "fields": {"csbm_ad": "BANKALAR", "csbm_tur": "cadde", "dis_kapi": "41/A"}}
+{"id": "real-izmir-eczane-3d2865815a", "fields": {"mahalle": "KARABAĞLAR BASIN SİTESİ", "csbm_ad": "177/5", "csbm_tur": "sokak", "dis_kapi": "15/A"}}
+{"id": "real-izmir-eczane-3d3423de22", "fields": {"mahalle": "BOZYAKA", "csbm_ad": "ESKİİZMİR", "csbm_tur": "cadde", "dis_kapi": "205/A"}}
+{"id": "real-izmir-eczane-3d3678ff06", "fields": {"csbm_ad": "288/7", "csbm_tur": "sokak", "dis_kapi": "1C-1D"}}
+{"id": "real-izmir-eczane-3d3834dd00", "fields": {"csbm_ad": "506", "csbm_tur": "sokak", "dis_kapi": "8/A"}}
+{"id": "real-izmir-eczane-3da51bfd3e", "fields": {"mahalle": "ÇAY", "csbm_ad": "2108/1", "csbm_tur": "sokak", "dis_kapi": "7/A"}}
+{"id": "real-izmir-eczane-3dcdfb82a3", "fields": {"ilce": "BAYRAKLI", "mahalle": "İŞCAN", "dis_kapi": "18/A", "site": "MANSUROĞLU MH. HAŞİM"}}
+{"id": "real-izmir-eczane-3ede6a218f", "fields": {"mahalle": "FIRAT", "csbm_ad": "289", "csbm_tur": "sokak", "dis_kapi": "37/2A"}}
+{"id": "real-izmir-eczane-3eedc4d334", "fields": {"mahalle": "GONCALAR", "csbm_ad": "ALİ ALP BÖKE", "csbm_tur": "cadde", "dis_kapi": "160"}}
+{"id": "real-izmir-eczane-3ef43676cf", "fields": {"mahalle": "GAZIOSMANPASA", "csbm_ad": "HASAN ÇELEBI", "csbm_tur": "cadde", "dis_kapi": "35/A"}}
+{"id": "real-izmir-eczane-3f0558f7aa", "fields": {"mahalle": "KAZIM DİRİK", "csbm_ad": "FOÇA İZMİR KARAYOLU", "csbm_tur": "sokak", "dis_kapi": "68"}}
+{"id": "real-izmir-eczane-3f370efbbb", "fields": {"mahalle": "ATATÜRK", "csbm_ad": "1596", "csbm_tur": "sokak", "dis_kapi": "2"}}
+{"id": "real-izmir-eczane-3fca150d64", "fields": {"mahalle": "ZEYBEK", "csbm_ad": "2388", "csbm_tur": "sokak", "dis_kapi": "4/A"}}
+{"id": "real-izmir-eczane-3fd6662d7e", "fields": {"csbm_ad": "BESTEKAR SADI HOSSES", "csbm_tur": "sokak", "dis_kapi": "6351"}}
+{"id": "real-izmir-eczane-3ffa2dcba2", "fields": {"mahalle": "BASINSİTESİ", "csbm_ad": "177/5", "csbm_tur": "sokak", "dis_kapi": "13/A"}}
+{"id": "real-izmir-eczane-40145b439c", "fields": {"mahalle": "KAZIM DİRİK", "csbm_ad": "ÜNİVERSİTE", "csbm_tur": "cadde", "dis_kapi": "34/B"}}
+{"id": "real-izmir-eczane-401d4e028b", "fields": {"mahalle": "HÜRRIYET", "csbm_ad": "FAIK TOKLUOGLU BULV.NO", "dis_kapi": "10/A"}}
+{"id": "real-izmir-eczane-405a798a84", "fields": {"mahalle": "YENİKALE", "csbm_ad": "MİTHATPAŞA", "csbm_tur": "cadde", "dis_kapi": "108/B"}}
+{"id": "real-izmir-eczane-40c5eb8356", "fields": {"ilce": "BAHÇELIEVLER", "csbm_ad": "SAIM ÇIKRIKÇI", "csbm_tur": "cadde", "dis_kapi": "102/A"}}
+{"id": "real-izmir-eczane-40d193424c", "fields": {"ilce": "ALTINDAG", "dis_kapi": "60/B"}}
+{"id": "real-izmir-eczane-40eb209f92", "fields": {"mahalle": "GÜVENDİK", "csbm_ad": "MEHMET ALİ AYGÜVEN", "csbm_tur": "cadde", "dis_kapi": "140/A"}}
+{"id": "real-izmir-eczane-41050a104e", "fields": {"mahalle": "YEŞİLOVA", "csbm_ad": "4053/2", "csbm_tur": "sokak", "dis_kapi": "30/A"}}
+{"id": "real-izmir-eczane-41223fde5c", "fields": {"mahalle": "KASIMPAŞA", "csbm_ad": "ATATÜRK", "csbm_tur": "cadde", "dis_kapi": "14"}}
+{"id": "real-izmir-eczane-41a1cb3dd7", "fields": {"ilce": "KONAK", "mahalle": "MITHATPASA", "csbm_ad": "MITHATPASA", "csbm_tur": "cadde", "dis_kapi": "507/A"}}
+{"id": "real-izmir-eczane-41c1809043", "fields": {"site": "MURATBEY MH.DOGAN BURSALIOGLU CD.NO.22/D"}}
+{"id": "real-izmir-eczane-422ba176e5", "fields": {"mahalle": "YALI", "csbm_ad": "6482", "csbm_tur": "sokak", "dis_kapi": "10"}}
+{"id": "real-izmir-eczane-4244792130", "fields": {"mahalle": "MİTHATPAŞA", "csbm_ad": "PARK GEÇİDİ CAD.NO", "dis_kapi": "15"}}
+{"id": "real-izmir-eczane-42660903f2", "fields": {"mahalle": "GÜLYAKA", "csbm_ad": "3012", "csbm_tur": "sokak", "dis_kapi": "16", "site": "GÜLYAKA SAĞLIK OCAĞI KARŞISI"}}
+{"id": "real-izmir-eczane-42a1907243", "fields": {"mahalle": "AYDIN", "csbm_ad": "4270", "csbm_tur": "sokak", "dis_kapi": "77/A"}}
+{"id": "real-izmir-eczane-42e5a1a348", "fields": {"mahalle": "YALI", "csbm_ad": "AHMET KEMAL BAYSAK", "csbm_tur": "bulvar", "dis_kapi": "14/B"}}
+{"id": "real-izmir-eczane-43142cde7f", "fields": {"csbm_ad": "BİRSEL", "csbm_tur": "sokak", "dis_kapi": "10/A", "site": "KÜLTÜR MH. MUSTAFA MÜNİR"}}
+{"id": "real-izmir-eczane-431ecb4475", "fields": {"mahalle": "ILICA", "csbm_ad": "5065", "csbm_tur": "sokak", "dis_kapi": "2/A"}}
+{"id": "real-izmir-eczane-435232598c", "fields": {"csbm_ad": "ÇIKRIKÇI", "csbm_tur": "cadde", "dis_kapi": "110/A", "site": "SAİM"}}
+{"id": "real-izmir-eczane-43af1e0a32", "fields": {"mahalle": "YALI", "csbm_ad": "6418", "csbm_tur": "sokak", "dis_kapi": "131/B"}}
+{"id": "real-izmir-eczane-43f397e53d", "fields": {"site": "ATIF BEY MH. ETİLER CD. NO:29/A"}}
+{"id": "real-izmir-eczane-442bf803c1", "fields": {"mahalle": "İSMETPAŞA", "csbm_ad": "ADNAN MENDERES CD. 9", "csbm_tur": "sokak", "dis_kapi": "31/B"}}
+{"id": "real-izmir-eczane-44305e1f37", "fields": {"mahalle": "YEŞİLYURT", "csbm_ad": "ANT", "csbm_tur": "cadde", "dis_kapi": "23/A"}}
+{"id": "real-izmir-eczane-44915a40fa", "fields": {"mahalle": "ATATÜRK", "csbm_ad": "99", "csbm_tur": "sokak", "dis_kapi": "26/A"}}
+{"id": "real-izmir-eczane-4529055dfb", "fields": {"mahalle": "YENİMAHALLE", "csbm_ad": "8764/3", "csbm_tur": "sokak", "dis_kapi": "4/1A"}}
+{"id": "real-izmir-eczane-459ba8838d", "fields": {"mahalle": "FİKRİ ALTAY", "csbm_ad": "ORDU", "csbm_tur": "bulvar", "dis_kapi": "150/A"}}
+{"id": "real-izmir-eczane-463c293ff7", "fields": {"mahalle": "GAZI", "dis_kapi": "16", "site": "SK.1/2C"}}
+{"id": "real-izmir-eczane-46beffee4e", "fields": {"mahalle": "YEŞİLOVA", "csbm_ad": "YILDIRIM BEYAZIT", "csbm_tur": "cadde", "dis_kapi": "272/C"}}
+{"id": "real-izmir-eczane-4706278c87", "fields": {"mahalle": "İSLAMSARAY", "csbm_ad": "930", "csbm_tur": "sokak", "dis_kapi": "3/A"}}
+{"id": "real-izmir-eczane-4757e4c37d", "fields": {"site": "ATIFBEY MAH. ÖNDER CD.28/E"}}
+{"id": "real-izmir-eczane-478cf8b6ef", "fields": {"mahalle": "8 EYLÜL", "csbm_ad": "135", "csbm_tur": "sokak", "dis_kapi": "6/A"}}
+{"id": "real-izmir-eczane-47c415e5d9", "fields": {"csbm_ad": "177/5", "csbm_tur": "sokak", "dis_kapi": "23/A", "site": "BASINSITESI"}}
+{"id": "real-izmir-eczane-482c964b38", "fields": {"mahalle": "CUMHURİYET", "csbm_ad": "YEŞİM", "csbm_tur": "sokak", "dis_kapi": "36/A"}}
+{"id": "real-izmir-eczane-4845e50796", "fields": {"il": "IZMIR", "csbm_ad": "BORNOVA", "dis_kapi": "51/A", "site": "KAZIM DİRİK MAH.SÜVARİ CAD.NO"}}
+{"id": "real-izmir-eczane-489575d54b", "fields": {"ilce": "MAHAL", "mahalle": "HALKAPINAR", "csbm_ad": "MÜRSELPAŞA", "csbm_tur": "bulvar", "site": "BOMONTİ İZMİR PROJESİ B BLOK NO:172/4A"}}
+{"id": "real-izmir-eczane-489dde134a", "fields": {"mahalle": "MERMERLİ", "csbm_ad": "1415", "csbm_tur": "sokak", "dis_kapi": "11/B"}}
+{"id": "real-izmir-eczane-4904db30f8", "fields": {"mahalle": "MİMAR SİNAN", "csbm_ad": "CAN KULDUK", "csbm_tur": "sokak", "site": "15(ÖZEL GAZİ HASTANESİ KÖŞESİ"}}
+{"id": "real-izmir-eczane-493055708a", "fields": {"csbm_ad": "MUSTAFA KEMAL", "csbm_tur": "cadde", "dis_kapi": "114/B"}}
+{"id": "real-izmir-eczane-4934215dbd", "fields": {"mahalle": "Atıf Bey", "csbm_ad": "Etiler", "csbm_tur": "cadde", "dis_kapi": "16/C"}}
+{"id": "real-izmir-eczane-4965e238ea", "fields": {"site": "MITHATPASA CAD.244/A"}}
+{"id": "real-izmir-eczane-499c1556f2", "fields": {"il": "HATAY", "mahalle": "GÖZTEPE", "csbm_ad": "İNÖNÜ", "csbm_tur": "cadde", "dis_kapi": "406/C"}}
+{"id": "real-izmir-eczane-49f13c67cf", "fields": {"mahalle": "MEVLANA", "csbm_ad": "1754/1", "csbm_tur": "sokak", "dis_kapi": "4/A"}}
+{"id": "real-izmir-eczane-4a0d23b132", "fields": {"csbm_ad": "CUMHURIYET", "csbm_tur": "meydan", "daire": "11"}}
+{"id": "real-izmir-eczane-4a7b0b47e5", "fields": {"csbm_ad": "177/5", "csbm_tur": "sokak", "dis_kapi": "11/A"}}
+{"id": "real-izmir-eczane-4abbaca778", "fields": {"site": "INÖNÜ CAD.NO.603/A HATAY KARABAGLAR-IZMIR"}}
+{"id": "real-izmir-eczane-4ae5944e8e", "fields": {"csbm_ad": "HANIM", "csbm_tur": "sokak", "dis_kapi": "22/A", "site": "BAHRİYE ÜÇOK MAH. LATİFE"}}
+{"id": "real-izmir-eczane-4bb7c7205e", "fields": {"csbm_ad": "PAŞA", "csbm_tur": "cadde", "dis_kapi": "127/D", "site": "KURTULUŞ MAH. FEVZİ"}}
+{"id": "real-izmir-eczane-4beac3aa7c", "fields": {"csbm_ad": "ERZEYBEK", "csbm_tur": "cadde", "dis_kapi": "55/B", "site": "BAHARİYE MH. HİDAYET"}}
+{"id": "real-izmir-eczane-4c37311cdd", "fields": {"site": "RAKIM ERKUTLU CAD.NO.3/A ESREFPASA"}}
+{"id": "real-izmir-eczane-4cfbdc7b5b", "fields": {"mahalle": "ATATÜRK", "csbm_ad": "1013", "csbm_tur": "sokak", "dis_kapi": "4/C"}}
+{"id": "real-izmir-eczane-4d5ef34871", "fields": {"mahalle": "MEHMET AKİF ERSOY", "csbm_ad": "ATATÜRK", "csbm_tur": "bulvar", "dis_kapi": "9/D"}}
+{"id": "real-izmir-eczane-4d8fac7ff2", "fields": {"site": "ESREFPASA CAD.NO.364/A"}}
+{"id": "real-izmir-eczane-4e23aa0c99", "fields": {"mahalle": "ATATÜRK", "csbm_ad": "NO", "dis_kapi": "1027"}}
+{"id": "real-izmir-eczane-4e6e6b0bdb", "fields": {"mahalle": "KAZIM DIRIK", "csbm_ad": "MUSTAFA KEMAL CAD.121/1-D BORNOVA"}}
+{"id": "real-izmir-eczane-4e84f2f92b", "fields": {"mahalle": "KAZIM DİRİK", "csbm_ad": "364/1", "csbm_tur": "sokak", "dis_kapi": "9/J"}}
+{"id": "real-izmir-eczane-4e9a373467", "fields": {"mahalle": "KAZIMDİRİK", "csbm_ad": "ZAFER", "csbm_tur": "cadde", "dis_kapi": "26/A"}}
+{"id": "real-izmir-eczane-4e9afe1897", "fields": {"mahalle": "ERGENE", "csbm_ad": "458", "csbm_tur": "sokak", "dis_kapi": "11B"}}
+{"id": "real-izmir-eczane-4ecd178cbb", "fields": {"mahalle": "ŞİFNE", "csbm_ad": "6000", "csbm_tur": "sokak", "dis_kapi": "75/A"}}
+{"id": "real-izmir-eczane-4f1c01fa68", "fields": {"mahalle": "ÇAMKULE", "csbm_ad": "FEVZIPASA", "csbm_tur": "cadde", "dis_kapi": "177/A"}}
+{"id": "real-izmir-eczane-4ff98b8851", "fields": {"mahalle": "FAHRETTİNPAŞA", "csbm_ad": "2222/1", "csbm_tur": "sokak", "dis_kapi": "4A"}}
+{"id": "real-izmir-eczane-502dcc3a3b", "fields": {"csbm_ad": "KURŞAKLI", "csbm_tur": "sokak", "dis_kapi": "14/B", "site": "FATİH MH. MEHMET"}}
+{"id": "real-izmir-eczane-5084d3dc6a", "fields": {"dis_kapi": "107/E"}}
+{"id": "real-izmir-eczane-5120dc76e1", "fields": {"site": "HASTANE CA.MITHATPASA MH.NO.9 BAYINDIR"}}
+{"id": "real-izmir-eczane-529b6bfe6c", "fields": {"mahalle": "YENİ", "csbm_ad": "ENSTİTÜ", "csbm_tur": "cadde", "dis_kapi": "7/A"}}
+{"id": "real-izmir-eczane-53bebcdada", "fields": {"csbm_ad": "8229/1", "csbm_tur": "sokak", "dis_kapi": "17"}}
+{"id": "real-izmir-eczane-53ea0c06c4", "fields": {"mahalle": "SADIKPASA", "csbm_ad": "ATATÜRK", "csbm_tur": "cadde", "dis_kapi": "104/A"}}
+{"id": "real-izmir-eczane-5557fef92d", "fields": {"mahalle": "KASIMPAŞA", "csbm_ad": "BAHRİYE ÜÇOK", "csbm_tur": "cadde", "dis_kapi": "7/A"}}
+{"id": "real-izmir-eczane-55dc0b5352", "fields": {"site": "SİTELER MH. 9 EYLÜL CD. NO:11/3"}}
+{"id": "real-izmir-eczane-570f25abda", "fields": {"site": "ATAÜRK MAH. TAHSIN BASARANCAD. NO:3/A"}}
+{"id": "real-izmir-eczane-574a71fd11", "fields": {"csbm_ad": "ALTAY", "csbm_tur": "cadde", "dis_kapi": "64/B", "site": "FATİH MAH. FAHRETTİN"}}
+{"id": "real-izmir-eczane-58518aa3a2", "fields": {"csbm_ad": "ARLI", "csbm_tur": "cadde", "dis_kapi": "22/C", "site": "CUMHURİYET MAH. SABİT"}}
+{"id": "real-izmir-eczane-5e3292abb6", "fields": {"mahalle": "KURTULUS", "csbm_ad": "KESTEL", "csbm_tur": "cadde", "dis_kapi": "71/7"}}
+{"id": "real-izmir-eczane-5eb9ba012e", "fields": {"site": "YESIL MH.S.METIN HENKOGLU CD.NO.5/D"}}
+{"id": "real-izmir-eczane-5f1c79504c", "fields": {"csbm_ad": "BANKALAR", "csbm_tur": "cadde", "dis_kapi": "3"}}
+{"id": "real-izmir-eczane-5f6a0db631", "fields": {"mahalle": "İPEKÇİLER", "csbm_ad": "ADLİYE", "csbm_tur": "meydan", "kat": "2"}}
+{"id": "real-izmir-eczane-5feae30c5c", "fields": {"mahalle": "ALTINTAŞ", "csbm_ad": "AHMET BESİM UYAL", "csbm_tur": "cadde", "dis_kapi": "4"}}
+{"id": "real-izmir-eczane-65dff226de", "fields": {"il": "İZMİR", "csbm_ad": "MUSTAFA KEMAL ATATÜRK MH.İZMİR", "csbm_tur": "cadde", "dis_kapi": "77"}}
+{"id": "real-izmir-eczane-667c012eef", "fields": {"site": "MORDOĞAN MH. FATİH CD. NO:10"}}
+{"id": "real-izmir-eczane-6a7777c310", "fields": {"mahalle": "GAZİ", "csbm_ad": "14", "csbm_tur": "sokak", "dis_kapi": "4/A"}}
+{"id": "real-izmir-eczane-6a8a72bd53", "fields": {"mahalle": "GAZİ", "csbm_ad": "ÖNDER", "csbm_tur": "cadde", "dis_kapi": "97/1A"}}
+{"id": "real-izmir-eczane-6b24bfdddb", "fields": {"csbm_ad": "B.MENDERES", "csbm_tur": "cadde", "dis_kapi": "121/F"}}
+{"id": "real-izmir-eczane-71be960217", "fields": {"mahalle": "ATATÜRK", "csbm_ad": "YUSUF DOĞAN", "csbm_tur": "cadde", "dis_kapi": "21"}}
+{"id": "real-izmir-eczane-86302bf72c", "fields": {"ilce": "BEYDAG", "csbm_ad": "CUMHURIYET MAH.ULUS", "csbm_tur": "meydan", "dis_kapi": "20/A"}}
+{"id": "real-izmir-eczane-94dc0f9564", "fields": {"csbm_ad": "ARLI", "csbm_tur": "cadde", "dis_kapi": "69"}}
+{"id": "real-izmir-saglik-tpl-009809cbc4", "fields": {"il": "İZMİR", "ilce": "KARABAĞLAR", "mahalle": "BAHÇELİEVLER", "dis_kapi": "502/4", "daire": "9"}}
+{"id": "real-izmir-saglik-tpl-0137ed606f", "fields": {"il": "İZMİR", "ilce": "ÇİĞLİ", "mahalle": "ATAŞEHİR", "dis_kapi": "4"}}
+{"id": "real-izmir-saglik-tpl-026ac6b850", "fields": {"site": "AZİZİYE MAH. RAKIM ELKUTLU NO:224 KONAK/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-0335b0804e", "fields": {"site": "UFUK MAH. MEHMETÇİK NO:4 BUCA/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-035dbd48a1", "fields": {"mahalle": "GAZİ", "dis_kapi": "33", "site": "GAZİEMİR/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-03bd7c8227", "fields": {"site": "KASIMPAŞA MAH. ATATÜRK NO:1 MENEMEN/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-04337f6bb3", "fields": {"site": "ÜÇ EYLÜL MAH. KANTARCI ÖDEMİŞ/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-05208b2447", "fields": {"site": "ÇINARLI MAH. FATİH NO:10/3 KONAK/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-05dc2b1ce6", "fields": {"il": "İZMİR", "ilce": "BAYRAKLI", "mahalle": "MANAVKUYU", "dis_kapi": "23"}}
+{"id": "real-izmir-saglik-tpl-05e729e046", "fields": {"site": "KURUÇEŞME MAH. AHMET PİRİŞTİNA NO:51 BUCA/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-08412b2bf2", "fields": {"il": "İZMİR", "ilce": "KARABAĞLAR", "mahalle": "ALİ FUAT CEBESOY", "dis_kapi": "9135/4", "daire": "4"}}
+{"id": "real-izmir-saglik-tpl-092fdb4c8e", "fields": {"il": "İZMİR", "ilce": "KARŞIYAKA", "mahalle": "AKSOY", "csbm_ad": "NO:11", "dis_kapi": "1743"}}
+{"id": "real-izmir-saglik-tpl-0a1c53ebc7", "fields": {"mahalle": "BEYAZEVLER", "dis_kapi": "44", "site": "GAZİEMİR/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-0ad600e646", "fields": {"mahalle": "ATATÜRK", "dis_kapi": "63/4", "site": "NO:3/A BUCA/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-0b11e9c5d4", "fields": {"il": "İZMİR", "ilce": "KONAK", "mahalle": "ÇİMENTEPE", "dis_kapi": "606", "daire": "27"}}
+{"id": "real-izmir-saglik-tpl-0b4f470441", "fields": {"il": "İZMİR", "ilce": "KARŞIYAKA", "mahalle": "TERSANE", "csbm_ad": "NO", "dis_kapi": "1671"}}
+{"id": "real-izmir-saglik-tpl-0bffec1bca", "fields": {"il": "İZMİR", "ilce": "BEYDAĞ", "mahalle": "ATATÜRK", "csbm_ad": "SAĞLIK", "dis_kapi": "7B"}}
+{"id": "real-izmir-saglik-tpl-0c9688de0d", "fields": {"site": "BELEVİ MAH. GÖRÜNMEZ NO:5 SELÇUK/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-0cb19d02eb", "fields": {"mahalle": "SERİNTEPE", "csbm_ad": "NO:15 BORNOVA/İZMİR", "dis_kapi": "4310"}}
+{"id": "real-izmir-saglik-tpl-0d06424e0f", "fields": {"il": "İZMİR", "ilce": "ÇİĞLİ", "mahalle": "GÜZELTEPE", "csbm_ad": "NO:103", "dis_kapi": "8172"}}
+{"id": "real-izmir-saglik-tpl-0d35d0b15f", "fields": {"il": "İZMİR", "ilce": "KARŞIYAKA", "mahalle": "MAVİŞEHİR", "csbm_ad": "NO", "dis_kapi": "2042/1"}}
+{"id": "real-izmir-saglik-tpl-0d4a9ae4cf", "fields": {"site": "ÇINARLI MAH. ANADOLU NO:14 KONAK/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-0dd274f783", "fields": {"mahalle": "SİTELER", "dis_kapi": "9", "site": "EYLÜL NO:9 ALİAĞA/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-0e2da9439d", "fields": {"il": "İZMİR", "ilce": "BAYINDIR", "site": "KARAVELİLER MAH. KAZIM DİRİK NO:217"}}
+{"id": "real-izmir-saglik-tpl-0f473361c2", "fields": {"site": "OĞLANANASI ATATÜRK MAH. 1 NO:1 MENDERES/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-110c431b80", "fields": {"il": "İZMİR", "ilce": "KARABAĞLAR", "mahalle": "KAZIM KARABEKİR", "csbm_ad": "NO:20", "dis_kapi": "9022"}}
+{"id": "real-izmir-saglik-tpl-11910e784f", "fields": {"site": "FATİH MAH. EGE NO:3 GAZİEMİR/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-1217129d7f", "fields": {"site": "B.HAYRETTİN PAŞA MAH. FEVZİ ÇAKMAK NO:52A ALİAĞA/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-121f3fa77b", "fields": {"il": "İZMİR", "ilce": "KARABAĞLAR", "mahalle": "UĞUR MUMCU", "csbm_ad": "NO:1A", "dis_kapi": "4183"}}
+{"id": "real-izmir-saglik-tpl-13424d2bb4", "fields": {"il": "İZMİR", "ilce": "TORBALI", "mahalle": "YEDİ EYLÜL", "csbm_ad": "İZMİR AYDIN OTOYOLU", "dis_kapi": "85"}}
+{"id": "real-izmir-saglik-tpl-134a428fea", "fields": {"site": "POYRACIK MAH. SOMA NO:24 KINIK/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-13a526e182", "fields": {"mahalle": "SIĞACIK", "dis_kapi": "43", "site": "SEFERİHİSAR/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-1474e09166", "fields": {"site": "SUBAŞI MAH. OSMAN DİRİK NO:19 TORBALI/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-18307e5753", "fields": {"mahalle": "MEVLANA", "csbm_ad": "NO:25 BORNOVA/İZMİR", "dis_kapi": "1754"}}
+{"id": "real-izmir-saglik-tpl-18a63d6a1f", "fields": {"mahalle": "KAZIMDİRİK", "csbm_ad": "SANAYİ NO:7-9 BORNOVA/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-18bed6431f", "fields": {"mahalle": "YAHŞELLİ", "csbm_ad": "NO:13 MENEMEN/İZMİR", "dis_kapi": "1249"}}
+{"id": "real-izmir-saglik-tpl-1b34f13adc", "fields": {"il": "İZMİR", "ilce": "BAYRAKLI", "mahalle": "EMEK", "dis_kapi": "7233", "daire": "32"}}
+{"id": "real-izmir-saglik-tpl-1c207cbb82", "fields": {"il": "İZMİR", "ilce": "ÖDEMİŞ", "mahalle": "KUVVETLİ", "csbm_ad": "MANYASI NO"}}
+{"id": "real-izmir-saglik-tpl-1cc2877c5a", "fields": {"il": "İZMİR", "ilce": "KEMALPAŞA", "mahalle": "SOĞUKPINAR", "csbm_ad": "NO", "dis_kapi": "315"}}
+{"id": "real-izmir-saglik-tpl-1ce1bb2194", "fields": {"mahalle": "GAZİPAŞA", "csbm_ad": "MENDERES/İZMİR", "dis_kapi": "20/A"}}
+{"id": "real-izmir-saglik-tpl-1d0b91f1fd", "fields": {"il": "İZMİR", "ilce": "DİKİLİ", "mahalle": "ÇANDARLI", "csbm_ad": "HÜRRİYET", "dis_kapi": "5"}}
+{"id": "real-izmir-saglik-tpl-1d39c0ae62", "fields": {"mahalle": "YENİKENT", "csbm_ad": "KEMAL ATATÜRK BERGAMA/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-1eb24680f3", "fields": {"il": "İZMİR", "ilce": "NARLIDERE", "mahalle": "İNÖNÜ", "csbm_ad": "27 MAYIS", "dis_kapi": "2"}}
+{"id": "real-izmir-saglik-tpl-237bf27b56", "fields": {"il": "İZMİR", "ilce": "BAYRAKLI", "mahalle": "ORG.NAFİZ GÜRMAN", "dis_kapi": "259"}}
+{"id": "real-izmir-saglik-tpl-2ec77c9804", "fields": {"site": "HIDIRLIK MAH. İNÖNÜ NO:11/6 SEFERİHİSAR/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-312262851d", "fields": {"site": "ÇELEBİ MAH. ERLER NO:60 GÜZELBAHÇE/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-336f82119e", "fields": {"mahalle": "KALABAK", "csbm_ad": "NO:1 URLA/İZMİR", "dis_kapi": "3035"}}
+{"id": "real-izmir-saglik-tpl-35179d8b17", "fields": {"site": "İNCİRALTI MAH. MİTHATPAŞA NO:56 BALÇOVA/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-35ff060906", "fields": {"site": "İPEKÇİLER MAH. SABRİ KURTOĞLU NO:12 TİRE/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-367bdc23d2", "fields": {"site": "KORUTÜRK MAH. MİTHATPAŞA NO:305 BALÇOVA/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-39b18f8e95", "fields": {"site": "FEVZİ ÇAKMAK MAH. HİLAL NO:3 FOÇA/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-3a9d8a03b1", "fields": {"il": "İZMİR", "ilce": "KİRAZ", "mahalle": "İSTİKLAL", "csbm_ad": "HOCA İBRAHİM EFENDİ", "dis_kapi": "4"}}
+{"id": "real-izmir-saglik-tpl-3de7b58a8e", "fields": {"mahalle": "ALAÇATI", "csbm_ad": "NO:2 ÇEŞME/İZMİR", "dis_kapi": "11003"}}
+{"id": "real-izmir-saglik-tpl-3e2060cb2a", "fields": {"il": "İZMİR", "ilce": "ÇEŞME", "mahalle": "ILICA", "csbm_ad": "NO:58", "dis_kapi": "5003"}}
+{"id": "real-izmir-saglik-tpl-3e2f6465ab", "fields": {"site": "EĞİTİM MAH. DUMLUPINAR NO:1 BALÇOVA/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-3f36e495e2", "fields": {"site": "İSMETPAŞA MAH. ŞEHİT SAMİ AKBULUT NO:42 DİKİLİ/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-49cf832378", "fields": {"site": "ARMUTLU 85.YIL CUMHURİYET MAH. DENİZ NO:5 KEMALPAŞA/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-4b0ac44b19", "fields": {"il": "İZMİR", "ilce": "URLA", "mahalle": "GÜLBAHÇE", "dis_kapi": "12088/2", "daire": "4"}}
+{"id": "real-izmir-saglik-tpl-5545174401", "fields": {"site": "POYRACIK MAH. MEHMET AKİF ERSOY NO:1 KINIK/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-567781a294", "fields": {"site": "SELÇUK MAH. KOZAK NO:119 BERGAMA/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-5e3979c7e1", "fields": {"mahalle": "HUZUR MAH. EGEMEN", "site": "NO:2 NARLIDERE/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-5f7832ef8d", "fields": {"il": "İZMİR", "ilce": "KARABURUN", "site": "MERKEZ MAH. BAŞKOMUTAN ATATÜRK NO:2/10"}}
+{"id": "real-izmir-saglik-tpl-88c1089e46", "fields": {"site": "TURAN MAH. BEYLERDERESİ NO:2 TİRE/İZMİR"}}
+{"id": "real-izmir-saglik-tpl-c833fa8f99", "fields": {"mahalle": "ATATÜRK", "csbm_ad": "SAĞLIK", "dis_kapi": "3-5"}}
+{"id": "real-izmir-muhtarlik-tpl-0004894bcb", "fields": {"il": "İZMİR", "ilce": "KONAK", "mahalle": "19 MAYIS", "dis_kapi": "5420", "daire": "17"}}
+{"id": "real-izmir-muhtarlik-tpl-0095c4ce51", "fields": {"site": "ÇALIBAHÇE MAH. ÇALIBAHÇE BERGAMA/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-00e4b160e1", "fields": {"il": "İZMİR", "ilce": "BUCA", "mahalle": "KURUÇEŞME", "dis_kapi": "205", "daire": "30"}}
+{"id": "real-izmir-muhtarlik-tpl-01018e0a02", "fields": {"mahalle": "SAİP", "csbm_ad": "MUSTAFA KEMAL ATATÜRK NO:27/1 KARABURUN/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-015126c0a6", "fields": {"ilce": "MURATLAR", "mahalle": "MURATLAR", "site": "BERGAMA/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-01c3c82a26", "fields": {"il": "İZMİR", "ilce": "KARABAĞLAR", "mahalle": "İHSAN ALYANAK", "csbm_ad": "NO:4", "dis_kapi": "5002"}}
+{"id": "real-izmir-muhtarlik-tpl-0274d345bb", "fields": {"il": "İZMİR", "ilce": "BUCA", "mahalle": "KARANFİL", "csbm_ad": "NO:2", "dis_kapi": "1107"}}
+{"id": "real-izmir-muhtarlik-tpl-027fe85346", "fields": {"il": "İZMİR", "ilce": "KARABAĞLAR", "mahalle": "REİS", "dis_kapi": "3B"}}
+{"id": "real-izmir-muhtarlik-tpl-0384543aa5", "fields": {"ilce": "GÜLTEPE", "mahalle": "GÜLTEPE", "site": "BERGAMA/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-041750637e", "fields": {"il": "İZMİR", "ilce": "BAYINDIR", "mahalle": "YAKAPINAR", "csbm_ad": "YAKAPINAR", "dis_kapi": "96A"}}
+{"id": "real-izmir-muhtarlik-tpl-04339b3611", "fields": {"il": "İZMİR", "ilce": "BAYINDIR", "mahalle": "KARAHALİLLİ", "dis_kapi": "23"}}
+{"id": "real-izmir-muhtarlik-tpl-047b2f34e8", "fields": {"ilce": "HALKAPINAR", "mahalle": "HALKAPINAR", "site": "CUMHURİYET NO:2/2 TİRE/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-0506aaa948", "fields": {"mahalle": "KUVVETLİ", "csbm_ad": "ÇALIŞIR NO:2/1 ÖDEMİŞ/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-05414db43f", "fields": {"il": "İZMİR", "ilce": "KONAK", "mahalle": "SÜVARİ", "dis_kapi": "68A"}}
+{"id": "real-izmir-muhtarlik-tpl-06811466a3", "fields": {"il": "İZMİR", "ilce": "KARŞIYAKA", "mahalle": "DEMİRKÖPRÜ", "csbm_ad": "NO:85", "dis_kapi": "6181"}}
+{"id": "real-izmir-muhtarlik-tpl-06c82ba194", "fields": {"site": "PINARBAŞI MAH. HACIALİLER KİRAZ/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-0719ad84c5", "fields": {"mahalle": "YANIKKÖY", "dis_kapi": "505", "site": "NO:5 MENEMEN/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-07560dd113", "fields": {"site": "MENDERES MAH. BÜYÜK MENDERES NO:61A GAZİEMİR/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-0799e2adf4", "fields": {"il": "İZMİR", "ilce": "KONAK", "mahalle": "FAİK PAŞA", "csbm_ad": "NO:4", "dis_kapi": "1293"}}
+{"id": "real-izmir-muhtarlik-tpl-08bbf9a6b4", "fields": {"site": "KAPLAN MAH. ARPACILAR NO:2 TİRE/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-08e11d8a95", "fields": {"il": "İZMİR", "ilce": "TORBALI", "mahalle": "TAŞKESİK", "csbm_ad": "NO:1", "dis_kapi": "6375"}}
+{"id": "real-izmir-muhtarlik-tpl-08e84964f8", "fields": {"site": "BALABAN MAH. ATA KINIK/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-09b98a5d40", "fields": {"mahalle": "HÜRRİYET", "csbm_ad": "NO", "dis_kapi": "489", "site": "BUCA/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-0a513da7d3", "fields": {"il": "İZMİR", "ilce": "BAYRAKLI", "mahalle": "GÜMÜŞPALA", "csbm_ad": "NO:7", "dis_kapi": "7075"}}
+{"id": "real-izmir-muhtarlik-tpl-0a719ee527", "fields": {"mahalle": "HUZUR", "site": "YAPICILAR NO:2 NARLIDERE/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-0b3637dc0f", "fields": {"site": "TEKBIÇAKLAR MAH. TEKBIÇAKLAR KİRAZ/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-0b88001985", "fields": {"site": "YAKAKÖY MAH. YAKA NO:13 BORNOVA/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-0bd47b7b4f", "fields": {"il": "İZMİR", "ilce": "ÖDEMİŞ", "mahalle": "OCAKLI", "csbm_ad": "OCAKLI", "dis_kapi": "137A"}}
+{"id": "real-izmir-muhtarlik-tpl-0c3a99d734", "fields": {"il": "İZMİR", "ilce": "ÖDEMİŞ", "mahalle": "ÇAMYAYLA", "csbm_ad": "YEŞİL DERE", "dis_kapi": "20"}}
+{"id": "real-izmir-muhtarlik-tpl-0cecc011d2", "fields": {"il": "İZMİR", "ilce": "BAYRAKLI", "mahalle": "MANAVKUYU", "dis_kapi": "4/2"}}
+{"id": "real-izmir-muhtarlik-tpl-0cef8ccf4a", "fields": {"il": "İZMİR", "ilce": "KINIK", "mahalle": "ÇALTI", "csbm_ad": "ÖĞRETMEN"}}
+{"id": "real-izmir-muhtarlik-tpl-0d5249e79c", "fields": {"il": "İZMİR", "ilce": "ZEYBEKLER KİRAZ", "mahalle": "ÖRENCİK"}}
+{"id": "real-izmir-muhtarlik-tpl-0d63d48f7a", "fields": {"il": "İZMİR", "ilce": "KEMALPAŞA", "mahalle": "GÖKYAKA", "csbm_ad": "GÖKYAKA", "csbm_tur": "yol", "dis_kapi": "9"}}
+{"id": "real-izmir-muhtarlik-tpl-0e36d94203", "fields": {"mahalle": "GÖLCÜK", "csbm_ad": "14000", "dis_kapi": "21A", "site": "SEFERİHİSAR/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-0e3a054be1", "fields": {"site": "DEMİRTAŞ MAH. DEMİRTAŞ ATATÜRK NO:7 DİKİLİ/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-0e56ba482c", "fields": {"il": "İZMİR", "ilce": "KARŞIYAKA", "site": "BOSTANLI MAH. CENGİZ KOCATOROS NO:47"}}
+{"id": "real-izmir-muhtarlik-tpl-0f1c6f263d", "fields": {"site": "OĞLANANASI ATATÜRK MAH. FEVZİ ÇAKMAK NO:1 MENDERES/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-0f9579d17a", "fields": {"mahalle": "KISIK", "csbm_ad": "NO:3A MENDERES/İZMİR", "dis_kapi": "7700"}}
+{"id": "real-izmir-muhtarlik-tpl-10f7eea11b", "fields": {"il": "İZMİR", "ilce": "ÇİĞLİ", "mahalle": "KAKLIÇ", "csbm_ad": "İZMİR", "dis_kapi": "51"}}
+{"id": "real-izmir-muhtarlik-tpl-11872c4211", "fields": {"mahalle": "SÜZBEYLİ", "csbm_ad": "NO:2 MENEMEN/İZMİR", "dis_kapi": "5001"}}
+{"id": "real-izmir-muhtarlik-tpl-139a6c7a01", "fields": {"site": "PARLAK MAH. TARLAİÇİ KARABURUN/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-144c211806", "fields": {"mahalle": "ULUS", "csbm_ad": "NO", "dis_kapi": "7526", "site": "MENEMEN/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-14589e1f2b", "fields": {"site": "BEŞPINAR MAH. BEŞPINAR KÖYİÇİ NO:79 KEMALPAŞA/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-14e4c79e87", "fields": {"il": "İZMİR", "ilce": "TORBALI", "mahalle": "MUSTAFA KEMAL", "csbm_ad": "MUSTAFA KEMAL ATATÜRK", "dis_kapi": "37C", "site": "GAZİ"}}
+{"id": "real-izmir-muhtarlik-tpl-15c7d7223f", "fields": {"il": "İZMİR", "ilce": "DİKİLİ", "mahalle": "YAYLAYURT", "csbm_ad": "YAYLAYURT CUMHURİYET", "dis_kapi": "24"}}
+{"id": "real-izmir-muhtarlik-tpl-15d3fb86e7", "fields": {"site": "ERTUĞRUL MAH. CAMİÖNÜ ÖDEMİŞ/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-15e196214f", "fields": {"il": "İZMİR", "ilce": "BEYDAĞ", "site": "EĞRİDERE MAH. BÖLÜKLER NO:23"}}
+{"id": "real-izmir-muhtarlik-tpl-16ccca639d", "fields": {"il": "İZMİR", "ilce": "TORBALI", "mahalle": "YAZIBAŞI", "csbm_ad": "ATATÜRK", "dis_kapi": "2B"}}
+{"id": "real-izmir-muhtarlik-tpl-17a040bc66", "fields": {"mahalle": "SAKARYA", "csbm_ad": "NO:5/2 ÇEŞME/İZMİR", "dis_kapi": "3083"}}
+{"id": "real-izmir-muhtarlik-tpl-1c0bd67e33", "fields": {"il": "İZMİR", "ilce": "ÇİĞLİ", "mahalle": "AHMET EFENDİ", "csbm_ad": "NO:3", "dis_kapi": "1114"}}
+{"id": "real-izmir-muhtarlik-tpl-1c29965709", "fields": {"mahalle": "NOHUTALAN", "csbm_ad": "EROĞLU NO:2 URLA/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-1c5baf33fe", "fields": {"site": "ATATÜRK MAH. NEYZEN TEVFİK NO:250 URLA/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-1d1b8c7563", "fields": {"mahalle": "ILIPINAR MAH. ILIPINAR", "csbm_ad": "KÜME EVLER", "dis_kapi": "165"}}
+{"id": "real-izmir-muhtarlik-tpl-1edd46b095", "fields": {"site": "SARNIÇKÖY MAH. FİLİZ NO:13 BORNOVA/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-1f05a3ea85", "fields": {"il": "İZMİR", "ilce": "GÜZELBAHÇE", "mahalle": "ÇELEBİ", "dis_kapi": "8A"}}
+{"id": "real-izmir-muhtarlik-tpl-2082dd0907", "fields": {"site": "BELEVİ MAH. BELEVİ CUMHURİYET NO:7 SELÇUK/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-23590a7899", "fields": {"il": "İZMİR", "ilce": "ALİAĞA", "mahalle": "KAZIM DİRİK", "csbm_ad": "CUMHURİYET", "dis_kapi": "13"}}
+{"id": "real-izmir-muhtarlik-tpl-24f30f8aa8", "fields": {"il": "İZMİR", "ilce": "GÜZELBAHÇE", "mahalle": "YAKA", "csbm_ad": "NO:1", "dis_kapi": "642"}}
+{"id": "real-izmir-muhtarlik-tpl-24f4e5e0c9", "fields": {"il": "İZMİR", "ilce": "BEYDAĞ", "mahalle": "KURUDERE", "csbm_ad": "DOĞA", "daire": "285"}}
+{"id": "real-izmir-muhtarlik-tpl-26f00224c2", "fields": {"site": "KAZIM DİRİK MAH. ATATÜRK NO:96 ALİAĞA/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-2d67964bba", "fields": {"site": "MUSTAFA KEMAL ATATÜRK MAH. ŞİRİN NO:12 FOÇA/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-308fa27802", "fields": {"site": "ÇETİN EMEÇ MAH. ATA NO:181 BALÇOVA/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-4bab374524", "fields": {"site": "KORUTÜRK MAH. POYRAZ NO:19 BALÇOVA/İZMİR"}}
+{"id": "real-izmir-muhtarlik-tpl-4f1e59f947", "fields": {"site": "ZEYTİNKÖY MAH. AKPINAR NO:84 SELÇUK/İZMİR"}}

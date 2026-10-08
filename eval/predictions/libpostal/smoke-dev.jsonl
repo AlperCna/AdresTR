@@ -1,0 +1,10 @@
+{"id": "smoke-001", "fields": {"mahalle": "Caferağa", "csbm_ad": "Moda", "csbm_tur": "cadde", "dis_kapi": "12", "site": "Kadıköy/İstanbul"}}
+{"id": "smoke-002", "fields": {"il": "Ankara", "ilce": "Çankaya", "mahalle": "Kızılay", "csbm_ad": "Atatürk", "csbm_tur": "bulvar", "dis_kapi": "115"}}
+{"id": "smoke-003", "fields": {"il": "İZMİR", "mahalle": "Konak", "csbm_ad": "1453", "csbm_tur": "sokak", "dis_kapi": "7/A"}}
+{"id": "smoke-004", "fields": {"il": "İSTANBUL", "csbm_ad": "BEGONYA", "csbm_tur": "sokak", "kat": "2", "posta_kodu": "34746", "site": "DAİRE:4 ATAŞEHİR"}}
+{"id": "smoke-005", "fields": {"il": "İzmir", "ilce": "Konak", "mahalle": "Güzelyalı", "csbm_ad": "Mithatpaşa", "csbm_tur": "cadde", "dis_kapi": "1050"}}
+{"id": "smoke-006", "fields": {"il": "Mersin", "ilce": "Mezitli", "mahalle": "Menderes", "csbm_ad": "Gazi Mustafa Kemal", "csbm_tur": "bulvar", "dis_kapi": "21"}}
+{"id": "smoke-007", "fields": {"il": "Bursa", "ilce": "Osmangazi", "mahalle": "Hamitler", "csbm_ad": "Kardelen", "csbm_tur": "sokak", "dis_kapi": "3"}}
+{"id": "smoke-008", "fields": {"il": "bursa", "ilce": "nilufer", "mahalle": "ihsaniye", "csbm_ad": "ataturk", "csbm_tur": "cadde", "dis_kapi": "45", "kat": "3"}}
+{"id": "smoke-009", "fields": {"il": "Sakarya", "ilce": "Serdivan", "mahalle": "Kemalpaşa", "site": "Küme Evler No:14"}}
+{"id": "smoke-010", "fields": {"ilce": "Çankaya", "mahalle": "Emek", "csbm_ad": "Bişkek", "csbm_tur": "cadde", "dis_kapi": "22/1", "posta_kodu": "06490"}}

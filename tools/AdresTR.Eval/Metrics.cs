@@ -32,7 +32,8 @@ internal sealed record ExampleOutcome(
     bool? IlceCorrect,
     bool? BirimCorrect,
     int? BirimRank,
-    double? Confidence);
+    double? Confidence,
+    bool PredictedIds);
 
 /// <summary>Aggregated metrics for one system on one set.</summary>
 internal sealed class EvalResult
@@ -152,7 +153,7 @@ internal static class Metrics
             }
         }
 
-        return new ExampleOutcome(e, exact, fields, il, ilce, birim, rank, p.Confidence);
+        return new ExampleOutcome(e, exact, fields, il, ilce, birim, rank, p.Confidence, p.Il is not null || p.Ilce is not null || p.Birim is not null || p.Candidates.Count > 0);
 
         static bool? Check(OptionalId gold, int? predicted) => gold.Annotated ? gold.Value == predicted : null;
 
@@ -177,7 +178,11 @@ internal static class Metrics
         var scored = fieldScores.Where(kv => kv.Value.Support > 0).ToDictionary(kv => kv.Key, kv => kv.Value, StringComparer.Ordinal);
         double[] f1s = [.. scored.Values.Where(s => s.TruePositive + s.FalsePositive + s.FalseNegative > 0).Select(s => s.F1)];
 
-        var birimOutcomes = outcomes.Where(o => o.Example.Birim is { Annotated: true, Value: not null }).ToList();
+        // Systems without a gazetteer (libpostal, LLMs) return no ids: id metrics are not applicable to them.
+        bool ids = outcomes.Any(o => o.PredictedIds);
+        var birimOutcomes = ids ? outcomes.Where(o => o.Example.Birim is { Annotated: true, Value: not null }).ToList() : [];
+        var ilOutcomes = ids ? outcomes.Where(o => o.IlCorrect is not null).ToList() : [];
+        var ilceOutcomes = ids ? outcomes.Where(o => o.IlceCorrect is not null).ToList() : [];
 
         return new EvalResult
         {
@@ -190,8 +195,8 @@ internal static class Metrics
             MicroF1Ci = Bootstrap(outcomes, MicroF1),
             MacroF1 = f1s.Length == 0 ? double.NaN : f1s.Average(),
             Fields = scored,
-            IlAccuracy = Mean(outcomes.Where(o => o.IlCorrect is not null).ToList(), o => o.IlCorrect == true),
-            IlceAccuracy = Mean(outcomes.Where(o => o.IlceCorrect is not null).ToList(), o => o.IlceCorrect == true),
+            IlAccuracy = Mean(ilOutcomes, o => o.IlCorrect == true),
+            IlceAccuracy = Mean(ilceOutcomes, o => o.IlceCorrect == true),
             BirimAccuracy = Mean(birimOutcomes, o => o.BirimRank == 1),
             BirimAccuracyCi = Bootstrap(birimOutcomes, s => Mean(s, o => o.BirimRank == 1)),
             BirimAt5 = Mean(birimOutcomes, o => o.BirimRank is <= 5),
