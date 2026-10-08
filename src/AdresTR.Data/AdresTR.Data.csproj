@@ -22,6 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <!-- Produced by tools/AdresTR.DataBuilder from data/staging; see data/staging/README.md. -->
+    <EmbeddedResource Include="Resources\gazetteer.bin" LogicalName="AdresTR.Data.gazetteer.bin" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
     <None Include="..\..\data\LICENSE-DATA.md" Pack="true" PackagePath="\" />
   </ItemGroup>

@@ -22,6 +22,7 @@
     <None Include="..\..\README.md" Pack="true" PackagePath="\" />
     <InternalsVisibleTo Include="AdresTR.Tests" />
     <InternalsVisibleTo Include="AdresTR.Benchmarks" />
+    <InternalsVisibleTo Include="AdresTR.DataBuilder" />
   </ItemGroup>
 
 </Project>

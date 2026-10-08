@@ -12,7 +12,7 @@ namespace AdresTR.Text;
 /// </remarks>
 public static class TurkishText
 {
-    private const char CombiningDotAbove = '̇';
+    private const char CombiningDotAbove = '\u0307';
     private const char Drop = '\0';
     private const char Space = ' ';
 
@@ -21,7 +21,7 @@ public static class TurkishText
     /// to ASCII (ç→c, ğ→g, ı/İ/I→i, ö→o, ş→s, ü→u), diacritics and invisible characters removed,
     /// apostrophes and dashes unified, whitespace collapsed and trimmed.
     /// </summary>
-    /// <example><c>Fold("  KADIKÖY’de Şişli ")</c> returns <c>"kadikoy'de sisli"</c>.</example>
+    /// <example><c>Fold("  KADIKÖY’de\u00A0Şişli ")</c> returns <c>"kadikoy'de sisli"</c>.</example>
     public static string Fold(string? text)
     {
         if (string.IsNullOrEmpty(text))
@@ -82,7 +82,7 @@ public static class TurkishText
 
     /// <summary>
     /// Cleans text for display while preserving case and Turkish letters: composes decomposed Turkish
-    /// letters (s + U+0327 → ş, I + U+0307 → İ, …), repairs the <c>i̇</c> artifact that JavaScript/Python
+    /// letters (s + U+0327 → ş, I + U+0307 → İ, …), repairs the <c>i\u0307</c> artifact that JavaScript/Python
     /// produce when lowercasing <c>İ</c>, replaces Romanian look-alikes (ș, ț), removes invisible
     /// characters, unifies apostrophes and dashes, and collapses whitespace.
     /// </summary>
@@ -178,11 +178,15 @@ public static class TurkishText
         {
             char c = text[i];
 
-            // Any i-variant followed by a combining dot above ("i̇", "İ" decomposed, even "ı̇") is a dotted i.
+            // Any i-variant followed by a combining dot above ("i\u0307", "İ" decomposed, even "ı\u0307") is a dotted i.
             if (c is 'i' or 'I' or 'ı' or 'İ' && i + 1 < text.Length && text[i + 1] == CombiningDotAbove)
             {
                 result.Append(upper ? 'İ' : 'i');
-                i++;
+                while (i + 1 < text.Length && text[i + 1] == CombiningDotAbove)
+                {
+                    i++;
+                }
+
                 continue;
             }
 
@@ -259,7 +263,7 @@ public static class TurkishText
             return normalized;
         }
 
-        if (c is >= '̀' and <= 'ͯ')
+        if (c is >= '\u0300' and <= 'ͯ')
         {
             return Drop;
         }
@@ -272,7 +276,7 @@ public static class TurkishText
     {
         switch (c)
         {
-            case '­' or '​' or '‌' or '‍' or '⁠' or '﻿':
+            case '\u00AD' or '\u200B' or '\u200C' or '\u200D' or '\u2060' or '\uFEFF':
                 return Drop;
             case '‘' or '’' or 'ʼ' or '´' or '′' or '`':
                 return '\'';
@@ -290,7 +294,7 @@ public static class TurkishText
                 return 'T';
         }
 
-        if (c is >= '̀' and <= 'ͯ')
+        if (c is >= '\u0300' and <= 'ͯ')
         {
             return Drop;
         }
@@ -306,24 +310,24 @@ public static class TurkishText
     /// <summary>Composes a base letter and a combining mark into a precomposed Turkish letter, or returns <see cref="Drop"/>.</summary>
     private static char Compose(char letter, char mark) => (letter, mark) switch
     {
-        ('c', '̧') => 'ç',
-        ('C', '̧') => 'Ç',
-        ('s', '̧') => 'ş',
-        ('S', '̧') => 'Ş',
-        ('g', '̆') => 'ğ',
-        ('G', '̆') => 'Ğ',
-        ('o', '̈') => 'ö',
-        ('O', '̈') => 'Ö',
-        ('u', '̈') => 'ü',
-        ('U', '̈') => 'Ü',
+        ('c', '\u0327') => 'ç',
+        ('C', '\u0327') => 'Ç',
+        ('s', '\u0327') => 'ş',
+        ('S', '\u0327') => 'Ş',
+        ('g', '\u0306') => 'ğ',
+        ('G', '\u0306') => 'Ğ',
+        ('o', '\u0308') => 'ö',
+        ('O', '\u0308') => 'Ö',
+        ('u', '\u0308') => 'ü',
+        ('U', '\u0308') => 'Ü',
         ('I' or 'İ', CombiningDotAbove) => 'İ',
         ('i' or 'ı', CombiningDotAbove) => 'i',
-        ('a', '̂') => 'â',
-        ('A', '̂') => 'Â',
-        ('i', '̂') => 'î',
-        ('I', '̂') => 'Î',
-        ('u', '̂') => 'û',
-        ('U', '̂') => 'Û',
+        ('a', '\u0302') => 'â',
+        ('A', '\u0302') => 'Â',
+        ('i', '\u0302') => 'î',
+        ('I', '\u0302') => 'Î',
+        ('u', '\u0302') => 'û',
+        ('U', '\u0302') => 'Û',
         _ => Drop,
     };
 }

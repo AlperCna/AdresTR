@@ -11,6 +11,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\AdresTR\AdresTR.csproj" />
+    <ProjectReference Include="..\..\src\AdresTR.Data\AdresTR.Data.csproj" />
   </ItemGroup>
 
 </Project>

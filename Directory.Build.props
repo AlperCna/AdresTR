@@ -9,6 +9,8 @@
     <EnforceCodeStyleInBuild>true</EnforceCodeStyleInBuild>
     <Deterministic>true</Deterministic>
     <IsPackable>false</IsPackable>
+    <!-- Only English satellite resources; avoids invalid-locale warnings from test dependencies. -->
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
 
     <Authors>Alper Can</Authors>
     <Copyright>Copyright (c) 2026 Alper Can</Copyright>
