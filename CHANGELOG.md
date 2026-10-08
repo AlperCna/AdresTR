@@ -5,6 +5,8 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.0-preview.2] - 2026-10-09
+
 ### Added
 - REST API (Faz 6): `/v1/parse`, `/v1/parse/batch`, `/v1/parse/csv`, `/v1/validate`, reference and autocomplete
   endpoints; per-IP rate limiting, output caching, CORS, validation, privacy notice, OpenAPI + Scalar.
@@ -36,5 +38,6 @@ First preview on NuGet: `AdresTR` and `AdresTR.Data`.
 - Samples (`samples/QuickStart`, `samples/CsvCleaner`), package icon and NuGet README, tag-triggered release
   workflow with NuGet Trusted Publishing (no stored API key).
 
-[Unreleased]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.1...HEAD
+[Unreleased]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.2...HEAD
+[0.1.0-preview.2]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.1...v0.1.0-preview.2
 [0.1.0-preview.1]: https://github.com/AlperCna/AdresTR/releases/tag/v0.1.0-preview.1

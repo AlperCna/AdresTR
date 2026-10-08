@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
   </PropertyGroup>
 
-  <!-- In your own project use: <PackageReference Include="AdresTR.Data" Version="0.1.0-preview.1" /> -->
+  <!-- In your own project use: <PackageReference Include="AdresTR.Data" Version="0.1.0-preview.2" /> -->
   <ItemGroup>
     <ProjectReference Include="..\..\src\AdresTR.Data\AdresTR.Data.csproj" />
   </ItemGroup>
