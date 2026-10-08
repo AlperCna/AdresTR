@@ -4,10 +4,10 @@
 Türkçe serbest metin adresleri ayrıştıran, normalize eden ve resmi il/ilçe/mahalle hiyerarşisine göre doğrulayan .NET kütüphanesi. → [Türkçe README](README.tr.md)
 
 [![CI](https://github.com/AlperCna/AdresTR/actions/workflows/ci.yml/badge.svg)](https://github.com/AlperCna/AdresTR/actions/workflows/ci.yml)
+[![NuGet](https://img.shields.io/nuget/vpre/AdresTR.svg?label=NuGet)](https://www.nuget.org/packages/AdresTR.Data)
 [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
-![Status](https://img.shields.io/badge/status-early%20development-orange)
 
-> 🚧 **Pre-release (not on NuGet yet).** The roadmap and the research behind it are public: [plan](docs/plan/PLAN.md) · [research](docs/plan/ARASTIRMA.md) · [decisions](docs/adr/).
+> 🚧 **Preview release.** APIs may still change before 1.0. The roadmap and the research behind it are public: [plan](docs/plan/PLAN.md) · [research](docs/plan/ARASTIRMA.md) · [decisions](docs/adr/).
 
 ## Why?
 
@@ -30,6 +30,10 @@ Yet there is **no free, offline, explainable** Turkish address parser:
 AdresTR aims to fill that gap, and to publish the first open Turkish address benchmark along the way.
 
 ## Quick start
+
+```bash
+dotnet add package AdresTR.Data --prerelease
+```
 
 ```csharp
 using AdresTR;
@@ -96,7 +100,7 @@ g.FindUnitsByPostalCode("34710");                       // Caferağa, …
 | 2 | Turkish text core | ✅ |
 | 3 | Benchmark: synthetic + real + challenge sets, metrics, baselines | ✅ |
 | 4 | Parser MVP with calibrated confidence and corrections log | ✅ |
-| 5 | NuGet v0.1 | ⏳ |
+| 5 | NuGet v0.1 (`0.1.0-preview.1`) | ✅ |
 | 6 | REST API + Docker | ⏳ |
 | 7 | In-browser playground | ⏳ |
 | 8 | Docs, Hugging Face dataset, v1.0 | ⏳ |
