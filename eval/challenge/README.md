@@ -64,7 +64,7 @@ A row can carry several tags.
 | `kume-evler` | 8 |
 
 **Gold ids:**
-- `birim` is set in 219 rows and null in 31.
+- `birim` is set in 218 rows and null in 32.
 - `ilce` is null in 7 rows.
 - `il` is null in 1 row (the bare `Cumhuriyet`).
 
@@ -81,8 +81,24 @@ These conventions apply on top of `SCHEMA.md`.
   `diger`). For ordinal streets the trailing dot is dropped (`2004. Cad.` → `2004`).
 
 **Gold ids record what the address determines with the staging gazetteer.**
-- Determination uses `alias.csv` (semt, tarihsel and yazım aliases) and the PTT postal codes in
-  `birim.csv`.
+- The builder computes the ids from the spans with the procedure in `SCHEMA.md` ("Two questions, two
+  kinds of gold"). It fails if they differ from the ids declared in the case file. The procedure:
+  - Candidates are the units whose official name matches the written mahalle. Semt and historic
+    aliases are used only when no official name matches.
+  - Candidates are kept only if they agree with the written il, ilçe and postal code (`birim.csv`).
+  - A type word right after the name restricts the type: `Mah./Mh./Mahallesi` → mahalle or OSB,
+    `Köyü` → köy (or a mahalle with a historic `X Köyü` alias), `Mevkii` → mevki, `Küme Evleri` →
+    küme evler.
+  - Without a type word, settlements (mahalle, köy, OSB) are preferred. Mevki, yayla, küme evler and
+    site units count only when no settlement matches.
+  - For a nested unit (`Kepçeli Köyü Kuruca Küme Evleri`), the parent name filters on `ust_ad`.
+  - A written ilçe that does not exist in the written il is ignored (`Merkez Kayseri`).
+  - Without a written mahalle, `birim` is null and il/ilçe come from what is written. A nationally
+    unique ilçe name determines its il.
+- A misspelled name (row tagged `typo`, `glued`, `broken-i` or `abbreviation`) that matches nothing
+  by itself is read as the official name the annotator declared.
+- Partial names are not completed. `Fatih Mah. Sapanca` has `birim = null`, because the official name
+  is Kurtköy Fatih.
 - An id is `null` when more than one unit stays possible. Examples: `Nişantaşı` alone (Teşvikiye or
   Harbiye), or `Cumhuriyet Mah. Merkez Düzce` (two units).
 - A postal code alone, with no settlement name, never determines a `birim` (`34710 Kadıköy İstanbul`).
@@ -96,7 +112,11 @@ These conventions apply on top of `SCHEMA.md`.
 **Doors and flats.**
 - `No:25/4` is door 25, flat 4.
 - A letter after the slash belongs to the door (`17/A`).
-- If a flat is given explicitly (`No:17/2 D:5`), the whole `17/2` is the door.
+- `No:3/2C` is door 3, flat 2C. `No:17 A` is door 17A. Ranges stay in the door (`5-7`).
+- Two deliberate edge cases are not covered by the SCHEMA examples. In each, a flat is also written
+  explicitly, so the whole `N/M` is kept as the door instead of being split:
+  - `chal-0092`: `No:17/2 D:5` → door `17/2`, flat `5`
+  - `chal-0097`: `No:86/1 A Blok No.3` → door `86/1`, block `A`, flat `3`
 - `Zemin` and `Bodrum` floors are `0` and `-1`.
 
 **Nested units (küme evler under a köy).**
@@ -135,7 +155,7 @@ Validation covers:
 - span text that folds to the gold name (or is explained by a tag)
 - postal-code prefixes
 - semt-alias consistency
-- "resolvable but null" ids
+- declared ids equal to the ids determined by the SCHEMA procedure
 
 ```bash
 python -I data/scripts/build_challenge.py          # validate + write eval/challenge/challenge.jsonl

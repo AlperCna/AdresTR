@@ -142,6 +142,117 @@ def resolve_birim(spec: str, ilce_id: int) -> int:
     return c[0]
 
 
+# ---------------------------------------------------------------- resolution (SCHEMA)
+# Tags that mark a written name as a spelling variant (typo, glued, broken İ, abbreviation/expansion):
+# the annotator's reading (the declared official name) is then used as the written name.
+SPELLING_TAGS = {"typo", "glued", "broken-i", "abbreviation"}
+SETTLEMENT_TURS = {"mahalle", "koy", "osb"}
+# Type word in the unlabeled text right after a mahalle span -> allowed birim types.
+TYPE_WORDS = [
+    (re.compile(r"^\s*(mahallesi|mahalle|mahlesi|mhallesi|maallesi|mahellesi|mah|mh)(?![a-z])"), {"mahalle", "osb"}),
+    (re.compile(r"^\s*(koyu|koy)(?![a-z])"), {"koy"}),
+    (re.compile(r"^\s*mevkii?(?![a-z])"), {"mevki"}),
+    (re.compile(r"^\s*(kume )?evleri?(?![a-z])"), {"kume_evler"}),
+]
+
+
+def type_word(after: str | None) -> set[str] | None:
+    if not after:
+        return None
+    f = fold(after, strip_suffix=False)
+    for rx, turs in TYPE_WORDS:
+        if rx.match(f):
+            return turs
+    return None
+
+
+def determine(follow, pk, declared, spelled):
+    """Ids the text determines, following eval/SCHEMA.md.
+
+    `declared` (the annotator's reading) is used only as the written name of a span whose spelling
+    is marked as a variant (typo/glued/broken-i/abbreviation tag)."""
+    d_il, d_ilce, d_birim = declared
+
+    def spans_of(label):
+        return [(t, after) for (lab, t, after) in follow if lab == label]
+
+    # il: written il names (official, alias, or the declared reading of a misspelling)
+    il_set = set()
+    for t, _ in spans_of("il"):
+        c = set(IL_BY_KEY.get(key(t), [])) | {h for (h_t, h, _) in ALIAS_BY_KEY.get(key(t), []) if h_t == "il"}
+        if not c and spelled and d_il is not None:
+            c = {d_il}
+        il_set |= c
+    # ilce: written ilçe names consistent with the written il; ignored if none is (e.g. 'Merkez' in Kayseri)
+    ilce_set = set()
+    for t, _ in spans_of("ilce"):
+        c = set(ILCE_BY_KEY.get(key(t), [])) | {h for (h_t, h, _) in ALIAS_BY_KEY.get(key(t), []) if h_t == "ilce"}
+        if not c and spelled and d_ilce is not None:
+            c = {d_ilce}
+        if il_set:
+            c = {i for i in c if ilce_plaka(i) in il_set}
+        ilce_set |= c
+
+    def constrain(cands):
+        if il_set:
+            cands = {b for b in cands if ilce_plaka(birim_ilce(b)) in il_set}
+        if ilce_set:
+            cands = {b for b in cands if birim_ilce(b) in ilce_set}
+        if pk:
+            cands = {b for b in cands if BIRIM[b]["posta_kodu"] == pk}
+        return cands
+
+    mah = []  # distinct written mahalle names, in text order
+    for t, after in spans_of("mahalle"):
+        if key(t) not in [key(m[0]) for m in mah]:
+            mah.append((t, after))
+    cands = None
+    if mah:
+        t, after = mah[-1]  # innermost unit is written last (parent köy first)
+        names = {key(t)}
+        known = BIRIM_BY_KEY.get(key(t)) or any(h_t == "birim" for (h_t, _, _) in ALIAS_BY_KEY.get(key(t), []))
+        if not known and spelled and d_birim is not None:
+            names = {key(BIRIM[d_birim]["ad"])}
+        turs = type_word(after)
+        official = {b for n in names for b in BIRIM_BY_KEY.get(n, [])}
+        official = constrain(official if turs is None else {b for b in official if BIRIM[b]["tur"] in turs})
+        if turs is None and any(BIRIM[b]["tur"] in SETTLEMENT_TURS for b in official):
+            official = {b for b in official if BIRIM[b]["tur"] in SETTLEMENT_TURS}
+        if official:
+            cands = official
+        else:  # semt / historic alias of the written name ('X Köyü' when the type word is Köyü)
+            akeys = set(names) | ({n + "koyu" for n in names} if turs == {"koy"} else set())
+            cands = constrain({h for n in akeys for (h_t, h, _) in ALIAS_BY_KEY.get(n, []) if h_t == "birim"})
+        if len(mah) > 1:  # nested unit: keep those whose parent is the other written name
+            parents = {key(m[0]) for m in mah[:-1]}
+            nested = {b for b in cands if key(BIRIM[b]["ust_ad"]) in parents}
+            cands = nested or cands
+    elif spans_of("semt"):
+        cands = set()
+        for t, _ in spans_of("semt"):
+            cands |= {h for (h_t, h, tur) in ALIAS_BY_KEY.get(key(t), []) if h_t == "birim" and tur == "semt"}
+        cands = constrain(cands)
+
+    birim = next(iter(cands)) if cands and len(cands) == 1 else None
+    if len(ilce_set) == 1:
+        ilce = next(iter(ilce_set))
+    elif cands:
+        ic = {birim_ilce(b) for b in cands} if not ilce_set else ilce_set & {birim_ilce(b) for b in cands}
+        ilce = next(iter(ic)) if len(ic) == 1 else None
+    else:
+        ilce = None
+    if len(il_set) == 1:
+        il = next(iter(il_set))
+    elif ilce is not None:
+        il = ilce_plaka(ilce)
+    elif cands:
+        ps = {ilce_plaka(birim_ilce(b)) for b in cands}
+        il = next(iter(ps)) if len(ps) == 1 else None
+    else:
+        il = None
+    return il, ilce, birim
+
+
 # ---------------------------------------------------------------- building
 class CaseError(Exception):
     pass
@@ -151,12 +262,16 @@ def build_case(idx: int, case: dict, warnings: list[str]) -> dict:
     cid = f"chal-{idx:04d}"
     segs = case["seg"]
     text, spans = "", []
+    follow = []  # (label, span text, text of the next segment if it is unlabeled)
     for s in segs:
         if isinstance(s, str):
             piece, label = s, None
         else:
             piece, label = s
+        if follow and follow[-1][2] is None and label is None:
+            follow[-1] = (follow[-1][0], follow[-1][1], piece)
         if label is not None:
+            follow.append((label, piece, None))
             if label not in LABELS:
                 raise CaseError(f"{cid}: unknown label {label!r}")
             if not piece or piece != piece.strip():
@@ -274,21 +389,11 @@ def build_case(idx: int, case: dict, warnings: list[str]) -> dict:
                 raise CaseError(f"{cid}: {lab} span {t!r} does not fold to {ref!r} (add typo/glued/... tag)")
             if not ok and "typo" in tags and lab == "ilce" and key(t) in ILCE_BY_KEY:
                 warnings.append(f"{cid}: typo'd ilce {t!r} is itself a real ilce name")
-    # null birim but resolvable mahalle span in known ilce -> suspicious
-    if birim_id is None and ilce_id is not None and not case.get("allow_null", False):
-        for t in by_label.get("mahalle", []):
-            c = [b for b in BIRIM_BY_KEY.get(key(t), []) if birim_ilce(b) == ilce_id]
-            if len(c) == 1:
-                raise CaseError(f"{cid}: mahalle {t!r} resolves uniquely in ilce but birim is null")
-    if ilce_id is None and il_id is not None and not case.get("allow_null", False):
-        for t in by_label.get("ilce", []):
-            c = [i for i in ILCE_BY_KEY.get(key(t), []) if ilce_plaka(i) == il_id]
-            if c:
-                raise CaseError(f"{cid}: ilce {t!r} resolves in il but ilce is null")
-        for t in by_label.get("mahalle", []):
-            c = [b for b in BIRIM_BY_KEY.get(key(t), []) if ilce_plaka(birim_ilce(b)) == il_id]
-            if len(c) == 1:
-                raise CaseError(f"{cid}: mahalle {t!r} unique in il but ilce is null")
+    # ids must equal what the text determines (eval/SCHEMA.md, "Two questions, two kinds of gold")
+    spelled = bool(SPELLING_TAGS & set(tags))
+    got = determine(follow, fields["posta_kodu"], (il_id, ilce_id, birim_id), spelled)
+    if got != (il_id, ilce_id, birim_id):
+        raise CaseError(f"{cid}: declared ids {(il_id, ilce_id, birim_id)} != determined {got}")
     # postal code
     pk = fields["posta_kodu"]
     if pk is not None and il_id is not None and not case.get("pk_conflict", False):

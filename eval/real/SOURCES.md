@@ -14,10 +14,10 @@ emitted; person-named health categories are excluded (see filters).
 | `ibb-saglik` | 104 | 416 | 520 | 505 | 520 | 505 |
 | `ibb-muhtarlik` | 36 | 144 | 180 | 177 | 180 | 177 |
 | `ibb-pazar-tpl` | 16 | 64 | 80 | 48 | 80 | 48 |
-| `izmir-eczane` | 112 | 448 | 560 | 403 | 105 | 527 |
+| `izmir-eczane` | 112 | 448 | 560 | 403 | 125 | 527 |
 | `izmir-saglik-tpl` | 16 | 64 | 80 | 80 | 80 | 80 |
 | `izmir-muhtarlik-tpl` | 16 | 64 | 80 | 80 | 80 | 80 |
-| **total** | **300** | **1200** | **1500** | 1293 | 1045 | 1417 |
+| **total** | **300** | **1200** | **1500** | 1293 | 1065 | 1417 |
 
 Split: dev ≈ 20 %, test ≈ 80 %, stratified by source and ilçe (every 5th entity in (ilçe, hash) order goes
 to dev). The split is **by entity**: rows that share a facility identity (same name in the same ilçe, same
@@ -151,8 +151,10 @@ from the human-written sources (`ibb-saglik`, `ibb-muhtarlik`, `izmir-eczane`).
   could not isolate (e.g. `…NO:144/AKINIK/IZMIR`, a bare semt/mahalle in the trailing text), that field is left
   **absent** rather than `null`.
 - **`gold.il/ilce/birim` = what the text determines** via the gazetteer, with the synthetic generator's rule:
-  start from the units whose official name (or semt/historic alias) matches the written mahalle, keep those in
-  the written il and ilçe; `birim` = the single remaining unit, `ilce` = the single remaining district, `il` = the
+  start from the units whose official name (or semt/historic alias) matches the written mahalle, keep only the
+  unit type the text names (`X MAH./MH.` → mahalle or OSB; İBB tails `MAHALLE/İLÇE` have no type word, so
+  settlements — mahalle, köy, OSB — win over mevkii/mezra/yayla/küme evler/site units of the same name), keep
+  those in the written il and ilçe; `birim` = the single remaining unit, `ilce` = the single remaining district, `il` = the
   written il or the single remaining province, else `null`. Without a written mahalle `birim` is `null` and
   il/ilçe come from what is written (a nationally unique ilçe name determines its il). If a needed component's
   presence is undecidable (see above), a non-unique result is left absent instead of `null`.
@@ -166,8 +168,9 @@ from the human-written sources (`ibb-saglik`, `ibb-muhtarlik`, `izmir-eczane`).
   street type is not published, so `csbm_tur` is absent. Semt pazarı rows with both a cadde and a sokak column
   leave the street unannotated.
 - **Null fields**: when the whole text was parsed, components that do not occur (`semt`, `site`, `blok`, `kat`,
-  `daire`, `posta_kodu`, `tarif`, missing street/door) are annotated as `null`. For slash doors (`No:5 /1`)
-  `dis_kapi` keeps the slash (`5/1`) and `daire` is left unannotated.
+  `daire`, `posta_kodu`, `tarif`, missing street/door) are annotated as `null`. Doors follow the schema's
+  dış kapı / iç kapı split: `No:5 /1` → `dis_kapi=5`, `daire=1` (both spanned separately); `No:17/A` →
+  `dis_kapi=17/A`, `daire=null`. Templated İzmir rows split `KAPINO` the same way.
 - **posta_kodu** only if written in the text (none were found).
 - **spans** only when the whole text was parsed and every labeled substring equals its gold value after
   folding (`Gazetteer.Key`); otherwise the row has no `spans` (partial spans are never written).
@@ -204,7 +207,7 @@ from the human-written sources (`ibb-saglik`, `ibb-muhtarlik`, `izmir-eczane`).
 | `blok` | 0 | 1342 | 158 |
 | `dis_kapi` | 1269 | 141 | 90 |
 | `kat` | 0 | 1342 | 158 |
-| `daire` | 0 | 906 | 594 |
+| `daire` | 103 | 1243 | 154 |
 | `posta_kodu` | 0 | 1342 | 158 |
 | `tarif` | 0 | 1310 | 190 |
 
@@ -260,7 +263,9 @@ Known issues and conventions to keep in mind:
   spellings, not the text-determined ids.
 - **`Yolu` as street type.** `Alemdağ Yan Yolu` → `csbm_ad=Alemdağ Yan`, `csbm_tur=yol`; but
   `Baraj Yolu Cad.` → `csbm_ad=Baraj Yolu`, `csbm_tur=cadde` (the last type word decides).
-- **Slash doors.** `No:5 /1` → `dis_kapi=5/1`, `daire` not annotated (the `/1` may be an iç kapı).
+- **Doors (dış kapı / iç kapı).** `No:5 /1` → `dis_kapi=5`, `daire=1`; `No:3 /2C` → `3` + `2C`;
+  `No:120/1-B` → `120` + `1-B`; a letter-only part stays in the door (`No:17/A` → `17/A`, `No:58 F` → `58F`);
+  ranges stay (`No:90 -92A` → `90-92A`). Some publishers may use `/` differently; this is the schema convention.
 - **Numbered streets keep the dot as written** (`892. Sk.` → `csbm_ad=892.`); `Gazetteer.Key` ignores it.
 - **Tags are heuristic.** `ambiguous-name` follows the synthetic-set meaning (the mahalle name exists more than
   once nationally) and is therefore frequent; `landmark` can fire on names such as `İSTASYON ALTI`; `semt` is

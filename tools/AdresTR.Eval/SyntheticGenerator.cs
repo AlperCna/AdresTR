@@ -519,6 +519,15 @@ internal sealed class SyntheticGenerator
             candidates = candidates.Where(u => u.PostalCode == a.Unit.PostalCode);
         }
 
+        // Unit type: the keyword names it (Mah. → mahalle/OSB, Köyü → köy); otherwise settlements win over mevkii/mezra.
+        bool koyWord = pieces.Exists(p => p.Label is null && TurkishText.Fold(p.Text) is "koyu" or "koy");
+        bool mahWord = pieces.Exists(p => p.Label is null && Abbreviations.Contains(TurkishText.Fold(p.Text)) && TurkishText.Fold(p.Text).StartsWith('m'));
+        mahWord |= pieces.Exists(p => p.Label is null && TurkishText.Fold(p.Text) == "mahallesi");
+        candidates = candidates.ToList() is var all && koyWord ? all.Where(u => u.Kind == UnitKind.Koy)
+            : mahWord ? all.Where(u => u.Kind is UnitKind.Mahalle or UnitKind.Osb)
+            : all.Any(u => u.Kind is UnitKind.Mahalle or UnitKind.Koy or UnitKind.Osb) ? all.Where(u => u.Kind is UnitKind.Mahalle or UnitKind.Koy or UnitKind.Osb)
+            : all;
+
         SettlementUnit[] remaining = [.. candidates];
         if (_unitsByKey[AdresTR.Gazetteer.Key(a.Unit.Name)].Skip(1).Any())
         {
