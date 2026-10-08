@@ -1,0 +1,214 @@
+[
+  {
+    "system": "regex-baseline",
+    "set": "synthetic-dev",
+    "n": 1000,
+    "exact_match": 0.115,
+    "exact_match_ci": [
+      0.096,
+      0.136
+    ],
+    "micro_f1": 0.7546,
+    "micro_f1_ci": [
+      0.7429,
+      0.7658
+    ],
+    "macro_f1": 0.6081,
+    "il_accuracy": 0.516,
+    "ilce_accuracy": 0.323,
+    "birim_accuracy": 0.1948,
+    "birim_accuracy_ci": [
+      0.1712,
+      0.2207
+    ],
+    "birim_at5": 0.1948,
+    "birim_mrr": 0.1948,
+    "ece": null,
+    "fields": {
+      "il": {
+        "precision": 1,
+        "recall": 0.5131,
+        "f1": 0.6782,
+        "support": 1000
+      },
+      "ilce": {
+        "precision": 1,
+        "recall": 0.3049,
+        "f1": 0.4673,
+        "support": 1000
+      },
+      "mahalle": {
+        "precision": 0.8765,
+        "recall": 0.639,
+        "f1": 0.7392,
+        "support": 1000
+      },
+      "semt": {
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "support": 1000
+      },
+      "csbm_tur": {
+        "precision": 1,
+        "recall": 0.9275,
+        "f1": 0.9624,
+        "support": 1000
+      },
+      "csbm_ad": {
+        "precision": 0.8165,
+        "recall": 0.7573,
+        "f1": 0.7858,
+        "support": 1000
+      },
+      "site": {
+        "precision": null,
+        "recall": 0,
+        "f1": 0,
+        "support": 1000
+      },
+      "blok": {
+        "precision": null,
+        "recall": 0,
+        "f1": 0,
+        "support": 1000
+      },
+      "dis_kapi": {
+        "precision": 0.8214,
+        "recall": 0.8214,
+        "f1": 0.8214,
+        "support": 1000
+      },
+      "kat": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "support": 1000
+      },
+      "daire": {
+        "precision": 1,
+        "recall": 0.7287,
+        "f1": 0.843,
+        "support": 1000
+      },
+      "posta_kodu": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "support": 1000
+      },
+      "tarif": {
+        "precision": null,
+        "recall": 0,
+        "f1": 0,
+        "support": 1000
+      }
+    }
+  },
+  {
+    "system": "regex-baseline",
+    "set": "synthetic-test",
+    "n": 2000,
+    "exact_match": 0.1265,
+    "exact_match_ci": [
+      0.112,
+      0.1415
+    ],
+    "micro_f1": 0.7558,
+    "micro_f1_ci": [
+      0.7472,
+      0.7642
+    ],
+    "macro_f1": 0.6098,
+    "il_accuracy": 0.5225,
+    "ilce_accuracy": 0.338,
+    "birim_accuracy": 0.2048,
+    "birim_accuracy_ci": [
+      0.188,
+      0.2237
+    ],
+    "birim_at5": 0.2048,
+    "birim_mrr": 0.2048,
+    "ece": null,
+    "fields": {
+      "il": {
+        "precision": 1,
+        "recall": 0.5189,
+        "f1": 0.6833,
+        "support": 2000
+      },
+      "ilce": {
+        "precision": 0.9952,
+        "recall": 0.3184,
+        "f1": 0.4824,
+        "support": 2000
+      },
+      "mahalle": {
+        "precision": 0.8893,
+        "recall": 0.6505,
+        "f1": 0.7514,
+        "support": 2000
+      },
+      "semt": {
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "support": 2000
+      },
+      "csbm_tur": {
+        "precision": 1,
+        "recall": 0.9017,
+        "f1": 0.9483,
+        "support": 2000
+      },
+      "csbm_ad": {
+        "precision": 0.8203,
+        "recall": 0.7396,
+        "f1": 0.7779,
+        "support": 2000
+      },
+      "site": {
+        "precision": null,
+        "recall": 0,
+        "f1": 0,
+        "support": 2000
+      },
+      "blok": {
+        "precision": null,
+        "recall": 0,
+        "f1": 0,
+        "support": 2000
+      },
+      "dis_kapi": {
+        "precision": 0.8188,
+        "recall": 0.8188,
+        "f1": 0.8188,
+        "support": 2000
+      },
+      "kat": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "support": 2000
+      },
+      "daire": {
+        "precision": 1,
+        "recall": 0.7479,
+        "f1": 0.8558,
+        "support": 2000
+      },
+      "posta_kodu": {
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
+        "support": 2000
+      },
+      "tarif": {
+        "precision": null,
+        "recall": 0,
+        "f1": 0,
+        "support": 2000
+      }
+    }
+  }
+]

@@ -46,6 +46,9 @@ jobs:
       - name: Gazetteer is up to date with data/staging
         run: dotnet run --project tools/AdresTR.DataBuilder -c Release --no-build -- check
 
+      - name: Evaluation sets are valid
+        run: dotnet run --project tools/AdresTR.Eval -c Release --no-build -- validate
+
       - run: dotnet test --solution AdresTR.slnx -c Release --no-build --coverage --coverage-output-format cobertura --results-directory ${{ github.workspace }}/coverage
 
       - name: Upload coverage
