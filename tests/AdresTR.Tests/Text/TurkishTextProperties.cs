@@ -6,7 +6,7 @@ namespace AdresTR.Tests.Text;
 public class TurkishTextProperties
 {
     private const string Alphabet =
-        "abcçdefgğhıijklmnoöprsştuüvyzABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZâîûÂÎÛqwxQWX0123456789 .,:/-' ̧̇";
+        "abcçdefgğhıijklmnoöprsştuüvyzABCÇDEFGĞHIİJKLMNOÖPRSŞTUÜVYZâîûÂÎÛqwxQWX0123456789 .,:/-'\u00A0\u0307\u0327";
 
     private static readonly Gen<string> TurkishStrings = Gen.String[Gen.Char[Alphabet], 0, 60];
 

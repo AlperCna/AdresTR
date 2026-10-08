@@ -1,0 +1,419 @@
+{
+  "olusturma_tarihi": "2026-10-08",
+  "uretici": "data/scripts/build_staging.py",
+  "veri_surumu": "2026.10",
+  "not": "Yol B: yalnız PTT türevi (MIT) + Wikidata (CC0). melihozkara/NVİ kopyası girdi DEĞİLDİR.",
+  "girdiler": [
+    {
+      "path": "muratgozel/src/data/neighbourhoods.json",
+      "sha256": "88729c45f7465e8a56e4ae76e6f88b5f4f96433ca93c75206a31b6f72a4a83d1",
+      "url": "https://raw.githubusercontent.com/muratgozel/turkey-neighbourhoods/99aca4907c85f95f8dbb9b6e2b0512325cc8be0e/src/data/neighbourhoods.json",
+      "lisans": "MIT",
+      "anlik_goruntu": "2024-03-31 (npm turkey-neighbourhoods@4.0.3; içerik PTT pk_list ~2022-08)"
+    },
+    {
+      "path": "epigra/src/Database/Seeders/GeozoneCitiesTableSeeder.php",
+      "sha256": "661f550853cabe77c243349c64da4866542771bb5402bd4c16daae775c623de3",
+      "url": "https://raw.githubusercontent.com/epigra/tr-geozones/c5566de9a88c515de93a158addb0adca2cf360a0/src/Database/Seeders/GeozoneCitiesTableSeeder.php",
+      "lisans": "MIT",
+      "anlik_goruntu": "2022-08-10 (PTT)"
+    },
+    {
+      "path": "epigra/src/Database/Seeders/GeozoneCountiesTableSeeder.php",
+      "sha256": "a06d5d53181e1b49d1e21d9e02f352e2659d8d8e244e15a69cec25198c9059a5",
+      "url": "https://raw.githubusercontent.com/epigra/tr-geozones/c5566de9a88c515de93a158addb0adca2cf360a0/src/Database/Seeders/GeozoneCountiesTableSeeder.php",
+      "lisans": "MIT",
+      "anlik_goruntu": "2022-08-10 (PTT)"
+    },
+    {
+      "path": "epigra/src/Database/Seeders/GeozoneDistrictsTableSeeder.php",
+      "sha256": "ee9fdf2fa43f706fc365553ec95a23d0f85761781e859c217783cf931c22cf47",
+      "url": "https://raw.githubusercontent.com/epigra/tr-geozones/c5566de9a88c515de93a158addb0adca2cf360a0/src/Database/Seeders/GeozoneDistrictsTableSeeder.php",
+      "lisans": "MIT",
+      "anlik_goruntu": "2022-08-10 (PTT)"
+    },
+    {
+      "path": "epigra/src/Database/Seeders/GeozoneNeighbourhoodsTableSeeder.php",
+      "sha256": "1c2a54f6eef626a5a51747a9a287df48bb416d73899c1a098375798101b46f76",
+      "url": "https://raw.githubusercontent.com/epigra/tr-geozones/c5566de9a88c515de93a158addb0adca2cf360a0/src/Database/Seeders/GeozoneNeighbourhoodsTableSeeder.php",
+      "lisans": "MIT",
+      "anlik_goruntu": "2022-08-10 (PTT)"
+    },
+    {
+      "path": "wikidata/wd_il.csv",
+      "sha256": "98c30f18d675677766990b660e152f3d127a650f7ac096604be70a89dc1c4985",
+      "url": "https://query.wikidata.org/sparql (sorgu: data/scripts/fetch_wikidata.py QUERIES['wd_il'])",
+      "lisans": "CC0-1.0",
+      "anlik_goruntu": "2026-10-08"
+    },
+    {
+      "path": "wikidata/wd_ilce.csv",
+      "sha256": "8a758b40de04bb05c5e41195962020ad164903f0d73e5309023f3a0f1aacdc64",
+      "url": "https://query.wikidata.org/sparql (sorgu: data/scripts/fetch_wikidata.py QUERIES['wd_ilce'])",
+      "lisans": "CC0-1.0",
+      "anlik_goruntu": "2026-10-08"
+    },
+    {
+      "path": "wikidata/wd_mahalle.csv",
+      "sha256": "97789da407f2e11d74f4ed5bbab265ced7918fbe0c23dc0c90e13e35d9c72724",
+      "url": "https://query.wikidata.org/sparql (sorgu: data/scripts/fetch_wikidata.py QUERIES['wd_mahalle'])",
+      "lisans": "CC0-1.0",
+      "anlik_goruntu": "2026-10-08"
+    },
+    {
+      "path": "wikidata/wd_koy.csv",
+      "sha256": "6658a654a052c4c50f4ac5980a3128636274ec49665f15d01319e3347558b289",
+      "url": "https://query.wikidata.org/sparql (sorgu: data/scripts/fetch_wikidata.py QUERIES['wd_koy'])",
+      "lisans": "CC0-1.0",
+      "anlik_goruntu": "2026-10-08"
+    },
+    {
+      "path": "wikidata/wd_belde.csv",
+      "sha256": "a61987a36b9a8dfb45639ed58f8ea0750ce45b2dd28f947e15203733f9b69d9c",
+      "url": "https://query.wikidata.org/sparql (sorgu: data/scripts/fetch_wikidata.py QUERIES['wd_belde'])",
+      "lisans": "CC0-1.0",
+      "anlik_goruntu": "2026-10-08"
+    },
+    {
+      "path": "wikidata/wd_parent_up.csv",
+      "sha256": "6b822a1d5bbf3fcb3c72a174ab69a2d086a74e5474ea1462b2d860bd326ef619",
+      "url": "https://query.wikidata.org/sparql (sorgu: data/scripts/fetch_wikidata.py QUERIES['wd_parent_up'])",
+      "lisans": "CC0-1.0",
+      "anlik_goruntu": "2026-10-08"
+    }
+  ],
+  "kuratorlu_girdiler": [
+    {
+      "path": "data/curated/semt_alias.csv",
+      "sha256": "0118b1899c9131a87acd6bcf0a5be5a0594e79800a39cc56c0b6404acc6c24a5",
+      "lisans": "CC0-1.0",
+      "kaynak": "el (data/curated/README.md)"
+    }
+  ],
+  "ciktilar": {
+    "il.csv": 81,
+    "ilce.csv": 973,
+    "birim.csv": 78790,
+    "alias.csv": 18816,
+    "retired_ids.csv": 0
+  },
+  "birim_tur_dagilimi": {
+    "mahalle": 32171,
+    "osb": 224,
+    "koy": 18229,
+    "mevki": 27374,
+    "yayla": 374,
+    "kume_evler": 140,
+    "mezra": 265,
+    "site": 13
+  },
+  "alias_dagilimi": {
+    "birim/semt/el": 3,
+    "birim/semt/ptt-semt": 3035,
+    "birim/tarihsel/wikidata-6360": 15762,
+    "il/yazim/el": 11,
+    "ilce/tarihsel/el": 3,
+    "ilce/yazim/el": 2
+  },
+  "kapsam": {
+    "mahalle": {
+      "n": 32171,
+      "wikidata": 26430,
+      "koordinat": 21394,
+      "nvi_id": 26390
+    },
+    "koy": {
+      "n": 18229,
+      "wikidata": 17643,
+      "koordinat": 17641,
+      "nvi_id": 17630
+    },
+    "mezra": {
+      "n": 265,
+      "wikidata": 0,
+      "koordinat": 0,
+      "nvi_id": 0
+    },
+    "mevki": {
+      "n": 27374,
+      "wikidata": 0,
+      "koordinat": 0,
+      "nvi_id": 0
+    },
+    "yayla": {
+      "n": 374,
+      "wikidata": 0,
+      "koordinat": 0,
+      "nvi_id": 0
+    },
+    "kume_evler": {
+      "n": 140,
+      "wikidata": 0,
+      "koordinat": 0,
+      "nvi_id": 0
+    },
+    "osb": {
+      "n": 224,
+      "wikidata": 19,
+      "koordinat": 9,
+      "nvi_id": 19
+    },
+    "site": {
+      "n": 13,
+      "wikidata": 0,
+      "koordinat": 0,
+      "nvi_id": 0
+    },
+    "_il": {
+      "n": 81,
+      "wikidata": 81,
+      "koordinat": 81
+    },
+    "_ilce": {
+      "n": 973,
+      "wikidata": 928,
+      "koordinat": 890
+    }
+  },
+  "dogrulama": {
+    "sorunlar": [],
+    "posta_kodu_plaka_istisnalari": [],
+    "posta_kodu_plaka_istisna_sayisi": 0,
+    "posta_kodu_bos_(yalniz_sentetik_koy)": 3,
+    "sentetik_koy": {
+      "satir": 5496,
+      "posta_kodu_dolu": 5493,
+      "posta_kodu_bos_(coklu_kod)": 3
+    },
+    "kalan_tur_soneki_sayisi": 79,
+    "kalan_tur_soneki_ornek": [
+      [
+        2020057,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        2080092,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        3090019,
+        "kume_evler",
+        "Küme Evleri"
+      ],
+      [
+        5040145,
+        "mevki",
+        "Çay Köyü"
+      ],
+      [
+        10010062,
+        "mahalle",
+        "Köylü Köyü"
+      ],
+      [
+        14050297,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        14060120,
+        "mevki",
+        "Hasan Köyü"
+      ],
+      [
+        14060337,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        14070215,
+        "yayla",
+        "Mah Yayla Evleri"
+      ],
+      [
+        14070218,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        14070219,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        14070220,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        14090056,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        14090057,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        14090058,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        17010154,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        18030103,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        18100045,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        18100046,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        18100047,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        19040029,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        19050082,
+        "mevki",
+        "Hüsemoğlu Köyü"
+      ],
+      [
+        19050102,
+        "mevki",
+        "Kızılibrik Köyü"
+      ],
+      [
+        19120153,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        23110145,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        28050187,
+        "mevki",
+        "Koz Köyü"
+      ],
+      [
+        28090275,
+        "koy",
+        "Köprübaşı Köyü"
+      ],
+      [
+        29060245,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        29060246,
+        "yayla",
+        "Yayla Evleri"
+      ],
+      [
+        29060247,
+        "yayla",
+        "Yayla Evleri"
+      ]
+    ],
+    "ilce_wikidata_coklu_aday_bos": 10,
+    "kasaba_ogesi_ilceye_baglanan": 517,
+    "wikidata_ilceye_cozulemeyen_oge": {
+      "mahalle": 933,
+      "koy": 330
+    },
+    "ptt_tekrar_ayiklanan": [
+      [
+        "Gaziosmanpaşaosb Mah",
+        "10100"
+      ],
+      [
+        "Merkez Mah (örencik Köyü)",
+        "14030"
+      ],
+      [
+        "Yuva Merkez Mah (yuva Köyü)",
+        "14030"
+      ],
+      [
+        "Çuhalar Mah (güneyaluç Köyü)",
+        "19402"
+      ],
+      [
+        "Altıntaşlar Mh. (kocadal Köyü)",
+        "29802"
+      ],
+      [
+        "Yayla Evleri Mah (küçükçit Köyü)",
+        "29802"
+      ],
+      [
+        "Merkez Mah (aşağı Kızılcaören Köyü)",
+        "78010"
+      ],
+      [
+        "Üzümlü Mevkii Mah (bedesten Köyü)",
+        "71452"
+      ],
+      [
+        "Ardıçalan Mevkii Mah (kalebaşı Köyü)",
+        "58662"
+      ],
+      [
+        "Direkli Mh. (ortaseki Köyü)",
+        "58662"
+      ],
+      [
+        "Yeni Mah (ayvazlar Köyü)",
+        "67902"
+      ]
+    ],
+    "capraz_kontrol_epigra": {
+      "murat_satir": 73305,
+      "epigra_satir": 73304,
+      "ortak_satir_(il,ilce,ad,pk)": 73304,
+      "yalniz_murat": 1,
+      "yalniz_epigra": 0,
+      "semtsiz_pk": 0,
+      "birden_fazla_semtli_pk": 0
+    },
+    "semt_siniflandirma": {
+      "ilce": 847,
+      "kendi_birimi": 762,
+      "gercek_alias": 315,
+      "belde": 387,
+      "koyler": 458,
+      "koy": 2
+    },
+    "alias_6360": 15762,
+    "kuratorlu_semt": {
+      "dosya": "curated/semt_alias.csv",
+      "satir": 2,
+      "eklenen": 3,
+      "atlanan_ayni": 0,
+      "sha256": "0118b1899c9131a87acd6bcf0a5be5a0594e79800a39cc56c0b6404acc6c24a5"
+    }
+  }
+}

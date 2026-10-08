@@ -9,21 +9,21 @@ public class TurkishTextTests
     [InlineData("İSTANBUL", "istanbul")]
     [InlineData("ISTANBUL", "istanbul")]
     [InlineData("istanbul", "istanbul")]
-    [InlineData("i̇stanbul", "istanbul")] // JS/Python "İSTANBUL".toLowerCase()
-    [InlineData("İSTANBUL", "istanbul")] // decomposed İ
+    [InlineData("i\u0307stanbul", "istanbul")] // JS/Python "İSTANBUL".toLowerCase()
+    [InlineData("I\u0307STANBUL", "istanbul")] // decomposed İ
     [InlineData("Kadıköy", "kadikoy")]
     [InlineData("KADIKÖY", "kadikoy")]
     [InlineData("Şişli", "sisli")]
-    [InlineData("Şişli", "sisli")] // decomposed ş
+    [InlineData("S\u0327is\u0327li", "sisli")] // decomposed ş
     [InlineData("Șișli", "sisli")] // Romanian s-comma look-alike
     [InlineData("Çağlayan", "caglayan")]
     [InlineData("Iğdır", "igdir")]
     [InlineData("Kâğıthane", "kagithane")]
     [InlineData("Ünye", "unye")]
-    [InlineData("  Moda  Cd. ", "moda cd.")]
+    [InlineData("  Moda\u00A0 Cd. ", "moda cd.")]
     [InlineData("a\tb\r\nc", "a b c")]
     [InlineData("Kadıköy’de", "kadikoy'de")]
-    [InlineData("Ka​dı­köy", "kadikoy")]
+    [InlineData("Ka\u200Bdı\u00ADköy", "kadikoy")]
     [InlineData("No:12/3", "no:12/3")]
     [InlineData("", "")]
     public void Fold_produces_ascii_matching_key(string input, string expected) =>
@@ -54,9 +54,10 @@ public class TurkishTextTests
     [InlineData("istanbul", "İSTANBUL")]
     [InlineData("ılgaz", "ILGAZ")]
     [InlineData("iğdır", "İĞDIR")]
-    [InlineData("i̇zmir", "İZMİR")]
-    [InlineData("ı̇zmir", "İZMİR")] // found by CsCheck: dotless i + combining dot
-    [InlineData("İ̇zmir", "İZMİR")]
+    [InlineData("i\u0307zmir", "İZMİR")]
+    [InlineData("ı\u0307zmir", "İZMİR")] // found by CsCheck: dotless i + combining dot
+    [InlineData("İ\u0307zmir", "İZMİR")]
+    [InlineData("i\u0307\u0307zmir", "İZMİR")] // found by CsCheck: repeated combining dots
     [InlineData("çeşme", "ÇEŞME")]
     public void ToUpperTr_uses_turkish_dotted_and_dotless_i(string input, string expected) =>
         Assert.Equal(expected, TurkishText.ToUpperTr(input));
@@ -66,9 +67,10 @@ public class TurkishTextTests
     [InlineData("ILGAZ", "ılgaz")]
     [InlineData("IĞDIR", "ığdır")]
     [InlineData("DİYARBAKIR", "diyarbakır")]
-    [InlineData("İZMİR", "izmir")]
-    [InlineData("ı̇zmir", "izmir")]
-    [InlineData("İ̇ZMİR", "izmir")]
+    [InlineData("İ\u0307\u0307ZMİR", "izmir")]
+    [InlineData("I\u0307ZMI\u0307R", "izmir")]
+    [InlineData("ı\u0307zmir", "izmir")]
+    [InlineData("İ\u0307ZMİR", "izmir")]
     public void ToLowerTr_uses_turkish_dotted_and_dotless_i(string input, string expected) =>
         Assert.Equal(expected, TurkishText.ToLowerTr(input));
 
@@ -85,14 +87,14 @@ public class TurkishTextTests
         Assert.Equal(expected, TurkishText.ToTitleTr(input));
 
     [Theory]
-    [InlineData("Şişli", "Şişli")]
-    [InlineData("Çankaya", "Çankaya")]
-    [InlineData("Ağri", "Ağri")]
-    [InlineData("i̇stanbul", "istanbul")]
-    [InlineData("İSTANBUL", "İSTANBUL")]
-    [InlineData("ı̇zmir", "izmir")]
-    [InlineData("Ka​dıköy", "Kadıköy")]
-    [InlineData("  a   b  ", "a b")]
+    [InlineData("S\u0327is\u0327li", "Şişli")]
+    [InlineData("C\u0327ankaya", "Çankaya")]
+    [InlineData("Ag\u0306ri", "Ağri")]
+    [InlineData("i\u0307stanbul", "istanbul")]
+    [InlineData("I\u0307STANBUL", "İSTANBUL")]
+    [InlineData("ı\u0307zmir", "izmir")]
+    [InlineData("Ka\u200Bdıköy", "Kadıköy")]
+    [InlineData("  a \u00A0 b  ", "a b")]
     [InlineData("Kadıköy’de", "Kadıköy'de")]
     [InlineData("Șișli", "Şişli")]
     [InlineData("Gazi–Mustafa", "Gazi-Mustafa")]

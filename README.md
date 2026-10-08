@@ -51,20 +51,30 @@ result.Corrections;            // diacritics, abbreviations, inferred postal cod
 `AdresTR.Text.TurkishText` — culture-independent Turkish text handling ([why it matters](docs/adr/0002-icu-independent-turkish-text.md)):
 
 ```csharp
-TurkishText.Fold("  KADIKÖY’de Şişli ");   // "kadikoy'de sisli"  (matching key)
+TurkishText.Fold("  KADIKÖY’de\u00A0Şişli ");   // "kadikoy'de sisli"  (matching key)
 TurkishText.ToUpperTr("istanbul");               // "İSTANBUL"
 TurkishText.ToTitleTr("ığdır");                  // "Iğdır"
-TurkishText.Normalize("i̇stanbul");          // "istanbul" (repairs JS/Python lowercasing of İ)
+TurkishText.Normalize("i\u0307stanbul");         // "istanbul" (repairs JS/Python lowercasing of İ)
 ```
 
 Results are identical with or without ICU and regardless of `CultureInfo.CurrentCulture`; CI verifies this.
+
+`AdresTR.Data` — the bundled gazetteer (81 il, 973 ilçe, 78,790 mahalle/köy/… units with postal codes, 18,816 aliases):
+
+```csharp
+var g = TurkishGazetteer.Default;                       // ~1.3 MB embedded, loaded once
+var kadikoy  = g.FindDistricts("KADIKOY", plaka: 34)[0].Entity;
+var caferaga = g.FindUnits("moda", kadikoy.Id)[0];      // semt alias → Caferağa Mahallesi
+caferaga.Entity.PostalCode;                             // "34710"
+g.FindProvinces("Urfa")[0].Entity.Name;                 // "Şanlıurfa"
+```
 
 ## Roadmap
 
 | Phase | Scope | Status |
 |---|---|---|
 | 0 | Repo, CI, ADRs | ✅ |
-| 1 | Gazetteer: il / ilçe / mahalle / postal codes, aliases, versioned binary format | 🔄 |
+| 1 | Gazetteer: il / ilçe / mahalle / postal codes, aliases, versioned binary format | ✅ (curation ongoing) |
 | 2 | Turkish text core | ✅ |
 | 3 | Benchmark: synthetic + real + challenge sets, metrics, baselines | ⏳ |
 | 4 | Parser MVP with confidence and corrections log | ⏳ |

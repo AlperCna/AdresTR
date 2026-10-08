@@ -33,7 +33,7 @@ Bu karmaşa e-ticaret ve kargo şirketlerine her gün maliyet çıkarıyor. Heps
 `AdresTR.Text.TurkishText`: kültürden bağımsız Türkçe metin işleme. "Türkçe I problemi" için [ADR-0002](docs/adr/0002-icu-independent-turkish-text.md)'ye bakın.
 
 ```csharp
-TurkishText.Fold("  KADIKÖY’de Şişli ");   // "kadikoy'de sisli"
+TurkishText.Fold("  KADIKÖY’de\u00A0Şişli ");   // "kadikoy'de sisli"
 TurkishText.ToUpperTr("istanbul");               // "İSTANBUL"
 TurkishText.ToTitleTr("ığdır");                  // "Iğdır"
 ```
