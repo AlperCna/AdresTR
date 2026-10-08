@@ -1,0 +1,422 @@
+@page "/"
+@using System.Diagnostics
+@using System.Globalization
+@using System.Text
+@using System.Text.Json
+@using System.Text.Json.Nodes
+@using AdresTR
+@using AdresTR.Data
+@inject IJSRuntime JS
+
+<PageTitle>AdresTR Playground</PageTitle>
+
+<section class="hero">
+    <h1>Türkçe adresleri ayrıştırın</h1>
+    <p>
+        Serbest metin adresi yazın: il, ilçe, mahalle, sokak, kapı ve daire numarası, posta kodu ayrılır;
+        resmi il/ilçe/mahalle kayıtlarına bağlanır ve yapılan her düzeltme açıklanır.
+    </p>
+</section>
+
+@if (_parser is null)
+{
+    <div class="card loading">AdresTR hazırlanıyor… (gazetteer yükleniyor)</div>
+}
+else
+{
+    <div class="tabs" role="tablist">
+        <button role="tab" class="@(_batch ? "" : "active")" aria-selected="@(!_batch)" @onclick="() => _batch = false">Tek adres</button>
+        <button role="tab" class="@(_batch ? "active" : "")" aria-selected="@_batch" @onclick="() => _batch = true">Toplu (satır satır)</button>
+        <span class="load-note">Hazır · gazetteer @_dataVersion · @_loadMs.ToString("0", CultureInfo.InvariantCulture) ms'de yüklendi</span>
+    </div>
+
+    @if (!_batch)
+    {
+        <div class="card">
+            <label for="address" class="label">Adres</label>
+            <textarea id="address" rows="2" spellcheck="false" placeholder="ör. kadikoy caferaga mh moda cd no:12 d3 istanbul"
+                      @bind="Input" @bind:event="oninput"></textarea>
+            <div class="examples">
+                <span class="muted">Örnekler:</span>
+                @foreach ((string label, string text) in Examples)
+                {
+                    <button class="chip" title="@text" @onclick="() => Input = text">@label</button>
+                }
+            </div>
+        </div>
+
+        @if (_result is { } r)
+        {
+            <div class="card">
+                <div class="highlight" aria-label="Bileşenleri işaretlenmiş adres">
+                    @foreach (Segment s in _segments)
+                    {
+                        if (s.Kind is null)
+                        {
+                            <span>@s.Text</span>
+                        }
+                        else
+                        {
+                            <mark class="c-@s.Kind" title="@KindLabel(s.Kind)">@s.Text<small>@KindLabel(s.Kind)</small></mark>
+                        }
+                    }
+                </div>
+
+                <div class="canonical">
+                    <span class="muted">Kanonik adres</span>
+                    <code>@r.ToCanonicalString()</code>
+                    <button class="ghost" @onclick="() => Copy(r.ToCanonicalString())">@(_copied ? "Kopyalandı ✓" : "Kopyala")</button>
+                </div>
+
+                <div class="confidence">
+                    <span class="muted">Güven</span>
+                    <div class="bar"><div style="width:@Pct(r.Confidence)"></div></div>
+                    <strong>@Pct(r.Confidence)</strong>
+                    <span class="muted">· @_parseMs.ToString("0.0", CultureInfo.InvariantCulture) ms</span>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="card">
+                    <h2>Bileşenler</h2>
+                    <table class="kv">
+                        @foreach ((string name, string kind, AddressComponent? c) in Components(r))
+                        {
+                            if (c is not null)
+                            {
+                                <tr>
+                                    <th><span class="dot c-@kind"></span>@name</th>
+                                    <td>
+                                        <strong>@c.Value</strong>
+                                        @if (!string.Equals(c.Value, c.Text, StringComparison.Ordinal))
+                                        {
+                                            <span class="muted"> · yazılan: “@c.Text”</span>
+                                        }
+                                    </td>
+                                </tr>
+                            }
+                        }
+                        @if (r.StreetType is { } type)
+                        {
+                            <tr><th><span class="dot c-street"></span>Yol türü</th><td>@StreetTypeLabel(type)</td></tr>
+                        }
+                    </table>
+                </div>
+
+                <div class="card">
+                    <h2>Çözümleme</h2>
+                    <table class="kv">
+                        <tr><th>İl</th><td>@(r.Province is { } p ? $"{p.Name} ({p.Plaka:D2})" : "—")</td></tr>
+                        <tr><th>İlçe</th><td>@(r.District?.Name ?? "—")</td></tr>
+                        <tr>
+                            <th>Mahalle / köy</th>
+                            <td>
+                                @if (r.Unit is { } u)
+                                {
+                                    <strong>@u.Name</strong> <span class="muted">(@UnitKindLabel(u.Kind), kimlik @u.Id)</span>
+                                    @if (u.PostalCode is not null)
+                                    {
+                                        <div class="muted">Posta kodu @u.PostalCode@(u.Semt is null ? "" : $" · PTT semt: {u.Semt}")</div>
+                                    }
+                                    @if (u.Location is { } loc)
+                                    {
+                                        <div><a href="@MapLink(loc)" target="_blank" rel="noopener">Haritada gör ↗</a></div>
+                                    }
+                                }
+                                else if (r.UnitCandidates.Count > 0)
+                                {
+                                    <span class="warn">Belirsiz: @r.UnitCandidates.Count aday</span>
+                                }
+                                else
+                                {
+                                    <span>—</span>
+                                }
+                            </td>
+                        </tr>
+                    </table>
+
+                    @if (r.Unit is null && r.UnitCandidates.Count > 1)
+                    {
+                        <p class="muted small">Metin tek bir mahalleyi belirlemiyor; AdresTR tahmin etmez, adayları sıralar:</p>
+                        <ol class="candidates">
+                            @foreach ((SettlementUnit unit, double score) in r.UnitCandidates.Take(8))
+                            {
+                                <li>@unit.Name <span class="muted">— @unit.District.Name/@unit.District.Province.Name</span></li>
+                            }
+                        </ol>
+                    }
+                </div>
+            </div>
+
+            @if (r.Corrections.Count > 0)
+            {
+                <div class="card">
+                    <h2>Düzeltmeler ve çıkarımlar</h2>
+                    <ul class="corrections">
+                        @foreach (Correction c in r.Corrections)
+                        {
+                            <li>
+                                <span class="badge">@CorrectionLabel(c.Kind)</span>
+                                @if (c.From is not null)
+                                {
+                                    <span>“@c.From” → </span>
+                                }
+                                <strong>@c.To</strong>
+                                <span class="muted">(@FieldLabel(c.Field))</span>
+                            </li>
+                        }
+                    </ul>
+                </div>
+            }
+
+            <details class="card">
+                <summary>JSON</summary>
+                <pre>@Json(r)</pre>
+            </details>
+        }
+    }
+    else
+    {
+        <div class="card">
+            <label for="batch" class="label">Her satıra bir adres (en fazla 500 satır)</label>
+            <textarea id="batch" rows="8" spellcheck="false" @bind="_batchInput"
+                      placeholder="kadikoy caferaga mh moda cd no:12&#10;ALSANCAK MAH. 1453 SK. NO:5/2 KONAK/İZMİR&#10;Moda, Kadıköy"></textarea>
+            <div class="row">
+                <button class="primary" @onclick="RunBatch">Ayrıştır</button>
+                @if (_batchRows.Count > 0)
+                {
+                    <button class="ghost" @onclick="DownloadCsv">CSV indir</button>
+                    <span class="muted">@_batchRows.Count adres · @_batchMs.ToString("0", CultureInfo.InvariantCulture) ms · @_batchRows.Count(x => x.Result.Unit is not null) tanesinde mahalle belirlendi</span>
+                }
+            </div>
+        </div>
+
+        @if (_batchRows.Count > 0)
+        {
+            <div class="card scroll">
+                <table class="results">
+                    <thead><tr><th>Girdi</th><th>Kanonik adres</th><th>Güven</th></tr></thead>
+                    <tbody>
+                        @foreach ((string input, ParseResult result) in _batchRows)
+                        {
+                            <tr class="@(result.Unit is null ? "check" : "")">
+                                <td>@input</td>
+                                <td>@result.ToCanonicalString()</td>
+                                <td>@Pct(result.Confidence)</td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        }
+    }
+
+    <p class="report muted small">
+        Yanlış mı ayrıştırdı? <a href="https://github.com/AlperCna/AdresTR/issues/new?template=wrong-parse.yml" target="_blank" rel="noopener">Bildirin</a>
+        (kişisel adres paylaşmayın; kapı numarasını değiştirin veya bir kurum adresi kullanın).
+    </p>
+}
+
+@code {
+    private static readonly (string Label, string Text)[] Examples =
+    [
+        ("ASCII + kısaltma", "kadikoy caferaga mh moda cd no:12 d3 istanbul"),
+        ("Numaralı sokak", "ALSANCAK MAH. 1453 SK. NO:5/2 KONAK/İZMİR"),
+        ("Semt", "Moda, Kadıköy"),
+        ("Eski köy adı", "Balaban Köyü Arnavutköy İstanbul"),
+        ("Belirsiz", "Cumhuriyet Mah. Atatürk Cad. No:5"),
+        ("Yapışık yazım", "CaferağaMah. ModaCad. No:12 Kadıköy"),
+        ("Yazım hatası", "Cafferağa Mah. Moda Cad. Kadıkkoy İstanbul"),
+        ("Site, blok, telefon", "Alsancak Mah. Güneş Sitesi B Blok K:2 D:7 Konak İzmir Tel: 0232 555 12 34"),
+        ("Kısa il adı", "Haliliye Urfa"),
+    ];
+
+    private AddressParser? _parser;
+    private string _dataVersion = "";
+    private double _loadMs;
+    private string _input = "";
+    private ParseResult? _result;
+    private List<Segment> _segments = [];
+    private double _parseMs;
+    private bool _copied;
+    private bool _batch;
+    private string _batchInput = "";
+    private List<(string Input, ParseResult Result)> _batchRows = [];
+    private double _batchMs;
+
+    private string Input
+    {
+        get => _input;
+        set
+        {
+            _input = value;
+            _copied = false;
+            Parse();
+        }
+    }
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Task.Yield(); // let the page render before the gazetteer loads
+        var stopwatch = Stopwatch.StartNew();
+        _parser = TurkishGazetteer.Parser;
+        _parser.Parse("Caferağa Mah. Kadıköy");
+        _loadMs = stopwatch.Elapsed.TotalMilliseconds;
+        _dataVersion = TurkishGazetteer.Default.DataVersion;
+        Input = Examples[0].Text;
+    }
+
+    private void Parse()
+    {
+        if (_parser is null || string.IsNullOrWhiteSpace(_input))
+        {
+            _result = null;
+            return;
+        }
+
+        var stopwatch = Stopwatch.StartNew();
+        _result = _parser.Parse(_input);
+        _parseMs = stopwatch.Elapsed.TotalMilliseconds;
+        _segments = Segments(_result);
+    }
+
+    private void RunBatch()
+    {
+        if (_parser is null)
+        {
+            return;
+        }
+
+        var stopwatch = Stopwatch.StartNew();
+        _batchRows = [.. _batchInput.Split('\n').Select(l => l.Trim()).Where(l => l.Length > 0).Take(500).Select(l => (l, _parser.Parse(l)))];
+        _batchMs = stopwatch.Elapsed.TotalMilliseconds;
+    }
+
+    private async Task DownloadCsv()
+    {
+        var sb = new StringBuilder("girdi,il,ilce,mahalle,posta_kodu,birim_id,adres_kanonik,guven\n");
+        foreach ((string input, ParseResult r) in _batchRows)
+        {
+            sb.AppendJoin(',', new[]
+            {
+                input, r.Province?.Name ?? "", r.District?.Name ?? "", r.Unit?.Name ?? r.Mahalle?.Value ?? "",
+                r.PostalCode?.Value ?? r.Unit?.PostalCode ?? "", r.Unit?.Id.ToString(CultureInfo.InvariantCulture) ?? "",
+                r.ToCanonicalString(), r.Confidence.ToString("0.00", CultureInfo.InvariantCulture),
+            }.Select(Csv)).Append('\n');
+        }
+
+        await JS.InvokeVoidAsync("adrestr.download", "adrestr.csv", sb.ToString());
+
+        static string Csv(string f) => f.AsSpan().IndexOfAny(",\"\n") >= 0 ? $"\"{f.Replace("\"", "\"\"", StringComparison.Ordinal)}\"" : f;
+    }
+
+    private async Task Copy(string text)
+    {
+        await JS.InvokeVoidAsync("adrestr.copy", text);
+        _copied = true;
+    }
+
+    private static IEnumerable<(string Name, string Kind, AddressComponent? Component)> Components(ParseResult r) =>
+    [
+        ("İl", "il", r.Il), ("İlçe", "ilce", r.Ilce), ("Mahalle / köy", "mahalle", r.Mahalle), ("Semt", "semt", r.Semt),
+        ("Cadde / sokak", "street", r.Street), ("Site / bina", "site", r.Site), ("Blok", "blok", r.Blok),
+        ("Kapı no", "door", r.DoorNumber), ("Kat", "floor", r.Floor), ("Daire", "flat", r.Flat),
+        ("Posta kodu", "postal", r.PostalCode), ("Tarif", "landmark", r.Landmark),
+    ];
+
+    private static List<Segment> Segments(ParseResult r)
+    {
+        var spans = Components(r).Where(c => c.Component is not null)
+            .Select(c => (c.Component!.Start, c.Component.End, c.Kind)).OrderBy(s => s.Start).ToList();
+        var segments = new List<Segment>();
+        int position = 0;
+        string input = r.Input;
+        foreach ((int start, int end, string kind) in spans)
+        {
+            if (start < position || end > input.Length)
+            {
+                continue;
+            }
+
+            if (start > position)
+            {
+                segments.Add(new Segment(input[position..start], null));
+            }
+
+            segments.Add(new Segment(input[start..end], kind));
+            position = end;
+        }
+
+        if (position < input.Length)
+        {
+            segments.Add(new Segment(input[position..], null));
+        }
+
+        return segments;
+    }
+
+    private static string Json(ParseResult r)
+    {
+        JsonObject Component(AddressComponent? c) => c is null ? null! : new JsonObject { ["value"] = c.Value, ["text"] = c.Text, ["start"] = c.Start, ["end"] = c.End };
+        var json = new JsonObject
+        {
+            ["input"] = r.Input,
+            ["canonical"] = r.ToCanonicalString(),
+            ["confidence"] = r.Confidence,
+            ["components"] = new JsonObject
+            {
+                ["il"] = Component(r.Il), ["ilce"] = Component(r.Ilce), ["mahalle"] = Component(r.Mahalle), ["semt"] = Component(r.Semt),
+                ["street"] = Component(r.Street), ["streetType"] = r.StreetType?.ToString(), ["site"] = Component(r.Site), ["blok"] = Component(r.Blok),
+                ["doorNumber"] = Component(r.DoorNumber), ["floor"] = Component(r.Floor), ["flat"] = Component(r.Flat),
+                ["postalCode"] = Component(r.PostalCode), ["landmark"] = Component(r.Landmark),
+            },
+            ["resolved"] = new JsonObject
+            {
+                ["il"] = r.Province is null ? null : new JsonObject { ["plaka"] = r.Province.Plaka, ["name"] = r.Province.Name },
+                ["ilce"] = r.District is null ? null : new JsonObject { ["id"] = r.District.Id, ["name"] = r.District.Name },
+                ["birim"] = r.Unit is null ? null : new JsonObject { ["id"] = r.Unit.Id, ["name"] = r.Unit.Name, ["kind"] = r.Unit.Kind.ToString(), ["postalCode"] = r.Unit.PostalCode },
+            },
+            ["corrections"] = new JsonArray([.. r.Corrections.Select(c => (JsonNode)new JsonObject { ["kind"] = c.Kind.ToString(), ["field"] = c.Field, ["from"] = c.From, ["to"] = c.To })]),
+        };
+
+        return json.ToJsonString(new JsonSerializerOptions { WriteIndented = true, Encoder = System.Text.Encodings.Web.JavaScriptEncoder.UnsafeRelaxedJsonEscaping });
+    }
+
+    private static string Pct(double x) => (100 * x).ToString("0", CultureInfo.InvariantCulture) + "%";
+
+    private static string MapLink(GeoPoint p) =>
+        string.Create(CultureInfo.InvariantCulture, $"https://www.openstreetmap.org/?mlat={p.Latitude}&mlon={p.Longitude}#map=15/{p.Latitude}/{p.Longitude}");
+
+    private static string KindLabel(string? kind) => kind switch
+    {
+        "il" => "il", "ilce" => "ilçe", "mahalle" => "mahalle", "semt" => "semt", "street" => "cadde/sokak", "site" => "site",
+        "blok" => "blok", "door" => "kapı no", "floor" => "kat", "flat" => "daire", "postal" => "posta kodu", "landmark" => "tarif", _ => "",
+    };
+
+    private static string StreetTypeLabel(StreetType t) => t switch
+    {
+        StreetType.Cadde => "Cadde", StreetType.Sokak => "Sokak", StreetType.Bulvar => "Bulvar", StreetType.Yol => "Yol",
+        StreetType.Meydan => "Meydan", StreetType.Cikmaz => "Çıkmaz", StreetType.KumeEvler => "Küme evler", _ => t.ToString(),
+    };
+
+    private static string UnitKindLabel(UnitKind k) => k switch
+    {
+        UnitKind.Mahalle => "mahalle", UnitKind.Koy => "köy", UnitKind.Belde => "belde", UnitKind.Mezra => "mezra", UnitKind.Mevki => "mevkii",
+        UnitKind.Yayla => "yayla", UnitKind.KumeEvler => "küme evler", UnitKind.Osb => "OSB", UnitKind.Site => "site", _ => "diğer",
+    };
+
+    private static string CorrectionLabel(CorrectionKind k) => k switch
+    {
+        CorrectionKind.Diacritics => "Türkçe karakter", CorrectionKind.Typo => "Yazım hatası", CorrectionKind.Semt => "Semt",
+        CorrectionKind.HistoricName => "Eski ad", CorrectionKind.Alias => "Kısa ad", CorrectionKind.Split => "Ayrıştırma",
+        CorrectionKind.Inferred => "Çıkarım", CorrectionKind.PostalCodeConflict => "Posta kodu çelişkisi", CorrectionKind.Duplicate => "Tekrar",
+        _ => k.ToString(),
+    };
+
+    private static string FieldLabel(string field) => field switch
+    {
+        "il" => "il", "ilce" => "ilçe", "mahalle" => "mahalle", "posta_kodu" => "posta kodu", _ => field,
+    };
+
+    private sealed record Segment(string Text, string? Kind);
+}

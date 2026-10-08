@@ -5,11 +5,11 @@ internal sealed class ParserIndex
 {
     public ParserIndex(Gazetteer gazetteer)
     {
-        Provinces = [.. gazetteer.Provinces.Select(p => (AdresTR.Gazetteer.Key(p.Name), p))];
-        Districts = [.. gazetteer.Districts.Select(d => (AdresTR.Gazetteer.Key(d.Name), d))];
+        Provinces = [.. gazetteer.Provinces.Select(p => (p.Key, p))];
+        Districts = [.. gazetteer.Districts.Select(d => (d.Key, d))];
         UnitsByDistrict = gazetteer.Districts.ToDictionary(
             d => d.Id,
-            d => d.Units.Select(u => (AdresTR.Gazetteer.Key(u.Name), u)).ToArray());
+            d => d.Units.Select(u => (u.Key, u)).ToArray());
         UnitsByProvince = gazetteer.Provinces.ToDictionary(
             p => p.Plaka,
             p => p.Districts.SelectMany(d => UnitsByDistrict[d.Id]).ToArray());

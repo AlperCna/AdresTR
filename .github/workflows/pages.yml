@@ -1,0 +1,67 @@
+name: Pages
+
+# Publishes the in-browser playground (Blazor WebAssembly, AOT-compiled) to https://alpercna.github.io/AdresTR/.
+# The parser runs entirely in the visitor's browser: addresses never leave the device (ADR-0009).
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "web/**"
+      - "src/AdresTR/**"
+      - "src/AdresTR.Data/**"
+      - ".github/workflows/pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: global.json
+
+      # AOT makes the gazetteer load and parsing many times faster than the WebAssembly interpreter.
+      - run: dotnet workload install wasm-tools
+
+      - name: Publish playground
+        run: dotnet publish web/AdresTR.Playground/AdresTR.Playground.csproj -c Release -o out -p:RunAOTCompilation=true
+
+      - name: Prepare for GitHub Pages (project site under /AdresTR/)
+        run: |
+          sed -i 's#<base href="/" />#<base href="/AdresTR/" />#' out/wwwroot/index.html
+          cp out/wwwroot/index.html out/wwwroot/404.html
+          touch out/wwwroot/.nojekyll
+          du -sh out/wwwroot out/wwwroot/_framework
+
+      - uses: actions/configure-pages@v6
+
+      - uses: actions/upload-pages-artifact@v5
+        with:
+          path: out/wwwroot
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v5

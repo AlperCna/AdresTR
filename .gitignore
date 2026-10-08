@@ -488,3 +488,6 @@ data/raw/
 BenchmarkDotNet.Artifacts/
 # Verify received files
 *.received.*
+
+# Local Claude Code preview settings
+.claude/

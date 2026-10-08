@@ -9,6 +9,11 @@ All notable changes to this project are documented here. The format follows
 - REST API (Faz 6): `/v1/parse`, `/v1/parse/batch`, `/v1/parse/csv`, `/v1/validate`, reference and autocomplete
   endpoints; per-IP rate limiting, output caching, CORS, validation, privacy notice, OpenAPI + Scalar.
 - Multi-arch, non-root chiseled container published to GHCR on every release; deployment guide (`docs/deploy.md`).
+- In-browser playground (Faz 7, Blazor WebAssembly AOT on GitHub Pages): live highlighting, resolution, corrections,
+  candidates, JSON and batch mode with CSV download; addresses never leave the device.
+
+### Changed
+- Gazetteer loads about 2× faster: payload inflated in one pass, name keys computed once, plain dictionaries.
 
 ## [0.1.0-preview.1] - 2026-10-08
 
