@@ -121,27 +121,32 @@ button.ghost { background: transparent; }
 .load-note { margin-left: auto; color: var(--muted); font-size: .8rem; }
 
 .highlight {
-    font: 1.1rem/2.6 ui-monospace, SFMono-Regular, Consolas, monospace;
-    word-break: break-word;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    row-gap: .6rem;
+    font: 1.1rem/1.4 ui-monospace, SFMono-Regular, Consolas, monospace;
     padding: .25rem 0 .5rem;
 }
 
+.highlight > span { white-space: pre; padding: .1rem 0; }
+
 .highlight mark {
-    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    white-space: pre;
     background: color-mix(in srgb, var(--k) 16%, transparent);
     border-bottom: 2px solid var(--k);
     color: inherit;
     border-radius: 4px;
-    padding: .1rem .15rem;
+    padding: .1rem .2rem 0;
 }
 
 .highlight mark small {
-    position: absolute;
-    left: 0;
-    top: 1.55em;
-    font: 600 .62rem/1 system-ui, sans-serif;
+    margin: .2rem 0 .15rem;
+    font: 600 .6rem/1 system-ui, sans-serif;
     color: var(--k);
-    white-space: nowrap;
     text-transform: uppercase;
     letter-spacing: .02em;
 }

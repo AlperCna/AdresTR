@@ -2,6 +2,8 @@
 
 **Türkçe serbest metin adresleri ayrıştıran, normalize eden ve doğrulayan .NET kütüphanesi.** → [English README](README.md)
 
+**▶ [Tarayıcıda deneyin](https://alpercna.github.io/AdresTR/)**: ayrıştırma tamamen tarayıcınızda (WebAssembly) çalışır, adres hiçbir yere gönderilmez.
+
 > 🚧 **Önizleme sürümü.** 1.0'dan önce API'ler değişebilir. Yol haritası ve arkasındaki araştırma açık: [plan](docs/plan/PLAN.md) · [araştırma](docs/plan/ARASTIRMA.md) · [kararlar (ADR)](docs/adr/).
 
 ## Neden?
