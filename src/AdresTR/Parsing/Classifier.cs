@@ -298,7 +298,7 @@ internal sealed class Classifier(Gazetteer gazetteer, string text, IReadOnlyList
         foreach (IGrouping<(AliasKind?, string?), GazetteerMatch<SettlementUnit>> group in matches.GroupBy(m => (m.Alias?.Kind, m.Alias?.Name)))
         {
             AliasKind? aliasKind = group.Key.Item1;
-            bool osbName = group.All(m => m.Entity.Kind == UnitKind.Osb);
+            bool osbName = group.All(m => m.Entity.Kind is UnitKind.Osb or UnitKind.Site);
             bool supported = unitKeyword || extendTo > 0 || osbName;
             double local = (aliasKind, supported) switch
             {
@@ -386,6 +386,16 @@ internal sealed class Classifier(Gazetteer gazetteer, string text, IReadOnlyList
 
     private void Street(int i)
     {
+        // "Küme Evler" / "Küme Evleri" on its own is a street-level type without a name.
+        if (Lexicon.At(tokens, i) is (Keyword.KumeEvler, int kumeLength) && Contiguous(i, i + kumeLength))
+        {
+            Add(new Hyp
+            {
+                From = i, To = i + kumeLength, Role = Role.Street, Local = 0.8, Value = string.Empty,
+                TextStart = tokens[i].Start, TextEnd = tokens[i].Start, StreetType = AdresTR.StreetType.KumeEvler, KeywordSupported = true,
+            });
+        }
+
         if (!IsNameToken(i) || tokens[i].Noise)
         {
             return;

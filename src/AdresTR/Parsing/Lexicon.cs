@@ -84,7 +84,7 @@ internal static class Lexicon
         // ("altı", "arası", "içi", "önü" are left out: they are also parts of place and street names.)
         ["karsisi"] = Keyword.Landmark, ["yani"] = Keyword.Landmark, ["arkasi"] = Keyword.Landmark, ["bitisigi"] = Keyword.Landmark,
         ["ustu"] = Keyword.Landmark, ["civari"] = Keyword.Landmark, ["yakini"] = Keyword.Landmark, ["kosesi"] = Keyword.Landmark,
-        ["girisi"] = Keyword.Landmark,
+        ["girisi"] = Keyword.Landmark, ["krs"] = Keyword.Landmark, ["krsi"] = Keyword.Landmark,
 
         // phone labels
         ["tel"] = Keyword.Phone, ["telefon"] = Keyword.Phone, ["gsm"] = Keyword.Phone, ["cep"] = Keyword.Phone,

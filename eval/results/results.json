@@ -962,12 +962,12 @@
       0.9458,
       0.9683
     ],
-    "micro_f1": 0.9915,
+    "micro_f1": 0.9916,
     "micro_f1_ci": [
-      0.989,
+      0.9891,
       0.994
     ],
-    "macro_f1": 0.7722,
+    "macro_f1": 0.7723,
     "il_accuracy": 0.9948,
     "ilce_accuracy": 0.9948,
     "birim_accuracy": 1,
@@ -1010,9 +1010,9 @@
         "support": 1009
       },
       "csbm_ad": {
-        "precision": 0.9881,
+        "precision": 0.9891,
         "recall": 0.9748,
-        "f1": 0.9814,
+        "f1": 0.9819,
         "support": 1137
       },
       "site": {
@@ -1275,17 +1275,17 @@
     "system": "adrestr",
     "set": "challenge-dev",
     "n": 83,
-    "exact_match": 0.9398,
+    "exact_match": 0.9639,
     "exact_match_ci": [
-      0.8795,
-      0.988
+      0.9157,
+      1
     ],
-    "micro_f1": 0.9855,
+    "micro_f1": 0.9895,
     "micro_f1_ci": [
-      0.9687,
-      0.9975
+      0.9735,
+      1
     ],
-    "macro_f1": 0.9309,
+    "macro_f1": 0.9477,
     "il_accuracy": 1,
     "ilce_accuracy": 1,
     "birim_accuracy": 0.9865,
@@ -1295,7 +1295,7 @@
     ],
     "birim_at5": 1,
     "birim_mrr": 0.9932,
-    "ece": 0.0599,
+    "ece": 0.032,
     "fields": {
       "il": {
         "precision": 1,
@@ -1322,15 +1322,15 @@
         "support": 83
       },
       "csbm_tur": {
-        "precision": 0.9767,
-        "recall": 0.9767,
-        "f1": 0.9767,
+        "precision": 0.9773,
+        "recall": 1,
+        "f1": 0.9885,
         "support": 83
       },
       "csbm_ad": {
-        "precision": 0.9545,
+        "precision": 0.9767,
         "recall": 1,
-        "f1": 0.9767,
+        "f1": 0.9882,
         "support": 83
       },
       "site": {
@@ -1370,9 +1370,9 @@
         "support": 83
       },
       "tarif": {
-        "precision": 0.6667,
-        "recall": 0.5,
-        "f1": 0.5714,
+        "precision": 0.75,
+        "recall": 0.75,
+        "f1": 0.75,
         "support": 83
       }
     }
