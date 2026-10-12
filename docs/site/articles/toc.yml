@@ -1,0 +1,16 @@
+- name: Getting started
+  href: getting-started.md
+- name: Parsing
+  href: parsing.md
+- name: Matching and duplicates
+  href: matching.md
+- name: Gazetteer and data licenses
+  href: gazetteer.md
+- name: REST API and self-hosting
+  href: rest-api.md
+- name: ASP.NET Core and FluentValidation
+  href: integrations.md
+- name: Benchmark
+  href: benchmark.md
+- name: Privacy (KVKK)
+  href: privacy.md

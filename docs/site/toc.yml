@@ -1,0 +1,8 @@
+- name: Guide
+  href: articles/
+- name: API reference
+  href: api/
+- name: Playground
+  href: https://alpercna.github.io/AdresTR/
+- name: GitHub
+  href: https://github.com/AlperCna/AdresTR

@@ -6,6 +6,7 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- Documentation site (DocFX) at /docs/: guide, API reference, REST/self-hosting, integrations, benchmark, privacy.
 - API clients: `clients/python` (`adrestr-client`, sync + async, httpx) and `clients/typescript` (`@adrestr/client`, fetch, zero
   dependencies) covering parse/trace, batch, CSV, validate, match, dedupe, reference data and autocomplete; tested in CI.
 - `AdresTR.AspNetCore` (`AddAdresTR()`, `[TurkishAddress]` validation attribute) and `AdresTR.FluentValidation`

@@ -10,6 +10,10 @@ on:
       - "web/**"
       - "src/AdresTR/**"
       - "src/AdresTR.Data/**"
+      - "src/AdresTR.AspNetCore/**"
+      - "src/AdresTR.FluentValidation/**"
+      - "docs/site/**"
+      - "dotnet-tools.json"
       - ".github/workflows/pages.yml"
   workflow_dispatch:
 
@@ -39,6 +43,13 @@ jobs:
 
       - name: Publish playground
         run: dotnet publish web/AdresTR.Playground/AdresTR.Playground.csproj -c Release -o out -p:RunAOTCompilation=true
+
+      - name: Build documentation site (DocFX)
+        run: |
+          dotnet tool restore
+          dotnet docfx docs/site/docfx.json
+          mkdir -p out/wwwroot/docs
+          cp -r docs/site/_site/* out/wwwroot/docs/
 
       - name: Prepare for GitHub Pages (project site under /AdresTR/)
         run: |

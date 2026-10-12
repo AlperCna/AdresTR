@@ -1,0 +1,35 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": "../../src",
+          "files": [
+            "AdresTR/AdresTR.csproj",
+            "AdresTR.Data/AdresTR.Data.csproj",
+            "AdresTR.AspNetCore/AdresTR.AspNetCore.csproj",
+            "AdresTR.FluentValidation/AdresTR.FluentValidation.csproj"
+          ]
+        }
+      ],
+      "dest": "api",
+      "properties": { "Configuration": "Release" }
+    }
+  ],
+  "build": {
+    "content": [
+      { "files": ["api/**.yml", "api/index.md"] },
+      { "files": ["articles/**.md", "articles/**/toc.yml", "toc.yml", "index.md"] }
+    ],
+    "resource": [{ "files": ["images/**"] }],
+    "output": "_site",
+    "globalMetadata": {
+      "_appTitle": "AdresTR",
+      "_appName": "AdresTR",
+      "_appFooter": "<span>AdresTR · MIT · <a href='https://github.com/AlperCna/AdresTR'>GitHub</a> · <a href='https://alpercna.github.io/AdresTR/'>Playground</a></span>",
+      "_enableSearch": true,
+      "_disableContribution": true
+    },
+    "template": ["default", "modern"]
+  }
+}

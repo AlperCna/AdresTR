@@ -500,3 +500,8 @@ clients/python/dist/
 .pytest_cache/
 clients/typescript/node_modules/
 clients/typescript/dist/
+
+# DocFX output
+docs/site/_site/
+docs/site/api/*.yml
+docs/site/api/.manifest
