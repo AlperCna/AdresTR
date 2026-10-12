@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>true</IsPackable>
+    <PackageId>AdresTR.Streets</PackageId>
+    <Description>Optional street names per ilçe for AdresTR, derived from OpenStreetMap (ODbL). Lets the parser verify streets and fix street typos.</Description>
+    <!-- This package contains OpenStreetMap data: ODbL 1.0 (share-alike + attribution), not MIT. -->
+    <PackageLicenseExpression>ODbL-1.0</PackageLicenseExpression>
+    <Copyright>Code (c) 2026 Alper Can (MIT); street data (c) OpenStreetMap contributors (ODbL 1.0)</Copyright>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MinVer" PrivateAssets="all" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="../AdresTR.Data/AdresTR.Data.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <!-- Produced by data/scripts/build_osm_streets.py -->
+    <EmbeddedResource Include="../../data/osm/streets.csv.gz" LogicalName="AdresTR.Streets.streets.csv.gz" />
+    <None Include="README.md" Pack="true" PackagePath="/" />
+    <None Include="../../data/osm/LICENSE.md" Pack="true" PackagePath="/" />
+    <None Include="../../data/osm/SOURCES.json" Pack="true" PackagePath="/" />
+  </ItemGroup>
+
+</Project>

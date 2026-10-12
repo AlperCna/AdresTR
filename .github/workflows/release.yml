@@ -56,6 +56,7 @@ jobs:
           dotnet pack src/AdresTR.Data/AdresTR.Data.csproj -c Release --no-build -o artifacts
           dotnet pack src/AdresTR.AspNetCore/AdresTR.AspNetCore.csproj -c Release --no-build -o artifacts
           dotnet pack src/AdresTR.FluentValidation/AdresTR.FluentValidation.csproj -c Release --no-build -o artifacts
+          dotnet pack src/AdresTR.Streets/AdresTR.Streets.csproj -c Release --no-build -o artifacts
 
       - name: Packages carry the tag's version
         env:
@@ -67,6 +68,7 @@ jobs:
           test -f "artifacts/AdresTR.Data.${VERSION}.nupkg"
           test -f "artifacts/AdresTR.AspNetCore.${VERSION}.nupkg"
           test -f "artifacts/AdresTR.FluentValidation.${VERSION}.nupkg"
+          test -f "artifacts/AdresTR.Streets.${VERSION}.nupkg"
 
       - uses: actions/upload-artifact@v7
         with:

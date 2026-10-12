@@ -20,17 +20,30 @@ public sealed class AddressParser
     internal const double DefaultTemperature = 0.08;
 
     private readonly Gazetteer _gazetteer;
+    private readonly StreetIndex? _streets;
 
     internal double Temperature { get; }
 
     /// <summary>Creates a parser over the given gazetteer (e.g. <c>TurkishGazetteer.Default</c> from AdresTR.Data).</summary>
     public AddressParser(Gazetteer gazetteer)
-        : this(gazetteer, DefaultTemperature)
+        : this(gazetteer, DefaultTemperature, null)
+    {
+    }
+
+    /// <summary>Creates a parser that also verifies and spell-corrects street names against <paramref name="streets"/>.</summary>
+    public AddressParser(Gazetteer gazetteer, StreetIndex? streets)
+        : this(gazetteer, DefaultTemperature, streets)
     {
     }
 
     internal AddressParser(Gazetteer gazetteer, double temperature)
+        : this(gazetteer, temperature, null)
     {
+    }
+
+    private AddressParser(Gazetteer gazetteer, double temperature, StreetIndex? streets)
+    {
+        _streets = streets;
         Temperature = temperature;
         ArgumentNullException.ThrowIfNull(gazetteer);
         _gazetteer = gazetteer;
@@ -468,7 +481,25 @@ public sealed class AddressParser
             corrections.Add(new Correction(CorrectionKind.PostalCodeConflict, "posta_kodu", best.Postal.Value, best.Province?.Name ?? string.Empty));
         }
 
+        VerifyStreet(result, corrections);
         result.Corrections = corrections;
+    }
+
+    /// <summary>With a street index: confirms the street exists in the ilçe, or corrects a typo of an existing one.</summary>
+    private void VerifyStreet(ParseResult result, List<Correction> corrections)
+    {
+        if (_streets is null || result.Street is not { } street || result.District is not { } district || street.Value.Length < 2)
+        {
+            return;
+        }
+
+        string? name = _streets.Find(district.Id, street.Value, out bool corrected);
+        result.StreetVerified = name is not null;
+        if (name is not null && corrected)
+        {
+            corrections.Add(new Correction(CorrectionKind.Typo, "street", street.Text, name));
+            result.Street = street with { Value = name };
+        }
     }
 
     /// <summary>What a resolution outputs: component values and resolved ids (paths differing only internally are equal).</summary>

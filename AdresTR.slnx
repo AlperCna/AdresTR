@@ -11,6 +11,7 @@
     <Project Path="src/AdresTR.AspNetCore/AdresTR.AspNetCore.csproj" />
     <Project Path="src/AdresTR.Data/AdresTR.Data.csproj" />
     <Project Path="src/AdresTR.FluentValidation/AdresTR.FluentValidation.csproj" />
+    <Project Path="src/AdresTR.Streets/AdresTR.Streets.csproj" />
     <Project Path="src/AdresTR/AdresTR.csproj" />
   </Folder>
   <Folder Name="/tests/">

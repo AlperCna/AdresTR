@@ -5,6 +5,10 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+- `AdresTR.Streets` (ODbL, separate package): 248,712 street names for 968 of 973 ilçe from OpenStreetMap; `StreetIndex` in the core
+  lets `AddressParser` verify streets (`StreetVerified`) and fix street typos. `OsmStreets.Parser` for a ready-made instance.
+
 ## [0.1.0-preview.3] - 2026-10-12
 
 ### Added

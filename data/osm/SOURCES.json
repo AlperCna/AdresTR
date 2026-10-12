@@ -1,0 +1,10 @@
+{
+  "source": "https://download.geofabrik.de/europe/turkey-latest.osm.pbf",
+  "sha256": "c064255eeacd0b3322bb7ffb71295f7894985e6e32c648ac58e361f574fb66e8",
+  "license": "ODbL-1.0",
+  "attribution": "\u00a9 OpenStreetMap contributors",
+  "ilce_matched": 968,
+  "ilce_total": 973,
+  "streets": 248712,
+  "unmatched_polygons": 9
+}

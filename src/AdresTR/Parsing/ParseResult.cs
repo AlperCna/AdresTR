@@ -99,6 +99,13 @@ public sealed class ParseResult
     /// <summary>Street name without the type word ("Moda", "1203/5").</summary>
     public AddressComponent? Street { get; internal set; }
 
+    /// <summary>
+    /// <see langword="true"/> when the street exists in the ilçe according to the <see cref="StreetIndex"/>,
+    /// <see langword="false"/> when it does not (OpenStreetMap data is incomplete: a hint, not proof),
+    /// <see langword="null"/> when no street index is configured or the ilçe is unknown.
+    /// </summary>
+    public bool? StreetVerified { get; internal set; }
+
     /// <summary>Site or building name without the type word.</summary>
     public AddressComponent? Site { get; internal set; }
 

@@ -75,6 +75,7 @@ jobs:
       - run: dotnet pack src/AdresTR.Data/AdresTR.Data.csproj -c Release -o ./artifacts
       - run: dotnet pack src/AdresTR.AspNetCore/AdresTR.AspNetCore.csproj -c Release -o ./artifacts
       - run: dotnet pack src/AdresTR.FluentValidation/AdresTR.FluentValidation.csproj -c Release -o ./artifacts
+      - run: dotnet pack src/AdresTR.Streets/AdresTR.Streets.csproj -c Release -o ./artifacts
       - name: API container image builds
         run: dotnet publish src/AdresTR.Api/AdresTR.Api.csproj -c Release -t:PublishContainer -p:ContainerRuntimeIdentifiers=linux-x64 -p:ContainerArchiveOutputPath=${{ runner.temp }}/adrestr-api.tar.gz
       - uses: actions/upload-artifact@v7

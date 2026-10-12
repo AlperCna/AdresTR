@@ -13,7 +13,8 @@ artifacts, if any, are published as separate packages under ODbL.
 | il / ilçe boundaries | [HDX COD-AB-TUR](https://data.humdata.org/dataset/cod-ab-tur) (Harita Genel Müdürlüğü) | CC BY-IGO | not used yet |
 | Curated semt and name aliases | `data/curated/` (community-maintained) | CC0 1.0 | ✅ started |
 
-Street (cadde/sokak) data is **not** bundled. See `docs/adr/0004-no-bundled-street-data.md`.
+Street names are available only in the separate **AdresTR.Streets** package (`data/osm`, OpenStreetMap, ODbL 1.0, see `data/osm/LICENSE.md`);
+they are **not** part of `AdresTR` or `AdresTR.Data`. See `docs/adr/0004-no-bundled-street-data.md`.
 
 The exact input files, their SHA-256 hashes and snapshot dates are listed in `data/staging/SOURCES.json`.
 This table is updated whenever a data snapshot is published. Each binary gazetteer embeds the
