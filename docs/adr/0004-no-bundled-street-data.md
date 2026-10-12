@@ -14,3 +14,10 @@ user-supplied file can enable street validation.
 
 ## Consequences
 Clean licensing; street names are not spell-corrected against a gazetteer in v1.
+
+## Update (2026-10-12)
+
+Street names now ship as an **optional, separate package** `AdresTR.Streets` (OpenStreetMap, ODbL 1.0, 248,712 streets for 968
+ilçe). The core `AdresTR` and `AdresTR.Data` packages still contain no street data; the parser only uses a `StreetIndex` when one
+is passed in, to verify streets and fix street typos. OSM coverage is partial, so `StreetVerified == false` is a hint.
+

@@ -5,6 +5,12 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+- Launch material (`docs/launch`), Hugging Face dataset card (`eval/huggingface`), clients release workflow.
+
+### Changed
+- Parser: bare "Küme Evler" street type, "Krş." landmark, units named like a site; ADR-0004 updated for AdresTR.Streets.
+
 ## [0.1.0-preview.4] - 2026-10-12
 
 ### Added

@@ -116,12 +116,12 @@ Documentation: <https://alpercna.github.io/AdresTR/docs/>. API clients: [Python]
 | 5 | NuGet v0.1 (`0.1.0-preview.1`) | ✅ |
 | 6 | REST API + Docker ([deploy guide](docs/deploy.md)) | ✅ |
 | 7 | [In-browser playground](https://alpercna.github.io/AdresTR/) | ✅ |
-| 8 | Docs, Hugging Face dataset, v1.0 | ⏳ |
+| 8 | Docs ✅, launch material ([blog, posts](docs/launch/announcements.md)) ✅, Hugging Face dataset (card ready), v1.0 | 🔄 |
 
 ## Data & licensing
 
 Code: [MIT](LICENSE). Data is licensed per source; see [data/LICENSE-DATA.md](data/LICENSE-DATA.md).
-Street data is not bundled ([ADR-0004](docs/adr/0004-no-bundled-street-data.md)).
+Street names are only in the optional `AdresTR.Streets` package (OpenStreetMap, ODbL; [ADR-0004](docs/adr/0004-no-bundled-street-data.md)).
 
 ## Privacy
 

@@ -588,3 +588,12 @@ Ayrıntılar `docs/research/` altındaki raporlarda.
 - [ ] ML (ONNX): araştırmadaki tetikleyiciler sağlanmadıkça ertelendi (gerçek test %95,8)
 - [ ] GHCR imajını herkese açmak (kullanıcı: Packages → adrestr-api → Change visibility)
 
+### Durum (2026-10-12)
+
+- [x] Eşleştirme (`AddressMatcher`, `/v1/match`, `/v1/dedupe`), izleme API'si, demo yenilemesi, ASP.NET Core ve FluentValidation paketleri
+- [x] Python ve TypeScript istemcileri (yayın: kullanıcı hesapları gerekir, `clients-release.yml` hazır)
+- [x] DocFX sitesi, sokak verisi paketi (`AdresTR.Streets`, ODbL), semt eşlemeleri (az, kaynaklı)
+- [x] Faz 8 materyalleri: `docs/launch/` (blog TR/EN, duyurular, kontrol listesi), Hugging Face veri seti kartı (`eval/huggingface/README.md`)
+- [ ] Kullanıcıya bağlı: GHCR görünürlüğü, PyPI/npm hesapları ve gizli anahtar, Hugging Face yükleme, izin e-postaları, duyurular
+- [ ] ML (ONNX): tetikleyiciler sağlanmadığı için ertelendi
+
