@@ -896,6 +896,7 @@ birim,6070006,Alacaatlı Köyü,tarihsel,wikidata-6360
 birim,6070022,Beytepe Köyü,tarihsel,wikidata-6360
 birim,6070022,Bilkent,semt,ptt-semt
 birim,6070028,Çavuşlu Köyü,tarihsel,wikidata-6360
+birim,6070029,Beysukent,semt,el
 birim,6070029,Çayyolu Köyü,tarihsel,wikidata-6360
 birim,6070032,100. Yıl,semt,ptt-semt
 birim,6070033,100. Yıl,semt,ptt-semt
@@ -930,6 +931,7 @@ birim,6070083,Dikmen,semt,ptt-semt
 birim,6070086,Esat,semt,ptt-semt
 birim,6070088,Dikmen,semt,ptt-semt
 birim,6070089,100. Yıl,semt,ptt-semt
+birim,6070090,Beysukent,semt,el
 birim,6070090,Bilkent,semt,ptt-semt
 birim,6070091,Dikmen,semt,ptt-semt
 birim,6070092,Yenişehir,semt,ptt-semt
@@ -1307,10 +1309,13 @@ birim,6160055,Yılanlı Köyü,tarihsel,wikidata-6360
 birim,6160056,Yurtyenice Köyü,tarihsel,wikidata-6360
 birim,6160057,Yüzbey Köyü,tarihsel,wikidata-6360
 birim,6170001,Sanatoryum,semt,ptt-semt
+birim,6170001,İncirli,semt,el
 birim,6170010,Bağlum,semt,ptt-semt
+birim,6170011,İncirli,semt,el
 birim,6170013,Bağlum,semt,ptt-semt
 birim,6170013,Çalseki Köyü,tarihsel,wikidata-6360
 birim,6170014,Sanatoryum,semt,ptt-semt
+birim,6170014,İncirli,semt,el
 birim,6170019,Hasköy S.Evleri,semt,ptt-semt
 birim,6170021,Hasköy S.Evleri,semt,ptt-semt
 birim,6170022,Bağlum,semt,ptt-semt
@@ -9070,6 +9075,7 @@ birim,34200003,Eminönü,semt,ptt-semt
 birim,34200007,Vefa,semt,ptt-semt
 birim,34200009,Bayazıt,semt,ptt-semt
 birim,34200014,Vefa,semt,ptt-semt
+birim,34200015,Draman,semt,el
 birim,34200016,Bayazıt,semt,ptt-semt
 birim,34200017,Vefa,semt,ptt-semt
 birim,34200020,Sirkeci,semt,ptt-semt
@@ -9097,7 +9103,12 @@ birim,34210005,Küçükköy,semt,ptt-semt
 birim,34210013,Küçükköy,semt,ptt-semt
 birim,34210014,Küçükköy,semt,ptt-semt
 birim,34230001,Ondokuzmayıs,semt,ptt-semt
+birim,34230005,Bahariye,semt,el
 birim,34230005,Moda,semt,el
+birim,34230013,Söğütlüçeşme,semt,el
+birim,34230017,Bahariye,semt,el
+birim,34230018,Söğütlüçeşme,semt,el
+birim,34230021,Söğütlüçeşme,semt,el
 birim,34240010,Kağıthane Merkez,semt,ptt-semt
 birim,34240011,Kağıthane Merkez,semt,ptt-semt
 birim,34250004,Yakacık,semt,ptt-semt

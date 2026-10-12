@@ -9,3 +9,9 @@ Topluluk tarafından bakılan tablolar; `build_staging.py` bunları `data/stagin
 | `abbreviations.draft.csv` | Draft abbreviation/typo lexicon for the parser (Faz 4). Rows marked unverified need review before use. |
 
 Rules: no personal data; cite a source in `kaynak`/`not` when possible; one semt may map to several mahalle.
+
+## Sourcing policy for semt_alias.csv
+
+Every row needs a source URL that states the mapping (tr.wikipedia, municipality, İstanbul Ansiklopedisi …). Never use OpenStreetMap
+(ODbL). Only add a semt that is not an official mahalle name of that ilçe. `data/scripts/build_semt_from_wikipedia.py` proposes
+candidates from Wikipedia semt articles; a human reviews them (partial or surrounding-area sentences are rejected).

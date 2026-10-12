@@ -6,6 +6,8 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- Curated semt aliases with source URLs (Bahariye, Söğütlüçeşme, Draman, Beysukent, İncirli) and a Wikipedia-based
+  candidate extractor (`data/scripts/build_semt_from_wikipedia.py`); gazetteer now has 18,827 aliases.
 - Documentation site (DocFX) at /docs/: guide, API reference, REST/self-hosting, integrations, benchmark, privacy.
 - API clients: `clients/python` (`adrestr-client`, sync + async, httpx) and `clients/typescript` (`@adrestr/client`, fetch, zero
   dependencies) covering parse/trace, batch, CSV, validate, match, dedupe, reference data and autocomplete; tested in CI.

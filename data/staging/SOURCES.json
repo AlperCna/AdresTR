@@ -1,5 +1,5 @@
 {
-  "olusturma_tarihi": "2026-10-08",
+  "olusturma_tarihi": "2026-10-12",
   "uretici": "data/scripts/build_staging.py",
   "veri_surumu": "2026.10",
   "not": "Yol B: yalnız PTT türevi (MIT) + Wikidata (CC0). melihozkara/NVİ kopyası girdi DEĞİLDİR.",
@@ -85,7 +85,7 @@
   "kuratorlu_girdiler": [
     {
       "path": "data/curated/semt_alias.csv",
-      "sha256": "0118b1899c9131a87acd6bcf0a5be5a0594e79800a39cc56c0b6404acc6c24a5",
+      "sha256": "06020d769b65d0260211b5f896519ac505f139bcc59fd6e26986526d97dd851c",
       "lisans": "CC0-1.0",
       "kaynak": "el (data/curated/README.md)"
     }
@@ -94,7 +94,7 @@
     "il.csv": 81,
     "ilce.csv": 973,
     "birim.csv": 78790,
-    "alias.csv": 18816,
+    "alias.csv": 18827,
     "retired_ids.csv": 0
   },
   "birim_tur_dagilimi": {
@@ -108,7 +108,7 @@
     "site": 13
   },
   "alias_dagilimi": {
-    "birim/semt/el": 3,
+    "birim/semt/el": 14,
     "birim/semt/ptt-semt": 3035,
     "birim/tarihsel/wikidata-6360": 15762,
     "il/yazim/el": 11,
@@ -410,10 +410,10 @@
     "alias_6360": 15762,
     "kuratorlu_semt": {
       "dosya": "curated/semt_alias.csv",
-      "satir": 2,
-      "eklenen": 3,
+      "satir": 7,
+      "eklenen": 14,
       "atlanan_ayni": 0,
-      "sha256": "0118b1899c9131a87acd6bcf0a5be5a0594e79800a39cc56c0b6404acc6c24a5"
+      "sha256": "06020d769b65d0260211b5f896519ac505f139bcc59fd6e26986526d97dd851c"
     }
   }
 }
