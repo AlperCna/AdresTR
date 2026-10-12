@@ -5,6 +5,8 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.0-preview.3] - 2026-10-12
+
 ### Added
 - Curated semt aliases with source URLs (Bahariye, Söğütlüçeşme, Draman, Beysukent, İncirli) and a Wikipedia-based
   candidate extractor (`data/scripts/build_semt_from_wikipedia.py`); gazetteer now has 18,827 aliases.
@@ -53,6 +55,7 @@ First preview on NuGet: `AdresTR` and `AdresTR.Data`.
 - Samples (`samples/QuickStart`, `samples/CsvCleaner`), package icon and NuGet README, tag-triggered release
   workflow with NuGet Trusted Publishing (no stored API key).
 
-[Unreleased]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.2...HEAD
+[Unreleased]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.3...HEAD
+[0.1.0-preview.3]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.2...v0.1.0-preview.3
 [0.1.0-preview.2]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.1...v0.1.0-preview.2
 [0.1.0-preview.1]: https://github.com/AlperCna/AdresTR/releases/tag/v0.1.0-preview.1
