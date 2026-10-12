@@ -11,10 +11,10 @@
 <PageTitle>AdresTR Playground</PageTitle>
 
 <section class="hero">
-    <h1>Türkçe adresleri ayrıştırın</h1>
+    <h1>@T("Türkçe adresleri ayrıştırın", "Parse Turkish addresses")</h1>
     <p>
-        Serbest metin adresi yazın: il, ilçe, mahalle, sokak, kapı ve daire numarası, posta kodu ayrılır;
-        resmi il/ilçe/mahalle kayıtlarına bağlanır ve yapılan her düzeltme açıklanır.
+        @T("Serbest metin adresi yazın: il, ilçe, mahalle, sokak, kapı ve daire numarası, posta kodu ayrılır; resmi il/ilçe/mahalle kayıtlarına bağlanır ve yapılan her düzeltme açıklanır.",
+           "Type a free-text address: il, ilçe, mahalle, street, door, flat and postal code are separated, linked to the official records, and every correction is explained.")
     </p>
 </section>
 
@@ -25,12 +25,96 @@
 else
 {
     <div class="tabs" role="tablist">
-        <button role="tab" class="@(_batch ? "" : "active")" aria-selected="@(!_batch)" @onclick="() => _batch = false">Tek adres</button>
-        <button role="tab" class="@(_batch ? "active" : "")" aria-selected="@_batch" @onclick="() => _batch = true">Toplu (satır satır)</button>
+        @foreach ((string id, string tr, string en) in Tabs)
+        {
+            <button role="tab" class="@(_tab == id ? "active" : "")" aria-selected="@(_tab == id)" @onclick="() => _tab = id">@T(tr, en)</button>
+        }
+        <button class="ghost" title="Language / Dil" @onclick="() => _en = !_en">@(_en ? "TR" : "EN")</button>
         <span class="load-note">Hazır · gazetteer @_dataVersion · @_loadMs.ToString("0", CultureInfo.InvariantCulture) ms'de yüklendi</span>
     </div>
 
-    @if (!_batch)
+    @if (_tab == "match")
+    {
+        <div class="card">
+            <div class="grid">
+                <div>
+                    <label for="ma" class="label">@T("Adres A", "Address A")</label>
+                    <textarea id="ma" rows="2" spellcheck="false" @bind="MatchA" @bind:event="oninput"></textarea>
+                </div>
+                <div>
+                    <label for="mb" class="label">@T("Adres B", "Address B")</label>
+                    <textarea id="mb" rows="2" spellcheck="false" @bind="MatchB" @bind:event="oninput"></textarea>
+                </div>
+            </div>
+            <div class="examples">
+                <span class="muted">@T("Örnekler:", "Examples:")</span>
+                @foreach ((string label, string a, string b) in MatchExamples)
+                {
+                    <button class="chip" @onclick="() => SetMatch(a, b)">@label</button>
+                }
+            </div>
+        </div>
+        @if (_match is { } m)
+        {
+            <div class="card">
+                <h2>@MatchLabel(m.Level) <span class="muted">· @Pct(m.Score)</span></h2>
+                <ul class="corrections">
+                    @foreach (string reason in m.Reasons)
+                    {
+                        <li>@reason</li>
+                    }
+                </ul>
+                <p class="canonical"><code>@_matchCanonA</code><code>@_matchCanonB</code></p>
+            </div>
+        }
+    }
+    else if (_tab == "form")
+    {
+        <div class="card">
+            <p class="muted small">@T("Resmi hiyerarşiden seçin; posta kodu, semt ve konum otomatik gelir.", "Pick from the official hierarchy; postal code, semt and location fill in automatically.")</p>
+            <div class="row">
+                <select aria-label="il" @bind="FormIl">
+                    <option value="0">@T("İl seçin", "Select il")</option>
+                    @foreach (Province p in TurkishGazetteer.Default.Provinces)
+                    {
+                        <option value="@p.Plaka">@p.Plaka.ToString("D2", CultureInfo.InvariantCulture) · @p.Name</option>
+                    }
+                </select>
+                <select aria-label="ilçe" disabled="@(_formIl == 0)" @bind="FormIlce">
+                    <option value="0">@T("İlçe seçin", "Select ilçe")</option>
+                    @if (TurkishGazetteer.Default.GetProvince(_formIl) is { } province)
+                    {
+                        @foreach (District d in province.Districts.OrderBy(d => d.Name, StringComparer.Create(CultureInfo.InvariantCulture, true)))
+                        {
+                            <option value="@d.Id">@d.Name</option>
+                        }
+                    }
+                </select>
+                <select aria-label="mahalle" disabled="@(_formIlce == 0)" @bind="FormUnit">
+                    <option value="0">@T("Mahalle / köy seçin", "Select mahalle / köy")</option>
+                    @if (TurkishGazetteer.Default.GetDistrict(_formIlce) is { } district)
+                    {
+                        @foreach (SettlementUnit u in district.Units.Where(u => u.Kind is UnitKind.Mahalle or UnitKind.Koy or UnitKind.Osb).OrderBy(u => u.Name, StringComparer.Create(CultureInfo.InvariantCulture, true)))
+                        {
+                            <option value="@u.Id">@u.Name @(u.Kind == UnitKind.Koy ? "(köy)" : "")</option>
+                        }
+                    }
+                </select>
+            </div>
+        </div>
+        @if (TurkishGazetteer.Default.GetUnit(_formUnit) is { } chosen)
+        {
+            <div class="card">
+                <h2>@chosen.Name <span class="muted">(@UnitKindLabel(chosen.Kind), @T("kimlik", "id") @chosen.Id)</span></h2>
+                <p>@chosen.District.Name/@chosen.District.Province.Name @(chosen.PostalCode is null ? "" : "· " + chosen.PostalCode) @(chosen.Semt is null ? "" : "· PTT semt: " + chosen.Semt)</p>
+                @if (chosen.Location is { } where)
+                {
+                    <iframe class="map" title="map" loading="lazy" src="@MapEmbed(where)"></iframe>
+                }
+            </div>
+        }
+    }
+    else if (!_batch)
     {
         <div class="card">
             <label for="address" class="label">Adres</label>
@@ -120,7 +204,8 @@ else
                                     }
                                     @if (u.Location is { } loc)
                                     {
-                                        <div><a href="@MapLink(loc)" target="_blank" rel="noopener">Haritada gör ↗</a></div>
+                                        <div><a href="@MapLink(loc)" target="_blank" rel="noopener">@T("Haritada gör ↗", "Open map ↗")</a></div>
+                                        <iframe class="map" title="map" loading="lazy" src="@MapEmbed(loc)"></iframe>
                                     }
                                 }
                                 else if (r.UnitCandidates.Count > 0)
@@ -167,6 +252,37 @@ else
                         }
                     </ul>
                 </div>
+            }
+
+            @if (r.Trace is { } trace)
+            {
+                <details class="card">
+                    <summary>@T("Nasıl ayrıştırıldı?", "How was this parsed?")</summary>
+                    <p class="muted small">@T("Jetonlar (yapışık yazımdan bölünenler işaretli) ve parser'ın değerlendirdiği alternatif okumalar:", "Tokens (splits of glued words are marked) and the alternative readings the parser weighed:") @trace.HypothesisCount @T("hipotez", "hypotheses")</p>
+                    <div class="chips">
+                        @foreach (TraceToken t in trace.Tokens)
+                        {
+                            <span class="tok @(t.Glued ? "glued" : "")" title="@t.Folded">@t.Text</span>
+                        }
+                    </div>
+                    <table class="results">
+                        <thead><tr><th>#</th><th>@T("Okuma", "Reading")</th><th>@T("Skor", "Score")</th><th>%</th></tr></thead>
+                        <tbody>
+                            @foreach (TraceAlternative a in trace.Alternatives)
+                            {
+                                <tr class="@(a.Rank == 1 ? "" : "check")">
+                                    <td>@a.Rank</td>
+                                    <td>
+                                        @string.Join(" · ", a.Components.Where(c => c.Role != "ignored" && c.Role != "noise").Select(c => c.Role + ": " + c.Value))
+                                        <div class="muted small">@(a.Unit ?? "—") · @(a.District ?? "—") · @(a.Province ?? "—") · @a.UnitCandidates @T("aday", "candidate(s)")</div>
+                                    </td>
+                                    <td>@a.Score.ToString("0.0", CultureInfo.InvariantCulture)</td>
+                                    <td>@Pct(a.Probability)</td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </details>
             }
 
             <details class="card">
@@ -231,6 +347,80 @@ else
         ("Kısa il adı", "Haliliye Urfa"),
     ];
 
+    private static readonly (string Id, string Tr, string En)[] Tabs =
+    [
+        ("single", "Tek adres", "Single address"),
+        ("batch", "Toplu", "Batch"),
+        ("match", "Eşleştir", "Match"),
+        ("form", "Form", "Form"),
+    ];
+
+    private static readonly (string Label, string A, string B)[] MatchExamples =
+    [
+        ("Aynı daire", "Caferağa Mah. Moda Cad. No:12 D:3 Kadıköy/İstanbul", "kadikoy caferaga mh moda cd no 12 daire 3 istanbul"),
+        ("Farklı kapı", "Caferağa Mah. Moda Cad. No:12 Kadıköy", "Caferağa Mah. Moda Cad. No:14 Kadıköy"),
+        ("Semt = mahalle", "Moda Kadıköy İstanbul", "Caferağa Mahallesi Kadıköy"),
+        ("Farklı şehir", "Caferağa Mah. Kadıköy İstanbul", "Alsancak Mah. Konak İzmir"),
+    ];
+
+    private string _tab = "single";
+    private bool _en;
+    private bool _batch => _tab == "batch";
+    private string _matchA = MatchExamples[0].A;
+    private string _matchB = MatchExamples[0].B;
+    private AddressMatch? _match;
+    private string _matchCanonA = "";
+    private string _matchCanonB = "";
+    private int _formIl, _formIlce, _formUnit;
+
+    private string T(string tr, string en) => _en ? en : tr;
+
+    private string MatchA { get => _matchA; set { _matchA = value; RunMatch(); } }
+
+    private string MatchB { get => _matchB; set { _matchB = value; RunMatch(); } }
+
+    private int FormIl { get => _formIl; set { _formIl = value; _formIlce = 0; _formUnit = 0; } }
+
+    private int FormIlce { get => _formIlce; set { _formIlce = value; _formUnit = 0; } }
+
+    private int FormUnit { get => _formUnit; set => _formUnit = value; }
+
+    private void SetMatch(string a, string b)
+    {
+        _matchA = a;
+        _matchB = b;
+        RunMatch();
+    }
+
+    private void RunMatch()
+    {
+        if (_parser is null || string.IsNullOrWhiteSpace(_matchA) || string.IsNullOrWhiteSpace(_matchB))
+        {
+            _match = null;
+            return;
+        }
+
+        ParseResult a = _parser.Parse(_matchA);
+        ParseResult b = _parser.Parse(_matchB);
+        _match = AddressMatcher.Compare(a, b);
+        _matchCanonA = a.ToCanonicalString();
+        _matchCanonB = b.ToCanonicalString();
+    }
+
+    private string MatchLabel(MatchLevel level) => level switch
+    {
+        MatchLevel.SameFlat => T("Aynı daire", "Same flat"),
+        MatchLevel.SameBuilding => T("Aynı bina", "Same building"),
+        MatchLevel.SameStreet => T("Aynı sokak", "Same street"),
+        MatchLevel.SameUnit => T("Aynı mahalle", "Same neighbourhood"),
+        MatchLevel.SameDistrict => T("Aynı ilçe", "Same district"),
+        MatchLevel.Unknown => T("Belirsiz", "Cannot tell"),
+        _ => T("Farklı yerler", "Different places"),
+    };
+
+    private static string MapEmbed(GeoPoint p) => string.Create(CultureInfo.InvariantCulture,
+        $"https://www.openstreetmap.org/export/embed.html?bbox={p.Longitude - 0.012},{p.Latitude - 0.008},{p.Longitude + 0.012},{p.Latitude + 0.008}&layer=mapnik&marker={p.Latitude},{p.Longitude}");
+
     private AddressParser? _parser;
     private string _dataVersion = "";
     private double _loadMs;
@@ -239,7 +429,6 @@ else
     private List<Segment> _segments = [];
     private double _parseMs;
     private bool _copied;
-    private bool _batch;
     private string _batchInput = "";
     private List<(string Input, ParseResult Result)> _batchRows = [];
     private double _batchMs;
@@ -264,6 +453,7 @@ else
         _loadMs = stopwatch.Elapsed.TotalMilliseconds;
         _dataVersion = TurkishGazetteer.Default.DataVersion;
         Input = Examples[0].Text;
+        RunMatch();
     }
 
     private void Parse()
@@ -275,7 +465,7 @@ else
         }
 
         var stopwatch = Stopwatch.StartNew();
-        _result = _parser.Parse(_input);
+        _result = _parser.Parse(_input, new ParseOptions { IncludeTrace = true });
         _parseMs = stopwatch.Elapsed.TotalMilliseconds;
         _segments = Segments(_result);
     }

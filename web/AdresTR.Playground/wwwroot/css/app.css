@@ -224,3 +224,10 @@ details pre { background: var(--code); padding: .75rem; border-radius: 8px; over
     .load-note { margin-left: 0; width: 100%; }
     .highlight { font-size: 1rem; }
 }
+
+select { font: inherit; padding: .4rem .5rem; border: 1px solid var(--border); border-radius: 8px; background: var(--bg); color: var(--text); max-width: 100%; }
+select:disabled { opacity: .5; }
+iframe.map { width: 100%; height: 220px; border: 1px solid var(--border); border-radius: 8px; margin-top: .5rem; }
+.chips { display: flex; flex-wrap: wrap; gap: .3rem; margin: .5rem 0; }
+.tok { font: .85rem ui-monospace, Consolas, monospace; background: var(--code); border: 1px solid var(--border); border-radius: 6px; padding: .1rem .4rem; }
+.tok.glued { border-color: var(--accent); background: var(--accent-soft); }

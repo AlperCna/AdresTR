@@ -6,6 +6,7 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- Playground: parse trace view, OpenStreetMap map, "Match" tab (same-place comparison), il → ilçe → mahalle form, TR/EN toggle.
 - `AddressParser.Parse(text, new ParseOptions { IncludeTrace = true })` returns a `ParseTrace` (tokens, hypothesis count,
   best alternative readings with scores) that explains how a result was reached; `POST /v1/parse?trace=true`.
 - REST: `POST /v1/match` (same place?) and `POST /v1/dedupe` (duplicate groups).
