@@ -577,3 +577,14 @@ Ayrıntılar `docs/research/` altındaki raporlarda.
 - [x] Faz 6: REST API (parse/batch/csv/validate/reference/autocomplete), hız sınırı, GHCR container (her sürümde), dağıtım rehberi. Azure dağıtımı abonelik gerektirdiği için isteğe bağlı bırakıldı.
 - [x] Faz 7: tarayıcı demosu https://alpercna.github.io/AdresTR/ (Blazor WASM AOT, ~1,9 sn yükleme, adres cihazdan çıkmaz)
 - [ ] Veri sahiplerine izin e-postaları (melihozkara için Gmail taslağı hazır): melihozkara (NVİ kopyası), TBB (şube listesi)
+
+### Sıradaki işler (2026-10-12, kullanıcı: "hepsini yap")
+
+- [x] Adres eşleştirme çekirdeği: `AddressMatcher.Compare` + `Group` (7 test)
+- [ ] Eşleştirme: API uç noktaları (`/v1/match`, `/v1/dedupe`), sentetik eşleştirme benchmark'ı (pairwise P/R/F1, B-cubed), playground'da "Eşleştir" sekmesi
+- [ ] Demo sitesi: OpenStreetMap haritası, il → ilçe → mahalle otomatik dolan form, örnekler için libpostal karşılaştırması, "nasıl ayrıştırdı" adım görünümü (parse trace API), İngilizce dil seçeneği, tasarım iyileştirmesi
+- [ ] Parser: daha fazla semt eşlemesi (data/curated/semt_alias.csv), zor vakalar dev setinde hata analizi (test setine dokunmadan), sokak doğrulama için ayrı ODbL paketi (OSM'den il/ilçe bazında sokak adları)
+- [ ] Geliştirici entegrasyonları: AdresTR.AspNetCore ([TurkishAddress] doğrulama özniteliği), AdresTR.FluentValidation, Python ve TypeScript istemcileri (yayın için PyPI/npm hesabı gerekir), DocFX sitesi (/AdresTR/docs)
+- [ ] ML (ONNX): araştırmadaki tetikleyiciler sağlanmadıkça ertelendi (gerçek test %95,8)
+- [ ] GHCR imajını herkese açmak (kullanıcı: Packages → adrestr-api → Change visibility)
+

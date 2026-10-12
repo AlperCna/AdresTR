@@ -5,6 +5,10 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+- `AddressMatcher`: decides whether two addresses are the same place (`MatchLevel`: Different … SameFlat, with a
+  confidence-discounted score and human-readable reasons) and groups duplicates (blocking by resolved mahalle).
+
 ## [0.1.0-preview.2] - 2026-10-09
 
 ### Added
