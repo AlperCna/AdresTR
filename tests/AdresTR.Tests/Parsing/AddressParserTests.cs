@@ -217,6 +217,22 @@ public class AddressParserTests
         Assert.Contains(r.Corrections, c => c.Kind == CorrectionKind.Duplicate);
     }
 
+    [Fact]
+    public void Trace_explains_tokens_and_alternatives()
+    {
+        ParseResult r = Parser.Parse("147sok no:5 Alsancak Konak", new ParseOptions { IncludeTrace = true });
+
+        Assert.NotNull(r.Trace);
+        Assert.Contains(r.Trace!.Tokens, t => t.Glued && t.Folded == "sok");
+        Assert.True(r.Trace.HypothesisCount > 0);
+        TraceAlternative best = r.Trace.Alternatives[0];
+        Assert.Equal(1, best.Rank);
+        Assert.Equal("Alsancak", best.Unit);
+        Assert.Contains(best.Components, c => c.Role == "street" && c.Value == "147");
+        Assert.InRange(r.Trace.Alternatives.Sum(a => a.Probability), 0, 1.0001);
+        Assert.Null(Parser.Parse("Alsancak Konak").Trace);
+    }
+
     [Theory]
     [InlineData("")]
     [InlineData("   ")]

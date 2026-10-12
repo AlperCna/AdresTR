@@ -6,6 +6,9 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- `AddressParser.Parse(text, new ParseOptions { IncludeTrace = true })` returns a `ParseTrace` (tokens, hypothesis count,
+  best alternative readings with scores) that explains how a result was reached; `POST /v1/parse?trace=true`.
+- REST: `POST /v1/match` (same place?) and `POST /v1/dedupe` (duplicate groups).
 - `AddressMatcher`: decides whether two addresses are the same place (`MatchLevel`: Different … SameFlat, with a
   confidence-discounted score and human-readable reasons) and groups duplicates (blocking by resolved mahalle).
 

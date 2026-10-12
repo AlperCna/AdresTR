@@ -38,9 +38,13 @@ public sealed class AddressParser
     }
 
     /// <summary>Parses one address.</summary>
-    public ParseResult Parse(string text)
+    public ParseResult Parse(string text) => Parse(text, ParseOptions.Default);
+
+    /// <summary>Parses one address with options (e.g. <see cref="ParseOptions.IncludeTrace"/>).</summary>
+    public ParseResult Parse(string text, ParseOptions options)
     {
         ArgumentNullException.ThrowIfNull(text);
+        ArgumentNullException.ThrowIfNull(options);
         string input = text.Length > MaxInputLength ? text[..MaxInputLength] : text;
         var result = new ParseResult(text);
 
@@ -58,8 +62,75 @@ public sealed class AddressParser
         }
 
         Fill(result, resolutions, input, tokens);
+        if (options.IncludeTrace)
+        {
+            result.Trace = BuildTrace(resolutions, input, tokens, hyps.Sum(h => h.Count));
+        }
+
         return result;
     }
+
+    private ParseTrace BuildTrace(List<Resolution> resolutions, string input, IReadOnlyList<Token> tokens, int hypothesisCount)
+    {
+        double max = resolutions[0].Score;
+        double[] weights = [.. resolutions.Select(r => Math.Exp((r.Score - max) / Temperature))];
+        double total = weights.Sum();
+
+        // One entry per distinct output; probability = mass of all paths producing it.
+        var alternatives = new List<TraceAlternative>();
+        foreach (var group in resolutions.Select((r, k) => (Resolution: r, Weight: weights[k]))
+                     .GroupBy(x => OutputSignature(x.Resolution))
+                     .Take(5))
+        {
+            Resolution r = group.First().Resolution;
+            var components = new List<TraceComponent>();
+            foreach (Hyp h in r.Path.Hyps())
+            {
+                int start = tokens[h.From].Start;
+                int end = tokens[h.To - 1].End;
+                string role = RoleName(h.Role);
+                string value = h.Role switch
+                {
+                    Role.Il => r.Province?.Name ?? h.Value,
+                    Role.Ilce => r.District?.Name ?? h.Value,
+                    Role.Mahalle => r.Unit?.Name ?? h.Value,
+                    _ => h.Value,
+                };
+                components.Add(new TraceComponent(role, value, input[start..end], start, end, Math.Round(h.Local, 3)));
+                if (h.FlatValue is not null)
+                {
+                    components.Add(new TraceComponent("flat", h.FlatValue, input[h.FlatStart..h.FlatEnd], h.FlatStart, h.FlatEnd, Math.Round(h.Local, 3)));
+                }
+            }
+
+            alternatives.Add(new TraceAlternative(
+                alternatives.Count + 1, Math.Round(r.Score, 3), Math.Round(group.Sum(x => x.Weight) / total, 4), components,
+                r.Province?.Name, r.District?.Name, r.Unit?.Name, r.Units.Count));
+        }
+
+        return new ParseTrace(
+            [.. tokens.Select(t => new TraceToken(input[t.Start..t.End], t.Start, t.End, t.Fold, t.Break == BreakKind.Glued))],
+            hypothesisCount,
+            alternatives);
+    }
+
+    private static string RoleName(Role role) => role switch
+    {
+        Role.Il => "il",
+        Role.Ilce => "ilce",
+        Role.Mahalle => "mahalle",
+        Role.Semt => "semt",
+        Role.Street => "street",
+        Role.Site => "site",
+        Role.Blok => "blok",
+        Role.Door => "door",
+        Role.Floor => "floor",
+        Role.Flat => "flat",
+        Role.Postal => "postal",
+        Role.Landmark => "landmark",
+        Role.Noise => "noise",
+        _ => "ignored",
+    };
 
     private Resolution Resolve(Parsing.Path path, IReadOnlyList<Token> tokens)
     {

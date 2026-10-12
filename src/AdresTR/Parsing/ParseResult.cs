@@ -138,6 +138,9 @@ public sealed class ParseResult
     /// <summary>Changes and inferences the parser made.</summary>
     public IReadOnlyList<Correction> Corrections { get; internal set; } = [];
 
+    /// <summary>How the result was reached; only set when <see cref="ParseOptions.IncludeTrace"/> is true.</summary>
+    public ParseTrace? Trace { get; internal set; }
+
     /// <summary>Formats the address in the official order: "Caferağa Mah. Moda Cad. No:12 D:3 34710 Kadıköy/İstanbul".</summary>
     public string ToCanonicalString()
     {

@@ -81,7 +81,8 @@ public sealed record ParseResponse(
     ResolvedDto Resolved,
     IReadOnlyList<CandidateDto> Candidates,
     IReadOnlyList<CorrectionDto> Corrections,
-    string DataVersion)
+    string DataVersion,
+    ParseTrace? Trace = null)
 {
     internal static ParseResponse From(ParseResult r, string dataVersion) => new(
         r.Input,
@@ -95,7 +96,8 @@ public sealed record ParseResponse(
         new ResolvedDto(ProvinceDto.From(r.Province), DistrictDto.From(r.District), UnitDto.From(r.Unit)),
         [.. r.UnitCandidates.Take(5).Select(c => new CandidateDto(c.Unit.Id, c.Unit.Name, c.Unit.District.Name, c.Unit.District.Province.Name, c.Score))],
         [.. r.Corrections.Select(c => new CorrectionDto(c.Kind, c.Field, c.From, c.To))],
-        dataVersion);
+        dataVersion,
+        r.Trace);
 }
 
 /// <summary>A structured address to check against the gazetteer. All fields are optional.</summary>
@@ -111,3 +113,27 @@ public sealed record ValidateResponse(bool Valid, ProvinceDto? Il, DistrictDto? 
 
 /// <summary>A name suggestion for autocomplete.</summary>
 public sealed record SuggestionDto(string Level, int Id, string Name, string? Context);
+
+/// <summary>Two addresses to compare.</summary>
+/// <param name="A">First address (at most 512 characters).</param>
+/// <param name="B">Second address (at most 512 characters).</param>
+public sealed record MatchRequest(
+    [property: Required, MaxLength(AddressParser.MaxInputLength)] string A,
+    [property: Required, MaxLength(AddressParser.MaxInputLength)] string B);
+
+/// <summary>How close two addresses are.</summary>
+/// <param name="Level">Different, Unknown, SameDistrict, SameUnit, SameStreet, SameBuilding or SameFlat.</param>
+/// <param name="Score">Similarity in [0, 1], discounted by parse confidence.</param>
+/// <param name="Reasons">Evidence for the decision.</param>
+/// <param name="A">Parse of the first address.</param>
+/// <param name="B">Parse of the second address.</param>
+public sealed record MatchResponse(MatchLevel Level, double Score, IReadOnlyList<string> Reasons, ParseResponse A, ParseResponse B);
+
+/// <summary>Addresses to group into duplicates.</summary>
+/// <param name="Items">Up to 1,000 addresses.</param>
+/// <param name="Minimum">Closest level that still counts as a duplicate (default SameBuilding).</param>
+public sealed record DedupeRequest([property: Required, MaxLength(1000)] string[] Items, MatchLevel? Minimum = null);
+
+/// <summary>Duplicate groups as indexes into the request items; every item is in exactly one group.</summary>
+public sealed record DedupeResponse(IReadOnlyList<IReadOnlyList<int>> Groups);
+

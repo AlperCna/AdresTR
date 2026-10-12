@@ -14,6 +14,7 @@ builder.Logging.AddFilter("Microsoft.AspNetCore.HttpLogging", LogLevel.None);
 
 builder.Services.AddSingleton<Gazetteer>(_ => TurkishGazetteer.Default);
 builder.Services.AddSingleton<AddressParser>(_ => TurkishGazetteer.Parser);
+builder.Services.AddSingleton<AddressMatcher>(sp => new AddressMatcher(sp.GetRequiredService<AddressParser>()));
 
 builder.Services.AddOpenApi(options => options.AddDocumentTransformer((document, _, _) =>
 {

@@ -42,6 +42,41 @@ public class ApiTests(WebApplicationFactory<Program> factory) : IClassFixture<We
     }
 
     [Fact]
+    public async Task Parse_can_include_a_trace()
+    {
+        JsonElement r = await PostJson("/v1/parse?trace=true", new { text = "kadikoy caferaga mh moda cd no:12" });
+        JsonElement trace = r.GetProperty("trace");
+        Assert.True(trace.GetProperty("tokens").GetArrayLength() >= 7);
+        Assert.True(trace.GetProperty("hypothesisCount").GetInt32() > 0);
+        JsonElement best = trace.GetProperty("alternatives")[0];
+        Assert.Equal(1, best.GetProperty("rank").GetInt32());
+        Assert.Contains(best.GetProperty("components").EnumerateArray(), c => c.GetProperty("role").GetString() == "mahalle");
+
+        JsonElement plain = await PostJson("/v1/parse", new { text = "Moda" });
+        Assert.Equal(JsonValueKind.Null, plain.GetProperty("trace").ValueKind);
+    }
+
+    [Fact]
+    public async Task Match_compares_two_addresses()
+    {
+        JsonElement r = await PostJson("/v1/match", new { a = "Caferağa Mah. Moda Cad. No:12 D:3 Kadıköy", b = "kadikoy caferaga mh moda cd no 12 daire 3" });
+        Assert.Equal("SameFlat", r.GetProperty("level").GetString());
+        Assert.True(r.GetProperty("reasons").GetArrayLength() > 0);
+    }
+
+    [Fact]
+    public async Task Dedupe_groups_duplicates()
+    {
+        JsonElement r = await PostJson("/v1/dedupe", new
+        {
+            items = new[] { "Caferağa Mah. Moda Cad. No:12 Kadıköy", "Alsancak Mah. Konak İzmir", "caferaga mh moda cd no 12 kadikoy" },
+        });
+        JsonElement[] groups = [.. r.GetProperty("groups").EnumerateArray()];
+        Assert.Equal(2, groups.Length);
+        Assert.Contains(groups, g => g.GetArrayLength() == 2);
+    }
+
+    [Fact]
     public async Task Parse_of_an_ambiguous_address_returns_candidates_but_no_unit()
     {
         JsonElement r = await PostJson("/v1/parse", new { text = "Cumhuriyet Mah. Atatürk Cad. No:5" });

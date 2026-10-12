@@ -19,6 +19,14 @@ internal static class Endpoints
             .WithName("Parse").WithTags("Parse")
             .WithSummary("Parses one Turkish address into components and resolves il/ilçe/mahalle.");
 
+        v1.MapPost("/match", Match)
+            .WithName("Match").WithTags("Match")
+            .WithSummary("Decides whether two addresses are the same place (SameFlat … Different) and explains why.");
+
+        v1.MapPost("/dedupe", Dedupe)
+            .WithName("Dedupe").WithTags("Match")
+            .WithSummary($"Groups duplicate addresses among up to {MaxBatchItems} items.");
+
         v1.MapPost("/parse/batch", ParseBatch)
             .WithName("ParseBatch").WithTags("Parse")
             .WithSummary($"Parses up to {MaxBatchItems} addresses.");
@@ -46,8 +54,31 @@ internal static class Endpoints
             .WithName("Autocomplete").WithSummary("Name suggestions by prefix (case, diacritics and spaces ignored).");
     }
 
-    private static Results<Ok<ParseResponse>, ValidationProblem> Parse(ParseRequest request, AddressParser parser, Gazetteer gazetteer) =>
-        TypedResults.Ok(ParseResponse.From(parser.Parse(request.Text ?? string.Empty), gazetteer.DataVersion));
+    private static Results<Ok<ParseResponse>, ValidationProblem> Parse(ParseRequest request, AddressParser parser, Gazetteer gazetteer, bool? trace) =>
+        TypedResults.Ok(ParseResponse.From(
+            parser.Parse(request.Text ?? string.Empty, new ParseOptions { IncludeTrace = trace == true }), gazetteer.DataVersion));
+
+    private static Ok<MatchResponse> Match(MatchRequest request, AddressParser parser, Gazetteer gazetteer)
+    {
+        ParseResult a = parser.Parse(request.A);
+        ParseResult b = parser.Parse(request.B);
+        AddressMatch m = AddressMatcher.Compare(a, b);
+        return TypedResults.Ok(new MatchResponse(m.Level, m.Score, m.Reasons,
+            ParseResponse.From(a, gazetteer.DataVersion), ParseResponse.From(b, gazetteer.DataVersion)));
+    }
+
+    private static Results<Ok<DedupeResponse>, ValidationProblem> Dedupe(DedupeRequest request, AddressMatcher matcher)
+    {
+        if (request.Items.Any(t => t is null || t.Length > AddressParser.MaxInputLength))
+        {
+            return TypedResults.ValidationProblem(new Dictionary<string, string[]>
+            {
+                ["items"] = [$"Every item must be a string of at most {AddressParser.MaxInputLength} characters."],
+            });
+        }
+
+        return TypedResults.Ok(new DedupeResponse(matcher.Group(request.Items, request.Minimum ?? MatchLevel.SameBuilding)));
+    }
 
     private static Results<Ok<BatchParseResponse>, ValidationProblem> ParseBatch(BatchParseRequest request, AddressParser parser, Gazetteer gazetteer)
     {
