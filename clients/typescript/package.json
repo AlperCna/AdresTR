@@ -1,0 +1,26 @@
+{
+  "name": "@adrestr/client",
+  "version": "0.1.0",
+  "description": "TypeScript client for the AdresTR REST API: Turkish address parsing, normalization, matching and validation",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": { ".": { "types": "./dist/index.d.ts", "import": "./dist/index.js" } },
+  "files": ["dist", "README.md"],
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit"
+  },
+  "keywords": ["turkish", "address", "adres", "geocoding", "parser", "nlp"],
+  "license": "MIT",
+  "author": "Alper Can",
+  "repository": { "type": "git", "url": "git+https://github.com/AlperCna/AdresTR.git", "directory": "clients/typescript" },
+  "homepage": "https://alpercna.github.io/AdresTR/",
+  "engines": { "node": ">=18" },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  }
+}

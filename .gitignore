@@ -491,3 +491,12 @@ BenchmarkDotNet.Artifacts/
 
 # Local Claude Code preview settings
 .claude/
+
+# Client tooling
+clients/python/.venv/
+clients/python/dist/
+**/__pycache__/
+*.egg-info/
+.pytest_cache/
+clients/typescript/node_modules/
+clients/typescript/dist/

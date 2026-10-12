@@ -6,6 +6,8 @@ All notable changes to this project are documented here. The format follows
 ## [Unreleased]
 
 ### Added
+- API clients: `clients/python` (`adrestr-client`, sync + async, httpx) and `clients/typescript` (`@adrestr/client`, fetch, zero
+  dependencies) covering parse/trace, batch, CSV, validate, match, dedupe, reference data and autocomplete; tested in CI.
 - `AdresTR.AspNetCore` (`AddAdresTR()`, `[TurkishAddress]` validation attribute) and `AdresTR.FluentValidation`
   (`MustBeTurkishAddress()`); both published with each release.
 - Playground: parse trace view, OpenStreetMap map, "Match" tab (same-place comparison), il → ilçe → mahalle form, TR/EN toggle.
