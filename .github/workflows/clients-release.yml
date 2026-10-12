@@ -1,0 +1,65 @@
+name: Clients release
+
+# Publishes the Python (PyPI) and TypeScript (npm) API clients when a tag "clients-v<version>" is pushed.
+#   PyPI: Trusted Publishing (OIDC; configure a "pending publisher": workflow clients-release.yml, environment pypi).
+#   npm:  automation token in the repository secret NPM_TOKEN (switch to npm trusted publishing after the first release).
+
+on:
+  push:
+    tags: ["clients-v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  python:
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Tag matches pyproject version
+        run: |
+          version="${GITHUB_REF_NAME#clients-v}"
+          grep -q "^version = \"$version\"" clients/python/pyproject.toml
+      - name: Test and build
+        working-directory: clients/python
+        run: |
+          pip install build ".[test]"
+          pytest -q
+          python -m build
+      - uses: pypa/gh-action-pypi-publish@v1.14.2
+        with:
+          packages-dir: clients/python/dist/
+
+  npm:
+    runs-on: ubuntu-latest
+    environment: npm
+    permissions:
+      contents: read
+      id-token: write # provenance attestation
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: "22"
+          registry-url: https://registry.npmjs.org
+      - name: Tag matches package.json version
+        working-directory: clients/typescript
+        run: test "$(node -p "require('./package.json').version")" = "${GITHUB_REF_NAME#clients-v}"
+      - name: Test and build
+        working-directory: clients/typescript
+        run: |
+          npm install --no-audit --no-fund
+          npm run typecheck
+          npm test
+          npm run build
+      - name: Publish
+        working-directory: clients/typescript
+        run: npm publish --access public --provenance
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

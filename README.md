@@ -102,7 +102,7 @@ builder.Services.AddAdresTR().AddValidation();                    // dotnet add 
 RuleFor(x => x.Address).MustBeTurkishAddress();                   // dotnet add package AdresTR.FluentValidation
 ```
 
-Documentation: <https://alpercna.github.io/AdresTR/docs/>. API clients: [Python](clients/python/README.md) (`adrestr-client`) and [TypeScript](clients/typescript/README.md) (`@adrestr/client`) for the [REST API](docs/deploy.md).
+Documentation: <https://alpercna.github.io/AdresTR/docs/>. API clients: [Python](clients/python/README.md) (`adrestr-client`) and [TypeScript](clients/typescript/README.md) (`adrestr-client`) for the [REST API](docs/deploy.md).
 
 ## Roadmap
 

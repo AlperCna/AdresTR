@@ -1,14 +1,14 @@
-# @adrestr/client
+# adrestr-client
 
 TypeScript client (ESM, zero runtime dependencies, uses `fetch`) for the [AdresTR](https://github.com/AlperCna/AdresTR) REST API: parse, normalize, match and validate Turkish addresses.
 
 ```bash
 docker run -p 8080:8080 ghcr.io/alpercna/adrestr-api:latest   # run the API yourself (addresses are personal data)
-npm install @adrestr/client
+npm install adrestr-client
 ```
 
 ```ts
-import { AdresTRClient } from "@adrestr/client";
+import { AdresTRClient } from "adrestr-client";
 
 const client = new AdresTRClient({ baseUrl: "http://localhost:8080" });
 

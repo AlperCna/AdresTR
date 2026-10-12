@@ -1,5 +1,5 @@
 {
-  "name": "@adrestr/client",
+  "name": "adrestr-client",
   "version": "0.1.0",
   "description": "TypeScript client for the AdresTR REST API: Turkish address parsing, normalization, matching and validation",
   "type": "module",
