@@ -93,6 +93,15 @@ g.FindProvinces("Urfa")[0].Entity.Name;                 // "Şanlıurfa"
 g.FindUnitsByPostalCode("34710");                       // Caferağa, …
 ```
 
+## Integrations
+
+```csharp
+builder.Services.AddAdresTR().AddValidation();                    // dotnet add package AdresTR.AspNetCore
+[Required, TurkishAddress(RequireDoorNumber = true)] public string? Address { get; set; }
+
+RuleFor(x => x.Address).MustBeTurkishAddress();                   // dotnet add package AdresTR.FluentValidation
+```
+
 ## Roadmap
 
 | Phase | Scope | Status |

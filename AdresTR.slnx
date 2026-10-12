@@ -8,12 +8,15 @@
   </Folder>
   <Folder Name="/src/">
     <Project Path="src/AdresTR.Api/AdresTR.Api.csproj" />
+    <Project Path="src/AdresTR.AspNetCore/AdresTR.AspNetCore.csproj" />
     <Project Path="src/AdresTR.Data/AdresTR.Data.csproj" />
+    <Project Path="src/AdresTR.FluentValidation/AdresTR.FluentValidation.csproj" />
     <Project Path="src/AdresTR/AdresTR.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/AdresTR.Api.Tests/AdresTR.Api.Tests.csproj" />
     <Project Path="tests/AdresTR.Eval.Tests/AdresTR.Eval.Tests.csproj" />
+    <Project Path="tests/AdresTR.Integrations.Tests/AdresTR.Integrations.Tests.csproj" />
     <Project Path="tests/AdresTR.Tests/AdresTR.Tests.csproj" />
   </Folder>
   <Folder Name="/tools/">
