@@ -55,6 +55,23 @@ public class AddressParserTests
         Assert.Equal("3", r.Flat?.Value);
     }
 
+    [Theory]
+    [InlineData("no: 69 akpınarköyü 05302 merzifon amasya", 5050021)]
+    [InlineData("Akpınarköyü Merzifon Amasya", 5050021)]
+    public void Glued_koyu_suffix_resolves_the_village_even_when_the_glued_form_is_an_alias(string input, int unitId)
+    {
+        ParseResult r = Parser.Parse(input);
+        Assert.Equal(unitId, r.Unit?.Id);
+    }
+
+    [Fact]
+    public void Glued_cadde_suffix_is_split_into_street_name_and_type()
+    {
+        ParseResult r = Parser.Parse("adana feke akkaya mh zafercadde no. 78");
+        Assert.Equal("zafer", r.Street?.Value, ignoreCase: true);
+        Assert.Equal(StreetType.Cadde, r.StreetType);
+    }
+
     [Fact]
     public void Restores_diacritics_and_reports_it()
     {

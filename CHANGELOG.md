@@ -9,6 +9,8 @@ All notable changes to this project are documented here. The format follows
 - Launch material (`docs/launch`), Hugging Face dataset card (`eval/huggingface`), clients release workflow.
 
 ### Changed
+- Parser: glued village names ("Akpınarköyü", "Dikenliköyü") are split even when the glued form is a gazetteer alias key, and
+  glued "cadde"/"bulvar" ("zafercadde") are split into name and type. Synthetic test exact match 97.4% → 98.0%.
 - Parser: bare "Küme Evler" street type, "Krş." landmark, units named like a site; ADR-0004 updated for AdresTR.Streets.
 
 ## [0.1.0-preview.4] - 2026-10-12

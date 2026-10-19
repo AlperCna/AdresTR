@@ -66,7 +66,7 @@ component correct; birim = the neighbourhood the text determines, resolved to th
 
 | Test set | AdresTR | libpostal | regex baseline |
 |---|---:|---:|---:|
-| Synthetic (2,000, noisy) — exact match | **97.4%** | 10.0% | 14.0% |
+| Synthetic (2,000, noisy) — exact match | **98.0%** | 10.0% | 14.0% |
 | Real public-institution addresses (1,200) — exact match | **95.8%** | 26.2% | 8.2% |
 | Hand-written hard cases (167) — exact match | **86.8%** | 24.6% | 21.0% |
 | Real — birim accuracy | **100%** | – | 19.2% |

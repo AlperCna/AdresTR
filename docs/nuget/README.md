@@ -24,7 +24,7 @@ r.ToCanonicalString();  // "Caferağa Mah. Moda Cad. No:12 D:3 34710 Kadıköy/�
 
 | Test set | AdresTR exact match | libpostal |
 |---|---:|---:|
-| Synthetic, noisy (2,000) | 97.4% | 10.0% |
+| Synthetic, noisy (2,000) | 98.0% | 10.0% |
 | Real public-institution addresses (1,200) | 95.8% | 26.2% |
 | Hand-written hard cases (167) | 86.8% | 24.6% |
 
