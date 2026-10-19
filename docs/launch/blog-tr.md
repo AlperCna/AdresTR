@@ -46,7 +46,7 @@ Parser'dan önce değerlendirme setini yaptım, çünkü "iyi mi?" sorusu sayıy
 | Test seti | AdresTR | libpostal | regex |
 |---|---:|---:|---:|
 | Sentetik, gürültülü (2.000) | **%98,0** | %10,0 | %14,0 |
-| Gerçek kurum adresleri (1.200) | **%95,8** | %26,2 | %8,2 |
+| Gerçek kurum adresleri (1.200) | **%96,1** | %26,2 | %8,2 |
 | Elle yazılmış zor vakalar (167) | **%86,8** | %24,6 | %21,0 |
 
 "Tam eşleşme": her bileşen doğru. Gerçek adresler İBB ve İzmir açık verisinden, kişisel veri yok. Test setleri hiç ayar için kullanılmadı.

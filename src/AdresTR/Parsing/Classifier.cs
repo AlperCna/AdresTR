@@ -529,6 +529,12 @@ internal sealed class Classifier(Gazetteer gazetteer, string text, IReadOnlyList
         int doorEnd = first.End;
         int next = n + 1;
 
+        // "Barboros Cd. 2190.sk": an unlabeled number followed by a street type is a numbered street, not a door.
+        if (!labeled && next < tokens.Count && Lexicon.StreetTypeOf(Lexicon.Of(tokens[next].Fold)) is not null)
+        {
+            return;
+        }
+
         // A letter written apart: "No:58 F", "No:12 A" — unless it starts a flat/floor/block ("D:5", "A Blok").
         if (IsDoorLetter(next))
         {
@@ -555,8 +561,15 @@ internal sealed class Classifier(Gazetteer gazetteer, string text, IReadOnlyList
                 return;
             }
 
-            // Range "1-3", "4-6B"
-            Add(DoorHyp(i, next + 1, first.Start, second.End, local));
+            // Range "1-3", "4-6B", "17-19/B"
+            int rangeEnd = second.End;
+            if (next + 1 < tokens.Count && tokens[next + 1].IsAlpha && tokens[next + 1].Fold.Length == 1 && tokens[next + 1].SlashBefore &&
+                tokens[next + 1].Break is not (BreakKind.Section or BreakKind.Soft))
+            {
+                rangeEnd = tokens[++next].End;
+            }
+
+            Add(DoorHyp(i, next + 1, first.Start, rangeEnd, local));
             return;
         }
 

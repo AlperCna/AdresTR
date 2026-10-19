@@ -639,17 +639,17 @@
     "system": "adrestr",
     "set": "real-dev",
     "n": 300,
-    "exact_match": 0.9633,
+    "exact_match": 0.9733,
     "exact_match_ci": [
-      0.94,
-      0.9833
+      0.9533,
+      0.99
     ],
-    "micro_f1": 0.9947,
+    "micro_f1": 0.9962,
     "micro_f1_ci": [
-      0.991,
-      0.9977
+      0.9932,
+      0.9985
     ],
-    "macro_f1": 0.9962,
+    "macro_f1": 0.9974,
     "il_accuracy": 1,
     "ilce_accuracy": 1,
     "birim_accuracy": 1,
@@ -659,7 +659,7 @@
     ],
     "birim_at5": 1,
     "birim_mrr": 1,
-    "ece": 0.0344,
+    "ece": 0.0244,
     "fields": {
       "il": {
         "precision": 1,
@@ -710,9 +710,9 @@
         "support": 266
       },
       "dis_kapi": {
-        "precision": 0.988,
-        "recall": 0.996,
-        "f1": 0.992,
+        "precision": 1,
+        "recall": 1,
+        "f1": 1,
         "support": 278
       },
       "kat": {
@@ -957,17 +957,17 @@
     "system": "adrestr",
     "set": "real-test",
     "n": 1200,
-    "exact_match": 0.9575,
+    "exact_match": 0.9608,
     "exact_match_ci": [
-      0.9458,
-      0.9683
+      0.9492,
+      0.9708
     ],
-    "micro_f1": 0.9916,
+    "micro_f1": 0.992,
     "micro_f1_ci": [
-      0.9891,
-      0.994
+      0.9895,
+      0.9943
     ],
-    "macro_f1": 0.7723,
+    "macro_f1": 0.7725,
     "il_accuracy": 0.9948,
     "ilce_accuracy": 0.9948,
     "birim_accuracy": 1,
@@ -977,7 +977,7 @@
     ],
     "birim_at5": 1,
     "birim_mrr": 1,
-    "ece": 0.036,
+    "ece": 0.0327,
     "fields": {
       "il": {
         "precision": 0.9905,
@@ -1028,9 +1028,9 @@
         "support": 1076
       },
       "dis_kapi": {
-        "precision": 0.9932,
+        "precision": 0.9971,
         "recall": 0.998,
-        "f1": 0.9956,
+        "f1": 0.9976,
         "support": 1132
       },
       "kat": {

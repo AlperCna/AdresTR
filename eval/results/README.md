@@ -121,7 +121,7 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | Exact match | Micro-F1 | Macro-F1 | il | ilçe | birim@1 | birim@5 | MRR | ECE |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| adrestr | 96.3 [94.0–98.3] | 99.5 [99.1–99.8] | 99.6 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 0.034 |
+| adrestr | 97.3 [95.3–99.0] | 99.6 [99.3–99.9] | 99.7 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 0.024 |
 | regex-baseline | 7.7 [5.0–10.7] | 62.6 [60.1–65.0] | 56.8 | 42.1 | 41.7 | 19.7 | 19.7 | 19.7 | – |
 | libpostal | 26.3 [21.7–31.3] | 58.1 [54.2–61.7] | 44.3 | – | – | – | – | – | – |
 
@@ -129,7 +129,7 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | il | ilce | mahalle | semt | csbm_tur | csbm_ad | site | blok | dis_kapi | kat | daire | posta_kodu | tarif |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| adrestr | 100.0 | 100.0 | 100.0 | – | 100.0 | 98.1 | – | – | 99.2 | – | 100.0 | – | – |
+| adrestr | 100.0 | 100.0 | 100.0 | – | 100.0 | 98.1 | – | – | 100.0 | – | 100.0 | – | – |
 | regex-baseline | 98.1 | 40.5 | 55.4 | – | 96.3 | 60.4 | – | – | 46.8 | – | 0.0 | – | – |
 | libpostal | 62.5 | 22.5 | 49.6 | – | 89.2 | 77.4 | 0.0 | – | 53.6 | – | 0.0 | – | – |
 
@@ -139,20 +139,20 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | Tag | n | adrestr | regex-baseline | libpostal |
 |---|---:|---:|---:|---:|
-| abbreviation | 279 | 96.1 | 7.9 | 27.2 |
-| ambiguous-name | 208 | 96.2 | 7.2 | 25.0 |
+| abbreviation | 279 | 97.1 | 7.9 | 27.2 |
+| ambiguous-name | 208 | 97.6 | 7.2 | 25.0 |
 | ascii | 8 | 100.0 | 12.5 | 25.0 |
 | broken-i | 15 | 100.0 | 6.7 | 26.7 |
 | glued | 17 | 100.0 | 5.9 | 11.8 |
 | landmark | 4 | 75.0 | 25.0 | 25.0 |
 | merkez | 11 | 90.9 | 9.1 | 9.1 |
-| missing-il | 245 | 99.2 | 3.7 | 25.3 |
-| missing-ilce | 88 | 98.9 | 10.2 | 64.8 |
-| numbered-street | 78 | 93.6 | 11.5 | 48.7 |
+| missing-il | 245 | 99.6 | 3.7 | 25.3 |
+| missing-ilce | 88 | 100.0 | 10.2 | 64.8 |
+| numbered-street | 78 | 97.4 | 11.5 | 48.7 |
 | semt | 7 | 100.0 | 0.0 | 57.1 |
 | site-blok | 1 | 0.0 | 0.0 | 0.0 |
-| slash-door | 117 | 99.1 | 4.3 | 47.0 |
-| uppercase | 143 | 94.4 | 6.3 | 42.0 |
+| slash-door | 117 | 100.0 | 4.3 | 47.0 |
+| uppercase | 143 | 95.1 | 6.3 | 42.0 |
 
 </details>
 
@@ -160,7 +160,7 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | Exact match | Micro-F1 | Macro-F1 | il | ilçe | birim@1 | birim@5 | MRR | ECE |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| adrestr | 95.8 [94.6–96.8] | 99.2 [98.9–99.4] | 77.2 | 99.5 | 99.5 | 100.0 | 100.0 | 100.0 | 0.036 |
+| adrestr | 96.1 [94.9–97.1] | 99.2 [99.0–99.4] | 77.3 | 99.5 | 99.5 | 100.0 | 100.0 | 100.0 | 0.033 |
 | regex-baseline | 8.2 [6.8–9.8] | 63.5 [62.3–64.6] | 49.8 | 42.5 | 42.6 | 19.2 | 19.2 | 19.2 | – |
 | libpostal | 26.2 [23.8–28.6] | 59.3 [57.4–61.1] | 39.9 | – | – | – | – | – | – |
 
@@ -168,7 +168,7 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | il | ilce | mahalle | semt | csbm_tur | csbm_ad | site | blok | dis_kapi | kat | daire | posta_kodu | tarif |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| adrestr | 99.5 | 99.1 | 99.6 | 0.0 | 99.7 | 98.2 | – | – | 99.6 | – | 99.3 | – | 0.0 |
+| adrestr | 99.5 | 99.1 | 99.6 | 0.0 | 99.7 | 98.2 | – | – | 99.8 | – | 99.3 | – | 0.0 |
 | regex-baseline | 98.1 | 40.2 | 50.8 | – | 96.2 | 64.1 | – | – | 49.2 | – | 0.0 | 0.0 | – |
 | libpostal | 63.2 | 21.1 | 50.2 | – | 88.4 | 75.8 | 0.0 | – | 60.1 | 0.0 | 0.0 | – | – |
 
@@ -178,8 +178,8 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | Tag | n | adrestr | regex-baseline | libpostal |
 |---|---:|---:|---:|---:|
-| abbreviation | 1135 | 95.9 | 8.6 | 27.0 |
-| ambiguous-name | 850 | 96.8 | 6.4 | 25.4 |
+| abbreviation | 1135 | 96.2 | 8.6 | 27.0 |
+| ambiguous-name | 850 | 97.1 | 6.4 | 25.4 |
 | ascii | 23 | 100.0 | 8.7 | 43.5 |
 | broken-i | 29 | 100.0 | 0.0 | 27.6 |
 | glued | 80 | 95.0 | 3.8 | 10.0 |
@@ -187,7 +187,7 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 | merkez | 28 | 100.0 | 7.1 | 14.3 |
 | missing-il | 991 | 96.9 | 5.4 | 26.9 |
 | missing-ilce | 364 | 96.7 | 12.1 | 64.0 |
-| numbered-street | 318 | 96.2 | 10.7 | 48.1 |
+| numbered-street | 318 | 97.5 | 10.7 | 48.1 |
 | osb | 1 | 100.0 | 0.0 | 0.0 |
 | reordered | 3 | 100.0 | 100.0 | 100.0 |
 | semt | 25 | 84.0 | 8.0 | 16.0 |

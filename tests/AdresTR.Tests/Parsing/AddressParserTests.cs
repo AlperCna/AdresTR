@@ -73,6 +73,20 @@ public class AddressParserTests
     }
 
     [Fact]
+    public void Door_range_keeps_its_trailing_letter()
+    {
+        ParseResult r = Parser.Parse("MEVLANA MAH. 1751 SOK. NO:17-19/B");
+        Assert.Equal("17-19/B", r.DoorNumber?.Value);
+    }
+
+    [Fact]
+    public void Unlabeled_number_before_a_street_type_is_a_street_name_not_a_door()
+    {
+        ParseResult r = Parser.Parse("100.Yıl mh Barboros cd 2190.sk Bağcılar/İstanbul");
+        Assert.Null(r.DoorNumber);
+    }
+
+    [Fact]
     public void Restores_diacritics_and_reports_it()
     {
         ParseResult r = Parser.Parse("caferaga mah kadikoy istanbul");

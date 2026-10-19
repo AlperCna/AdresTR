@@ -50,7 +50,7 @@ r.Confidence;           // kalibre edilmiş güven
 | Set | AdresTR | libpostal | regex |
 |---|---:|---:|---:|
 | Sentetik (2.000) — tam eşleşme | **%98,0** | %10,0 | %14,0 |
-| Gerçek kurum adresleri (1.200) — tam eşleşme | **%95,8** | %26,2 | %8,2 |
+| Gerçek kurum adresleri (1.200) — tam eşleşme | **%96,1** | %26,2 | %8,2 |
 | Elle yazılmış zor vakalar (167) — tam eşleşme | **%86,8** | %24,6 | %21,0 |
 
 Ayrıntılar: [eval/results](eval/results/README.md) · Metodoloji: [eval/README.md](eval/README.md)

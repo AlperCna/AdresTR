@@ -5,7 +5,7 @@
     "birim_accuracy": 1
   },
   "real-dev": {
-    "exact_match": 0.9633,
+    "exact_match": 0.973,
     "micro_f1": 0.9947,
     "birim_accuracy": 1
   },

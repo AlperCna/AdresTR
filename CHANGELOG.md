@@ -11,6 +11,8 @@ All notable changes to this project are documented here. The format follows
 ### Changed
 - Parser: glued village names ("Akpınarköyü", "Dikenliköyü") are split even when the glued form is a gazetteer alias key, and
   glued "cadde"/"bulvar" ("zafercadde") are split into name and type. Synthetic test exact match 97.4% → 98.0%.
+- Parser: door ranges keep a trailing letter ("No:17-19/B"); an unlabeled number right before a street type ("Cd. 2190.sk") is a
+  street name, not a door. Real test exact match 95.8% → 96.1%.
 - Parser: bare "Küme Evler" street type, "Krş." landmark, units named like a site; ADR-0004 updated for AdresTR.Streets.
 
 ## [0.1.0-preview.4] - 2026-10-12
