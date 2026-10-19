@@ -61,6 +61,9 @@ internal sealed class Hyp
     /// <summary>For a door hypothesis like "No:17/5": the flat part ("5").</summary>
     public string? FlatValue { get; init; }
 
+    /// <summary>For a site hypothesis: the name was followed by an apartment keyword ("Çiçek Apt.") rather than "Sitesi".</summary>
+    public bool Apartment { get; init; }
+
     public int FlatStart { get; init; }
 
     public int FlatEnd { get; init; }
@@ -472,7 +475,7 @@ internal sealed class Classifier(Gazetteer gazetteer, string text, IReadOnlyList
                     Add(new Hyp
                     {
                         From = i, To = k + KeywordLength(k), Role = Role.Site, Local = 0.8, Value = CleanSpaces(Slice(i, k)),
-                        TextStart = tokens[i].Start, TextEnd = tokens[k - 1].End, KeywordSupported = true,
+                        TextStart = tokens[i].Start, TextEnd = tokens[k - 1].End, KeywordSupported = true, Apartment = kw is Keyword.Bina,
                     });
                 }
 

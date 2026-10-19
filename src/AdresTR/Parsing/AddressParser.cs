@@ -431,6 +431,7 @@ public sealed class AddressParser
                     break;
                 case Role.Site:
                     result.Site = component;
+                    result.SiteIsApartment = h.Apartment;
                     break;
                 case Role.Blok:
                     result.Blok = component;

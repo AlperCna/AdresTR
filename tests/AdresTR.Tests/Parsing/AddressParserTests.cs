@@ -87,6 +87,27 @@ public class AddressParserTests
     }
 
     [Fact]
+    public void Canonical_string_keeps_apartment_versus_site()
+    {
+        Assert.Contains("Çiçek Apt.", Parser.Parse("Caferağa Mah. Moda Cad. Çiçek Apt. No:12 Kadıköy İstanbul").ToCanonicalString());
+        Assert.Contains("Yıldız Sitesi", Parser.Parse("Caferağa Mah. Moda Cad. Yıldız Sitesi No:12 Kadıköy İstanbul").ToCanonicalString());
+    }
+
+    [Fact]
+    public void Universitesi_is_not_split_into_a_site()
+    {
+        ParseResult r = Parser.Parse("bursa nilüfer görükle mah. kampüs cad. no 5 uludağ üniversitesi karşısı");
+        Assert.Null(r.Site);
+    }
+
+    [Fact]
+    public void Bare_n_colon_is_a_door_number_label()
+    {
+        ParseResult r = Parser.Parse("Ordu Altınordu Düz Mah. Belediye Cd. N:5");
+        Assert.Equal("5", r.DoorNumber?.Value);
+    }
+
+    [Fact]
     public void Restores_diacritics_and_reports_it()
     {
         ParseResult r = Parser.Parse("caferaga mah kadikoy istanbul");

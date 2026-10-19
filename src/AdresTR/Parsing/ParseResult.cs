@@ -109,6 +109,8 @@ public sealed class ParseResult
     /// <summary>Site or building name without the type word.</summary>
     public AddressComponent? Site { get; internal set; }
 
+    internal bool SiteIsApartment { get; set; }
+
     /// <summary>Block identifier ("A", "B2").</summary>
     public AddressComponent? Blok { get; internal set; }
 
@@ -181,7 +183,7 @@ public sealed class ParseResult
 
         if (Site is not null)
         {
-            Add($"{Display(Site.Value)} Sitesi");
+            Add($"{Display(Site.Value)} {(SiteIsApartment ? "Apt." : "Sitesi")}");
         }
 
         if (Blok is not null)

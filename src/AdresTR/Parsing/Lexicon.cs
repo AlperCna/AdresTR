@@ -70,7 +70,7 @@ internal static class Lexicon
         ["blok"] = Keyword.Blok, ["blk"] = Keyword.Blok, ["bl"] = Keyword.Blok, ["blogu"] = Keyword.Blok,
 
         // numbers
-        ["no"] = Keyword.No, ["numara"] = Keyword.No, ["nu"] = Keyword.No, ["num"] = Keyword.No, ["numarasi"] = Keyword.No, ["nomara"] = Keyword.No,
+        ["no"] = Keyword.No, ["n"] = Keyword.No, ["numara"] = Keyword.No, ["nu"] = Keyword.No, ["num"] = Keyword.No, ["numarasi"] = Keyword.No, ["nomara"] = Keyword.No,
         ["nolu"] = Keyword.Nolu, ["numarali"] = Keyword.Nolu, ["nlu"] = Keyword.Nolu,
         ["kat"] = Keyword.Kat, ["k"] = Keyword.Kat, ["kati"] = Keyword.Kat,
         ["daire"] = Keyword.Daire, ["d"] = Keyword.Daire, ["dr"] = Keyword.Daire, ["dai"] = Keyword.Daire, ["dair"] = Keyword.Daire, ["dairesi"] = Keyword.Daire,

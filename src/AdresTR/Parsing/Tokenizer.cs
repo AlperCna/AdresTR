@@ -170,7 +170,9 @@ internal static partial class Tokenizer
         {
             foreach (string suffix in LongGluedSuffixes)
             {
-                if (t.Fold.Length - suffix.Length >= 3 && t.Fold.EndsWith(suffix, StringComparison.Ordinal))
+                // "universitesi" is a word of its own, not "univer" + "sitesi".
+                if (t.Fold.Length - suffix.Length >= 3 && t.Fold.EndsWith(suffix, StringComparison.Ordinal) &&
+                    !(suffix == "sitesi" && t.Fold.EndsWith("universitesi", StringComparison.Ordinal)))
                 {
                     return Split(t, suffix.Length, out name, out keyword);
                 }
