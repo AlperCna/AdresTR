@@ -108,6 +108,15 @@ public class AddressParserTests
     }
 
     [Fact]
+    public void Written_district_is_not_overridden_by_a_neighbourhood_that_exists_only_elsewhere()
+    {
+        // "Kuzey" exists in Kocaeli only in Körfez; the text says Gebze.
+        ParseResult r = Parser.Parse("Kuzey Mahallesi Karayolu Cad. No:1 Gebze Kocaeli");
+        Assert.Equal("Gebze", r.District?.Name);
+        Assert.Null(r.Unit);
+    }
+
+    [Fact]
     public void Restores_diacritics_and_reports_it()
     {
         ParseResult r = Parser.Parse("caferaga mah kadikoy istanbul");

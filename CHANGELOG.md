@@ -15,6 +15,8 @@ All notable changes to this project are documented here. The format follows
   street name, not a door. Real test exact match 95.8% → 96.1%.
 - Parser: "üniversitesi" is no longer split into a site ("Üniver Sitesi"); a bare "N:5" is a door number; `ToCanonicalString()`
   writes "Apt." for apartments instead of "Sitesi".
+- Parser: a written ilçe is no longer silently replaced by the only ilçe of the il that has a neighbourhood of that name
+  ("Kuzey Mah. … Gebze Kocaeli" now stays Gebze with no unit instead of resolving to Körfez).
 - Parser: bare "Küme Evler" street type, "Krş." landmark, units named like a site; ADR-0004 updated for AdresTR.Streets.
 
 ## [0.1.0-preview.4] - 2026-10-12
