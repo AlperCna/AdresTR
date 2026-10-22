@@ -5,6 +5,8 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+## [0.1.0-preview.5] - 2026-10-22
+
 ### Added
 - Launch material (`docs/launch`), Hugging Face dataset card (`eval/huggingface`), clients release workflow.
 
@@ -76,7 +78,8 @@ First preview on NuGet: `AdresTR` and `AdresTR.Data`.
 - Samples (`samples/QuickStart`, `samples/CsvCleaner`), package icon and NuGet README, tag-triggered release
   workflow with NuGet Trusted Publishing (no stored API key).
 
-[Unreleased]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.4...HEAD
+[Unreleased]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.5...HEAD
+[0.1.0-preview.5]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.4...v0.1.0-preview.5
 [0.1.0-preview.4]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.3...v0.1.0-preview.4
 [0.1.0-preview.3]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.2...v0.1.0-preview.3
 [0.1.0-preview.2]: https://github.com/AlperCna/AdresTR/compare/v0.1.0-preview.1...v0.1.0-preview.2
