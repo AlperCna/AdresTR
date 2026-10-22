@@ -57,7 +57,7 @@ internal static class Lexicon
         ["cadesi"] = Keyword.Cadde, ["cddesi"] = Keyword.Cadde, ["caddsi"] = Keyword.Cadde, ["cadessi"] = Keyword.Cadde, ["cadd"] = Keyword.Cadde,
         ["sokagi"] = Keyword.Sokak, ["sokak"] = Keyword.Sokak, ["sok"] = Keyword.Sokak, ["sk"] = Keyword.Sokak,
         ["skk"] = Keyword.Sokak, ["sokk"] = Keyword.Sokak, ["sokag"] = Keyword.Sokak, ["sokar"] = Keyword.Sokak, ["sokakk"] = Keyword.Sokak,
-        ["bulvari"] = Keyword.Bulvar, ["bulvar"] = Keyword.Bulvar, ["bulv"] = Keyword.Bulvar, ["blv"] = Keyword.Bulvar, ["bulvr"] = Keyword.Bulvar,
+        ["bulvari"] = Keyword.Bulvar, ["bulvar"] = Keyword.Bulvar, ["bulv"] = Keyword.Bulvar, ["blv"] = Keyword.Bulvar, ["bulvr"] = Keyword.Bulvar, ["bul"] = Keyword.Bulvar, ["bld"] = Keyword.Bulvar,
         ["yolu"] = Keyword.Yol, ["yol"] = Keyword.Yol,
         ["meydani"] = Keyword.Meydan, ["meydan"] = Keyword.Meydan, ["myd"] = Keyword.Meydan,
         ["cikmazi"] = Keyword.Cikmaz, ["cikmaz"] = Keyword.Cikmaz, ["cikm"] = Keyword.Cikmaz, ["ckm"] = Keyword.Cikmaz,

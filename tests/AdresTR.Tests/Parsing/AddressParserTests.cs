@@ -117,6 +117,14 @@ public class AddressParserTests
     }
 
     [Fact]
+    public void Bul_abbreviation_is_a_boulevard()
+    {
+        ParseResult r = Parser.Parse("Silivri Cumhuriyet Mah Fatih Sultan Mehmet Bul. No 5 İstanbul");
+        Assert.Equal(StreetType.Bulvar, r.StreetType);
+        Assert.Equal("5", r.DoorNumber?.Value);
+    }
+
+    [Fact]
     public void Restores_diacritics_and_reports_it()
     {
         ParseResult r = Parser.Parse("caferaga mah kadikoy istanbul");
