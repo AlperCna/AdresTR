@@ -124,6 +124,25 @@ public class AddressParserTests
         Assert.Equal("5", r.DoorNumber?.Value);
     }
 
+    [Theory]
+    [InlineData("Caferağa Mah. Moda Cad. No:12 3. Kat 7 Nolu Daire Kadıköy İstanbul", "12", "3", "7")]
+    [InlineData("Caferağa Mah. Moda Cad. Numara 12 İç Kapı No 3 Kadıköy", "12", null, "3")]
+    [InlineData("Caferağa Mah. Moda Cad. No:12 Kat:Giriş Kadıköy İstanbul", "12", "0", null)]
+    public void Floor_and_flat_label_variants(string input, string door, string? floor, string? flat)
+    {
+        ParseResult r = Parser.Parse(input);
+        Assert.Equal(door, r.DoorNumber?.Value);
+        Assert.Equal(floor, r.Floor?.Value);
+        Assert.Equal(flat, r.Flat?.Value);
+    }
+
+    [Fact]
+    public void Site_name_cannot_be_a_bare_number_and_canonical_keeps_the_building_type()
+    {
+        Assert.Null(Parser.Parse("Kızılay Mah. Atatürk Blv. No:100 İş Hanı Kat:5 Çankaya Ankara").Site);
+        Assert.Contains("Mavi Plaza", Parser.Parse("Alsancak Mah. 1472 Sk. Mavi Plaza Kat 7 Konak İzmir").ToCanonicalString());
+    }
+
     [Fact]
     public void Restores_diacritics_and_reports_it()
     {

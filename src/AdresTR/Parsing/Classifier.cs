@@ -61,8 +61,8 @@ internal sealed class Hyp
     /// <summary>For a door hypothesis like "No:17/5": the flat part ("5").</summary>
     public string? FlatValue { get; init; }
 
-    /// <summary>For a site hypothesis: the name was followed by an apartment keyword ("Çiçek Apt.") rather than "Sitesi".</summary>
-    public bool Apartment { get; init; }
+    /// <summary>For a site hypothesis: how the building type is written in the canonical string ("Sitesi", "Apt.", "Plaza", "İş Hanı" …).</summary>
+    public string? SiteSuffix { get; init; }
 
     public int FlatStart { get; init; }
 
@@ -463,6 +463,23 @@ internal sealed class Classifier(Gazetteer gazetteer, string text, IReadOnlyList
         }
     }
 
+    // How the building keyword at token k is written in the canonical string.
+    private string SiteSuffixOf(int k)
+    {
+        string key = string.Concat(Enumerable.Range(k, KeywordLength(k)).Select(x => tokens[x].Fold));
+        return key switch
+        {
+            "apartmani" or "apartman" or "apt" or "ap" => "Apt.",
+            "plaza" => "Plaza",
+            "rezidans" or "residence" => "Rezidans",
+            "konutlari" => "Konutları",
+            "ishani" => "İş Hanı",
+            "ismerkezi" => "İş Merkezi",
+            "pasaji" => "Pasajı",
+            _ => "Sitesi",
+        };
+    }
+
     private void Site(int i)
     {
         for (int k = i + 1; k <= Math.Min(tokens.Count - 1, i + 4); k++)
@@ -470,12 +487,13 @@ internal sealed class Classifier(Gazetteer gazetteer, string text, IReadOnlyList
             Keyword kw = KeywordAt(k);
             if (kw is Keyword.Site or Keyword.Bina)
             {
-                if (Contiguous(i, k) && !Enumerable.Range(i, k - i).Any(x => KeywordAt(x) is not Keyword.None))
+                if (Contiguous(i, k) && !Enumerable.Range(i, k - i).Any(x => KeywordAt(x) is not Keyword.None) &&
+                    Enumerable.Range(i, k - i).Any(x => tokens[x].Kind != TokenKind.Num))
                 {
                     Add(new Hyp
                     {
                         From = i, To = k + KeywordLength(k), Role = Role.Site, Local = 0.8, Value = CleanSpaces(Slice(i, k)),
-                        TextStart = tokens[i].Start, TextEnd = tokens[k - 1].End, KeywordSupported = true, Apartment = kw is Keyword.Bina,
+                        TextStart = tokens[i].Start, TextEnd = tokens[k - 1].End, KeywordSupported = true, SiteSuffix = SiteSuffixOf(k),
                     });
                 }
 
@@ -612,8 +630,8 @@ internal sealed class Classifier(Gazetteer gazetteer, string text, IReadOnlyList
             });
         }
 
-        // "3. kat", "3 kat", "zemin kat"
-        if (KeywordAt(i + 1) == Keyword.Kat && tokens[i + 1].Fold.Length > 1 && FloorValue(tokens[i]) is string w)
+        // "3. kat", "3 kat", "zemin kat" (but not the door number in "No:12 Kat:Giriş")
+        if ((i == 0 || KeywordAt(i - 1) != Keyword.No) && KeywordAt(i + 1) == Keyword.Kat && tokens[i + 1].Fold.Length > 1 && FloorValue(tokens[i]) is string w)
         {
             Add(new Hyp
             {
@@ -624,7 +642,7 @@ internal sealed class Classifier(Gazetteer gazetteer, string text, IReadOnlyList
 
         static string? FloorValue(Token t) => t.Fold switch
         {
-            "zemin" or "z" => "0",
+            "zemin" or "z" or "giris" => "0",
             "bodrum" or "b" => "-1",
             _ when t.IsNum && t.Fold.Length <= 2 => t.Fold.TrimStart('0') is "" ? "0" : t.Fold.TrimStart('0'),
             _ => null,
@@ -643,6 +661,39 @@ internal sealed class Classifier(Gazetteer gazetteer, string text, IReadOnlyList
                 Value = tokens[i].Fold[1..].TrimStart('0') is "" ? "0" : tokens[i].Fold[1..].TrimStart('0'),
                 TextStart = tokens[i].Start + 1, TextEnd = tokens[i].End, KeywordSupported = true,
             });
+        }
+
+        // "7 nolu daire", "7 no'lu daire"
+        if (tokens[i].Kind != TokenKind.Alpha && tokens[i].Fold.Length <= 5 && !tokens[i].Noise)
+        {
+            int k = i + 1 < tokens.Count && KeywordAt(i + 1) == Keyword.Nolu ? i + 2 : i + 1;
+            if (k > i + 1 && k < tokens.Count && KeywordAt(k) == Keyword.Daire && tokens[k].Fold.Length > 1)
+            {
+                Add(new Hyp
+                {
+                    From = i, To = k + 1, Role = Role.Flat, Local = 0.92,
+                    Value = text[tokens[i].Start..tokens[i].End].ToUpperInvariant(), TextStart = tokens[i].Start, TextEnd = tokens[i].End, KeywordSupported = true,
+                });
+            }
+        }
+
+        // "İç Kapı No 3", "Daire No: 3": the label may be followed by "No".
+        if (KeywordAt(i) == Keyword.Daire)
+        {
+            int j = i + KeywordLength(i);
+            if (j < tokens.Count && KeywordAt(j) == Keyword.No)
+            {
+                j++;
+            }
+
+            if (j > i + 1 && j < tokens.Count && KeywordAt(j - 1) == Keyword.No && tokens[j].Kind != TokenKind.Alpha && tokens[j].Fold.Length <= 5)
+            {
+                Add(new Hyp
+                {
+                    From = i, To = j + 1, Role = Role.Flat, Local = 0.9,
+                    Value = text[tokens[j].Start..tokens[j].End].ToUpperInvariant(), TextStart = tokens[j].Start, TextEnd = tokens[j].End, KeywordSupported = true,
+                });
+            }
         }
 
         if (KeywordAt(i) == Keyword.Daire && i + 1 < tokens.Count && tokens[i + 1].Kind != TokenKind.Alpha && tokens[i + 1].Fold.Length <= 5)
