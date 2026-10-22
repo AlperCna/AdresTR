@@ -43,8 +43,8 @@ I built the evaluation sets before the parser, because "is it good?" needs a num
 
 | Test set | AdresTR | libpostal | regex |
 |---|---:|---:|---:|
-| Synthetic, noisy (2,000) | **97.4%** | 10.0% | 14.0% |
-| Real public-institution addresses (1,200) | **95.8%** | 26.2% | 8.2% |
+| Synthetic, noisy (2,000) | **98.0%** | 10.0% | 14.0% |
+| Real public-institution addresses (1,200) | **96.1%** | 26.2% | 8.2% |
 | Hand-written hard cases (167) | **86.8%** | 24.6% | 21.0% |
 
 "Exact match" = every component correct. Real addresses come from İBB and İzmir open data (no personal data). Test splits were never

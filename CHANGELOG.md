@@ -9,6 +9,15 @@ All notable changes to this project are documented here. The format follows
 - Launch material (`docs/launch`), Hugging Face dataset card (`eval/huggingface`), clients release workflow.
 
 ### Changed
+- Parser: glued village names ("Akpınarköyü", "Dikenliköyü") are split even when the glued form is a gazetteer alias key, and
+  glued "cadde"/"bulvar" ("zafercadde") are split into name and type. Synthetic test exact match 97.4% → 98.0%.
+- Parser: door ranges keep a trailing letter ("No:17-19/B"); an unlabeled number right before a street type ("Cd. 2190.sk") is a
+  street name, not a door. Real test exact match 95.8% → 96.1%.
+- Parser: "üniversitesi" is no longer split into a site ("Üniver Sitesi"); a bare "N:5" is a door number; `ToCanonicalString()`
+  writes "Apt." for apartments instead of "Sitesi".
+- Parser: a written ilçe is no longer silently replaced by the only ilçe of the il that has a neighbourhood of that name
+  ("Kuzey Mah. … Gebze Kocaeli" now stays Gebze with no unit instead of resolving to Körfez).
+- Parser: "Bul." and "Bld." are recognised as boulevard abbreviations.
 - Parser: bare "Küme Evler" street type, "Krş." landmark, units named like a site; ADR-0004 updated for AdresTR.Streets.
 
 ## [0.1.0-preview.4] - 2026-10-12

@@ -55,6 +55,75 @@ public class AddressParserTests
         Assert.Equal("3", r.Flat?.Value);
     }
 
+    [Theory]
+    [InlineData("no: 69 akpınarköyü 05302 merzifon amasya", 5050021)]
+    [InlineData("Akpınarköyü Merzifon Amasya", 5050021)]
+    public void Glued_koyu_suffix_resolves_the_village_even_when_the_glued_form_is_an_alias(string input, int unitId)
+    {
+        ParseResult r = Parser.Parse(input);
+        Assert.Equal(unitId, r.Unit?.Id);
+    }
+
+    [Fact]
+    public void Glued_cadde_suffix_is_split_into_street_name_and_type()
+    {
+        ParseResult r = Parser.Parse("adana feke akkaya mh zafercadde no. 78");
+        Assert.Equal("zafer", r.Street?.Value, ignoreCase: true);
+        Assert.Equal(StreetType.Cadde, r.StreetType);
+    }
+
+    [Fact]
+    public void Door_range_keeps_its_trailing_letter()
+    {
+        ParseResult r = Parser.Parse("MEVLANA MAH. 1751 SOK. NO:17-19/B");
+        Assert.Equal("17-19/B", r.DoorNumber?.Value);
+    }
+
+    [Fact]
+    public void Unlabeled_number_before_a_street_type_is_a_street_name_not_a_door()
+    {
+        ParseResult r = Parser.Parse("100.Yıl mh Barboros cd 2190.sk Bağcılar/İstanbul");
+        Assert.Null(r.DoorNumber);
+    }
+
+    [Fact]
+    public void Canonical_string_keeps_apartment_versus_site()
+    {
+        Assert.Contains("Çiçek Apt.", Parser.Parse("Caferağa Mah. Moda Cad. Çiçek Apt. No:12 Kadıköy İstanbul").ToCanonicalString());
+        Assert.Contains("Yıldız Sitesi", Parser.Parse("Caferağa Mah. Moda Cad. Yıldız Sitesi No:12 Kadıköy İstanbul").ToCanonicalString());
+    }
+
+    [Fact]
+    public void Universitesi_is_not_split_into_a_site()
+    {
+        ParseResult r = Parser.Parse("bursa nilüfer görükle mah. kampüs cad. no 5 uludağ üniversitesi karşısı");
+        Assert.Null(r.Site);
+    }
+
+    [Fact]
+    public void Bare_n_colon_is_a_door_number_label()
+    {
+        ParseResult r = Parser.Parse("Ordu Altınordu Düz Mah. Belediye Cd. N:5");
+        Assert.Equal("5", r.DoorNumber?.Value);
+    }
+
+    [Fact]
+    public void Written_district_is_not_overridden_by_a_neighbourhood_that_exists_only_elsewhere()
+    {
+        // "Kuzey" exists in Kocaeli only in Körfez; the text says Gebze.
+        ParseResult r = Parser.Parse("Kuzey Mahallesi Karayolu Cad. No:1 Gebze Kocaeli");
+        Assert.Equal("Gebze", r.District?.Name);
+        Assert.Null(r.Unit);
+    }
+
+    [Fact]
+    public void Bul_abbreviation_is_a_boulevard()
+    {
+        ParseResult r = Parser.Parse("Silivri Cumhuriyet Mah Fatih Sultan Mehmet Bul. No 5 İstanbul");
+        Assert.Equal(StreetType.Bulvar, r.StreetType);
+        Assert.Equal("5", r.DoorNumber?.Value);
+    }
+
     [Fact]
     public void Restores_diacritics_and_reports_it()
     {

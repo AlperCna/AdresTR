@@ -1,11 +1,11 @@
 {
   "synthetic-dev": {
-    "exact_match": 0.99,
-    "micro_f1": 0.9985,
-    "birim_accuracy": 0.9917
+    "exact_match": 0.996,
+    "micro_f1": 1,
+    "birim_accuracy": 1
   },
   "real-dev": {
-    "exact_match": 0.9633,
+    "exact_match": 0.973,
     "micro_f1": 0.9947,
     "birim_accuracy": 1
   },

@@ -273,12 +273,40 @@ public sealed class AddressParser
 
         score -= AdminOrderPenalty(hyps, r);
 
+        // The text names another ilçe of the same il that this path skipped to make the unit fit ("Kuzey Mah. ... Gebze Kocaeli"
+        // where only Körfez has a Kuzey): the written ilçe must not be silently overridden.
+        if (r.Ilce is null && finalDistricts.Count == 1 && WrittenOtherDistrict(hyps, tokens, finalDistricts[0]))
+        {
+            score -= 1.5;
+        }
+
         r.Units = units;
         r.Unit = units.Count == 1 ? units[0] : null;
         r.District = finalDistricts.Count == 1 ? finalDistricts[0] : null;
         r.Province = finalProvinces.Count == 1 ? finalProvinces[0] : null;
         r.Score = score;
         return r;
+    }
+
+    private bool WrittenOtherDistrict(List<Hyp> hyps, IReadOnlyList<Token> tokens, District inferred)
+    {
+        for (int k = 0; k < tokens.Count; k++)
+        {
+            if (tokens[k].Noise || !tokens[k].IsAlpha || hyps.Exists(h => k >= h.From && k < h.To))
+            {
+                continue;
+            }
+
+            foreach (GazetteerMatch<District> m in _gazetteer.FindDistrictsByKey(tokens[k].Fold))
+            {
+                if (m.Entity.Province == inferred.Province && m.Entity != inferred)
+                {
+                    return true;
+                }
+            }
+        }
+
+        return false;
     }
 
     private List<SettlementUnit> FuzzyUnits(Hyp unitHyp, HashSet<Province>? provinces, List<District>? districts, Resolution r, ref double score)
@@ -431,6 +459,7 @@ public sealed class AddressParser
                     break;
                 case Role.Site:
                     result.Site = component;
+                    result.SiteIsApartment = h.Apartment;
                     break;
                 case Role.Blok:
                     result.Blok = component;

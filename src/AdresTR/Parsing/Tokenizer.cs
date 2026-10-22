@@ -61,7 +61,7 @@ internal static partial class Tokenizer
 {
     // Long keyword suffixes that may be glued to a name: "atillamahallesi", "bagdatcaddesi".
     private static readonly string[] LongGluedSuffixes =
-        ["mahallesi", "mahalle", "caddesi", "sokagi", "sokak", "bulvari", "sitesi", "apartmani", "koyu"];
+        ["mahallesi", "mahalle", "caddesi", "cadde", "sokagi", "sokak", "bulvari", "bulvar", "sitesi", "apartmani", "koyu"];
 
     // Short ones are split only when the remaining prefix is a known gazetteer name: "caferagamah".
     private static readonly string[] ShortGluedSuffixes = ["mah", "mh", "cad", "cd", "sok", "sk", "koy", "bulv", "blv"];
@@ -151,7 +151,9 @@ internal static partial class Tokenizer
         var result = new List<Token>(tokens.Count + 2);
         foreach (Token t in tokens)
         {
-            if (t.IsAlpha && !IsKnownName(t.Fold, gazetteer) && TrySplit(t, out Token? name, out Token? keyword))
+            // "akpinarkoyu" is itself a gazetteer key (the "Akpınar Köyü" alias), yet the glued form should still split.
+            bool gluedVillage = t.Fold.Length > 7 && t.Fold.EndsWith("koyu", StringComparison.Ordinal) && IsKnownName(t.Fold[..^4], gazetteer);
+            if (t.IsAlpha && (gluedVillage || !IsKnownName(t.Fold, gazetteer)) && TrySplit(t, out Token? name, out Token? keyword))
             {
                 result.Add(name!);
                 result.Add(keyword!);
@@ -168,7 +170,9 @@ internal static partial class Tokenizer
         {
             foreach (string suffix in LongGluedSuffixes)
             {
-                if (t.Fold.Length - suffix.Length >= 3 && t.Fold.EndsWith(suffix, StringComparison.Ordinal))
+                // "universitesi" is a word of its own, not "univer" + "sitesi".
+                if (t.Fold.Length - suffix.Length >= 3 && t.Fold.EndsWith(suffix, StringComparison.Ordinal) &&
+                    !(suffix == "sitesi" && t.Fold.EndsWith("universitesi", StringComparison.Ordinal)))
                 {
                     return Split(t, suffix.Length, out name, out keyword);
                 }
