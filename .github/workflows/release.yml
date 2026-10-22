@@ -161,6 +161,12 @@ jobs:
           if [ ! -s notes.md ]; then echo "See [CHANGELOG.md](CHANGELOG.md)." > notes.md; fi
           echo -e "\n**NuGet:** https://www.nuget.org/packages/AdresTR/${VERSION} · https://www.nuget.org/packages/AdresTR.Data/${VERSION}" >> notes.md
           printf '\n**Container:** `docker run -p 8080:8080 ghcr.io/alpercna/adrestr-api:%s`\n' "$VERSION" >> notes.md
-          flags=()
-          if [ "$PRERELEASE" = "true" ]; then flags+=(--prerelease); fi
-          gh release create "$GITHUB_REF_NAME" artifacts/* --title "AdresTR ${VERSION}" --notes-file notes.md "${flags[@]}"
+          # A release created by hand from the tag (GitHub UI) must not fail the job: update its notes and attach the packages instead.
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release edit "$GITHUB_REF_NAME" --title "AdresTR ${VERSION}" --notes-file notes.md
+            gh release upload "$GITHUB_REF_NAME" artifacts/* --clobber
+          else
+            flags=()
+            if [ "$PRERELEASE" = "true" ]; then flags+=(--prerelease); fi
+            gh release create "$GITHUB_REF_NAME" artifacts/* --title "AdresTR ${VERSION}" --notes-file notes.md "${flags[@]}"
+          fi
