@@ -459,7 +459,7 @@ public sealed class AddressParser
                     break;
                 case Role.Site:
                     result.Site = component;
-                    result.SiteIsApartment = h.Apartment;
+                    result.SiteSuffix = h.SiteSuffix;
                     break;
                 case Role.Blok:
                     result.Blok = component;
