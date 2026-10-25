@@ -11,4 +11,4 @@ r.Unit?.Id;              // 34230005
 - [Getting started](articles/getting-started.md)
 - [Try it in the browser](https://alpercna.github.io/AdresTR/) (runs client-side; nothing is sent anywhere)
 - [API reference](api/index.md)
-- [Benchmark](articles/benchmark.md): 98.0 % exact match on noisy synthetic, 96.1 % on real public-institution addresses
+- [Benchmark](articles/benchmark.md): 98.2 % exact match on noisy synthetic, 96.1 % on real public-institution addresses

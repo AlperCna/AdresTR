@@ -66,6 +66,9 @@ internal static partial class Tokenizer
     // Short ones are split only when the remaining prefix is a known gazetteer name: "caferagamah".
     private static readonly string[] ShortGluedSuffixes = ["mah", "mh", "cad", "cd", "sok", "sk", "koy", "bulv", "blv"];
 
+    // Street abbreviations that may be glued to an unmarked name when a door label follows: "Erguvancd, No: 37", "100. Yılsk No.34".
+    private static readonly string[] GluedStreetBeforeDoor = ["cad", "cd", "sok", "sk", "bulv", "blv"];
+
     public static List<Token> Tokenize(string text, Gazetteer gazetteer)
     {
         bool[] noise = NoiseMask(text);
@@ -149,11 +152,13 @@ internal static partial class Tokenizer
     private static List<Token> SplitGluedKeywords(List<Token> tokens, string text, Gazetteer gazetteer)
     {
         var result = new List<Token>(tokens.Count + 2);
-        foreach (Token t in tokens)
+        for (int index = 0; index < tokens.Count; index++)
         {
+            Token t = tokens[index];
+
             // "akpinarkoyu" is itself a gazetteer key (the "Akpınar Köyü" alias), yet the glued form should still split.
             bool gluedVillage = t.Fold.Length > 7 && t.Fold.EndsWith("koyu", StringComparison.Ordinal) && IsKnownName(t.Fold[..^4], gazetteer);
-            if (t.IsAlpha && (gluedVillage || !IsKnownName(t.Fold, gazetteer)) && TrySplit(t, out Token? name, out Token? keyword))
+            if (t.IsAlpha && (gluedVillage || !IsKnownName(t.Fold, gazetteer)) && TrySplit(t, index, out Token? name, out Token? keyword))
             {
                 result.Add(name!);
                 result.Add(keyword!);
@@ -166,7 +171,7 @@ internal static partial class Tokenizer
 
         return result;
 
-        bool TrySplit(Token t, out Token? name, out Token? keyword)
+        bool TrySplit(Token t, int index, out Token? name, out Token? keyword)
         {
             foreach (string suffix in LongGluedSuffixes)
             {
@@ -181,10 +186,12 @@ internal static partial class Tokenizer
             // Short suffixes ("CaferağaMah.", "ErguvanCad.", "CEVİLİMH."): split when the prefix is a known name,
             // when the suffix starts with a capital after a lowercase letter, or when an abbreviation period follows.
             bool periodAfter = t.End < text.Length && text[t.End] == '.';
+            bool doorLabelFollows = index + 1 < tokens.Count && Lexicon.Of(tokens[index + 1].Fold) == Keyword.No;
             foreach (string suffix in ShortGluedSuffixes)
             {
                 if (t.Fold.Length - suffix.Length >= 3 && t.Fold.EndsWith(suffix, StringComparison.Ordinal) &&
-                    (IsKnownName(t.Fold[..^suffix.Length], gazetteer) || periodAfter || CamelBoundary(t, suffix.Length)))
+                    (IsKnownName(t.Fold[..^suffix.Length], gazetteer) || periodAfter || CamelBoundary(t, suffix.Length) ||
+                     (doorLabelFollows && Array.IndexOf(GluedStreetBeforeDoor, suffix) >= 0)))
                 {
                     return Split(t, suffix.Length, out name, out keyword);
                 }

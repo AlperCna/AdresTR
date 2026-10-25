@@ -362,6 +362,26 @@ public class AddressParserTests
         Assert.Equal("12", r.DoorNumber?.Value);
     }
 
+    [Theory]
+    [InlineData("Ahi Evran mah., 100. Yılsk, No.34 Kat:5, Kocasinan, Kayseri", StreetType.Sokak, "34")]
+    [InlineData("Hisar köyü, Erguvancd, No: 37, Merkez, Uşak", StreetType.Cadde, "37")]
+    public void Glued_street_abbreviation_is_split_when_a_door_label_follows(string input, StreetType type, string door)
+    {
+        ParseResult r = Parser.Parse(input);
+        Assert.Equal(type, r.StreetType);
+        Assert.Equal(door, r.DoorNumber?.Value);
+    }
+
+    [Theory]
+    [InlineData("Caferağa Mah. Moda Cad. Gusk No:5 Kadıköy İstanbul")]
+    [InlineData("Caferağa Mah. Moda Cad. No:5 Kadıköy İstanbul")]
+    public void Words_before_a_door_label_are_not_split_without_a_street_suffix_shape(string input)
+    {
+        ParseResult r = Parser.Parse(input);
+        Assert.Equal("Moda", r.Street?.Value);
+        Assert.Equal("5", r.DoorNumber?.Value);
+    }
+
     [Fact]
     public void Truncates_very_long_input() =>
         Assert.NotNull(Parser.Parse(string.Concat(Enumerable.Repeat("Caferağa Mah. ", 500))));
