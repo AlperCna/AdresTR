@@ -9,7 +9,7 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | Exact match | Micro-F1 | Macro-F1 | il | ilçe | birim@1 | birim@5 | MRR | ECE |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| adrestr | 99.6 [99.1–99.9] | 100.0 [99.9–100.0] | 92.3 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 0.001 |
+| adrestr | 99.8 [99.5–100.0] | 100.0 [100.0–100.0] | 92.3 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 0.001 |
 | regex-baseline | 14.2 [12.0–16.3] | 76.8 [75.6–77.9] | 61.5 | 51.5 | 31.4 | 18.7 | 18.7 | 18.7 | – |
 | libpostal | 12.0 [10.2–14.1] | 61.2 [59.5–62.9] | 47.7 | – | – | – | – | – | – |
 
@@ -17,7 +17,7 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | il | ilce | mahalle | semt | csbm_tur | csbm_ad | site | blok | dis_kapi | kat | daire | posta_kodu | tarif |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| adrestr | 100.0 | 99.9 | 100.0 | 0.0 | 99.9 | 99.9 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
+| adrestr | 100.0 | 99.9 | 100.0 | 0.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 |
 | regex-baseline | 72.3 | 50.4 | 73.9 | – | 96.2 | 78.6 | 0.0 | 0.0 | 82.1 | 100.0 | 84.3 | 100.0 | 0.0 |
 | libpostal | 55.1 | 55.0 | 60.6 | – | 93.1 | 81.6 | 0.0 | 0.0 | 58.0 | 75.3 | 8.0 | 85.5 | 0.0 |
 
@@ -27,21 +27,21 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | Tag | n | adrestr | regex-baseline | libpostal |
 |---|---:|---:|---:|---:|
-| abbreviation | 823 | 99.5 | 16.2 | 11.5 |
-| ambiguous-name | 705 | 99.7 | 15.2 | 13.2 |
+| abbreviation | 823 | 99.8 | 16.2 | 11.5 |
+| ambiguous-name | 705 | 100.0 | 15.2 | 13.2 |
 | ascii | 149 | 100.0 | 18.8 | 12.1 |
 | broken-i | 60 | 100.0 | 0.0 | 6.7 |
 | duplicate-token | 83 | 97.6 | 14.5 | 14.5 |
-| glued | 115 | 98.3 | 0.0 | 0.0 |
-| koy | 192 | 99.5 | 0.0 | 14.1 |
-| landmark | 119 | 98.3 | 0.0 | 0.0 |
+| glued | 115 | 100.0 | 0.0 | 0.0 |
+| koy | 192 | 100.0 | 0.0 | 14.1 |
+| landmark | 119 | 99.2 | 0.0 | 0.0 |
 | missing-il | 100 | 100.0 | 0.0 | 9.0 |
 | missing-ilce | 119 | 99.2 | 28.6 | 8.4 |
 | noise:ascii | 149 | 100.0 | 18.8 | 12.1 |
 | noise:broken-i | 60 | 100.0 | 0.0 | 6.7 |
 | noise:duplicate-token | 83 | 97.6 | 14.5 | 14.5 |
-| noise:glued | 115 | 98.3 | 0.0 | 0.0 |
-| noise:landmark | 119 | 98.3 | 0.0 | 0.0 |
+| noise:glued | 115 | 100.0 | 0.0 | 0.0 |
+| noise:landmark | 119 | 99.2 | 0.0 | 0.0 |
 | noise:lowercase | 130 | 100.0 | 12.3 | 7.7 |
 | noise:missing-il | 100 | 100.0 | 0.0 | 9.0 |
 | noise:missing-ilce | 119 | 99.2 | 28.6 | 8.4 |
@@ -65,7 +65,7 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | Exact match | Micro-F1 | Macro-F1 | il | ilçe | birim@1 | birim@5 | MRR | ECE |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| adrestr | 98.0 [97.4–98.7] | 99.7 [99.7–99.8] | 92.1 | 100.0 | 99.9 | 99.8 | 99.8 | 99.8 | 0.016 |
+| adrestr | 98.2 [97.5–98.8] | 99.8 [99.7–99.9] | 92.1 | 100.0 | 99.9 | 99.8 | 99.8 | 99.8 | 0.014 |
 | regex-baseline | 14.0 [12.5–15.7] | 76.8 [76.0–77.7] | 61.6 | 52.1 | 33.5 | 19.9 | 19.9 | 19.9 | – |
 | libpostal | 10.0 [8.6–11.3] | 60.0 [58.8–61.2] | 47.4 | – | – | – | – | – | – |
 
@@ -73,7 +73,7 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | System | il | ilce | mahalle | semt | csbm_tur | csbm_ad | site | blok | dis_kapi | kat | daire | posta_kodu | tarif |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| adrestr | 100.0 | 99.5 | 99.7 | 0.0 | 99.9 | 99.4 | 99.5 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 99.0 |
+| adrestr | 100.0 | 99.5 | 99.7 | 0.0 | 100.0 | 99.7 | 99.5 | 100.0 | 100.0 | 100.0 | 100.0 | 100.0 | 99.0 |
 | regex-baseline | 73.2 | 51.1 | 75.1 | – | 94.8 | 77.8 | 0.0 | 0.0 | 81.9 | 100.0 | 85.6 | 100.0 | 0.0 |
 | libpostal | 55.5 | 55.2 | 59.6 | – | 92.0 | 78.8 | 0.2 | 0.0 | 55.0 | 79.4 | 11.4 | 82.0 | 0.0 |
 
@@ -83,32 +83,32 @@ Speed is measured with BenchmarkDotNet (`benchmarks/`), not here, so this file i
 
 | Tag | n | adrestr | regex-baseline | libpostal |
 |---|---:|---:|---:|---:|
-| abbreviation | 1616 | 98.0 | 16.1 | 9.8 |
-| ambiguous-name | 1438 | 98.2 | 15.0 | 10.4 |
-| ascii | 237 | 98.3 | 13.1 | 6.8 |
+| abbreviation | 1616 | 98.2 | 16.1 | 9.8 |
+| ambiguous-name | 1438 | 98.3 | 15.0 | 10.4 |
+| ascii | 237 | 98.7 | 13.1 | 6.8 |
 | broken-i | 122 | 99.2 | 0.0 | 1.6 |
-| duplicate-token | 237 | 88.2 | 14.8 | 11.8 |
-| glued | 249 | 96.0 | 0.0 | 0.0 |
+| duplicate-token | 237 | 88.6 | 14.8 | 11.8 |
+| glued | 249 | 97.2 | 0.0 | 0.0 |
 | koy | 369 | 98.6 | 0.0 | 11.7 |
 | landmark | 210 | 97.6 | 0.0 | 0.0 |
-| missing-il | 216 | 97.7 | 0.0 | 13.0 |
+| missing-il | 216 | 98.1 | 0.0 | 13.0 |
 | missing-ilce | 229 | 92.6 | 16.2 | 3.9 |
-| noise:ascii | 237 | 98.3 | 13.1 | 6.8 |
+| noise:ascii | 237 | 98.7 | 13.1 | 6.8 |
 | noise:broken-i | 122 | 99.2 | 0.0 | 1.6 |
-| noise:duplicate-token | 237 | 88.2 | 14.8 | 11.8 |
-| noise:glued | 249 | 96.0 | 0.0 | 0.0 |
+| noise:duplicate-token | 237 | 88.6 | 14.8 | 11.8 |
+| noise:glued | 249 | 97.2 | 0.0 | 0.0 |
 | noise:landmark | 210 | 97.6 | 0.0 | 0.0 |
 | noise:lowercase | 243 | 98.4 | 9.1 | 10.7 |
-| noise:missing-il | 216 | 97.7 | 0.0 | 13.0 |
+| noise:missing-il | 216 | 98.1 | 0.0 | 13.0 |
 | noise:missing-ilce | 229 | 92.6 | 16.2 | 3.9 |
 | noise:phone | 226 | 99.1 | 0.0 | 0.4 |
 | noise:reordered | 162 | 95.7 | 0.0 | 0.0 |
 | noise:typo | 231 | 95.7 | 1.7 | 2.6 |
 | noise:uppercase | 207 | 96.6 | 12.6 | 4.8 |
 | numbered-street | 116 | 99.1 | 15.5 | 8.6 |
-| osb | 51 | 92.2 | 0.0 | 0.0 |
+| osb | 51 | 94.1 | 0.0 | 0.0 |
 | phone | 226 | 99.1 | 0.0 | 0.4 |
-| postal-code | 499 | 98.4 | 14.2 | 10.4 |
+| postal-code | 499 | 98.6 | 14.2 | 10.4 |
 | reordered | 464 | 97.6 | 0.0 | 0.0 |
 | site-blok | 185 | 98.4 | 0.0 | 0.0 |
 | slash-door | 335 | 98.2 | 3.0 | 3.6 |

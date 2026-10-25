@@ -10,6 +10,9 @@ All notable changes to this project are documented here. The format follows
   door number ("No 5 Bina No 2" → door 5, building 2). `ToCanonicalString()` writes it as "Bina No:2".
 
 ### Changed
+- Tokenizer: a street abbreviation glued to an unmarked name is split when a door label follows ("Erguvancd, No: 37",
+  "100. Yılsk, No.34"), without needing street data. Synthetic test exact match 98.0% → 98.2%, synthetic dev 99.6% → 99.8%;
+  real and challenge sets unchanged.
 - Parser: "3. Kat 7 Nolu Daire", "İç Kapı No 3" and "Kat:Giriş" are read as floor/flat (the door number is no longer overwritten);
   a building name cannot be a bare number ("No:100 İş Hanı"); `ToCanonicalString()` writes the real building type
   ("Plaza", "İş Hanı", "Rezidans", "Apt.") instead of "Sitesi"/"Apt." for everything.
