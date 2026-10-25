@@ -62,5 +62,7 @@ jobs:
             echo "and run \`dotnet run --project tools/AdresTR.DataBuilder -- build\` so CI's \`check\` step passes."
             echo
             echo "PRs opened with the default token do not start CI; close and reopen this PR to run it."
-          } > pr-body.md
-          gh pr create --draft --base "${GITHUB_REF_NAME}" --title "chore(data): refresh staging from upstream sources" --body-file pr-body.md
+          } > "$RUNNER_TEMP/pr-body.md"
+          # Needs Settings > Actions > General > "Allow GitHub Actions to create and approve pull requests".
+          gh pr create --draft --base "${GITHUB_REF_NAME}" --title "chore(data): refresh staging from upstream sources" --body-file "$RUNNER_TEMP/pr-body.md" ||
+            echo "::warning::Could not open the PR. The branch $branch is pushed: https://github.com/${GITHUB_REPOSITORY}/compare/${GITHUB_REF_NAME}...$branch"
