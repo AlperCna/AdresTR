@@ -5,6 +5,10 @@ All notable changes to this project are documented here. The format follows
 
 ## [Unreleased]
 
+### Added
+- `ParseResult.BuildingNumber` (REST: `components.buildingNumber`): "Bina No" / "Bina Numarası" is its own field instead of overwriting the
+  door number ("No 5 Bina No 2" → door 5, building 2). `ToCanonicalString()` writes it as "Bina No:2".
+
 ### Changed
 - Parser: "3. Kat 7 Nolu Daire", "İç Kapı No 3" and "Kat:Giriş" are read as floor/flat (the door number is no longer overwritten);
   a building name cannot be a bare number ("No:100 İş Hanı"); `ToCanonicalString()` writes the real building type

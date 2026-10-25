@@ -137,6 +137,7 @@ public sealed class AddressParser
         Role.Site => "site",
         Role.Blok => "blok",
         Role.Door => "door",
+        Role.BuildingNo => "building_no",
         Role.Floor => "floor",
         Role.Flat => "flat",
         Role.Postal => "postal",
@@ -350,7 +351,7 @@ public sealed class AddressParser
     /// <summary>İl/ilçe belong at the end of the address, or all together at the start.</summary>
     private static double AdminOrderPenalty(List<Hyp> hyps, Resolution r)
     {
-        List<Hyp> local = hyps.FindAll(h => h.Role is Role.Mahalle or Role.Semt or Role.Street or Role.Site or Role.Blok or Role.Door or Role.Floor or Role.Flat);
+        List<Hyp> local = hyps.FindAll(h => h.Role is Role.Mahalle or Role.Semt or Role.Street or Role.Site or Role.Blok or Role.Door or Role.BuildingNo or Role.Floor or Role.Flat);
         if (local.Count == 0)
         {
             return r.Il is not null && r.Ilce is not null && r.Il.From < r.Ilce.From ? 0.2 : 0;
@@ -471,6 +472,9 @@ public sealed class AddressParser
                         result.Flat = new AddressComponent(h.FlatValue, input[h.FlatStart..h.FlatEnd], h.FlatStart, h.FlatEnd);
                     }
 
+                    break;
+                case Role.BuildingNo:
+                    result.BuildingNumber = component;
                     break;
                 case Role.Floor:
                     result.Floor = component;

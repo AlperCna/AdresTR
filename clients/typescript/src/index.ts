@@ -9,7 +9,7 @@ export interface Component { value: string; text: string; start: number; end: nu
 export interface Components {
   il: Component | null; ilce: Component | null; mahalle: Component | null; semt: Component | null;
   street: Component | null; streetType: StreetType | null; site: Component | null; blok: Component | null;
-  doorNumber: Component | null; floor: Component | null; flat: Component | null;
+  doorNumber: Component | null; buildingNumber: Component | null; floor: Component | null; flat: Component | null;
   postalCode: Component | null; landmark: Component | null;
 }
 export interface Province { plaka: number; name: string }

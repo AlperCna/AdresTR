@@ -13,6 +13,7 @@ internal enum Role : byte
     Site,
     Blok,
     Door,
+    BuildingNo,
     Floor,
     Flat,
     Postal,
@@ -95,6 +96,7 @@ internal sealed class Classifier(Gazetteer gazetteer, string text, IReadOnlyList
             Site(i);
             Blok(i);
             Door(i);
+            BuildingNo(i);
             Floor(i);
             Flat(i);
             Postal(i);
@@ -616,6 +618,39 @@ internal sealed class Classifier(Gazetteer gazetteer, string text, IReadOnlyList
             FlatValue = flatStart < 0 ? null : string.Concat(text[flatStart..flatEnd].Where(c => !char.IsWhiteSpace(c))).ToUpperInvariant(),
             FlatStart = Math.Max(flatStart, 0), FlatEnd = Math.Max(flatEnd, 0),
         };
+    }
+
+    /// <summary>"Bina No: 2", "Bina Numarası 2/B": the building number, kept apart from the door number.</summary>
+    private void BuildingNo(int i)
+    {
+        if (KeywordAt(i) != Keyword.BinaNo)
+        {
+            return;
+        }
+
+        int n = i + KeywordLength(i);
+        if (n >= tokens.Count || tokens[n].Kind == TokenKind.Alpha || tokens[n].Noise || tokens[n].Fold.Length > 5)
+        {
+            return;
+        }
+
+        int end = tokens[n].End;
+        int next = n + 1;
+
+        // "Bina No 2/B", "Bina No:2B": a letter right after the number.
+        if (next < tokens.Count && tokens[next].IsAlpha && tokens[next].Fold.Length == 1 && tokens[next].Break is not (BreakKind.Section or BreakKind.Soft) &&
+            (tokens[next].SlashBefore || tokens[next].Break == BreakKind.Glued))
+        {
+            end = tokens[next].End;
+            next++;
+        }
+
+        Add(new Hyp
+        {
+            From = i, To = next, Role = Role.BuildingNo, Local = 0.92,
+            Value = string.Concat(text[tokens[n].Start..end].Where(c => !char.IsWhiteSpace(c))).ToUpperInvariant(),
+            TextStart = tokens[n].Start, TextEnd = end, KeywordSupported = true,
+        });
     }
 
     private void Floor(int i)

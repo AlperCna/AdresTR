@@ -22,7 +22,7 @@ public sealed class ParseOptions
 public sealed record TraceToken(string Text, int Start, int End, string Folded, bool Glued);
 
 /// <summary>A span of the input and the role an alternative assigns to it.</summary>
-/// <param name="Role">"il", "ilce", "mahalle", "semt", "street", "site", "blok", "door", "floor", "flat", "postal", "landmark", "noise" or "ignored".</param>
+/// <param name="Role">"il", "ilce", "mahalle", "semt", "street", "site", "blok", "door", "building_no", "floor", "flat", "postal", "landmark", "noise" or "ignored".</param>
 /// <param name="Value">Normalized value.</param>
 /// <param name="Text">The covered input text, including type words ("Caferağa Mah.").</param>
 /// <param name="Start">Start offset in the input.</param>

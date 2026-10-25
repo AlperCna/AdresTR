@@ -73,6 +73,7 @@ internal static class Solver
         Role.Site => 6,
         Role.Blok => 7,
         Role.Door => 8,
+        Role.BuildingNo => 8,
         Role.Floor => 9,
         Role.Flat => 10,
         _ => 0,
