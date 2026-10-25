@@ -1,0 +1,66 @@
+name: Data refresh
+
+# Rebuilds data/staging from the upstream sources (PTT-derived MIT lists and Wikidata CC0) and opens a PR when the output
+# changed. Nothing is published from here: a person reviews the diff, bumps data/staging/VERSION and rebuilds the gazetteer.
+
+on:
+  schedule:
+    - cron: "0 3 1 * *" # first day of each month
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  DOTNET_NOLOGO: true
+  DOTNET_CLI_TELEMETRY_OPTOUT: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+
+      - run: python -m pip install requests
+
+      - name: Fetch upstream sources
+        run: |
+          mkdir -p data/raw
+          git clone --depth 1 https://github.com/muratgozel/turkey-neighbourhoods data/raw/muratgozel
+          git clone --depth 1 https://github.com/epigra/tr-geozones data/raw/epigra
+          python -I data/scripts/fetch_wikidata.py data/raw/wikidata
+
+      - name: Rebuild staging
+        run: python -I data/scripts/build_staging.py
+
+      - name: Open a PR when the data changed
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if git diff --quiet -- data/staging; then
+            echo "data/staging is up to date."
+            exit 0
+          fi
+          branch="data/refresh-$(date -u +%Y-%m-%d)"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "$branch"
+          git add data/staging
+          git commit -m "chore(data): refresh staging from upstream sources"
+          git push origin "$branch"
+          {
+            echo "Automated rebuild of \`data/staging\` from the upstream sources listed in \`data/staging/SOURCES.json\`."
+            echo
+            git diff --stat HEAD~1 -- data/staging
+            echo
+            echo "Before merging: read the diff (retired ids, renamed units), bump \`data/staging/VERSION\` if this should become a snapshot,"
+            echo "and run \`dotnet run --project tools/AdresTR.DataBuilder -- build\` so CI's \`check\` step passes."
+            echo
+            echo "PRs opened with the default token do not start CI; close and reopen this PR to run it."
+          } > pr-body.md
+          gh pr create --draft --base "${GITHUB_REF_NAME}" --title "chore(data): refresh staging from upstream sources" --body-file pr-body.md
