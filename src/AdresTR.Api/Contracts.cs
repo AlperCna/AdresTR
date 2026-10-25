@@ -35,6 +35,7 @@ public sealed record ComponentsDto(
     ComponentDto? Site,
     ComponentDto? Blok,
     ComponentDto? DoorNumber,
+    ComponentDto? BuildingNumber,
     ComponentDto? Floor,
     ComponentDto? Flat,
     ComponentDto? PostalCode,
@@ -91,7 +92,7 @@ public sealed record ParseResponse(
         new ComponentsDto(
             ComponentDto.From(r.Il), ComponentDto.From(r.Ilce), ComponentDto.From(r.Mahalle), ComponentDto.From(r.Semt),
             ComponentDto.From(r.Street), r.StreetType, ComponentDto.From(r.Site), ComponentDto.From(r.Blok),
-            ComponentDto.From(r.DoorNumber), ComponentDto.From(r.Floor), ComponentDto.From(r.Flat),
+            ComponentDto.From(r.DoorNumber), ComponentDto.From(r.BuildingNumber), ComponentDto.From(r.Floor), ComponentDto.From(r.Flat),
             ComponentDto.From(r.PostalCode), ComponentDto.From(r.Landmark)),
         new ResolvedDto(ProvinceDto.From(r.Province), DistrictDto.From(r.District), UnitDto.From(r.Unit)),
         [.. r.UnitCandidates.Take(5).Select(c => new CandidateDto(c.Unit.Id, c.Unit.Name, c.Unit.District.Name, c.Unit.District.Province.Name, c.Score))],

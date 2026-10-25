@@ -510,7 +510,7 @@ else
     [
         ("İl", "il", r.Il), ("İlçe", "ilce", r.Ilce), ("Mahalle / köy", "mahalle", r.Mahalle), ("Semt", "semt", r.Semt),
         ("Cadde / sokak", "street", r.Street), ("Site / bina", "site", r.Site), ("Blok", "blok", r.Blok),
-        ("Kapı no", "door", r.DoorNumber), ("Kat", "floor", r.Floor), ("Daire", "flat", r.Flat),
+        ("Kapı no", "door", r.DoorNumber), ("Bina no", "building_no", r.BuildingNumber), ("Kat", "floor", r.Floor), ("Daire", "flat", r.Flat),
         ("Posta kodu", "postal", r.PostalCode), ("Tarif", "landmark", r.Landmark),
     ];
 
@@ -557,7 +557,7 @@ else
             {
                 ["il"] = Component(r.Il), ["ilce"] = Component(r.Ilce), ["mahalle"] = Component(r.Mahalle), ["semt"] = Component(r.Semt),
                 ["street"] = Component(r.Street), ["streetType"] = r.StreetType?.ToString(), ["site"] = Component(r.Site), ["blok"] = Component(r.Blok),
-                ["doorNumber"] = Component(r.DoorNumber), ["floor"] = Component(r.Floor), ["flat"] = Component(r.Flat),
+                ["doorNumber"] = Component(r.DoorNumber), ["buildingNumber"] = Component(r.BuildingNumber), ["floor"] = Component(r.Floor), ["flat"] = Component(r.Flat),
                 ["postalCode"] = Component(r.PostalCode), ["landmark"] = Component(r.Landmark),
             },
             ["resolved"] = new JsonObject

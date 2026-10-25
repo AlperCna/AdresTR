@@ -4,7 +4,7 @@
 
 ## Components and offsets
 
-`Il`, `Ilce`, `Mahalle`, `Semt`, `Street` (+ `StreetType`), `Site`, `Blok`, `DoorNumber`, `Floor`, `Flat`, `PostalCode` and
+`Il`, `Ilce`, `Mahalle`, `Semt`, `Street` (+ `StreetType`), `Site`, `Blok`, `DoorNumber`, `BuildingNumber` ("Bina No"), `Floor`, `Flat`, `PostalCode` and
 `Landmark` are [AddressComponent](xref:AdresTR.AddressComponent)s: normalized `Value`, the `Text` as written and
 `Start`/`End` offsets into the input. They describe **what the text says**.
 

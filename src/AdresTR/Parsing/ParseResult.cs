@@ -114,6 +114,9 @@ public sealed class ParseResult
     /// <summary>Block identifier ("A", "B2").</summary>
     public AddressComponent? Blok { get; internal set; }
 
+    /// <summary>Building number written as "Bina No" (kept apart from the door number), e.g. "2" or "2/B".</summary>
+    public AddressComponent? BuildingNumber { get; internal set; }
+
     /// <summary>Door number (dış kapı no), e.g. "12" or "17/A".</summary>
     public AddressComponent? DoorNumber { get; internal set; }
 
@@ -189,6 +192,11 @@ public sealed class ParseResult
         if (Blok is not null)
         {
             Add($"{Blok.Value} Blok");
+        }
+
+        if (BuildingNumber is not null)
+        {
+            Add($"Bina No:{BuildingNumber.Value}");
         }
 
         if (DoorNumber is not null)

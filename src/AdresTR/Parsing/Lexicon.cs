@@ -21,6 +21,7 @@ internal enum Keyword : byte
     Bina,
     Blok,
     No,
+    BinaNo,
     Nolu,
     Kat,
     Daire,
@@ -104,6 +105,9 @@ internal static class Lexicon
         (["is", "merkezi"], Keyword.Bina),
         (["is", "hani"], Keyword.Bina),
         (["ic", "kapi"], Keyword.Daire),
+        (["bina", "no"], Keyword.BinaNo),
+        (["bina", "numarasi"], Keyword.BinaNo),
+        (["bina", "numara"], Keyword.BinaNo),
     ];
 
     /// <summary>Single-letter keywords are only keywords next to a number ("K:3", "D 5").</summary>

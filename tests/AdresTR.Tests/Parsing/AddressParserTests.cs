@@ -333,6 +333,35 @@ public class AddressParserTests
         Assert.Equal(input, r.Input);
     }
 
+    [Theory]
+    [InlineData("Caferağa Mah. Moda Cad. No 5 Bina No 2 Kadıköy İstanbul", "5", "2")]
+    [InlineData("Caferağa Mah. Moda Cad. Bina No:2 Kapı No:5 Kadıköy İstanbul", "5", "2")]
+    [InlineData("Caferağa Mah. Moda Cad. No:5 Bina Numarası 2/B Kadıköy İstanbul", "5", "2/B")]
+    public void Bina_no_is_kept_apart_from_the_door_number(string input, string door, string building)
+    {
+        ParseResult r = Parser.Parse(input);
+        Assert.Equal(door, r.DoorNumber?.Value);
+        Assert.Equal(building, r.BuildingNumber?.Value);
+        Assert.Equal(Caferaga, r.Unit?.Id);
+    }
+
+    [Fact]
+    public void Bina_no_alone_does_not_become_a_door_number()
+    {
+        ParseResult r = Parser.Parse("Caferağa Mah. Moda Cad. Bina No:7 Kadıköy İstanbul");
+        Assert.Equal("7", r.BuildingNumber?.Value);
+        Assert.Null(r.DoorNumber);
+        Assert.Equal("Caferağa Mah. Moda Cad. Bina No:7 34710 Kadıköy/İstanbul", r.ToCanonicalString());
+    }
+
+    [Fact]
+    public void Addresses_without_bina_no_have_no_building_number()
+    {
+        ParseResult r = Parser.Parse("Caferağa Mah. Moda Cad. No:12 D:3 Kadıköy/İstanbul");
+        Assert.Null(r.BuildingNumber);
+        Assert.Equal("12", r.DoorNumber?.Value);
+    }
+
     [Fact]
     public void Truncates_very_long_input() =>
         Assert.NotNull(Parser.Parse(string.Concat(Enumerable.Repeat("Caferağa Mah. ", 500))));
