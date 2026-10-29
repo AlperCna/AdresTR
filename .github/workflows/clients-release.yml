@@ -32,7 +32,7 @@ jobs:
           pip install build ".[test]"
           pytest -q
           python -m build
-      - uses: pypa/gh-action-pypi-publish@v1.14.2
+      - uses: pypa/gh-action-pypi-publish@v1.14.3
         with:
           packages-dir: clients/python/dist/
 
