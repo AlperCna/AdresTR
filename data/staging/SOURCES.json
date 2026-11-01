@@ -1,5 +1,5 @@
 {
-  "olusturma_tarihi": "2026-10-12",
+  "olusturma_tarihi": "2026-11-01",
   "uretici": "data/scripts/build_staging.py",
   "veri_surumu": "2026.10",
   "not": "Yol B: yalnız PTT türevi (MIT) + Wikidata (CC0). melihozkara/NVİ kopyası girdi DEĞİLDİR.",
@@ -41,45 +41,45 @@
     },
     {
       "path": "wikidata/wd_il.csv",
-      "sha256": "98c30f18d675677766990b660e152f3d127a650f7ac096604be70a89dc1c4985",
+      "sha256": "0437192adcea80b62d59de46adfcab2bbeee56295693f19ce38d26620eb133a3",
       "url": "https://query.wikidata.org/sparql (sorgu: data/scripts/fetch_wikidata.py QUERIES['wd_il'])",
       "lisans": "CC0-1.0",
-      "anlik_goruntu": "2026-10-08"
+      "anlik_goruntu": "2026-11-01"
     },
     {
       "path": "wikidata/wd_ilce.csv",
-      "sha256": "8a758b40de04bb05c5e41195962020ad164903f0d73e5309023f3a0f1aacdc64",
+      "sha256": "e00ef6f56aff76aa6f04ad6310f7f5f2d4996c8485e525c0288dccbab40bd4ea",
       "url": "https://query.wikidata.org/sparql (sorgu: data/scripts/fetch_wikidata.py QUERIES['wd_ilce'])",
       "lisans": "CC0-1.0",
-      "anlik_goruntu": "2026-10-08"
+      "anlik_goruntu": "2026-11-01"
     },
     {
       "path": "wikidata/wd_mahalle.csv",
-      "sha256": "97789da407f2e11d74f4ed5bbab265ced7918fbe0c23dc0c90e13e35d9c72724",
+      "sha256": "26cb6a032444979786928f715a7e0be622087757ef8e54a2dc3396892a1883fa",
       "url": "https://query.wikidata.org/sparql (sorgu: data/scripts/fetch_wikidata.py QUERIES['wd_mahalle'])",
       "lisans": "CC0-1.0",
-      "anlik_goruntu": "2026-10-08"
+      "anlik_goruntu": "2026-11-01"
     },
     {
       "path": "wikidata/wd_koy.csv",
-      "sha256": "6658a654a052c4c50f4ac5980a3128636274ec49665f15d01319e3347558b289",
+      "sha256": "0f6604c18b636fc198033f6c6d21ca1b66cbde0d024b71a0a0841de13e627bd4",
       "url": "https://query.wikidata.org/sparql (sorgu: data/scripts/fetch_wikidata.py QUERIES['wd_koy'])",
       "lisans": "CC0-1.0",
-      "anlik_goruntu": "2026-10-08"
+      "anlik_goruntu": "2026-11-01"
     },
     {
       "path": "wikidata/wd_belde.csv",
-      "sha256": "a61987a36b9a8dfb45639ed58f8ea0750ce45b2dd28f947e15203733f9b69d9c",
+      "sha256": "24578d1efbf6a1f02e3a871ece027dce7cf88d99ec9c65e8eacb178d840b3253",
       "url": "https://query.wikidata.org/sparql (sorgu: data/scripts/fetch_wikidata.py QUERIES['wd_belde'])",
       "lisans": "CC0-1.0",
-      "anlik_goruntu": "2026-10-08"
+      "anlik_goruntu": "2026-11-01"
     },
     {
       "path": "wikidata/wd_parent_up.csv",
-      "sha256": "6b822a1d5bbf3fcb3c72a174ab69a2d086a74e5474ea1462b2d860bd326ef619",
+      "sha256": "9ae2d89ceb72ca8cebe866c14f8aefb1adca4d2f1055a112e7673df30333a675",
       "url": "https://query.wikidata.org/sparql (sorgu: data/scripts/fetch_wikidata.py QUERIES['wd_parent_up'])",
       "lisans": "CC0-1.0",
-      "anlik_goruntu": "2026-10-08"
+      "anlik_goruntu": "2026-11-01"
     }
   ],
   "kuratorlu_girdiler": [
@@ -94,7 +94,7 @@
     "il.csv": 81,
     "ilce.csv": 973,
     "birim.csv": 78790,
-    "alias.csv": 18827,
+    "alias.csv": 18885,
     "retired_ids.csv": 0
   },
   "birim_tur_dagilimi": {
@@ -110,7 +110,7 @@
   "alias_dagilimi": {
     "birim/semt/el": 14,
     "birim/semt/ptt-semt": 3035,
-    "birim/tarihsel/wikidata-6360": 15762,
+    "birim/tarihsel/wikidata-6360": 15820,
     "il/yazim/el": 11,
     "ilce/tarihsel/el": 3,
     "ilce/yazim/el": 2
@@ -118,9 +118,9 @@
   "kapsam": {
     "mahalle": {
       "n": 32171,
-      "wikidata": 26430,
-      "koordinat": 21394,
-      "nvi_id": 26390
+      "wikidata": 26424,
+      "koordinat": 21454,
+      "nvi_id": 26384
     },
     "koy": {
       "n": 18229,
@@ -171,8 +171,8 @@
     },
     "_ilce": {
       "n": 973,
-      "wikidata": 928,
-      "koordinat": 890
+      "wikidata": 930,
+      "koordinat": 892
     }
   },
   "dogrulama": {
@@ -338,11 +338,11 @@
         "Yayla Evleri"
       ]
     ],
-    "ilce_wikidata_coklu_aday_bos": 10,
-    "kasaba_ogesi_ilceye_baglanan": 517,
+    "ilce_wikidata_coklu_aday_bos": 9,
+    "kasaba_ogesi_ilceye_baglanan": 523,
     "wikidata_ilceye_cozulemeyen_oge": {
       "mahalle": 933,
-      "koy": 330
+      "koy": 334
     },
     "ptt_tekrar_ayiklanan": [
       [
@@ -407,7 +407,7 @@
       "koyler": 458,
       "koy": 2
     },
-    "alias_6360": 15762,
+    "alias_6360": 15820,
     "kuratorlu_semt": {
       "dosya": "curated/semt_alias.csv",
       "satir": 7,
